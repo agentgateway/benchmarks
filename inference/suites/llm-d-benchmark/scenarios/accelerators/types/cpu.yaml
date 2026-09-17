@@ -21,3 +21,11 @@ scenario:
         requests: {memory: 4Gi, cpu: "2"}
       accelerator:
         count: 0
+    # Without this, the router/EPP pod falls back to the llm-d-router chart's
+    # own default (cpu: 8, memory: 8Gi), which is sized for a real GPU node
+    # and won't schedule on a laptop-sized cluster.
+    router:
+      epp:
+        resources:
+          limits: {memory: 512Mi, cpu: "1"}
+          requests: {memory: 128Mi, cpu: "100m"}
