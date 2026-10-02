@@ -48,6 +48,11 @@ set_defaults() {
   : "${BENCHMARK_CAMPAIGN_ID:=optimized-baseline-qwen3-32b-h100-$(date -u +%Y%m%d-%H%M%S)}"
   : "${BENCHMARK_SECRET_NAMESPACE:=benchmark-secrets}"
   : "${BENCHMARK_HF_SECRET_NAME:=llm-d-hf-token}"
+  : "${BENCHMARK_HF_TOKEN_REQUIRED:=true}"
+  case "${BENCHMARK_HF_TOKEN_REQUIRED}" in
+    true|false) ;;
+    *) die "BENCHMARK_HF_TOKEN_REQUIRED must be true or false" ;;
+  esac
   : "${BENCHMARK_REPORT_FORMATS:=markdown,png,csv}"
   : "${BENCHMARK_TREATMENTS:=service agentgateway-standalone agentgateway-gateway}"
 
@@ -95,7 +100,7 @@ set_defaults() {
   export BENCHMARK_REPLICAS BENCHMARK_TENSOR_PARALLELISM BENCHMARK_ENDPOINT_PATH
   export BENCHMARK_MODEL_STORAGE_PROFILE BENCHMARK_WORKLOAD_STORAGE_PROFILE
   export BENCHMARK_GPU_RELEASE_POLICY BENCHMARK_REPETITION BENCHMARK_CAMPAIGN_ID
-  export BENCHMARK_SECRET_NAMESPACE BENCHMARK_HF_SECRET_NAME
+  export BENCHMARK_SECRET_NAMESPACE BENCHMARK_HF_SECRET_NAME BENCHMARK_HF_TOKEN_REQUIRED
   export BENCHMARK_REPORT_FORMATS BENCHMARK_CLUSTER_PROVIDER=gke
   export BENCHMARK_TREATMENTS BENCHMARK_COMPARISONS
 
@@ -106,6 +111,10 @@ set_defaults() {
 }
 
 ensure_hf_secret() {
+  if [[ "${BENCHMARK_HF_TOKEN_REQUIRED}" == false ]]; then
+    log "HF token disabled; model and workload must allow anonymous downloads"
+    return
+  fi
   kubectl --context "${BENCHMARK_KUBE_CONTEXT}" \
     create namespace "${BENCHMARK_SECRET_NAMESPACE}" \
     --dry-run=client -o yaml |

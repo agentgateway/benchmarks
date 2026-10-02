@@ -452,3 +452,22 @@ grep -Fxq '  base_seed: 42' \
   "${SCRIPT_DIR}/../workloads/deterministic-optimized-baseline.yaml.in"
 
 echo "workload rendering tests passed"
+
+# Current-release comparisons must not weaken the historical version guard.
+for profile in optimized-baseline-qwen3-32b-h100-v0.9 optimized-baseline-qwen3-32b-h100-v0.9-agw-v1.5.0; do
+  for version in v1.4.1 v1.5.0; do
+    expected=v1.4.1
+    [[ "${profile}" != *-agw-v1.5.0 ]] || expected=v1.5.0
+    if BENCHMARK_TREATMENT=agentgateway-standalone \
+      BENCHMARK_CAMPAIGN_ID=profile-test BENCHMARK_ACCELERATOR_TYPE=gpu \
+      BENCHMARK_BACKEND_TYPE=vllm BENCHMARK_SCENARIO=optimized-baseline \
+      BENCHMARK_ROUTING_POLICY=optimized-baseline BENCHMARK_REFERENCE_PROFILE="${profile}" \
+      AGW_VERSION="${version}" \
+      bash -c 'source "$1"; validate_configuration' _ "${RUNNER}"; then
+      [[ "${version}" == "${expected}" ]] || { echo 'wrong release accepted' >&2; exit 1; }
+    else
+      [[ "${version}" != "${expected}" ]] || { echo 'matching release rejected' >&2; exit 1; }
+    fi
+  done
+done
+echo "reference release guard tests passed"

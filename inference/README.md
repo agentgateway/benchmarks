@@ -168,7 +168,11 @@ BENCHMARK_TREATMENT=<treatment> \
 make benchmark
 ```
 
-The reference profile requires agentgateway v1.4.1. The wrapper verifies the
+The historical reference profile requires agentgateway v1.4.1.
+For v1.5.0, set `AGW_VERSION=v1.5.0` and
+`BENCHMARK_REFERENCE_PROFILE=optimized-baseline-qwen3-32b-h100-v0.9-agw-v1.5.0`.
+This separate profile preserves vLLM v0.23.0 and the same serving/EPP resources.
+For standalone mode, set `AGW_IMAGE` to the release digest to pin the binary. The wrapper verifies the
 observed vLLM, EPP, and agentgateway pod images before starting traffic.
 `BENCHMARK_ENDPOINT_PATH=internal` explicitly supplies the proxy Service
 ClusterIP to the harness; this prevents Gateway status from selecting an
@@ -434,8 +438,10 @@ not a billing quote. See the Google Cloud
 Each treatment temporarily needs about 17 GiB of local space while collecting
 raw per-request results. The three compressed per-request files total
 approximately 3 GiB, so copy long-lived evidence to durable object storage.
-`BENCHMARK_REPETITION=3` runs every treatment three times and should be
-budgeted at approximately 18 hours and USD 1,200 to 1,275.
+`BENCHMARK_REPETITION` labels one campaign invocation; it does not repeat it.
+Run the campaign separately with repetition IDs 1, 2, and 3 for three rounds,
+reversing treatment order between rounds. Budget approximately 18 hours and
+USD 1,200 to 1,275 for three rounds of the default historical matrix.
 
 ## Results
 

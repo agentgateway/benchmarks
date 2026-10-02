@@ -535,7 +535,7 @@ validate_configuration() {
     *) log "unsupported BENCHMARK_ROUTING_POLICY: ${BENCHMARK_ROUTING_POLICY}"; return 2 ;;
   esac
   case "${BENCHMARK_REFERENCE_PROFILE}" in
-    ""|smoke-gpu|optimized-baseline-qwen3-32b-h100-v0.9|optimized-baseline-qwen3-32b-h100-v0.9-vllm-v0.27.1) ;;
+    ""|smoke-gpu|optimized-baseline-qwen3-32b-h100-v0.9|optimized-baseline-qwen3-32b-h100-v0.9-vllm-v0.27.1|optimized-baseline-qwen3-32b-h100-v0.9-agw-v1.5.0) ;;
     *) log "unsupported BENCHMARK_REFERENCE_PROFILE: ${BENCHMARK_REFERENCE_PROFILE}"; return 2 ;;
   esac
   case "${BENCHMARK_ENDPOINT_PATH}" in
@@ -615,7 +615,8 @@ validate_configuration() {
     fi
   fi
   if [[ "${BENCHMARK_REFERENCE_PROFILE}" == "optimized-baseline-qwen3-32b-h100-v0.9" ||
-        "${BENCHMARK_REFERENCE_PROFILE}" == "optimized-baseline-qwen3-32b-h100-v0.9-vllm-v0.27.1" ]]; then
+        "${BENCHMARK_REFERENCE_PROFILE}" == "optimized-baseline-qwen3-32b-h100-v0.9-vllm-v0.27.1" ||
+        "${BENCHMARK_REFERENCE_PROFILE}" == "optimized-baseline-qwen3-32b-h100-v0.9-agw-v1.5.0" ]]; then
     # The published v0.9 report is a historical artifact. Its calibration
     # matrix records vLLM v0.23.0 even though the mutable v0.9 guide overlay
     # now selects v0.26.0. Reproducing the report therefore requires locking
@@ -630,9 +631,13 @@ validate_configuration() {
       log "${BENCHMARK_REFERENCE_PROFILE} requires optimized-baseline, Qwen3-32B, 8 TP=2 H100 vLLM replicas, and router v0.9.0"
       return 2
     }
+    local expected_agw_version=v1.4.1
+    if [[ "${BENCHMARK_REFERENCE_PROFILE}" == *-agw-v1.5.0 ]]; then
+      expected_agw_version=v1.5.0
+    fi
     if [[ "${BENCHMARK_TREATMENT}" == agentgateway-* && \
-          "${AGW_VERSION}" != "v1.4.1" ]]; then
-      log "${BENCHMARK_REFERENCE_PROFILE} requires AGW_VERSION=v1.4.1"
+          "${AGW_VERSION}" != "${expected_agw_version}" ]]; then
+      log "${BENCHMARK_REFERENCE_PROFILE} requires AGW_VERSION=${expected_agw_version}"
       return 2
     fi
   fi
@@ -1246,10 +1251,16 @@ verify_praxis_runtime() {
 }
 
 verify_reference_runtime() {
-  local expected_vllm_version
+  local expected_vllm_version expected_agw_version=v1.4.1
+  local expected_agw_image=cr.agentgateway.dev/agentgateway:v1.4.1
   case "${BENCHMARK_REFERENCE_PROFILE}" in
     optimized-baseline-qwen3-32b-h100-v0.9)
       expected_vllm_version="v0.23.0"
+      ;;
+    optimized-baseline-qwen3-32b-h100-v0.9-agw-v1.5.0)
+      expected_vllm_version="v0.23.0"
+      expected_agw_version=v1.5.0
+      expected_agw_image="${AGW_IMAGE}"
       ;;
     optimized-baseline-qwen3-32b-h100-v0.9-vllm-v0.27.1)
       expected_vllm_version="v0.27.1"
@@ -1290,9 +1301,9 @@ PY
     }
   fi
   if [[ "${BENCHMARK_TREATMENT}" == agentgateway-* ]]; then
-    grep -Fq $'\tcr.agentgateway.dev/agentgateway:v1.4.1' \
+    grep -Fq "$(printf '\t%s' "${expected_agw_image}")" \
       "${inventory}" || {
-      log "reference preflight did not observe agentgateway v1.4.1"
+      log "reference preflight did not observe ${expected_agw_image}"
       cat "${inventory}" >&2
       return 1
     }
@@ -1303,9 +1314,9 @@ PY
       --namespace "${AGW_CONTROLLER_NAMESPACE}" \
       -l app.kubernetes.io/name=agentgateway \
       -o jsonpath='{range .items[*].spec.template.spec.containers[*]}{.image}{"\n"}{end}')"
-    grep -Fxq "cr.agentgateway.dev/controller:v1.4.1" \
+    grep -Fxq "cr.agentgateway.dev/controller:${expected_agw_version}" \
       <<<"${controller_images}" || {
-      log "reference preflight did not observe agentgateway controller v1.4.1"
+      log "reference preflight did not observe agentgateway controller ${expected_agw_version}"
       printf '%s\n' "${controller_images}" >&2
       return 1
     }

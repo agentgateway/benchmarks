@@ -163,3 +163,18 @@ for treatments in 'service praxis-standalone' 'service typo' 'service service'; 
 done
 
 echo "GKE campaign orchestration tests passed"
+
+: >"${TEST_COMMAND_LOG}"
+BENCHMARK_HF_TOKEN_REQUIRED=false TEST_SECRET_EXISTS=false \
+PRAXIS_IMAGE="example.invalid/praxis@sha256:$(printf '%064d' 1)" \
+BENCHMARK_TREATMENTS='service agentgateway-standalone praxis-standalone' \
+BENCHMARK_COMPARISONS='service:agentgateway-standalone agentgateway-standalone:praxis-standalone' \
+BENCHMARK_REPETITION=1 BENCHMARK_CAMPAIGN_ID=test-three-treatments \
+  "${CAMPAIGN_SCRIPT}" >"${TEMP_DIR}/three-treatments.log"
+[[ "$(grep -c '^target=benchmark ' "${TEST_COMMAND_LOG}")" == 3 ]]
+grep -q '^target=benchmark-report .*comparisons=service:agentgateway-standalone agentgateway-standalone:praxis-standalone$' "${TEST_COMMAND_LOG}"
+if grep -q '^kubectl ' "${TEST_COMMAND_LOG}"; then
+  echo 'anonymous campaign unexpectedly accessed secrets' >&2
+  exit 1
+fi
+echo "one-round paired reports and anonymous model tests passed"
