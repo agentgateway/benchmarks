@@ -42,6 +42,7 @@ repetitions whose inference backend, workload, and infrastructure must match.
 | `agentgateway-standalone` | agentgateway in the standalone EPP topology |
 | `agentgateway-gateway` | agentgateway on Kubernetes with EPP |
 | `envoy-standalone` | Envoy sidecar in the standalone EPP topology |
+| `praxis-standalone` | Experimental custom Praxis AI sidecar; see [build and qualification requirements](suites/llm-d-benchmark/PRAXIS.md) |
 
 Required variables:
 

@@ -44,6 +44,10 @@ set_defaults() {
   esac
   case "${BENCHMARK_SMOKE_TREATMENT}" in
     service|agentgateway-standalone|agentgateway-gateway|envoy-standalone) ;;
+    praxis-standalone)
+      [[ "${PRAXIS_IMAGE:-}" =~ ^[^[:space:]@]+@sha256:[0-9a-f]{64}$ ]] || \
+        die "praxis-standalone requires PRAXIS_IMAGE=registry/repository@sha256:digest"
+      ;;
     *) die "unsupported BENCHMARK_SMOKE_TREATMENT=${BENCHMARK_SMOKE_TREATMENT}" ;;
   esac
   [[ "${BENCHMARK_SMOKE_GPU_TARGET_NODES}" == 1 ]] || \

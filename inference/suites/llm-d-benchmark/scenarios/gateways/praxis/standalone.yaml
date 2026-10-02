@@ -1,0 +1,69 @@
+# The pinned llm-d-router chart has two validated preset slots. Its Envoy slot
+# provides generic sidecar scaffolding; the preset is removed by the renderer
+# and all executable/configuration fields below describe Praxis AI.
+scenario:
+  - name: praxis-standalone
+    router:
+      proxy:
+        enabled: true
+        mode: sidecar
+        proxyType: envoy
+        name: praxis-proxy
+        command: praxis-ai
+        args: ["--config", "/etc/praxis/config.yaml"]
+        imagePullPolicy: IfNotPresent
+        failOpen: false
+        ports:
+          - name: http
+            containerPort: 8081
+        readinessProbe:
+          exec:
+            command: ["wget", "-qO-", "http://127.0.0.1:9901/ready"]
+          periodSeconds: 5
+          timeoutSeconds: 2
+        startupProbe:
+          exec:
+            command: ["wget", "-qO-", "http://127.0.0.1:9901/healthy"]
+          periodSeconds: 1
+          timeoutSeconds: 2
+          failureThreshold: 60
+        volumeMounts:
+          - name: praxis-config
+            mountPath: /etc/praxis
+            readOnly: true
+        volumes:
+          - name: praxis-config
+            configMap:
+              name: praxis
+        configMap:
+          name: praxis
+          data:
+            config.yaml: |
+              listeners:
+                - name: inference
+                  address: "0.0.0.0:8081"
+                  filter_chains: [llmd]
+              filter_chains:
+                - name: llmd
+                  filters:
+                    - filter: ext_proc
+                      target: "http://127.0.0.1:9002"
+                      message_timeout_ms: 1000000
+                      lifecycle_timeout_ms: 300000
+                      status_on_error: 503
+                      processing_mode:
+                        request_header_mode: send
+                        response_header_mode: send
+                        request_body_mode: full_duplex_streamed
+                        response_body_mode: none
+                        request_trailer_mode: skip
+                        response_trailer_mode: skip
+                    - filter: endpoint_selector
+                      source_header: x-gateway-destination-endpoint
+                      required: true
+                      status_on_required_failure: 503
+                      strip_header: true
+              admin:
+                address: "127.0.0.1:9901"
+              insecure_options:
+                allow_private_endpoints: true

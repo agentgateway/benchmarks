@@ -49,6 +49,39 @@ set_defaults() {
   : "${BENCHMARK_SECRET_NAMESPACE:=benchmark-secrets}"
   : "${BENCHMARK_HF_SECRET_NAME:=llm-d-hf-token}"
   : "${BENCHMARK_REPORT_FORMATS:=markdown,png,csv}"
+  : "${BENCHMARK_TREATMENTS:=service agentgateway-standalone agentgateway-gateway}"
+
+  # Validate the entire matrix before any cloud operation. A typo or a missing
+  # custom image must not acquire GPU capacity.
+  local treatment seen=" " baseline="" candidate comparison left right
+  read -r -a CAMPAIGN_TREATMENTS <<<"${BENCHMARK_TREATMENTS}"
+  (( ${#CAMPAIGN_TREATMENTS[@]} >= 2 )) || die "BENCHMARK_TREATMENTS requires at least two treatments"
+  for treatment in "${CAMPAIGN_TREATMENTS[@]}"; do
+    case "${treatment}" in
+      service|agentgateway-standalone|agentgateway-gateway|envoy-standalone) ;;
+      praxis-standalone)
+        [[ "${PRAXIS_IMAGE:-}" =~ ^[^[:space:]@]+@sha256:[0-9a-f]{64}$ ]] || \
+          die "praxis-standalone requires PRAXIS_IMAGE=registry/repository@sha256:digest"
+        ;;
+      *) die "unsupported campaign treatment: ${treatment}" ;;
+    esac
+    [[ "${seen}" != *" ${treatment} "* ]] || die "duplicate campaign treatment: ${treatment}"
+    seen+="${treatment} "
+  done
+  if [[ -z "${BENCHMARK_COMPARISONS:-}" ]]; then
+    baseline="${CAMPAIGN_TREATMENTS[0]}"
+    BENCHMARK_COMPARISONS=""
+    for candidate in "${CAMPAIGN_TREATMENTS[@]:1}"; do
+      BENCHMARK_COMPARISONS+="${BENCHMARK_COMPARISONS:+ }${baseline}:${candidate}"
+    done
+  fi
+  for comparison in ${BENCHMARK_COMPARISONS}; do
+    left="${comparison%%:*}"
+    right="${comparison#*:}"
+    [[ "${comparison}" == *:* && "${left}" != "${right}" && \
+       "${seen}" == *" ${left} "* && "${seen}" == *" ${right} "* ]] || \
+      die "comparison must name two selected treatments: ${comparison}"
+  done
 
   export BENCHMARK_GKE_PROJECT BENCHMARK_GKE_LOCATION BENCHMARK_GKE_CLUSTER
   export BENCHMARK_KUBE_CONTEXT BENCHMARK_GKE_CPU_NODEPOOL
@@ -64,6 +97,7 @@ set_defaults() {
   export BENCHMARK_GPU_RELEASE_POLICY BENCHMARK_REPETITION BENCHMARK_CAMPAIGN_ID
   export BENCHMARK_SECRET_NAMESPACE BENCHMARK_HF_SECRET_NAME
   export BENCHMARK_REPORT_FORMATS BENCHMARK_CLUSTER_PROVIDER=gke
+  export BENCHMARK_TREATMENTS BENCHMARK_COMPARISONS
 
   case "${BENCHMARK_GKE_CLUSTER_LIFECYCLE}" in
     retain|destroy) ;;
@@ -162,7 +196,7 @@ main() {
   ensure_hf_secret
 
   local treatment
-  for treatment in service agentgateway-standalone agentgateway-gateway; do
+  for treatment in "${CAMPAIGN_TREATMENTS[@]}"; do
     # Scale-up itself is billable and must be reversed if the process is
     # interrupted before the benchmark creates its first namespace.
     CAMPAIGN_CLEANUP_REQUIRED=true
@@ -178,7 +212,6 @@ main() {
   results_root="${BENCHMARK_RESULTS_DIR:-${SCRIPT_DIR}/results/${BENCHMARK_SUITE}}"
   campaign_dir="${results_root}/${BENCHMARK_CAMPAIGN_ID}"
   export BENCHMARK_CAMPAIGN_DIR="${campaign_dir}"
-  export BENCHMARK_COMPARISONS="service:agentgateway-standalone service:agentgateway-gateway"
   log "generating reports"
   run_make benchmark-report
   log "campaign evidence: ${campaign_dir}"

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import shutil
 from pathlib import Path
 
@@ -81,6 +82,42 @@ def validate_registered_repetitions(
         )
 
 
+def validate_praxis_comparison(manifest: dict, baseline: str, candidate: str) -> None:
+    """Refuse to publish a Praxis comparison with missing or unequal controls."""
+    if "praxis-standalone" not in (baseline, candidate):
+        return
+    treatments = manifest["treatments"]
+    praxis_runs = treatments["praxis-standalone"]["repetitions"]
+    builds = set()
+    for run in praxis_runs.values():
+        gateway = run.get("gateway", {})
+        image = gateway.get("image", "")
+        source = gateway.get("source_revision", "")
+        if not re.fullmatch(r"[^\s@]+@sha256:[0-9a-f]{64}", image):
+            raise ValueError("Praxis comparison requires an immutable image digest")
+        if not re.fullmatch(r"[0-9a-f]{40}", source):
+            raise ValueError("Praxis comparison requires a source revision")
+        if gateway.get("build_features") != "full,llmd-ext-proc":
+            raise ValueError("Praxis comparison requires full,llmd-ext-proc build evidence")
+        builds.add((image, source))
+    if len(builds) != 1:
+        raise ValueError("Praxis image/source must remain fixed across repetitions")
+    if not all(name.endswith("-standalone") for name in (baseline, candidate)):
+        return
+    controls = set()
+    for treatment in (baseline, candidate):
+        for run in treatments[treatment]["repetitions"].values():
+            digest = run.get("router_chart_digest", "")
+            invariant = run.get("standalone_invariant_sha256", "")
+            if not re.fullmatch(r"sha256:[0-9a-f]{64}", digest):
+                raise ValueError("standalone comparison requires the router chart digest")
+            if not re.fullmatch(r"[0-9a-f]{64}", invariant):
+                raise ValueError("standalone comparison requires the configuration invariant")
+            controls.add((run.get("router_chart_version"), digest, invariant))
+    if len(controls) != 1:
+        raise ValueError("standalone comparison has different charts, EPP policies, resources or workloads")
+
+
 def main() -> None:
     args = parser().parse_args()
     campaign = args.campaign.resolve()
@@ -112,6 +149,7 @@ def main() -> None:
             validate_registered_repetitions(
                 campaign, treatment, registered_treatments[treatment]
             )
+        validate_praxis_comparison(manifest, baseline_name, candidate_name)
         prism_treatments.update((baseline_name, candidate_name))
         baseline = read_treatment(campaign, baseline_name)
         candidate = read_treatment(campaign, candidate_name)

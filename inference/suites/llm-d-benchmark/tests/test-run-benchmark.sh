@@ -70,6 +70,24 @@ BENCHMARK_REFERENCE_PROFILE=smoke-gpu bash -c '
 
 echo "campaign treatment tests passed"
 
+BENCHMARK_TREATMENT=praxis-standalone \
+PRAXIS_IMAGE="example.invalid/praxis@sha256:$(printf '%064d' 1)" \
+BENCHMARK_CAMPAIGN_ID=test-praxis bash -c '
+  source "$1"
+  validate_configuration
+  [[ "$BENCHMARK_GATEWAY_IMPLEMENTATION" == praxis ]]
+  [[ "$BENCHMARK_ROUTER_MODE" == standalone ]]
+  [[ "$GATEWAY_IMAGE" == "$PRAXIS_IMAGE" ]]
+' _ "${RUNNER}"
+if BENCHMARK_TREATMENT=praxis-standalone \
+  PRAXIS_IMAGE=example.invalid/praxis:latest BENCHMARK_CAMPAIGN_ID=test-praxis \
+  bash -c 'source "$1"; validate_configuration' _ "${RUNNER}"; then
+  echo "mutable Praxis image unexpectedly accepted" >&2
+  exit 1
+fi
+
+echo "Praxis treatment validation tests passed"
+
 ENDPOINT_TEST_DIR="$(mktemp -d)"
 mkdir -p "${ENDPOINT_TEST_DIR}/.venv/bin"
 ln -s "$(command -v python3)" "${ENDPOINT_TEST_DIR}/.venv/bin/python"
@@ -87,6 +105,8 @@ LLM_D_BENCHMARK_DIR="${ENDPOINT_TEST_DIR}" bash -c '
 ]}
 JSON
   }
+  [[ "$(resolve_internal_endpoint)" == "http://10.0.0.9:80" ]]
+  BENCHMARK_TREATMENT=praxis-standalone
   [[ "$(resolve_internal_endpoint)" == "http://10.0.0.9:80" ]]
 ' _ "${RUNNER}"
 rm -r -- "${ENDPOINT_TEST_DIR:?}"

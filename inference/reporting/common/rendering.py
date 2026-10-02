@@ -12,10 +12,11 @@ from common.model import TreatmentResults
 
 def display_name(name: str) -> str:
     names = {
-        "service": "k8s service (RR)",
+        "service": "k8s service",
         "agentgateway-standalone": "agentgateway standalone",
         "agentgateway-gateway": "agentgateway on Kubernetes",
         "envoy-standalone": "Envoy standalone",
+        "praxis-standalone": "Praxis AI standalone",
     }
     return names.get(name, name.replace("-", " "))
 
@@ -37,6 +38,19 @@ def agentgateway_mode_note(name: str) -> str | None:
             "[Learn more about Kubernetes inference routing]"
             "(https://agentgateway.dev/docs/kubernetes/latest/llm/inference/"
             "inference-routing/)."
+        ),
+        "praxis-standalone": (
+            "**Praxis mode:** A custom Praxis AI build enables its experimental "
+            "`llmd-ext-proc` feature. Praxis runs beside the same EPP, uses "
+            "localhost gRPC for request scheduling, and forwards to the EPP-selected "
+            "model endpoint. The chart's generic Envoy slot is replaced by the "
+            "Praxis binary and configuration. This is a benchmark adapter, not "
+            "native Praxis Gateway API support. At the pinned source revision, the "
+            "ext_proc filter rejects response-body forwarding to the EPP and "
+            "trailer processing. This adapter sends request headers/body and "
+            "response headers only. Matching EPP configuration does not prove "
+            "equivalent request-lifecycle accounting; verify that separately "
+            "before interpreting GPU or scheduling results."
         ),
     }
     return notes.get(name)
@@ -210,21 +224,31 @@ def write_markdown(
     delta_heading = "Δ% vs k8s" if baseline.name == "service" else f"Δ% vs {b_name}"
     comparison_description = (
         f"Graphs below compare {c_name} routing to a stock Kubernetes Service "
-        f"that round-robins requests across the same {identity['replicas']} "
-        f"{backend} pods (no EPP, no scoring). Tables abbreviate this baseline "
-        "as `k8s service (RR)`, where RR means round-robin."
+        f"across the same {identity['replicas']} {backend} pods (no EPP, no "
+        "scoring). Service balancing occurs at connection level; persistent "
+        "connections do not guarantee round-robin distribution of requests. "
+        "This comparison includes both gateway and scheduler effects and does "
+        "not isolate proxy overhead."
         if baseline.name == "service"
         else f"Graphs below compare {c_name} to {b_name} across the same "
         f"{identity['replicas']} {backend} pods."
     )
 
-    lines = [
-        "# Benchmark Report",
-        "",
+    topology = (
         f"The benchmark runs model {identity['model']} on {gpu_count} × {accelerator} "
         f"GPUs, distributed across {identity['replicas']} {backend} "
         f"model servers ({identity['tensor_parallelism']} GPUs per server with "
-        f"TP={identity['tensor_parallelism']}). Workload is "
+        f"TP={identity['tensor_parallelism']})."
+        if identity.get("accelerator_type") == "gpu" and backend != "sim"
+        else f"The benchmark uses {identity['replicas']} {backend} backend pods "
+        f"on {identity.get('accelerator_type', 'unspecified')} resources. "
+        "Simulator results measure routing and transport behavior, not GPU "
+        "inference throughput or model quality."
+    )
+    lines = [
+        "# Benchmark Report",
+        "",
+        f"{topology} Workload is "
         f"`{identity['workload']}` driven across the configured request-rate ladder.",
         "",
         "> [!NOTE]",
@@ -241,6 +265,15 @@ def write_markdown(
     if mode_note:
         lines.extend([mode_note, ""])
     lines.extend([comparison_description, ""])
+    if baseline.name.endswith("-standalone") and candidate.name.endswith("-standalone"):
+        lines.extend([
+            "Both treatments use the same EPP policy, backend topology, workload, "
+            "and proxy resource allocation. Differences measure the complete "
+            "gateway integration path, including EPP communication and streaming; "
+            "they do not demonstrate that one scheduler is more effective. "
+            "EPP and GPU variability remain part of end-to-end measurements.",
+            "",
+        ])
     if include_images:
         lines.extend(
             [

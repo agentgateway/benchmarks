@@ -10,7 +10,8 @@
 #
 # Required: BENCHMARK_TREATMENT and BENCHMARK_CAMPAIGN_ID. Supported treatments
 # are service, agentgateway-standalone, agentgateway-gateway, and
-# envoy-standalone.
+# envoy-standalone, praxis-standalone. Praxis requires PRAXIS_IMAGE pinned
+# by sha256 and built with full,llmd-ext-proc; see the Praxis suite guide.
 # Optional: BENCHMARK_CLUSTER_PROVIDER (kind or gke; default: kind),
 # BENCHMARK_REPETITION (positive campaign repetition; default: 1),
 # BENCHMARK_ACCELERATOR_TYPE and BENCHMARK_BACKEND_TYPE (default together to
@@ -90,6 +91,9 @@ HELM_DIFF_HELM4_VERSION="${BENCHMARK_HELM_DIFF_HELM4_VERSION:-v3.15.11}"
 
 AGW_VERSION="${AGW_VERSION:-v1.4.1}"
 AGW_IMAGE="${AGW_IMAGE:-cr.agentgateway.dev/agentgateway:${AGW_VERSION}}"
+PRAXIS_IMAGE="${PRAXIS_IMAGE:-}"
+PRAXIS_SOURCE_REVISION="${PRAXIS_SOURCE_REVISION:-f5f51a751d6f25acde96fb840665b24f2696ce46}"
+GATEWAY_IMAGE="${AGW_IMAGE}"
 AGW_CONTROLLER_NAMESPACE="${AGW_CONTROLLER_NAMESPACE:-agentgateway-system}"
 WORKLOAD_FILE_PATH=""
 WORKLOAD=""
@@ -481,6 +485,20 @@ validate_configuration() {
     envoy-standalone)
       BENCHMARK_GATEWAY_IMPLEMENTATION=envoy
       BENCHMARK_ROUTER_MODE=standalone
+      GATEWAY_IMAGE=docker.io/envoyproxy/envoy:distroless-v1.33.2
+      ;;
+    praxis-standalone)
+      BENCHMARK_GATEWAY_IMPLEMENTATION=praxis
+      BENCHMARK_ROUTER_MODE=standalone
+      [[ "${PRAXIS_IMAGE}" =~ ^[^[:space:]@]+@sha256:[0-9a-f]{64}$ ]] || {
+        log "praxis-standalone requires PRAXIS_IMAGE=registry/repository@sha256:digest (full,llmd-ext-proc build)"
+        return 2
+      }
+      [[ "${PRAXIS_SOURCE_REVISION}" =~ ^[0-9a-f]{40}$ ]] || {
+        log "PRAXIS_SOURCE_REVISION must be a full immutable Git revision"
+        return 2
+      }
+      GATEWAY_IMAGE="${PRAXIS_IMAGE}"
       ;;
     "")
       log "BENCHMARK_TREATMENT is required"
@@ -511,7 +529,7 @@ validate_configuration() {
     return 2
   fi
   case "${BENCHMARK_ROUTER_MODE}" in standalone|gateway) ;; *) log "unsupported BENCHMARK_ROUTER_MODE: ${BENCHMARK_ROUTER_MODE}"; return 2 ;; esac
-  case "${BENCHMARK_GATEWAY_IMPLEMENTATION}" in agentgateway|envoy) ;; *) log "unsupported BENCHMARK_GATEWAY_IMPLEMENTATION: ${BENCHMARK_GATEWAY_IMPLEMENTATION}"; return 2 ;; esac
+  case "${BENCHMARK_GATEWAY_IMPLEMENTATION}" in agentgateway|envoy|praxis) ;; *) log "unsupported BENCHMARK_GATEWAY_IMPLEMENTATION: ${BENCHMARK_GATEWAY_IMPLEMENTATION}"; return 2 ;; esac
   case "${BENCHMARK_ROUTING_POLICY}" in
     default|optimized-baseline|cache-only|load-only) ;;
     *) log "unsupported BENCHMARK_ROUTING_POLICY: ${BENCHMARK_ROUTING_POLICY}"; return 2 ;;
@@ -1059,7 +1077,7 @@ render_scenario() {
     --gateway-implementation "${BENCHMARK_GATEWAY_IMPLEMENTATION}"
     --router-mode "${BENCHMARK_ROUTER_MODE}"
     --routing-policy "${BENCHMARK_ROUTING_POLICY}"
-    --gateway-image "${AGW_IMAGE}"
+    --gateway-image "${GATEWAY_IMAGE}"
     --agentgateway-version "${AGW_VERSION}"
     --router-chart-version "${BENCHMARK_ROUTER_CHART_VERSION}"
     --workload "${WORKLOAD}"
@@ -1173,8 +1191,8 @@ def choose(suffix):
 
 if treatment == "service":
     selected = choose("-direct")
-elif treatment in ("envoy-standalone", "agentgateway-standalone"):
-    # Both standalone implementations are deployed behind the router-epp
+elif treatment in ("envoy-standalone", "agentgateway-standalone", "praxis-standalone"):
+    # Standalone implementations are deployed behind the router-epp
     # Service. Selecting that ClusterIP keeps their measured network path
     # identical and avoids the external GKE load balancer.
     selected = choose("-router-epp")
@@ -1206,6 +1224,25 @@ PY
   local status=$?
   rm -f -- "${resources}"
   return "${status}"
+}
+
+verify_praxis_runtime() {
+  [[ "${BENCHMARK_TREATMENT}" == "praxis-standalone" ]] || return 0
+  local pods pod
+  pods="$(mktemp "${TMPDIR:-/tmp}/praxis-runtime.XXXXXX.json")"
+  kubectl get pods --namespace "${SCENARIO_NAME}" -o json > "${pods}"
+  pod="$("${LLM_D_BENCHMARK_DIR}/.venv/bin/python" \
+    "${SUITE_DIR}/scripts/verify-praxis-runtime.py" \
+    --input "${pods}" --image "${PRAXIS_IMAGE}" \
+    --source-revision "${PRAXIS_SOURCE_REVISION}" \
+    --output "${SPEC_DIR}/praxis-runtime-inventory.json")" || {
+      rm -f "${pods}"
+      return 1
+    }
+  rm -f "${pods}"
+  kubectl exec --namespace "${SCENARIO_NAME}" "${pod}" --container praxis-proxy -- \
+    praxis-ai --validate --config /etc/praxis/config.yaml
+  log "Praxis runtime preflight: immutable image and feature-dependent configuration verified"
 }
 
 verify_reference_runtime() {
@@ -2265,9 +2302,15 @@ for component in stack:
 
 if treatment != "service":
     proxy = scenario.get("router", {}).get("proxy", {})
-    proxy_image = proxy.get("presets", {}).get(gateway_implementation, {}).get(
+    proxy_image = proxy.get("image") or proxy.get("presets", {}).get(gateway_implementation, {}).get(
         "image", ""
     )
+    # The upstream chart identifies its preset slot as Envoy even though the
+    # actual container is Praxis. Do not publish that scaffolding as a runtime.
+    if gateway_implementation == "praxis":
+        stack[:] = [component for component in stack if "envoy" not in str(
+            component.get("standardized", {}).get("tool", "")
+        ).lower()]
     has_gateway_component = any(
         "gateway"
         in " ".join(
@@ -2279,7 +2322,7 @@ if treatment != "service":
         ).lower()
         for component in stack
     )
-    if not has_gateway_component:
+    if not has_gateway_component or gateway_implementation == "praxis":
         native_config = copy.deepcopy(proxy)
         cfg_id = hashlib.sha256(
             yaml.safe_dump(native_config, sort_keys=True).encode("utf-8")
@@ -2332,6 +2375,9 @@ write_prism_supporting_artifacts() {
   done
 
   cp "${SPEC_DIR}/scenario.yaml" "${artifact_dir}/benchmark-scenario.yaml"
+  if [[ -f "${SPEC_DIR}/praxis-runtime-inventory.json" ]]; then
+    cp "${SPEC_DIR}/praxis-runtime-inventory.json" "${artifact_dir}/praxis-runtime-inventory.json"
+  fi
   cp "${source_dir}/config.yaml" "${artifact_dir}/config.yaml"
   cp "${source_dir}/run_metadata.yaml" "${artifact_dir}/run_metadata.yaml"
   cp "${source_dir}/stdout.log" "${artifact_dir}/inference-perf-stdout.log"
@@ -2443,9 +2489,9 @@ write_campaign_manifest() {
     "${BENCHMARK_ROUTER_CHART_VERSION}" "${ROUTER_CHART_DIGEST}" \
     "${STANDALONE_INVARIANT_SHA256}" "${RUNTIME_METRICS_ENABLED}" \
     "${METRICS_INTERVAL}" "${GKE_MONITORING_MODE}" "${FAST_COLLECT}" \
-    "${GPU_RELEASE_POLICY}" "${GKE_GPU_NODEPOOL}" "${AGW_IMAGE}" \
+    "${GPU_RELEASE_POLICY}" "${GKE_GPU_NODEPOOL}" "${GATEWAY_IMAGE}" \
     "${LLM_D_BENCHMARK_REF}" "${BENCHMARK_REFERENCE_PROFILE}" \
-    "${BENCHMARK_ENDPOINT_PATH}" "${AGW_VERSION}" <<'PY'
+    "${BENCHMARK_ENDPOINT_PATH}" "${AGW_VERSION}" "${PRAXIS_SOURCE_REVISION}" <<'PY'
 import os
 import sys
 from pathlib import Path
@@ -2496,6 +2542,7 @@ import yaml
     reference_profile,
     endpoint_path,
     agentgateway_version,
+    praxis_source_revision,
 ) = sys.argv[1:]
 
 path = Path(metadata_path)
@@ -2580,6 +2627,9 @@ treatment_entry.setdefault("repetitions", {})[str(repetition)] = {
             agentgateway_version if treatment.startswith("agentgateway-")
             else "not-applicable"
         ),
+        "source_revision": praxis_source_revision if treatment == "praxis-standalone" else "not-recorded",
+        "build_features": "full,llmd-ext-proc" if treatment == "praxis-standalone" else "not-applicable",
+        "chart_adapter": "envoy-slot-with-praxis-overrides" if treatment == "praxis-standalone" else "native",
     },
     "storage": {
         "model": {
@@ -2665,7 +2715,7 @@ main() {
   render_bundled_upstream_workload
   resolve_campaign_input_hashes
   resolve_router_chart_digest
-  if [[ "${BENCHMARK_CLUSTER_PROVIDER}" == "kind" ]]; then
+  if [[ "${BENCHMARK_CLUSTER_PROVIDER}" == "kind" && "${BENCHMARK_TREATMENT}" == agentgateway-* ]]; then
     command -v skopeo >/dev/null || {
       log "skopeo is required for the kind provider"
       return 1
@@ -2694,6 +2744,7 @@ PY
   ensure_agentgateway_gateway_controller
   configure_agentgateway_gateway_image
   configure_gke_monitoring
+  verify_praxis_runtime
   log "smoketest: ${TREATMENT_ID} (${SCENARIO_NAME})"
   llmdbench --spec "${SPEC_DIR}/spec.yaml" --workspace "$(workspace_dir)" \
     smoketest -p "${SCENARIO_NAME}"
