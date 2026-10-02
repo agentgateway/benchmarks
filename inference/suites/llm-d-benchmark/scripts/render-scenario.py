@@ -141,6 +141,7 @@ def parser() -> argparse.ArgumentParser:
             "agentgateway-standalone",
             "agentgateway-gateway",
             "envoy-standalone",
+            "praxis-standalone",
         ),
         required=True,
     )
@@ -279,6 +280,16 @@ def main() -> None:
         method["gateway"] = {"className": "epponly"}
         proxy = router.setdefault("proxy", {})
         proxy["proxyType"] = args.gateway_implementation
+        if args.gateway_implementation == "praxis":
+            if not re.fullmatch(r"[^\s@]+@sha256:[0-9a-f]{64}", args.gateway_image):
+                raise ValueError("Praxis requires an immutable --gateway-image registry/repository@sha256:digest")
+            # v0.9.0 only recognizes envoy/agentgateway preset names. Use the
+            # generic Envoy container slot with every implementation field
+            # explicitly replaced by the Praxis overlay, not an Envoy binary.
+            proxy["proxyType"] = "envoy"
+            proxy["image"] = args.gateway_image
+            proxy["presets"] = {"envoy": None}
+            router.setdefault("epp", {}).setdefault("flags", {})["secure-serving"] = False
         if args.gateway_implementation == "agentgateway":
             proxy["args"] = ["-f", "/config/config.yaml"]
             proxy["httpTargetPort"] = "http"

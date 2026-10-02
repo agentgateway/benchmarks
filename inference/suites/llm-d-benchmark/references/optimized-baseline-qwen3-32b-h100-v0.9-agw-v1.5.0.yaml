@@ -1,0 +1,36 @@
+# Agentgateway v1.5.0 comparison; preserves historical vLLM v0.23.0,
+# model-server resources and EPP settings. Historical profiles stay unchanged.
+scenario:
+  - name: optimized-baseline-qwen3-32b-h100-v0.9-agw-v1.5.0
+    images:
+      vllm:
+        repository: docker.io/vllm/vllm-openai
+        tag: v0.23.0
+    vllmCommon:
+      shmMemory: 20Gi
+    decode:
+      replicas: 8
+      parallelism:
+        tensor: 2
+        data: 1
+        dataLocal: 1
+        workers: 1
+      resources:
+        limits: {memory: 128Gi, cpu: "16"}
+        requests: {memory: 96Gi, cpu: "8"}
+      vllm:
+        # Match the report-era optimized-baseline command surface. In
+        # particular, avoid adding the wrapper's newer block-size,
+        # max-model-len, and gpu-memory-utilization flags.
+        customCommand: |
+          vllm serve /model-cache/$MODEL_PATH \
+          --host 0.0.0.0 \
+          --served-model-name $MODEL_NAME \
+          --port $VLLM_METRICS_PORT \
+          --disable-access-log-for-endpoints=/health,/metrics,/v1/models \
+          --tensor-parallel-size=$TP_SIZE
+    router:
+      epp:
+        resources:
+          limits: {memory: 16Gi}
+          requests: {memory: 8Gi, cpu: "4"}

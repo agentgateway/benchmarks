@@ -29,11 +29,17 @@ def normalize(document: dict[str, Any]) -> dict[str, Any]:
     # Proxy resources and deployment shape are comparison invariants. Image,
     # command, ports and implementation-specific presets are intentionally
     # omitted because they are intrinsic dataplane differences.
+    resources = {"requests": {"cpu": "4", "memory": "8Gi"}, "limits": {"memory": "16Gi"}}
+    for kind, values in proxy.get("resources", {}).items():
+        resources.setdefault(kind, {}).update(values)
     router["proxy"] = {
-        key: copy.deepcopy(proxy[key])
-        for key in ("enabled", "deploymentMode", "resources")
-        if key in proxy
+        "enabled": proxy.get("enabled", True),
+        "mode": proxy.get("mode", "sidecar"),
+        "resources": resources,
     }
+    # This version only controls the absent Gateway API controller. The
+    # standalone proxy image belongs to the intentionally omitted proxy data.
+    scenario.get("chartVersions", {}).pop("agentgateway", None)
 
     # agentgateway's standalone ext-proc connection is intentionally insecure
     # over localhost. Envoy's chart path may omit this implementation detail.

@@ -140,4 +140,41 @@ fi
 grep -q 'BENCHMARK_GKE_CLUSTER_LIFECYCLE must be retain or destroy' \
   "${TEMP_DIR}/invalid-lifecycle.log"
 
+: >"${TEST_COMMAND_LOG}"
+PRAXIS_IMAGE="example.invalid/praxis@sha256:$(printf '%064d' 1)" \
+BENCHMARK_TREATMENTS='agentgateway-standalone praxis-standalone' \
+BENCHMARK_CAMPAIGN_ID=test-praxis-comparison \
+  "${CAMPAIGN_SCRIPT}" >"${TEMP_DIR}/praxis.log"
+[[ "$(grep -c '^target=benchmark ' "${TEST_COMMAND_LOG}")" == 2 ]]
+grep -q '^target=benchmark treatment=praxis-standalone ' "${TEST_COMMAND_LOG}"
+grep -q '^target=benchmark-report .*comparisons=agentgateway-standalone:praxis-standalone$' "${TEST_COMMAND_LOG}"
+
+for treatments in 'service praxis-standalone' 'service typo' 'service service'; do
+  : >"${TEST_COMMAND_LOG}"
+  if PRAXIS_IMAGE=example.invalid/praxis:latest \
+    BENCHMARK_TREATMENTS="${treatments}" BENCHMARK_CAMPAIGN_ID=test-invalid-matrix \
+    "${CAMPAIGN_SCRIPT}" >"${TEMP_DIR}/invalid-matrix.log" 2>&1; then
+    echo "invalid campaign matrix unexpectedly accepted: ${treatments}" >&2
+    exit 1
+  fi
+  [[ ! -s "${TEST_COMMAND_LOG}" ]] || {
+    echo "invalid matrix reached cloud orchestration" >&2; exit 1;
+  }
+done
+
 echo "GKE campaign orchestration tests passed"
+
+: >"${TEST_COMMAND_LOG}"
+BENCHMARK_HF_TOKEN_REQUIRED=false TEST_SECRET_EXISTS=false \
+PRAXIS_IMAGE="example.invalid/praxis@sha256:$(printf '%064d' 1)" \
+BENCHMARK_TREATMENTS='service agentgateway-standalone praxis-standalone' \
+BENCHMARK_COMPARISONS='service:agentgateway-standalone agentgateway-standalone:praxis-standalone' \
+BENCHMARK_REPETITION=1 BENCHMARK_CAMPAIGN_ID=test-three-treatments \
+  "${CAMPAIGN_SCRIPT}" >"${TEMP_DIR}/three-treatments.log"
+[[ "$(grep -c '^target=benchmark ' "${TEST_COMMAND_LOG}")" == 3 ]]
+grep -q '^target=benchmark-report .*comparisons=service:agentgateway-standalone agentgateway-standalone:praxis-standalone$' "${TEST_COMMAND_LOG}"
+if grep -q '^kubectl ' "${TEST_COMMAND_LOG}"; then
+  echo 'anonymous campaign unexpectedly accessed secrets' >&2
+  exit 1
+fi
+echo "one-round paired reports and anonymous model tests passed"

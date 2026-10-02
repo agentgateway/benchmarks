@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import importlib.util
+import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -106,6 +108,77 @@ class RenderScenarioTest(unittest.TestCase):
         self.assertEqual(method["gateway"]["className"], "agentgateway")
         self.assertNotIn("proxy", method["router"])
         self.assertTrue(method["router"]["inferencePool"]["create"])
+
+    def praxis(self, image: str | None = None) -> dict:
+        return self.render(
+            "--treatment", "praxis-standalone",
+            "--gateway-implementation", "praxis",
+            "--gateway-image", image or "example.invalid/praxis@sha256:" + "a" * 64,
+            "--overlay", str(BENCHMARKING / "scenarios/gateways/praxis/standalone.yaml"),
+            "--overlay", str(BENCHMARKING / "scenarios/routing/optimized-baseline.yaml"),
+            "--routing-policy", "optimized-baseline",
+        )
+
+    def test_praxis_requires_immutable_image_and_supported_processing_modes(self) -> None:
+        with self.assertRaises(subprocess.CalledProcessError):
+            self.praxis("example.invalid/praxis:latest")
+        router = self.praxis()["modelservice"]["router"]
+        proxy = router["proxy"]
+        self.assertEqual(proxy["command"], "praxis-ai")
+        self.assertEqual(proxy["presets"], {"envoy": None})
+        self.assertFalse(router["epp"]["flags"]["secure-serving"])
+        config = yaml.safe_load(proxy["configMap"]["data"]["config.yaml"])
+        self.assertEqual(config["admin"]["address"], "127.0.0.1:9901")
+        self.assertNotIn("allow_public_admin", config["insecure_options"])
+        filters = config["filter_chains"][0]["filters"]
+        self.assertEqual(filters[0]["processing_mode"]["response_body_mode"], "none")
+        self.assertEqual(filters[0]["processing_mode"]["request_trailer_mode"], "skip")
+        self.assertEqual(filters[0]["processing_mode"]["response_trailer_mode"], "skip")
+        self.assertEqual(filters[0]["processing_mode"]["response_header_mode"], "send")
+        self.assertTrue(filters[1]["required"])
+        self.assertTrue(filters[1]["strip_header"])
+
+    @unittest.skipUnless(os.environ.get("BENCHMARK_ROUTER_CHART_DIR") and shutil.which("helm"),
+                         "set BENCHMARK_ROUTER_CHART_DIR to the unpacked v0.9.0 chart for Helm validation")
+    def test_real_chart_renders_praxis_and_identical_epp(self) -> None:
+        praxis = self.praxis()
+        agentgateway = self.render(
+            "--treatment", "agentgateway-standalone",
+            "--gateway-implementation", "agentgateway",
+            "--gateway-image", "example.invalid/agentgateway:test",
+            "--overlay", str(BENCHMARKING / "scenarios/gateways/agentgateway/standalone.yaml"),
+            "--overlay", str(BENCHMARKING / "scenarios/routing/optimized-baseline.yaml"),
+            "--routing-policy", "optimized-baseline",
+        )
+        manifests = []
+        for scenario in (praxis, agentgateway):
+            router = scenario["modelservice"]["router"]
+            router["modelServers"] = {"matchLabels": {"app": "model"}}
+            router["inferencePool"]["targetPorts"] = [8000]
+            with tempfile.TemporaryDirectory() as directory:
+                values = Path(directory) / "values.yaml"
+                values.write_text(yaml.safe_dump({"router": router}))
+                rendered = subprocess.run([
+                    "helm", "template", "test", os.environ["BENCHMARK_ROUTER_CHART_DIR"],
+                    "--values", str(values),
+                ], check=True, capture_output=True, text=True)
+                manifests.append(list(yaml.safe_load_all(rendered.stdout)))
+        pods = [next(d for d in docs if d["kind"] in ("Deployment", "StatefulSet"))
+                ["spec"]["template"]["spec"] for docs in manifests]
+        self.assertEqual([c["name"] for c in pods[0]["containers"]], ["praxis-proxy", "epp"])
+        proxy = pods[0]["containers"][0]
+        self.assertEqual(proxy["image"], "example.invalid/praxis@sha256:" + "a" * 64)
+        self.assertEqual(proxy["command"], ["praxis-ai"])
+        self.assertEqual(proxy["args"], ["--config", "/etc/praxis/config.yaml"])
+        self.assertEqual(proxy["resources"], pods[1]["containers"][0]["resources"])
+        self.assertEqual(pods[0]["containers"][1], pods[1]["containers"][1])
+        epp_configs = [next(d for d in docs if d["kind"] == "ConfigMap" and
+                           d["metadata"]["name"] == "test-epp")["data"] for docs in manifests]
+        self.assertEqual(epp_configs[0], epp_configs[1])
+        praxis_config = next(d for d in manifests[0] if d["kind"] == "ConfigMap" and
+                             d["metadata"]["name"] == "praxis")
+        self.assertEqual(set(praxis_config["data"]), {"config.yaml"})
+        self.assertFalse(any(v.get("configMap", {}).get("name") == "envoy" for v in pods[0]["volumes"]))
 
     def test_model_and_workload_storage_are_independent(self) -> None:
         scenario = self.render(

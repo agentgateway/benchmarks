@@ -176,13 +176,14 @@ class GenerateReportTest(unittest.TestCase):
             self.assertIn("agentgateway standalone", markdown)
             self.assertNotIn("Agentgateway", markdown)
             self.assertIn("<details>", markdown)
-            self.assertIn("| Rate | k8s service (RR) Output", markdown)
+            self.assertIn("| Rate | k8s service Output", markdown)
             self.assertIn(
-                "a stock Kubernetes Service that round-robins requests",
+                "a stock Kubernetes Service across the same",
                 markdown,
             )
             self.assertIn("(no EPP, no scoring)", markdown)
-            self.assertIn("where RR means round-robin", markdown)
+            self.assertIn("do not guarantee round-robin distribution of requests", markdown)
+            self.assertIn("does not isolate proxy overhead", markdown)
             self.assertIn("**agentgateway mode:**", markdown)
             self.assertIn("standalone request scheduler mode", markdown)
             self.assertIn(
@@ -315,6 +316,66 @@ class GenerateReportTest(unittest.TestCase):
                 "| 10 | 1,000 | 0 | 0.2 | n/a",
                 (report_dir / "README.md").read_text(encoding="utf-8"),
             )
+
+
+class PraxisComparisonTest(unittest.TestCase):
+    def create_praxis_campaign(self, root: Path) -> Path:
+        campaign = GenerateReportTest.create_campaign(self, root)
+        (campaign / "runs/service").rename(campaign / "runs/praxis-standalone")
+        manifest_path = campaign / "campaign-manifest.yaml"
+        manifest = yaml.safe_load(manifest_path.read_text())
+        manifest["identity"].update(accelerator_type="sim", backend_type="inference-sim")
+        treatments = manifest["treatments"]
+        treatments["praxis-standalone"] = treatments.pop("service")
+        for entry in treatments.values():
+            entry["repetitions"]["1"].update({
+                "router_chart_version": "v0.9.0",
+                "router_chart_digest": "sha256:" + "a" * 64,
+                "standalone_invariant_sha256": "b" * 64,
+            })
+        treatments["praxis-standalone"]["repetitions"]["1"]["gateway"] = {
+            "image": "example.invalid/praxis@sha256:" + "c" * 64,
+            "source_revision": "d" * 40,
+            "build_features": "full,llmd-ext-proc",
+        }
+        manifest_path.write_text(yaml.safe_dump(manifest))
+        return campaign
+
+    def test_praxis_report_describes_gateway_path_and_simulator_scope(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            campaign = self.create_praxis_campaign(Path(directory))
+            subprocess.run([
+                sys.executable, str(GENERATOR), "--campaign", str(campaign),
+                "--comparison", "agentgateway-standalone:praxis-standalone",
+                "--formats", "markdown,csv",
+            ], check=True, capture_output=True, text=True)
+            markdown = (campaign / "generated/agentgateway-standalone-vs-praxis-standalone/README.md").read_text()
+            self.assertIn("Praxis AI standalone", markdown)
+            self.assertIn("experimental", markdown)
+            self.assertIn("not GPU inference throughput", markdown)
+            self.assertIn("do not demonstrate that one scheduler is more effective", markdown)
+            self.assertNotIn("16 × H100 GPUs", markdown)
+
+    def test_praxis_report_rejects_incomplete_or_different_controls(self) -> None:
+        for field, value in (
+            ("standalone_invariant_sha256", "e" * 64),
+            ("standalone_invariant_sha256", ""),
+            ("router_chart_digest", "sha256:" + "e" * 64),
+            ("gateway", {"image": "praxis:latest"}),
+        ):
+            with self.subTest(field=field, value=value), tempfile.TemporaryDirectory() as directory:
+                campaign = self.create_praxis_campaign(Path(directory))
+                path = campaign / "campaign-manifest.yaml"
+                manifest = yaml.safe_load(path.read_text())
+                manifest["treatments"]["praxis-standalone"]["repetitions"]["1"][field] = value
+                path.write_text(yaml.safe_dump(manifest))
+                result = subprocess.run([
+                    sys.executable, str(GENERATOR), "--campaign", str(campaign),
+                    "--comparison", "agentgateway-standalone:praxis-standalone",
+                    "--formats", "markdown,csv",
+                ], capture_output=True, text=True)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertFalse((campaign / "generated/agentgateway-standalone-vs-praxis-standalone/README.md").exists())
 
 
 if __name__ == "__main__":

@@ -70,6 +70,24 @@ BENCHMARK_REFERENCE_PROFILE=smoke-gpu bash -c '
 
 echo "campaign treatment tests passed"
 
+BENCHMARK_TREATMENT=praxis-standalone \
+PRAXIS_IMAGE="example.invalid/praxis@sha256:$(printf '%064d' 1)" \
+BENCHMARK_CAMPAIGN_ID=test-praxis bash -c '
+  source "$1"
+  validate_configuration
+  [[ "$BENCHMARK_GATEWAY_IMPLEMENTATION" == praxis ]]
+  [[ "$BENCHMARK_ROUTER_MODE" == standalone ]]
+  [[ "$GATEWAY_IMAGE" == "$PRAXIS_IMAGE" ]]
+' _ "${RUNNER}"
+if BENCHMARK_TREATMENT=praxis-standalone \
+  PRAXIS_IMAGE=example.invalid/praxis:latest BENCHMARK_CAMPAIGN_ID=test-praxis \
+  bash -c 'source "$1"; validate_configuration' _ "${RUNNER}"; then
+  echo "mutable Praxis image unexpectedly accepted" >&2
+  exit 1
+fi
+
+echo "Praxis treatment validation tests passed"
+
 ENDPOINT_TEST_DIR="$(mktemp -d)"
 mkdir -p "${ENDPOINT_TEST_DIR}/.venv/bin"
 ln -s "$(command -v python3)" "${ENDPOINT_TEST_DIR}/.venv/bin/python"
@@ -87,6 +105,8 @@ LLM_D_BENCHMARK_DIR="${ENDPOINT_TEST_DIR}" bash -c '
 ]}
 JSON
   }
+  [[ "$(resolve_internal_endpoint)" == "http://10.0.0.9:80" ]]
+  BENCHMARK_TREATMENT=praxis-standalone
   [[ "$(resolve_internal_endpoint)" == "http://10.0.0.9:80" ]]
 ' _ "${RUNNER}"
 rm -r -- "${ENDPOINT_TEST_DIR:?}"
@@ -432,3 +452,22 @@ grep -Fxq '  base_seed: 42' \
   "${SCRIPT_DIR}/../workloads/deterministic-optimized-baseline.yaml.in"
 
 echo "workload rendering tests passed"
+
+# Current-release comparisons must not weaken the historical version guard.
+for profile in optimized-baseline-qwen3-32b-h100-v0.9 optimized-baseline-qwen3-32b-h100-v0.9-agw-v1.5.0; do
+  for version in v1.4.1 v1.5.0; do
+    expected=v1.4.1
+    [[ "${profile}" != *-agw-v1.5.0 ]] || expected=v1.5.0
+    if BENCHMARK_TREATMENT=agentgateway-standalone \
+      BENCHMARK_CAMPAIGN_ID=profile-test BENCHMARK_ACCELERATOR_TYPE=gpu \
+      BENCHMARK_BACKEND_TYPE=vllm BENCHMARK_SCENARIO=optimized-baseline \
+      BENCHMARK_ROUTING_POLICY=optimized-baseline BENCHMARK_REFERENCE_PROFILE="${profile}" \
+      AGW_VERSION="${version}" \
+      bash -c 'source "$1"; validate_configuration' _ "${RUNNER}"; then
+      [[ "${version}" == "${expected}" ]] || { echo 'wrong release accepted' >&2; exit 1; }
+    else
+      [[ "${version}" != "${expected}" ]] || { echo 'matching release rejected' >&2; exit 1; }
+    fi
+  done
+done
+echo "reference release guard tests passed"
