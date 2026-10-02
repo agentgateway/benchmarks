@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 .venv/
 ai-gateway/mock/mock-server
+!ai-gateway/results/
+ai-gateway/results/*
+!ai-gateway/results/2026-10-01-initial/
