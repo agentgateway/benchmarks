@@ -3,11 +3,14 @@
 Community benchmarks for [agentgateway](https://github.com/agentgateway/agentgateway).
 
 This repo holds the tooling and published results for measuring how agentgateway
-performs as an inference gateway - both as EPP's standalone sidecar and as a
-Gateway API data plane - compared to routing traffic through a plain Kubernetes
-Service with no gateway at all.
+performs as an AI proxy and an inference gateway. CPU-only AI proxy tests use a
+deterministic backend; inference tests compare EPP integration against a plain
+Kubernetes Service. These workloads answer different questions.
 
 ## Layout
+
+- [`ai-gateway/`](ai-gateway/README.md) - native CPU-only protocol qualification
+  and Fortio proxy measurements for agentgateway, Praxis AI, and a direct backend.
 
 - [`inference/`](inference/README.md) - the benchmark runner itself: campaign-based
   execution comparing `service`, `agentgateway-standalone`, and

@@ -1,0 +1,71 @@
+runtime:
+  threads: 2
+listeners:
+- name: openai
+  address: "0.0.0.0:8080"
+  filter_chains: [openai]
+- name: anthropic
+  address: "0.0.0.0:8082"
+  filter_chains: [anthropic]
+- name: translation
+  address: "0.0.0.0:8084"
+  filter_chains: [translation]
+filter_chains:
+- name: openai
+  filters:
+  - filter: token_count
+    provider: openai
+  - filter: router
+    routes:
+    - path_prefix: "/"
+      cluster: mock
+  - filter: load_balancer
+    clusters:
+    - name: mock
+      endpoints: ["mock:8081"]
+- name: anthropic
+  filters:
+  - filter: anthropic_messages_format
+    on_invalid: continue
+  - filter: anthropic_messages_protocol
+    default_version: "2023-06-01"
+  - filter: token_count
+    provider: anthropic
+  - filter: router
+    routes:
+    - path_prefix: "/"
+      cluster: mock
+  - filter: load_balancer
+    clusters:
+    - name: mock
+      endpoints: ["mock:8081"]
+- name: translation
+  filters:
+  - filter: anthropic_messages_format
+    on_invalid: continue
+  - filter: anthropic_messages_to_chat_completions
+    max_body_bytes: 1048576
+  - filter: anthropic_messages_to_chat_completions_stream
+    max_partial_event_bytes: 10485760
+    max_tool_blocks: 10000
+    response_conditions:
+    - when:
+        headers:
+          content-type: "text/event-stream"
+  - filter: path_rewrite
+    replace:
+      pattern: "^/v1/messages$"
+      replacement: "/v1/chat/completions"
+  - filter: token_count
+    provider: openai
+  - filter: router
+    routes:
+    - path_prefix: "/"
+      cluster: mock
+  - filter: load_balancer
+    clusters:
+    - name: mock
+      endpoints: ["mock:8081"]
+insecure_options:
+  allow_private_endpoints: true
+  allow_private_upstreams: true
