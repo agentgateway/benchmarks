@@ -2,8 +2,8 @@
 
 This harness uses a deterministic Go backend, Fortio 1.75.1, agentgateway v1.5.0
 and Praxis AI 0.5.0, with container images pinned in `compose.yaml`. It measures
-synthetic proxy overhead; it performs **no model inference**. No comparative
-performance result has been produced yet.
+synthetic proxy overhead; it performs **no model inference**. The [initial single-round report](results/2026-10-01-initial/README.md) includes
+all 54 trials and the complete raw evidence archive.
 
 The workload design follows the public
 [agentgateway/LiteLLM proxy benchmark](https://github.com/linsun/litellm-agw-perf)

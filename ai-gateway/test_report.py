@@ -14,6 +14,7 @@ class ReportTest(unittest.TestCase):
                 rows.append(dict(case='openai',size=1024,qps=qps,gateway=gateway,
                                  successful_qps=1000/(i+1),p99_ms=1+i,errors=i))
         manifest={'mode':'preliminary-performance','started_utc':'2026-10-02T00:00:00Z',
+                  'host':{'docker_arch':'amd64','docker_cpus':16,'docker_memory':64*2**30,'platform':'test-linux'},
                   'trials':[{} for _ in rows], 'parameters':{'repetitions':1,'connections':32,'warmup':5,'duration':30}}
         for name,value in [('manifest.json',manifest),('campaign-status.json',{'status':'complete'}),('summary.json',rows)]:
             (path/name).write_text(json.dumps(value))
