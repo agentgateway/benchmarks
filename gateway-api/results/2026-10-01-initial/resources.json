@@ -1,0 +1,296 @@
+{
+  "collector_error_rows": 14,
+  "intervals": {
+    "agentgateway/agentgateway:attached-routes": {
+      "outcome": "completed",
+      "namespaces": {
+        "praxis": {
+          "samples": 4,
+          "max_containers": 2,
+          "max_working_set_mib": 90.20703125,
+          "max_cpu_cores": 0.7002313849999999
+        },
+        "agentgateway-system": {
+          "samples": 4,
+          "max_containers": 2,
+          "max_working_set_mib": 126.0390625,
+          "max_cpu_cores": 0.32706421500000005
+        },
+        "praxis-system": {
+          "samples": 4,
+          "max_containers": 2,
+          "max_working_set_mib": 8.71875,
+          "max_cpu_cores": 0.062560854
+        },
+        "agentgateway": {
+          "samples": 4,
+          "max_containers": 1,
+          "max_working_set_mib": 43.4375,
+          "max_cpu_cores": 0.011392154
+        }
+      }
+    },
+    "praxis/praxis:attached-routes": {
+      "outcome": "completed",
+      "namespaces": {
+        "agentgateway": {
+          "samples": 4,
+          "max_containers": 1,
+          "max_working_set_mib": 30.85546875,
+          "max_cpu_cores": 0.002641275
+        },
+        "praxis-system": {
+          "samples": 4,
+          "max_containers": 2,
+          "max_working_set_mib": 16.18359375,
+          "max_cpu_cores": 0.48385823
+        },
+        "agentgateway-system": {
+          "samples": 4,
+          "max_containers": 2,
+          "max_working_set_mib": 134.1640625,
+          "max_cpu_cores": 0.48513265299999997
+        },
+        "praxis": {
+          "samples": 4,
+          "max_containers": 12,
+          "max_working_set_mib": 175.9609375,
+          "max_cpu_cores": 0.013143815
+        }
+      }
+    },
+    "agentgateway/agentgateway:probe": {
+      "outcome": "completed",
+      "namespaces": {
+        "praxis": {
+          "samples": 6,
+          "max_containers": 10,
+          "max_working_set_mib": 188.69140625,
+          "max_cpu_cores": 0.010398669000000001
+        },
+        "praxis-system": {
+          "samples": 6,
+          "max_containers": 2,
+          "max_working_set_mib": 16.19140625,
+          "max_cpu_cores": 0.48385823
+        },
+        "agentgateway-system": {
+          "samples": 6,
+          "max_containers": 2,
+          "max_working_set_mib": 141.98046875,
+          "max_cpu_cores": 0.30066347299999996
+        },
+        "agentgateway": {
+          "samples": 6,
+          "max_containers": 1,
+          "max_working_set_mib": 30.87890625,
+          "max_cpu_cores": 0.029123768
+        }
+      }
+    },
+    "praxis/praxis:probe": {
+      "outcome": "failed",
+      "namespaces": {
+        "agentgateway-system": {
+          "samples": 1,
+          "max_containers": 2,
+          "max_working_set_mib": 136.9296875,
+          "max_cpu_cores": 0.302717832
+        },
+        "agentgateway": {
+          "samples": 1,
+          "max_containers": 1,
+          "max_working_set_mib": 30.8359375,
+          "max_cpu_cores": 0.019528614
+        },
+        "praxis-system": {
+          "samples": 1,
+          "max_containers": 2,
+          "max_working_set_mib": 6.23828125,
+          "max_cpu_cores": 0.163786392
+        },
+        "praxis": {
+          "samples": 1,
+          "max_containers": 2,
+          "max_working_set_mib": 17.29296875,
+          "max_cpu_cores": 0.002123601
+        }
+      }
+    },
+    "agentgateway/agentgateway:routechange": {
+      "outcome": "completed",
+      "namespaces": {
+        "praxis": {
+          "samples": 43,
+          "max_containers": 3,
+          "max_working_set_mib": 26.41015625,
+          "max_cpu_cores": 0.010986273999999999
+        },
+        "praxis-system": {
+          "samples": 43,
+          "max_containers": 2,
+          "max_working_set_mib": 8.5703125,
+          "max_cpu_cores": 0.163797629
+        },
+        "agentgateway-system": {
+          "samples": 43,
+          "max_containers": 2,
+          "max_working_set_mib": 146.2109375,
+          "max_cpu_cores": 0.36443559400000003
+        },
+        "agentgateway": {
+          "samples": 43,
+          "max_containers": 1,
+          "max_working_set_mib": 30.8359375,
+          "max_cpu_cores": 0.330051702
+        }
+      }
+    },
+    "praxis/praxis:routechange": {
+      "outcome": "completed",
+      "namespaces": {
+        "praxis": {
+          "samples": 42,
+          "max_containers": 15,
+          "max_working_set_mib": 152.296875,
+          "max_cpu_cores": 0.376067058
+        },
+        "agentgateway": {
+          "samples": 42,
+          "max_containers": 1,
+          "max_working_set_mib": 26.02734375,
+          "max_cpu_cores": 0.28785659
+        },
+        "agentgateway-system": {
+          "samples": 42,
+          "max_containers": 2,
+          "max_working_set_mib": 120.3203125,
+          "max_cpu_cores": 0.032602823
+        },
+        "praxis-system": {
+          "samples": 42,
+          "max_containers": 2,
+          "max_working_set_mib": 7.890625,
+          "max_cpu_cores": 0.051420878
+        }
+      }
+    },
+    "agentgateway/agentgateway:scale-10x100": {
+      "outcome": "duration_complete",
+      "namespaces": {
+        "praxis-system": {
+          "samples": 120,
+          "max_containers": 2,
+          "max_working_set_mib": 18.07421875,
+          "max_cpu_cores": 0.247893671
+        },
+        "praxis": {
+          "samples": 120,
+          "max_containers": 12,
+          "max_working_set_mib": 135.79296875,
+          "max_cpu_cores": 0.344730096
+        },
+        "agentgateway-system": {
+          "samples": 120,
+          "max_containers": 2,
+          "max_working_set_mib": 223.77734375,
+          "max_cpu_cores": 0.6185153809999999
+        },
+        "agentgateway": {
+          "samples": 120,
+          "max_containers": 1,
+          "max_working_set_mib": 31.83203125,
+          "max_cpu_cores": 0.003632949
+        }
+      }
+    },
+    "praxis/praxis:scale-10x100": {
+      "outcome": "duration_complete",
+      "namespaces": {
+        "praxis-system": {
+          "samples": 121,
+          "max_containers": 2,
+          "max_working_set_mib": 21.46875,
+          "max_cpu_cores": 0.892872314
+        },
+        "agentgateway-system": {
+          "samples": 121,
+          "max_containers": 2,
+          "max_working_set_mib": 228.8984375,
+          "max_cpu_cores": 0.440249243
+        },
+        "agentgateway": {
+          "samples": 121,
+          "max_containers": 1,
+          "max_working_set_mib": 31.33984375,
+          "max_cpu_cores": 0.004980176
+        },
+        "praxis": {
+          "samples": 121,
+          "max_containers": 18,
+          "max_working_set_mib": 438.72265625,
+          "max_cpu_cores": 0.15015137599999998
+        }
+      }
+    },
+    "agentgateway/agentgateway:scale-50x100": {
+      "outcome": "duration_complete",
+      "namespaces": {
+        "agentgateway": {
+          "samples": 123,
+          "max_containers": 1,
+          "max_working_set_mib": 51.953125,
+          "max_cpu_cores": 0.012338829
+        },
+        "praxis": {
+          "samples": 123,
+          "max_containers": 10,
+          "max_working_set_mib": 315.03515625,
+          "max_cpu_cores": 0.03135507
+        },
+        "agentgateway-system": {
+          "samples": 123,
+          "max_containers": 2,
+          "max_working_set_mib": 764.27734375,
+          "max_cpu_cores": 1.2261164249999998
+        },
+        "praxis-system": {
+          "samples": 123,
+          "max_containers": 2,
+          "max_working_set_mib": 65.4609375,
+          "max_cpu_cores": 0.857305015
+        }
+      }
+    },
+    "praxis/praxis:scale-50x100": {
+      "outcome": "duration_complete",
+      "namespaces": {
+        "praxis-system": {
+          "samples": 122,
+          "max_containers": 2,
+          "max_working_set_mib": 67.35546875,
+          "max_cpu_cores": 1.156846993
+        },
+        "praxis": {
+          "samples": 122,
+          "max_containers": 18,
+          "max_working_set_mib": 265.58984375,
+          "max_cpu_cores": 0.053018860999999994
+        },
+        "agentgateway-system": {
+          "samples": 122,
+          "max_containers": 2,
+          "max_working_set_mib": 764.27734375,
+          "max_cpu_cores": 1.2261164249999998
+        },
+        "agentgateway": {
+          "samples": 122,
+          "max_containers": 1,
+          "max_working_set_mib": 45.5625,
+          "max_cpu_cores": 0.015100807
+        }
+      }
+    }
+  },
+  "interpretation": "Five-second samples; maxima are sampled namespace aggregates, not true peaks or per-process RSS. Windows include command setup/cleanup. CPU from kubelet usageNanoCores. Container records can include rollout overlap or recently terminated containers retained by the collector; they are not a verified live-pod count. No efficiency winner is established."
+}

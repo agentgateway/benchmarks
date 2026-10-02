@@ -1,0 +1,730 @@
+From ade5ca160a546d18695a4456225185872d86a6b8 Mon Sep 17 00:00:00 2001
+From: Daneyon Hansen <daneyon.hansen@solo.io>
+Date: Thu, 1 Oct 2026 17:31:44 -0700
+Subject: [PATCH 1/2] feat: add Praxis and repeatable Gateway API campaigns
+
+Signed-off-by: Daneyon Hansen <daneyon.hansen@solo.io>
+---
+ CAMPAIGN.md                       | 181 ++++++++++++++++++++++++++++++
+ install/agentgateway-current.sh   |  14 +++
+ install/agentgateway-current.yaml |  26 +++++
+ install/praxis.sh                 |  41 +++++++
+ install/praxis.yaml               |  19 ++++
+ tests/campaign.py                 | 143 +++++++++++++++++++++++
+ tests/common.sh                   |   4 +-
+ tests/probe/probe.go              |   9 +-
+ tests/route-load.sh               |  16 ++-
+ tests/routechange.sh              |   2 +-
+ tests/routechange/routechange.go  |   9 +-
+ tests/traffic.sh                  |  12 +-
+ 12 files changed, 462 insertions(+), 14 deletions(-)
+ create mode 100644 CAMPAIGN.md
+ create mode 100755 install/agentgateway-current.sh
+ create mode 100644 install/agentgateway-current.yaml
+ create mode 100755 install/praxis.sh
+ create mode 100644 install/praxis.yaml
+ create mode 100755 tests/campaign.py
+
+diff --git a/CAMPAIGN.md b/CAMPAIGN.md
+new file mode 100644
+index 0000000..37cb1d8
+--- /dev/null
++++ b/CAMPAIGN.md
+@@ -0,0 +1,181 @@
++# Agentgateway and Praxis campaign
++
++This adds Praxis operator installation and a bounded runner around the existing
++tests. It does not change the historical reports or claim new benchmark results.
++Agentgateway was already supported. `GATEWAYS` now also selects the route-scale
++targets. The campaign runs implementations sequentially and reverses their order
++on alternating repetitions, retaining failures as well as successful runs.
++
++## Environment and versions
++
++Use a disposable Linux amd64 cluster with fixed node types and no autoscaling.
++The original reports used single-node kind on a 16-core AMD 9950x with 96 GB RAM.
++A single dedicated VM with kind preserves that topology; a multi-node cloud run
++is a separate experiment and must report placement, CNI, network path, and load
++generator resources. Never merge its absolute numbers with the original reports.
++Do not execute these scripts against a shared or production cluster: they create
++resources in `default` and simulated namespaces.
++
++Required tools are Bash, Python 3, Git, Go 1.24.3 or newer, kubectl, Helm,
++Docker, and `pilot-load` at the revision in `go.mod`. For route-load, the runner
++must be able to reach the Kubernetes API; for probes and traffic it must also
++reach each Gateway's `status.addresses[0]` on port 80. Run traffic on a Linux host
++with host networking. Do not use `kubectl port-forward` for throughput results.
++
++Install the same pinned Gateway API CRDs for both implementations. Praxis's
++current operator CI uses v1.5.1. Pin the agentgateway controller/chart and proxy
++image separately. `install/basic.sh` retains the historical kgateway-based
++agentgateway installer; it is not a current agentgateway release installer.
++Use `AGENTGATEWAY_VERSION=v1.5.0 bash install/agentgateway-current.sh` for the
++independent controller. Its v1.5.0 chart was resolved to
++`sha256:9216ce83965ad2ce0888014d14aac5e71333fd9d4057cd167da92b37630fbee1`
++during preparation; record the digest resolved for both chart pulls when running.
++The controller chart renders `cr.agentgateway.dev/controller:v1.5.0`. The script
++accepts extra Helm arguments, such as `-f controller-values.yaml`.
++Record the controller source SHA, chart version/values, data-plane image digest,
++CRD version, Kubernetes version, kernel, CPU model, topology, requests/limits,
++replicas, monitoring configuration, and resolved backend/load-generator images.
++
++Praxis support is based on operator commit
++`fb8beaa14cf714dacf0e6964cc8be94d1b5c1d7c`. Build its Containerfile from that
++checkout, make the image available to the cluster, then run:
++
++```sh
++export PRAXIS_OPERATOR_IMAGE='REGISTRY/praxis-operator@sha256:YOUR_DIGEST'
++export PRAXIS_IMAGE='ghcr.io/praxis-proxy/praxis@sha256:YOUR_DIGEST'
++bash install/praxis.sh
++```
++
++The operator's checked-in image is a placeholder, and its default proxy is
++0.5.2. Testing core 0.7.2 is a separate compatibility choice; first verify config
++acceptance and a smoke request. Record any integration failure rather than
++silently changing the candidate. The optional installer uses pinned upstream
++RBAC/deployment/GatewayClass manifests and a local basic HTTP Gateway; it does
++not install CRDs or other controllers.
++
++At this operator revision, the default is two controller replicas, each limited
++to 200m CPU/128 MiB, and one data-plane replica with a 256 MiB memory limit and
++no CPU limit. Keep vendor defaults for an explicitly labeled default-settings
++experiment. For an equal-resource experiment, normalize both controllers and
++data planes and verify that reconciliation does not revert the limits. Record
++any patches. The operator creates LoadBalancer Services; kind needs reachable
++load balancer addresses, and cloud installations must account for LB cost and
++network hops. Its `Gateway.spec.infrastructure.annotations` are copied to the
++Service, allowing internal-LB annotations appropriate to the cloud provider.
++
++One reproducible equal-resource variant is to match Praxis's generated
++data-plane limits and give both controllers two replicas at 200m/128 MiB. This
++deliberately tests those small limits; monitor throttling/OOM and do not present
++it as either implementation's maximum scale. Supply this Helm values file to
++the current agentgateway installer:
++
++```yaml
++controller:
++  replicaCount: 2
++resources:
++  requests: {cpu: 50m, memory: 64Mi}
++  limits: {cpu: 200m, memory: 128Mi}
++```
++
++After installing the CRDs, apply this resource in the agentgateway Gateway's
++namespace and reference it through `spec.infrastructure.parametersRef`:
++
++```yaml
++apiVersion: agentgateway.dev/v1alpha1
++kind: AgentgatewayParameters
++metadata:
++  name: benchmark-resources
++  namespace: agentgateway
++spec:
++  resources:
++    requests: {cpu: 100m, memory: 64Mi}
++    limits: {memory: 256Mi}
++  deployment:
++    spec:
++      replicas: 1
++```
++
++```sh
++kubectl patch gateway agentgateway -n agentgateway --type=merge -p \
++  '{"spec":{"infrastructure":{"parametersRef":{"group":"agentgateway.dev","kind":"AgentgatewayParameters","name":"benchmark-resources"}}}}'
++```
++
++Verify actual Deployment resources and replica counts after each controller has
++reconciled. Do not patch the Praxis generated Deployment for measurement without
++checking persistence: the controller can replace those fields during route
++changes. Higher equal limits require an explicitly disclosed operator change at
++this revision, whose generated resource limits are hard-coded.
++
++## Run and retain evidence
++
++Pin `BACKEND_IMAGE` and `BENCHTOOL_IMAGE` by digest. These overrides apply to the
++traffic test and to the probe/route-change backend. Snapshot the full working
++tree, including untracked campaign files, alongside the result bundle; the
++runner's `suite-diff.patch` only contains tracked changes.
++
++```sh
++export GATEWAYS='agentgateway/agentgateway,praxis/praxis'
++export BACKEND_IMAGE='howardjohn/hyper-server@sha256:YOUR_DIGEST'
++export BENCHTOOL_IMAGE='howardjohn/benchtool@sha256:YOUR_DIGEST'
++python3 tests/campaign.py --profile smoke --output /tmp/gateway-smoke --dry-run
++python3 tests/campaign.py --profile smoke --output /tmp/gateway-smoke
++python3 tests/campaign.py --profile full --output /tmp/gateway-full
++```
++
++The output directory must not exist before a live run. Defaults are three
++repetitions; use `--repetitions 5` for publication after the smoke campaign passes.
++`--case probe --case routechange` selects a subset. `--dry-run` prints the exact
++plan without connecting to Kubernetes or starting workloads. Full campaigns can
++take several hours; estimate the displayed deadlines against the cloud budget.
++
++| Case | Full profile | Evidence |
++| --- | --- | --- |
++| Attached routes | 1,000 routes per implementation | Status setup/teardown time and status writes, original suite semantics |
++| Propagation | 1,000 sequential route creations | Time until the first successful response, plus transient error count |
++| Route changes | 1,000 backend/filter changes | Requests served before any error; original test fails on an unexpected response |
++| Scale/churn | 10×100 and 50×100 namespaces/routes, 10 minutes each | Controller/data-plane CPU, memory, network, config acceptance and restart behavior |
++| Traffic | 1/16/512 connections, unlimited and 10,000 QPS, 60 seconds | Throughput, p50/p90/p99, errors, CPU and memory |
++
++Run initial warmups, then repeat the traffic cases with 4 KiB and larger payloads
++using the original `tests/traffic.sh -p` flag. Confirm the direct backend has
++headroom before attributing saturation to a gateway. Hold transport/TLS,
++connections, logging, backend and host placement constant within each comparison.
++
++Install the original Prometheus/Grafana monitoring or equivalent cAdvisor scrape
++before measurement. Export its full time series for the exact recorded UTC
++intervals; Kubernetes state snapshots alone are not CPU/memory measurements.
++Preserve pod restarts/OOM/throttling, request error counts, and raw histograms.
++Report per-repetition results and dispersion rather than selecting the best run.
++
++Each case records the exact command, gateway, UTC start, elapsed time, raw log,
++exit status, and before/after Kubernetes state, including actual pod image IDs.
++`completed` means the command exited zero, not that all Gateway API semantics
++passed. `duration_complete` means a sustained scale workload reached its specified
++duration and received SIGINT for cleanup. Forced cleanup timeout stops the
++campaign to prevent contaminating later cases. Other failures remain in the
++bundle and the campaign returns a nonzero exit code. Inspect controller and
++proxy logs for every failure and preserve them with the report.
++
++## Correctness and scope gates
++
++Run the upstream Gateway API GATEWAY-HTTP conformance profile against both
++implementations, using the same conformance source revision and installed CRDs.
++Retain unfiltered logs, report YAML, supported-feature declarations, and all
++skips. Do not label a skipped or unsupported test as passing. Praxis's own helper
++uses a monthly test snapshot and permits CRD mismatch; this campaign should pin
++matching versions instead of inheriting that flag without explanation.
++
++Before interpreting throughput, explicitly verify exact/prefix/host/header
++matching, route precedence, header modifiers, cross-namespace ReferenceGrant,
++denied references, and status `observedGeneration`. Include conflicting routes,
++invalid backend references, and removal of routes. The original probe measures
++first-200 convergence; it does not prove stable success or complete conformance.
++The route-change test includes backend-ref response filters; an unsupported
++feature is a compatibility result, not a comparable throughput sample.
++
++ListenerSet tests are outside the shared Praxis operator surface at this
++revision. Keep them as agentgateway capability tests, not a scored head-to-head
++performance case. Add independent rolling-upgrade and controller-restart runs
++after the common baseline; do not combine their failures with steady-state
++traffic statistics. This Gateway API campaign measures controllers and HTTP
++proxies, not model quality, LLM throughput, token accounting, or MCP sessions.
+diff --git a/install/agentgateway-current.sh b/install/agentgateway-current.sh
+new file mode 100755
+index 0000000..abd39d7
+--- /dev/null
++++ b/install/agentgateway-current.sh
+@@ -0,0 +1,14 @@
++#!/usr/bin/env bash
++set -euo pipefail
++
++WD=$(cd "$(dirname "$0")" && pwd)
++version="${AGENTGATEWAY_VERSION:-v1.5.0}"
++
++# Preserve basic.sh's historical kgateway setup. This is the current independent
++# agentgateway controller; any additional arguments are controller Helm values.
++helm upgrade --install agentgateway-crds oci://cr.agentgateway.dev/charts/agentgateway-crds \
++  --version "$version" --namespace agentgateway-system --create-namespace --wait
++helm upgrade --install agentgateway oci://cr.agentgateway.dev/charts/agentgateway \
++  --version "$version" --namespace agentgateway-system --wait "$@"
++kubectl apply --server-side -f "$WD/agentgateway-current.yaml"
++kubectl wait -n agentgateway gateway/agentgateway --for=condition=Programmed --timeout=300s
+diff --git a/install/agentgateway-current.yaml b/install/agentgateway-current.yaml
+new file mode 100644
+index 0000000..1bafbc2
+--- /dev/null
++++ b/install/agentgateway-current.yaml
+@@ -0,0 +1,26 @@
++apiVersion: v1
++kind: Namespace
++metadata:
++  name: agentgateway
++---
++apiVersion: gateway.networking.k8s.io/v1
++kind: GatewayClass
++metadata:
++  name: agentgateway
++spec:
++  controllerName: agentgateway.dev/agentgateway
++---
++apiVersion: gateway.networking.k8s.io/v1
++kind: Gateway
++metadata:
++  name: agentgateway
++  namespace: agentgateway
++spec:
++  gatewayClassName: agentgateway
++  listeners:
++  - protocol: HTTP
++    port: 80
++    name: http
++    allowedRoutes:
++      namespaces:
++        from: All
+diff --git a/install/praxis.sh b/install/praxis.sh
+new file mode 100755
+index 0000000..ebc5a22
+--- /dev/null
++++ b/install/praxis.sh
+@@ -0,0 +1,41 @@
++#!/usr/bin/env bash
++set -euo pipefail
++
++WD=$(cd "$(dirname "$0")" && pwd)
++operator_revision="${PRAXIS_OPERATOR_REVISION:-fb8beaa14cf714dacf0e6964cc8be94d1b5c1d7c}"
++: "${PRAXIS_OPERATOR_IMAGE:?Set the image built from PRAXIS_OPERATOR_REVISION, preferably by digest}"
++: "${PRAXIS_IMAGE:?Set a pinned Praxis data-plane image, preferably by digest}"
++
++# The operator currently has no published release. Use its exact source manifests
++# with explicitly supplied image references; do not silently select latest.
++if [[ ! "$operator_revision" =~ ^[a-f0-9]{40}$ ]]; then
++  echo "PRAXIS_OPERATOR_REVISION must be a full commit SHA" >&2
++  exit 1
++fi
++manifest_dir=$(mktemp -d)
++trap 'rm -rf "$manifest_dir"' EXIT
++for manifest in rbac deployment gatewayclass; do
++  curl --fail --silent --show-error --location \
++    "https://raw.githubusercontent.com/praxis-proxy/operator/${operator_revision}/deploy/${manifest}.yaml" \
++    > "$manifest_dir/$manifest.yaml"
++done
++python3 - "$manifest_dir/deployment.yaml" <<'PY'
++import os
++import pathlib
++import sys
++
++path = pathlib.Path(sys.argv[1])
++text = path.read_text()
++for name in ("OPERATOR_IMAGE", "PRAXIS_IMAGE"):
++    value = os.environ["PRAXIS_OPERATOR_IMAGE" if name == "OPERATOR_IMAGE" else name]
++    if not value or any(c.isspace() or c in "\"'\\" for c in value):
++        raise SystemExit(f"Invalid image reference: {name}")
++    text = text.replace(f"__{name}__", value)
++path.write_text(text)
++PY
++kubectl apply --server-side -f "$manifest_dir/rbac.yaml"
++kubectl apply --server-side -f "$manifest_dir/deployment.yaml"
++kubectl apply --server-side -f "$manifest_dir/gatewayclass.yaml"
++kubectl rollout status -n praxis-system deployment/praxis-operator --timeout=180s
++kubectl apply --server-side -f "$WD/praxis.yaml"
++kubectl wait -n praxis gateway/praxis --for=condition=Programmed --timeout=300s
+diff --git a/install/praxis.yaml b/install/praxis.yaml
+new file mode 100644
+index 0000000..b70a56e
+--- /dev/null
++++ b/install/praxis.yaml
+@@ -0,0 +1,19 @@
++apiVersion: v1
++kind: Namespace
++metadata:
++  name: praxis
++---
++apiVersion: gateway.networking.k8s.io/v1
++kind: Gateway
++metadata:
++  name: praxis
++  namespace: praxis
++spec:
++  gatewayClassName: praxis
++  listeners:
++  - protocol: HTTP
++    port: 80
++    name: http
++    allowedRoutes:
++      namespaces:
++        from: All
+diff --git a/tests/campaign.py b/tests/campaign.py
+new file mode 100755
+index 0000000..d97942a
+--- /dev/null
++++ b/tests/campaign.py
+@@ -0,0 +1,143 @@
++#!/usr/bin/env python3
++"""Run existing Gateway API benchmarks with bounded runtimes and raw evidence."""
++
++import argparse
++import datetime
++import json
++import os
++from pathlib import Path
++import re
++import signal
++import shutil
++import subprocess
++import time
++
++ROOT = Path(__file__).resolve().parents[1]
++
++
++def utc_now():
++    return datetime.datetime.now(datetime.timezone.utc).isoformat()
++
++
++def cases(profile):
++    routes = "25" if profile == "smoke" else "1000"
++    iterations = "25" if profile == "smoke" else "1000"
++    traffic_duration = "10" if profile == "smoke" else "60"
++    yield "attached-routes", ["bash", "tests/attached-routes.sh", "split", f"--routes={routes}"], 600, False
++    yield "probe", ["bash", "tests/probe.sh", f"--routes={routes}"], 900, False
++    yield "routechange", ["bash", "tests/routechange.sh", f"--iterations={iterations}"], 900, False
++    scales = [(1, 25)] if profile == "smoke" else [(10, 100), (50, 100)]
++    for namespaces, count in scales:
++        yield f"scale-{namespaces}x{count}", ["bash", "tests/route-load.sh", str(namespaces), str(count)], 60 if profile == "smoke" else 600, True
++    connections = [1, 16] if profile == "smoke" else [1, 16, 512]
++    for connections_count in connections:
++        for qps in ([1000] if profile == "smoke" else [0, 10000]):
++            yield f"traffic-c{connections_count}-q{qps}", ["bash", "tests/traffic.sh", "-d", traffic_duration, "-q", str(qps), "-c", str(connections_count), "-p", "0"], 300, False
++
++
++def execute(command, log_path, env, timeout, timed_load=False):
++    started = utc_now()
++    start = time.monotonic()
++    timed_out = False
++    with log_path.open("w") as output:
++        process = subprocess.Popen(command, cwd=ROOT, env=env, stdout=output,
++                                   stderr=subprocess.STDOUT, start_new_session=True)
++        try:
++            code = process.wait(timeout=timeout)
++        except subprocess.TimeoutExpired:
++            timed_out = True
++            # Let pilot-load delete its generated resources before escalation.
++            os.killpg(process.pid, signal.SIGINT)
++            try:
++                code = process.wait(timeout=30)
++            except subprocess.TimeoutExpired:
++                os.killpg(process.pid, signal.SIGKILL)
++                code = process.wait()
++                timed_load = False  # Forced termination may leave cluster state.
++    if timed_out:
++        outcome = "duration_complete" if timed_load and code in (0, 130, -signal.SIGINT) else "timeout"
++    else:
++        outcome = "completed" if code == 0 and not timed_load else "failed"
++    return {"command": command, "started_at": started, "elapsed_seconds": time.monotonic() - start,
++            "exit_code": code, "outcome": outcome, "log": str(log_path)}
++
++
++def snapshot(destination):
++    commands = {
++        "suite-revision.txt": ["git", "rev-parse", "HEAD"],
++        "suite-diff.patch": ["git", "diff"],
++        "client-version.json": ["kubectl", "version", "-o", "json"],
++        "nodes.json": ["kubectl", "get", "nodes", "-o", "json"],
++        "pods.json": ["kubectl", "get", "pods", "-A", "-o", "json"],
++        "deployments.json": ["kubectl", "get", "deployments", "-A", "-o", "json"],
++        "gateways.json": ["kubectl", "get", "gateway", "-A", "-o", "json"],
++        "gatewayclasses.json": ["kubectl", "get", "gatewayclass", "-o", "json"],
++        "routes.json": ["kubectl", "get", "httproute", "-A", "-o", "json"],
++    }
++    destination.mkdir(parents=True)
++    failures = []
++    for name, command in commands.items():
++        result = execute(command, destination / name, os.environ.copy(), 30)
++        if result["outcome"] != "completed":
++            failures.append(result)
++    (destination / "capture-errors.json").write_text(json.dumps(failures, indent=2) + "\n")
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--gateways", default="agentgateway/agentgateway,praxis/praxis")
++    parser.add_argument("--profile", choices=["smoke", "full"], default="smoke")
++    parser.add_argument("--repetitions", type=int, default=3)
++    parser.add_argument("--output", type=Path, required=True)
++    parser.add_argument("--case", action="append", default=[], help="Run only named cases; repeat to select several")
++    parser.add_argument("--dry-run", action="store_true")
++    args = parser.parse_args()
++    gateways = args.gateways.split(",")
++    if args.repetitions < 1 or any(not re.fullmatch(r"[a-z0-9][a-z0-9.-]*/[a-z0-9][a-z0-9.-]*", value) for value in gateways):
++        parser.error("Use positive repetitions and comma-separated namespace/name gateways")
++    selected = [case for case in cases(args.profile) if not args.case or case[0] in args.case]
++    unknown = set(args.case) - {case[0] for case in selected}
++    if unknown:
++        parser.error(f"Unknown cases: {sorted(unknown)}")
++    plan = []
++    for repetition in range(args.repetitions):
++        # Counterbalance order; never run both implementations' load concurrently.
++        order = gateways if repetition % 2 == 0 else list(reversed(gateways))
++        for name, command, timeout, timed_load in selected:
++            for gateway in order:
++                plan.append({"repetition": repetition + 1, "gateway": gateway, "case": name,
++                             "command": command, "timeout_seconds": timeout, "timed_load": timed_load})
++    if args.dry_run:
++        print(json.dumps(plan, indent=2))
++        return 0
++    dependencies = ["bash", "git", "kubectl", "go"]
++    if any(item[0].startswith("traffic-") for item in selected):
++        dependencies.append("docker")
++    if any(item[0].startswith("scale-") for item in selected):
++        dependencies.append("pilot-load")
++    missing = [command for command in dependencies if not shutil.which(command)]
++    if missing:
++        parser.error(f"Missing tools: {', '.join(missing)}")
++    output = args.output.resolve()
++    output.mkdir(parents=True, exist_ok=False)
++    (output / "plan.json").write_text(json.dumps(plan, indent=2) + "\n")
++    snapshot(output / "before")
++    results = []
++    for item in plan:
++        name = f"r{item['repetition']}-{item['gateway'].replace('/', '-')}-{item['case']}"
++        print(f"{utc_now()} {name}", flush=True)
++        env = dict(os.environ, GATEWAYS=item["gateway"], RESULTS_DIR=str(output / name))
++        result = execute(item["command"], output / f"{name}.log", env,
++                         item["timeout_seconds"], item["timed_load"])
++        results.append(dict(item, **result))
++        (output / "results.json").write_text(json.dumps(results, indent=2) + "\n")
++        snapshot(output / f"{name}-state")
++        if result["outcome"] == "timeout":
++            # An incompletely cleaned load test could contaminate later cases.
++            break
++    snapshot(output / "after")
++    return int(any(result["outcome"] not in ("completed", "duration_complete") for result in results))
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
+diff --git a/tests/common.sh b/tests/common.sh
+index 8cdfbaf..129a3b9 100644
+--- a/tests/common.sh
++++ b/tests/common.sh
+@@ -3,7 +3,7 @@ WD=$(dirname "$0")
+ WD=$(cd "$WD"; pwd)
+ 
+ # Use the GATEWAYS environment variable. If unset, fall back to the defaults.
+-if [[ -n "${GATEWAYS}" ]]; then
++if [[ -n "${GATEWAYS:-}" ]]; then
+   IFS=',' read -r -a gateways <<< "$GATEWAYS"
+ else
+   gateways=(agentgateway/agentgateway  envoy/envoy-gateway istio/istio nginx/nginx)
+@@ -46,4 +46,4 @@ function join_by { local IFS="$1"; shift; echo "$*"; }
+ function log-flag() {
+   local vic="$(svc-address monitoring victoria-logs 2> /dev/null || true)"
+   echo "${vic:+--victoria=http://${vic}:9428}"
+-}
+\ No newline at end of file
++}
+diff --git a/tests/probe/probe.go b/tests/probe/probe.go
+index 6d457a3..fe7b0dc 100644
+--- a/tests/probe/probe.go
++++ b/tests/probe/probe.go
+@@ -5,6 +5,7 @@ import (
+ 	"fmt"
+ 	"io"
+ 	"net/http"
++	"os"
+ 	"strings"
+ 	"time"
+ 
+@@ -92,7 +93,7 @@ spec:
+     spec:
+       containers:
+       - name: backend
+-        image: howardjohn/hyper-server
++        image: {{.BackendImage}}
+         resources:
+           requests:
+             memory: "64Mi"
+@@ -186,7 +187,11 @@ func (a *ProbeTest) Run(ctx model.Context) error {
+ 		gw.Address = a[0].Value
+ 	}
+ 
+-	if err := kube.ApplyTemplate(ctx.Client, "default", backendTemplate, nil); err != nil {
++	backendImage := os.Getenv("BACKEND_IMAGE")
++	if backendImage == "" {
++		backendImage = "howardjohn/hyper-server"
++	}
++	if err := kube.ApplyTemplate(ctx.Client, "default", backendTemplate, map[string]string{"BackendImage": backendImage}); err != nil {
+ 		return err
+ 	}
+ 	for r := range a.Config.Routes {
+diff --git a/tests/route-load.sh b/tests/route-load.sh
+index acd1b93..4bb12d8 100755
+--- a/tests/route-load.sh
++++ b/tests/route-load.sh
+@@ -1,8 +1,17 @@
+ #!/bin/bash
++set -euo pipefail
++
++WD=$(cd "$(dirname "$0")" && pwd)
++source "$WD/common.sh"
+ 
+ namespaces="${1:-10}"
+ routes="${2:-100}"
+ 
++gateway_refs=""
++for gateway in "${gateways[@]}"; do
++  gateway_refs+="          - ${gateway}"$'\n'
++done
++
+ cat <<EOF | pilot-load cluster --config -
+ jitter:
+   workloads: "2s"
+@@ -20,11 +29,8 @@ namespaces:
+       - name: httproute
+         config:
+           gateways:
+-          - agentgateway/agentgateway
+-          - envoy/envoy-gateway
+-          - istio/istio
+-          - nginx/nginx
++${gateway_refs}
+ nodes:
+ - name: node
+   count: 20
+-EOF
+\ No newline at end of file
++EOF
+diff --git a/tests/routechange.sh b/tests/routechange.sh
+index 5f6cbc2..3f2834e 100755
+--- a/tests/routechange.sh
++++ b/tests/routechange.sh
+@@ -1,5 +1,5 @@
+ #!/bin/bash
+-# set -e
++set -e
+ WD=$(dirname "$0")
+ WD=$(cd "$WD"; pwd)
+ source "$WD/common.sh"
+diff --git a/tests/routechange/routechange.go b/tests/routechange/routechange.go
+index b4f34f8..faa1b83 100644
+--- a/tests/routechange/routechange.go
++++ b/tests/routechange/routechange.go
+@@ -5,6 +5,7 @@ import (
+ 	"fmt"
+ 	"io"
+ 	"net/http"
++	"os"
+ 	"strings"
+ 	"time"
+ 
+@@ -86,7 +87,7 @@ spec:
+     spec:
+       containers:
+       - name: backend
+-        image: howardjohn/hyper-server
++        image: {{.BackendImage}}
+         env:
+         - name: PORT
+           value: 8080,8081
+@@ -165,7 +166,11 @@ func (a *ChangeTest) Run(ctx model.Context) error {
+ 		gw.Address = a[0].Value
+ 	}
+ 
+-	if err := kube.ApplyTemplate(ctx.Client, "default", backendTemplate, nil); err != nil {
++	backendImage := os.Getenv("BACKEND_IMAGE")
++	if backendImage == "" {
++		backendImage = "howardjohn/hyper-server"
++	}
++	if err := kube.ApplyTemplate(ctx.Client, "default", backendTemplate, map[string]string{"BackendImage": backendImage}); err != nil {
+ 		return err
+ 	}
+ 
+diff --git a/tests/traffic.sh b/tests/traffic.sh
+index 45b270a..e98aeb5 100755
+--- a/tests/traffic.sh
++++ b/tests/traffic.sh
+@@ -1,4 +1,5 @@
+ #!/bin/bash
++set -e
+ 
+ WD=$(dirname "$0")
+ WD=$(cd "$WD"; pwd)
+@@ -22,7 +23,7 @@ spec:
+     spec:
+       containers:
+       - name: backend
+-        image: howardjohn/hyper-server
++        image: ${BACKEND_IMAGE:-howardjohn/hyper-server}
+         resources:
+           requests:
+             memory: "64Mi"
+@@ -65,4 +66,11 @@ spec:
+ EOF
+ done
+ 
+-docker run --rm -v /tmp/results:/tmp/results --init -it --network=host howardjohn/benchtool "$@" "$(join_by , "${targets[@]}")"
++results_dir="${RESULTS_DIR:-/tmp/results}"
++mkdir -p "$results_dir"
++docker_tty=()
++if [[ -t 0 && -t 1 ]]; then
++  docker_tty=(-it)
++fi
++docker run --rm -v "$results_dir:/tmp/results" --init "${docker_tty[@]}" --network=host \
++  "${BENCHTOOL_IMAGE:-howardjohn/benchtool}" "$@" "$(join_by , "${targets[@]}")"
+-- 
+2.39.2
+
+
+From 25d513948a41463199fadded4828315527736e15 Mon Sep 17 00:00:00 2001
+From: Daneyon Hansen <daneyon.hansen@solo.io>
+Date: Thu, 1 Oct 2026 19:41:20 -0700
+Subject: [PATCH 2/2] Validate readiness and raw traffic measurements
+
+Signed-off-by: Daneyon Hansen <daneyon.hansen@solo.io>
+---
+ tests/traffic.sh | 36 +++++++++++++++++++++++++++++++++++-
+ 1 file changed, 35 insertions(+), 1 deletion(-)
+
+diff --git a/tests/traffic.sh b/tests/traffic.sh
+index e98aeb5..ccf79b9 100755
+--- a/tests/traffic.sh
++++ b/tests/traffic.sh
+@@ -48,7 +48,7 @@ targets=()
+ for gw in "${gateways[@]}"; do
+   name="$(<<<"$gw" cut -d/ -f 2)"
+   namespace="$(<<<"$gw" cut -d/ -f 1)"
+-  targets+=("$(gw-address $gw)#$name")
++  targets+=("$(gw-address "$gw")#$name")
+   cat <<EOF | kubectl apply -f - --server-side=true
+ apiVersion: gateway.networking.k8s.io/v1
+ kind: HTTPRoute
+@@ -66,6 +66,23 @@ spec:
+ EOF
+ done
+ 
++# HTTPRoute acceptance and data-plane readiness are asynchronous. Exclude
++# convergence from steady-state measurements, but retain the wait in the log.
++for target in "${targets[@]}"; do
++  address="${target%%#*}"
++  ready=false
++  for attempt in $(seq 1 120); do
++    code=$(curl --max-time 2 -s -o /dev/null -w '%{http_code}' "http://$address/" || true)
++    if [[ "$code" == 200 ]]; then ready=true; break; fi
++    sleep 1
++  done
++  if [[ "$ready" != true ]]; then
++    echo "Readiness failed for $target: HTTP $code" >&2
++    exit 1
++  fi
++  echo "Ready: $target after $attempt probe(s) at $(date -u +%FT%TZ)"
++done
++
+ results_dir="${RESULTS_DIR:-/tmp/results}"
+ mkdir -p "$results_dir"
+ docker_tty=()
+@@ -74,3 +91,20 @@ if [[ -t 0 && -t 1 ]]; then
+ fi
+ docker run --rm -v "$results_dir:/tmp/results" --init "${docker_tty[@]}" --network=host \
+   "${BENCHTOOL_IMAGE:-howardjohn/benchtool}" "$@" "$(join_by , "${targets[@]}")"
++
++# The upstream benchtool wrapper may exit zero after Fortio aborts. A campaign
++# invocation has one target; validate that its raw result actually exists.
++python3 - "$results_dir/fortio.json" <<'PYTHON'
++import json
++from pathlib import Path
++import sys
++p = Path(sys.argv[1])
++if not p.is_file():
++    raise SystemExit("Missing Fortio result: traffic measurement failed")
++r = json.loads(p.read_text())
++counts = r.get("RetCodes", {})
++if r.get("ActualDuration", 0) <= 0 or sum(counts.values()) <= 0:
++    raise SystemExit("Empty Fortio measurement")
++if any(count for code, count in counts.items() if code != "200"):
++    raise SystemExit("Fortio recorded failed requests; preserve raw evidence")
++PYTHON
+-- 
+2.39.2
+

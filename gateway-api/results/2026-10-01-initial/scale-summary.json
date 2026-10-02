@@ -1,0 +1,82 @@
+[
+  {
+    "snapshot": "r1-agentgateway-agentgateway-scale-10x100-t300",
+    "routes": 1000,
+    "accepted": 1000,
+    "resolved": 1000,
+    "current": 1000,
+    "no_conditions": 0,
+    "reasons": {}
+  },
+  {
+    "snapshot": "r1-agentgateway-agentgateway-scale-10x100-t540",
+    "routes": 1000,
+    "accepted": 1000,
+    "resolved": 1000,
+    "current": 1000,
+    "no_conditions": 0,
+    "reasons": {}
+  },
+  {
+    "snapshot": "r1-agentgateway-agentgateway-scale-50x100-t300",
+    "routes": 5000,
+    "accepted": 5000,
+    "resolved": 5000,
+    "current": 5000,
+    "no_conditions": 0,
+    "reasons": {}
+  },
+  {
+    "snapshot": "r1-agentgateway-agentgateway-scale-50x100-t540",
+    "routes": 5000,
+    "accepted": 5000,
+    "resolved": 5000,
+    "current": 5000,
+    "no_conditions": 0,
+    "reasons": {}
+  },
+  {
+    "snapshot": "r1-praxis-praxis-scale-10x100-t300",
+    "routes": 1000,
+    "accepted": 5,
+    "resolved": 0,
+    "current": 2,
+    "no_conditions": 995,
+    "reasons": {
+      "ResolvedRefs:BackendNotFound": 5
+    }
+  },
+  {
+    "snapshot": "r1-praxis-praxis-scale-10x100-t540",
+    "routes": 1000,
+    "accepted": 5,
+    "resolved": 0,
+    "current": 1,
+    "no_conditions": 995,
+    "reasons": {
+      "ResolvedRefs:BackendNotFound": 5
+    }
+  },
+  {
+    "snapshot": "r1-praxis-praxis-scale-50x100-t300",
+    "routes": 5000,
+    "accepted": 243,
+    "resolved": 0,
+    "current": 236,
+    "no_conditions": 4757,
+    "reasons": {
+      "ResolvedRefs:BackendNotFound": 243
+    }
+  },
+  {
+    "snapshot": "r1-praxis-praxis-scale-50x100-t540",
+    "routes": 5000,
+    "accepted": 243,
+    "resolved": 0,
+    "current": 219,
+    "no_conditions": 4757,
+    "reasons": {
+      "ResolvedRefs:BackendNotFound": 243
+    }
+  }
+]

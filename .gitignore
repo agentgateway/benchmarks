@@ -7,3 +7,6 @@ ai-gateway/mock/mock-server
 !ai-gateway/results/
 ai-gateway/results/*
 !ai-gateway/results/2026-10-01-initial/
+!gateway-api/results/
+gateway-api/results/*
+!gateway-api/results/2026-10-01-initial/
