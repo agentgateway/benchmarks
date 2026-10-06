@@ -4,7 +4,11 @@ This directory contains the source, configured workload definitions, review
 records and generated results. The companion evidence release supplies
 `accepted-results.tar.gz` and `extended-gateway-api-results.tar.gz`, separate
 manifests and credential-redaction ledgers, and `SHA256SUMS`. The verified release
-link is recorded in `evidence/PUBLICATION.json` after upload.
+link is available in the [publication record](../evidence/PUBLICATION.json).
+
+[Download the verified evidence release](https://github.com/danehans/agentgateway-benchmarks/releases/tag/cpu-2026-10-05-v1.6.0). Both archives have
+been regenerated offline: current numeric reports match byte-for-byte, as do the
+historical conformance JSON files and matrices.
 
 The current archive contains all accepted CPU/Kubernetes passes, exact gateway
 configurations, host/process resource samples and retained route-scale failure

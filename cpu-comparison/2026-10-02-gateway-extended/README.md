@@ -70,3 +70,5 @@ An [offline replay](evidence/reanalysis.json) reproduced both JSON files and all
 successful parsing as an independent scientific review. Upstream source links,
 configuration, exact commands and the original validity decisions accompany the
 results; operating a fresh cluster requires new qualification and review.
+
+Download the [checksum-verified public raw evidence](https://github.com/danehans/agentgateway-benchmarks/releases/tag/cpu-2026-10-05-v1.6.0). The [publication record](evidence/PUBLICATION.json) lists asset hashes and the reviewed source commit.

@@ -1,5 +1,9 @@
 # AI gateway protocol and proxy-overhead campaign
 
+This is the historical October 1, single-run campaign. For the completed
+three-pass agentgateway v1.6.0 and Praxis release/nightly comparison, start with
+[the current CPU reports](../cpu-comparison/2026-10-05-stable-comparison/README.md).
+
 This harness uses a deterministic Go backend, Fortio 1.75.1, agentgateway v1.5.0
 and Praxis AI 0.5.0, with container images pinned in `compose.yaml`. It measures
 synthetic proxy overhead; it performs **no model inference**. The [initial single-round report](results/2026-10-01-initial/README.md) includes

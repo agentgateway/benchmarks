@@ -62,3 +62,5 @@ pins, excluded-attempt explanations and manual review records accompany the
 results. Do not treat parser success as scientific approval for a fresh run.
 
 [Offline reanalysis](evidence/reanalysis.json) reproduced all 24 numeric data and report files byte-for-byte from the sanitized public archive; both host-resource summaries matched as JSON values.
+
+Download the [checksum-verified public raw evidence](https://github.com/danehans/agentgateway-benchmarks/releases/tag/cpu-2026-10-05-v1.6.0). The [publication record](evidence/PUBLICATION.json) lists asset hashes and the reviewed source commit.

@@ -1,5 +1,9 @@
 # Initial Gateway API comparison
 
+This is the historical October 1, single-run campaign. For the completed
+three-pass agentgateway v1.6.0 and Praxis release/nightly comparison, start with
+[the current CPU reports](../cpu-comparison/2026-10-05-stable-comparison/README.md).
+
 This is a companion to the CPU AI proxy campaign. It uses the community
 [howardjohn/gateway-api-bench](https://github.com/howardjohn/gateway-api-bench)
 suite and the standardized Gateway API v1.5.1 core HTTP conformance tests.
