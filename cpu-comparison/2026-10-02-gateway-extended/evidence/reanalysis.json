@@ -1,0 +1,37 @@
+{
+  "reviewed_at": "2026-10-06T03:54:13.433914+00:00",
+  "source": "Sanitized public archive; every results/ member verified or atomically installed in the scratch replay tree before analysis.",
+  "archive_sha256": "aab7f074ad75b5b673c891846853ea5294defa6a9d2ecee254913e9fd1350baf",
+  "checks": [
+    {
+      "file": "reports/data/test-results.json",
+      "byte_identical": true,
+      "sha256": "51a28ea3dee39526e5c5a793814c22d60114bd8643b0e1f913bdd5a7791c4539"
+    },
+    {
+      "file": "reports/data/aggregate.json",
+      "byte_identical": true,
+      "sha256": "aa49859452d5bd3c78b7a89167bf0aa404d93c7a7c1ab6053e675ac1673cae55"
+    },
+    {
+      "file": "reports/matrix/grpc.md",
+      "byte_identical": true,
+      "sha256": "3089a39b3ba8b2e80692b7b9940337bcce1f5e7ae6acbe56c4b99d698d23a6f0"
+    },
+    {
+      "file": "reports/matrix/http-core.md",
+      "byte_identical": true,
+      "sha256": "4859b128899b94780fc32156cd4bc174b456359e75290c78e98c94dce0d1448b"
+    },
+    {
+      "file": "reports/matrix/http-gateway-extended.md",
+      "byte_identical": true,
+      "sha256": "de6006e60bd0881d952dd179aa9440144d08950f9421c74722b7c0656905dcbd"
+    },
+    {
+      "file": "reports/matrix/tls.md",
+      "byte_identical": true,
+      "sha256": "14f44dbab4a6372e1c43a3e6a8c299c20d2ae4edd9a6a30b5a2cdc30305f41ce"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# Draft scenario: qualify with 10 routes before measured scale workloads.
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: {{.Name}}
+  labels:
+    benchmark: gateway-scale
+spec:
+  parentRefs:
+  - name: {{.Gateway}}
+    namespace: {{.GatewayNamespace}}
+  hostnames:
+  - "{{.Name}}.bench.test"
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    filters:
+    - type: ResponseHeaderModifier
+      responseHeaderModifier:
+        set:
+        - name: x-benchmark-generation
+          value: "{{.Marker}}"
+    backendRefs:
+    - name: backend
+      namespace: gateway-backend
+      port: 8081

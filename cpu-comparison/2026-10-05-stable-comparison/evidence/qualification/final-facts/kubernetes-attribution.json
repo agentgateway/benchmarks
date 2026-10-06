@@ -1,0 +1,747 @@
+{
+  "controller_startups": [
+    {
+      "pass": "pass1",
+      "http_start": "2026-10-05T22:44:25.958556+00:00",
+      "http_end": "2026-10-05T22:53:10.622282+00:00",
+      "samples": 100,
+      "pid_restart_counts": {
+        "181137": [
+          1
+        ],
+        "181025": [
+          0
+        ]
+      },
+      "previous_terminations": [
+        {
+          "pod": "praxis-operator-754557dfd6-z6rl7",
+          "previous_exit": 1,
+          "previous_finished": "2026-10-05T22:44:09Z",
+          "before_http": true
+        }
+      ]
+    },
+    {
+      "pass": "pass2",
+      "http_start": "2026-10-05T23:29:23.787836+00:00",
+      "http_end": "2026-10-05T23:38:08.231070+00:00",
+      "samples": 100,
+      "pid_restart_counts": {
+        "213630": [
+          1
+        ],
+        "213174": [
+          0
+        ]
+      },
+      "previous_terminations": [
+        {
+          "pod": "praxis-operator-7c54b6bb97-clsd7",
+          "previous_exit": 1,
+          "previous_finished": "2026-10-05T23:29:08Z",
+          "before_http": true
+        }
+      ]
+    },
+    {
+      "pass": "pass3",
+      "http_start": "2026-10-06T01:01:12.423209+00:00",
+      "http_end": "2026-10-06T01:09:56.979369+00:00",
+      "samples": 100,
+      "pid_restart_counts": {
+        "277889": [
+          1
+        ],
+        "277767": [
+          0
+        ]
+      },
+      "previous_terminations": [
+        {
+          "pod": "praxis-operator-6798bd6b95-hhttw",
+          "previous_exit": 1,
+          "previous_finished": "2026-10-06T01:00:56Z",
+          "before_http": true
+        }
+      ]
+    }
+  ],
+  "scale_diagnostics": [
+    {
+      "pass": "pass1",
+      "routes": 1000,
+      "artifact": "diagnostics/pass1-praxis-release-1000",
+      "phase_start": "2026-10-05T22:53:10.622553+00:00",
+      "phase_end": "2026-10-05T23:04:21.265780+00:00",
+      "filter_guard_messages_from_replacement_pods": [
+        "too many filters (1003, max 100)"
+      ],
+      "replacement_pod_evidence": [
+        {
+          "artifact": "diagnostics/pass1-praxis-release-1000/praxis-benchmark-76cf4bf6bb-lfcbj.log",
+          "messages": [
+            "too many filters (1003, max 100)"
+          ],
+          "pod_created": "2026-10-05T22:53:32Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 2,
+              "state": {
+                "waiting": {
+                  "message": "back-off 20s restarting failed container=praxis pod=praxis-benchmark-76cf4bf6bb-lfcbj_gateway-benchmark(e791361c-0afa-4b55-b044-71b8c91b5a9d)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://4df85eaa859590b2ef80653f0aabbe8361ecc940b6c64bd1547b1de3863263d6",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-05T22:53:44Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-05T22:53:44Z"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "artifact": "diagnostics/pass1-praxis-release-1000/praxis-benchmark-76cf4bf6bb-lfcbj-previous.log",
+          "messages": [
+            "too many filters (1003, max 100)"
+          ],
+          "pod_created": "2026-10-05T22:53:32Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 2,
+              "state": {
+                "waiting": {
+                  "message": "back-off 20s restarting failed container=praxis pod=praxis-benchmark-76cf4bf6bb-lfcbj_gateway-benchmark(e791361c-0afa-4b55-b044-71b8c91b5a9d)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://4df85eaa859590b2ef80653f0aabbe8361ecc940b6c64bd1547b1de3863263d6",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-05T22:53:44Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-05T22:53:44Z"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "configmap_1048576_byte_api422_timestamps_within_phase": [],
+      "scale_runner_exit": 0
+    },
+    {
+      "pass": "pass1",
+      "routes": 5000,
+      "artifact": "diagnostics/pass1-praxis-release-5000",
+      "phase_start": "2026-10-05T23:04:21.266065+00:00",
+      "phase_end": "2026-10-05T23:16:59.230709+00:00",
+      "filter_guard_messages_from_replacement_pods": [
+        "too many filters (4273, max 100)"
+      ],
+      "replacement_pod_evidence": [
+        {
+          "artifact": "diagnostics/pass1-praxis-release-5000/praxis-benchmark-695bf4ccf9-pfh7n.log",
+          "messages": [
+            "too many filters (4273, max 100)"
+          ],
+          "pod_created": "2026-10-05T23:05:18Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 2,
+              "state": {
+                "waiting": {
+                  "message": "back-off 20s restarting failed container=praxis pod=praxis-benchmark-695bf4ccf9-pfh7n_gateway-benchmark(dd3195a9-41b7-4e29-8f58-7272613c3101)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://0388a8c9eb3277904e71704855ab49550ce03ca14bd41fe0344c614ee6749908",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-05T23:05:33Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-05T23:05:33Z"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "artifact": "diagnostics/pass1-praxis-release-5000/praxis-benchmark-695bf4ccf9-pfh7n-previous.log",
+          "messages": [
+            "too many filters (4273, max 100)"
+          ],
+          "pod_created": "2026-10-05T23:05:18Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 2,
+              "state": {
+                "waiting": {
+                  "message": "back-off 20s restarting failed container=praxis pod=praxis-benchmark-695bf4ccf9-pfh7n_gateway-benchmark(dd3195a9-41b7-4e29-8f58-7272613c3101)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://0388a8c9eb3277904e71704855ab49550ce03ca14bd41fe0344c614ee6749908",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-05T23:05:33Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-05T23:05:33Z"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "configmap_1048576_byte_api422_timestamps_within_phase": [
+        "2026-10-05T23:05:18.610714Z",
+        "2026-10-05T23:05:18.610777Z",
+        "2026-10-05T23:05:18.932524Z",
+        "2026-10-05T23:05:18.932561Z",
+        "2026-10-05T23:05:19.216236Z",
+        "2026-10-05T23:05:19.216270Z",
+        "2026-10-05T23:05:19.535383Z",
+        "2026-10-05T23:05:19.535421Z",
+        "2026-10-05T23:05:19.819411Z",
+        "2026-10-05T23:05:19.819460Z",
+        "2026-10-05T23:05:20.122369Z",
+        "2026-10-05T23:05:20.122408Z",
+        "2026-10-05T23:05:20.422622Z",
+        "2026-10-05T23:05:20.422658Z",
+        "2026-10-05T23:05:20.719037Z",
+        "2026-10-05T23:05:20.719081Z",
+        "2026-10-05T23:05:21.073875Z",
+        "2026-10-05T23:05:21.073914Z",
+        "2026-10-05T23:05:21.343162Z",
+        "2026-10-05T23:05:21.343208Z",
+        "2026-10-05T23:05:21.625332Z",
+        "2026-10-05T23:05:21.625373Z",
+        "2026-10-05T23:05:21.927034Z",
+        "2026-10-05T23:05:21.927071Z",
+        "2026-10-05T23:05:22.227817Z",
+        "2026-10-05T23:05:22.227854Z",
+        "2026-10-05T23:05:22.542759Z",
+        "2026-10-05T23:05:22.542795Z",
+        "2026-10-05T23:05:22.841292Z",
+        "2026-10-05T23:05:22.841366Z",
+        "2026-10-05T23:05:23.145533Z",
+        "2026-10-05T23:05:23.145580Z",
+        "2026-10-05T23:05:23.440351Z",
+        "2026-10-05T23:05:23.440390Z",
+        "2026-10-05T23:05:23.748409Z",
+        "2026-10-05T23:05:23.748448Z",
+        "2026-10-05T23:05:24.065685Z",
+        "2026-10-05T23:05:24.065728Z",
+        "2026-10-05T23:05:24.345932Z",
+        "2026-10-05T23:05:24.345972Z",
+        "2026-10-05T23:05:24.642605Z",
+        "2026-10-05T23:05:24.642644Z",
+        "2026-10-05T23:05:24.943531Z",
+        "2026-10-05T23:05:24.943570Z",
+        "2026-10-05T23:05:25.251264Z",
+        "2026-10-05T23:05:25.251304Z",
+        "2026-10-05T23:05:26.463952Z",
+        "2026-10-05T23:05:26.463998Z",
+        "2026-10-05T23:05:27.385844Z",
+        "2026-10-05T23:05:27.385891Z",
+        "2026-10-05T23:05:42.669003Z",
+        "2026-10-05T23:05:42.669047Z",
+        "2026-10-05T23:05:57.963658Z",
+        "2026-10-05T23:05:57.963704Z"
+      ],
+      "scale_runner_exit": 0
+    },
+    {
+      "pass": "pass2",
+      "routes": 1000,
+      "artifact": "diagnostics/pass2-praxis-release-1000",
+      "phase_start": "2026-10-05T23:38:08.231325+00:00",
+      "phase_end": "2026-10-05T23:49:18.456056+00:00",
+      "filter_guard_messages_from_replacement_pods": [
+        "too many filters (1003, max 100)"
+      ],
+      "replacement_pod_evidence": [
+        {
+          "artifact": "diagnostics/pass2-praxis-release-1000/praxis-benchmark-76cf4bf6bb-wwv4x.log",
+          "messages": [
+            "too many filters (1003, max 100)"
+          ],
+          "pod_created": "2026-10-05T23:38:31Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 2,
+              "state": {
+                "waiting": {
+                  "message": "back-off 20s restarting failed container=praxis pod=praxis-benchmark-76cf4bf6bb-wwv4x_gateway-benchmark(ad0414aa-3236-4f0f-894b-f51abbcd6bf4)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://f5285cbdd79786e84715d6f8b870e018279521703cf830e9d2c9c24942a3f3d3",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-05T23:38:43Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-05T23:38:43Z"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "artifact": "diagnostics/pass2-praxis-release-1000/praxis-benchmark-76cf4bf6bb-wwv4x-previous.log",
+          "messages": [
+            "too many filters (1003, max 100)"
+          ],
+          "pod_created": "2026-10-05T23:38:31Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 2,
+              "state": {
+                "waiting": {
+                  "message": "back-off 20s restarting failed container=praxis pod=praxis-benchmark-76cf4bf6bb-wwv4x_gateway-benchmark(ad0414aa-3236-4f0f-894b-f51abbcd6bf4)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://f5285cbdd79786e84715d6f8b870e018279521703cf830e9d2c9c24942a3f3d3",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-05T23:38:43Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-05T23:38:43Z"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "configmap_1048576_byte_api422_timestamps_within_phase": [],
+      "scale_runner_exit": 0
+    },
+    {
+      "pass": "pass2",
+      "routes": 5000,
+      "artifact": "diagnostics/pass2-praxis-release-5000",
+      "phase_start": "2026-10-05T23:49:18.456299+00:00",
+      "phase_end": "2026-10-06T00:02:00.310513+00:00",
+      "filter_guard_messages_from_replacement_pods": [
+        "too many filters (4277, max 100)"
+      ],
+      "replacement_pod_evidence": [
+        {
+          "artifact": "diagnostics/pass2-praxis-release-5000/praxis-benchmark-7fc6d8b77f-db67m-previous.log",
+          "messages": [
+            "too many filters (4277, max 100)"
+          ],
+          "pod_created": "2026-10-05T23:50:16Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 3,
+              "state": {
+                "waiting": {
+                  "message": "back-off 40s restarting failed container=praxis pod=praxis-benchmark-7fc6d8b77f-db67m_gateway-benchmark(15edadb4-f762-4006-ae42-9135425d2123)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://d74a4c2c7bb703bcf273b2f909f7fc9e082ffcd0271c40b8dc132f84b4cd22ac",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-05T23:50:52Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-05T23:50:52Z"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "artifact": "diagnostics/pass2-praxis-release-5000/praxis-benchmark-7fc6d8b77f-db67m.log",
+          "messages": [
+            "too many filters (4277, max 100)"
+          ],
+          "pod_created": "2026-10-05T23:50:16Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 3,
+              "state": {
+                "waiting": {
+                  "message": "back-off 40s restarting failed container=praxis pod=praxis-benchmark-7fc6d8b77f-db67m_gateway-benchmark(15edadb4-f762-4006-ae42-9135425d2123)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://d74a4c2c7bb703bcf273b2f909f7fc9e082ffcd0271c40b8dc132f84b4cd22ac",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-05T23:50:52Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-05T23:50:52Z"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "configmap_1048576_byte_api422_timestamps_within_phase": [
+        "2026-10-05T23:50:15.461170Z",
+        "2026-10-05T23:50:15.461209Z",
+        "2026-10-05T23:50:15.761760Z",
+        "2026-10-05T23:50:15.761796Z",
+        "2026-10-05T23:50:16.070376Z",
+        "2026-10-05T23:50:16.070411Z",
+        "2026-10-05T23:50:16.366586Z",
+        "2026-10-05T23:50:16.366630Z",
+        "2026-10-05T23:50:16.651953Z",
+        "2026-10-05T23:50:16.651995Z",
+        "2026-10-05T23:50:16.963567Z",
+        "2026-10-05T23:50:16.963605Z",
+        "2026-10-05T23:50:17.266865Z",
+        "2026-10-05T23:50:17.266906Z",
+        "2026-10-05T23:50:17.590012Z",
+        "2026-10-05T23:50:17.590048Z",
+        "2026-10-05T23:50:17.870207Z",
+        "2026-10-05T23:50:17.870242Z",
+        "2026-10-05T23:50:18.154260Z",
+        "2026-10-05T23:50:18.154299Z",
+        "2026-10-05T23:50:18.460699Z",
+        "2026-10-05T23:50:18.460741Z",
+        "2026-10-05T23:50:18.771468Z",
+        "2026-10-05T23:50:18.771503Z",
+        "2026-10-05T23:50:19.071346Z",
+        "2026-10-05T23:50:19.071384Z",
+        "2026-10-05T23:50:19.425983Z",
+        "2026-10-05T23:50:19.426029Z",
+        "2026-10-05T23:50:19.673808Z",
+        "2026-10-05T23:50:19.673847Z",
+        "2026-10-05T23:50:19.978681Z",
+        "2026-10-05T23:50:19.978723Z",
+        "2026-10-05T23:50:20.280719Z",
+        "2026-10-05T23:50:20.280753Z",
+        "2026-10-05T23:50:20.580205Z",
+        "2026-10-05T23:50:20.580239Z",
+        "2026-10-05T23:50:20.874455Z",
+        "2026-10-05T23:50:20.874495Z",
+        "2026-10-05T23:50:21.239520Z",
+        "2026-10-05T23:50:21.239569Z",
+        "2026-10-05T23:50:21.591729Z",
+        "2026-10-05T23:50:21.591766Z",
+        "2026-10-05T23:50:21.888377Z",
+        "2026-10-05T23:50:21.888413Z",
+        "2026-10-05T23:50:22.188358Z",
+        "2026-10-05T23:50:22.188404Z",
+        "2026-10-05T23:50:23.384059Z",
+        "2026-10-05T23:50:23.384108Z",
+        "2026-10-05T23:50:38.681488Z",
+        "2026-10-05T23:50:38.681537Z",
+        "2026-10-05T23:50:54.387718Z",
+        "2026-10-05T23:50:54.387762Z"
+      ],
+      "scale_runner_exit": 0
+    },
+    {
+      "pass": "pass3",
+      "routes": 1000,
+      "artifact": "diagnostics/pass3-praxis-release-1000",
+      "phase_start": "2026-10-06T01:09:56.979609+00:00",
+      "phase_end": "2026-10-06T01:21:01.442494+00:00",
+      "filter_guard_messages_from_replacement_pods": [
+        "too many filters (1003, max 100)"
+      ],
+      "replacement_pod_evidence": [
+        {
+          "artifact": "diagnostics/pass3-praxis-release-1000/praxis-benchmark-76cf4bf6bb-kczrc-previous.log",
+          "messages": [
+            "too many filters (1003, max 100)"
+          ],
+          "pod_created": "2026-10-06T01:10:18Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 2,
+              "state": {
+                "waiting": {
+                  "message": "back-off 20s restarting failed container=praxis pod=praxis-benchmark-76cf4bf6bb-kczrc_gateway-benchmark(dda09e6a-ce1a-433c-b675-c76d723b66dc)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://fe19204bf330d912e1b5aa58bf2691582367cfeebf3fa8d394067380bf583d54",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-06T01:10:31Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-06T01:10:31Z"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "artifact": "diagnostics/pass3-praxis-release-1000/praxis-benchmark-76cf4bf6bb-kczrc.log",
+          "messages": [
+            "too many filters (1003, max 100)"
+          ],
+          "pod_created": "2026-10-06T01:10:18Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 2,
+              "state": {
+                "waiting": {
+                  "message": "back-off 20s restarting failed container=praxis pod=praxis-benchmark-76cf4bf6bb-kczrc_gateway-benchmark(dda09e6a-ce1a-433c-b675-c76d723b66dc)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://fe19204bf330d912e1b5aa58bf2691582367cfeebf3fa8d394067380bf583d54",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-06T01:10:31Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-06T01:10:31Z"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "configmap_1048576_byte_api422_timestamps_within_phase": [],
+      "scale_runner_exit": 0
+    },
+    {
+      "pass": "pass3",
+      "routes": 5000,
+      "artifact": "diagnostics/pass3-praxis-release-5000",
+      "phase_start": "2026-10-06T01:21:01.442787+00:00",
+      "phase_end": "2026-10-06T01:33:38.675015+00:00",
+      "filter_guard_messages_from_replacement_pods": [
+        "too many filters (4301, max 100)"
+      ],
+      "replacement_pod_evidence": [
+        {
+          "artifact": "diagnostics/pass3-praxis-release-5000/praxis-benchmark-5fdbdc5c96-5cd6m.log",
+          "messages": [
+            "too many filters (4301, max 100)"
+          ],
+          "pod_created": "2026-10-06T01:21:59Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 2,
+              "state": {
+                "waiting": {
+                  "message": "back-off 20s restarting failed container=praxis pod=praxis-benchmark-5fdbdc5c96-5cd6m_gateway-benchmark(8ed6af4c-2c8d-4641-a78c-29960549806d)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://7f962ca0784ee086c282fc9e7704e51c1a5102ecabe9116f724796012f63b236",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-06T01:22:13Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-06T01:22:13Z"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "artifact": "diagnostics/pass3-praxis-release-5000/praxis-benchmark-5fdbdc5c96-5cd6m-previous.log",
+          "messages": [
+            "too many filters (4301, max 100)"
+          ],
+          "pod_created": "2026-10-06T01:21:59Z",
+          "container_status": [
+            {
+              "name": "praxis",
+              "restartCount": 2,
+              "state": {
+                "waiting": {
+                  "message": "back-off 20s restarting failed container=praxis pod=praxis-benchmark-5fdbdc5c96-5cd6m_gateway-benchmark(8ed6af4c-2c8d-4641-a78c-29960549806d)",
+                  "reason": "CrashLoopBackOff"
+                }
+              },
+              "lastState": {
+                "terminated": {
+                  "containerID": "containerd://7f962ca0784ee086c282fc9e7704e51c1a5102ecabe9116f724796012f63b236",
+                  "exitCode": 1,
+                  "finishedAt": "2026-10-06T01:22:13Z",
+                  "reason": "Error",
+                  "startedAt": "2026-10-06T01:22:13Z"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "configmap_1048576_byte_api422_timestamps_within_phase": [
+        "2026-10-06T01:21:58.894625Z",
+        "2026-10-06T01:21:58.894672Z",
+        "2026-10-06T01:21:59.223032Z",
+        "2026-10-06T01:21:59.223067Z",
+        "2026-10-06T01:21:59.480229Z",
+        "2026-10-06T01:21:59.480278Z",
+        "2026-10-06T01:21:59.794959Z",
+        "2026-10-06T01:21:59.794996Z",
+        "2026-10-06T01:22:00.091869Z",
+        "2026-10-06T01:22:00.091909Z",
+        "2026-10-06T01:22:00.374851Z",
+        "2026-10-06T01:22:00.374893Z",
+        "2026-10-06T01:22:00.697764Z",
+        "2026-10-06T01:22:00.697800Z",
+        "2026-10-06T01:22:00.997665Z",
+        "2026-10-06T01:22:00.997701Z",
+        "2026-10-06T01:22:01.311799Z",
+        "2026-10-06T01:22:01.311839Z",
+        "2026-10-06T01:22:01.604345Z",
+        "2026-10-06T01:22:01.604386Z",
+        "2026-10-06T01:22:01.901763Z",
+        "2026-10-06T01:22:01.901804Z",
+        "2026-10-06T01:22:02.201259Z",
+        "2026-10-06T01:22:02.201297Z",
+        "2026-10-06T01:22:02.498862Z",
+        "2026-10-06T01:22:02.498898Z",
+        "2026-10-06T01:22:02.805705Z",
+        "2026-10-06T01:22:02.805757Z",
+        "2026-10-06T01:22:03.116423Z",
+        "2026-10-06T01:22:03.116463Z",
+        "2026-10-06T01:22:03.411639Z",
+        "2026-10-06T01:22:03.411682Z",
+        "2026-10-06T01:22:03.721072Z",
+        "2026-10-06T01:22:03.721117Z",
+        "2026-10-06T01:22:04.016815Z",
+        "2026-10-06T01:22:04.016875Z",
+        "2026-10-06T01:22:04.319182Z",
+        "2026-10-06T01:22:04.319218Z",
+        "2026-10-06T01:22:04.620047Z",
+        "2026-10-06T01:22:04.620085Z",
+        "2026-10-06T01:22:04.945748Z",
+        "2026-10-06T01:22:04.945800Z",
+        "2026-10-06T01:22:05.218086Z",
+        "2026-10-06T01:22:05.218126Z",
+        "2026-10-06T01:22:05.567446Z",
+        "2026-10-06T01:22:05.567495Z",
+        "2026-10-06T01:22:06.383665Z",
+        "2026-10-06T01:22:06.383711Z",
+        "2026-10-06T01:22:21.695944Z",
+        "2026-10-06T01:22:21.695991Z",
+        "2026-10-06T01:22:37.386339Z",
+        "2026-10-06T01:22:37.386397Z"
+      ],
+      "scale_runner_exit": 0
+    }
+  ],
+  "telemetry_gaps": [
+    {
+      "utc": "2026-10-05T23:05:03.047551+00:00",
+      "error": "Command '['nsenter', '-t', '0', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1.",
+      "within_scale_phases": [
+        "results/kubernetes/pass1/praxis-release/scale-5000-execution.json"
+      ]
+    },
+    {
+      "utc": "2026-10-05T23:05:08.327404+00:00",
+      "error": "Command '['nsenter', '-t', '0', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1.",
+      "within_scale_phases": [
+        "results/kubernetes/pass1/praxis-release/scale-5000-execution.json"
+      ]
+    },
+    {
+      "utc": "2026-10-05T23:10:54.488876+00:00",
+      "error": "Command '['nsenter', '-t', '227765', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1.",
+      "within_scale_phases": [
+        "results/kubernetes/pass1/praxis-release/scale-5000-execution.json"
+      ]
+    },
+    {
+      "utc": "2026-10-05T23:44:16.490201+00:00",
+      "error": "Command '['nsenter', '-t', '0', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1.",
+      "within_scale_phases": [
+        "results/kubernetes/pass2/praxis-release/scale-1000-execution.json"
+      ]
+    },
+    {
+      "utc": "2026-10-05T23:50:07.747259+00:00",
+      "error": "Command '['nsenter', '-t', '0', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1.",
+      "within_scale_phases": [
+        "results/kubernetes/pass2/praxis-release/scale-5000-execution.json"
+      ]
+    },
+    {
+      "utc": "2026-10-06T01:22:34.581522+00:00",
+      "error": "Command '['nsenter', '-t', '0', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1.",
+      "within_scale_phases": [
+        "results/kubernetes/pass3/praxis-release/scale-5000-execution.json"
+      ]
+    }
+  ],
+  "static_signatures": [
+    {
+      "pass": "pass1",
+      "treatment": "agentgateway",
+      "artifact": "results/static-address/pass1/agentgateway",
+      "unsupported_address": false,
+      "explicit_unsupported_spec": false,
+      "cleanup_complete": true
+    },
+    {
+      "pass": "pass1",
+      "treatment": "praxis",
+      "artifact": "results/static-address/pass1/praxis",
+      "unsupported_address": true,
+      "explicit_unsupported_spec": true,
+      "cleanup_complete": true
+    },
+    {
+      "pass": "pass2",
+      "treatment": "agentgateway",
+      "artifact": "results/static-address/pass2/agentgateway",
+      "unsupported_address": false,
+      "explicit_unsupported_spec": false,
+      "cleanup_complete": true
+    },
+    {
+      "pass": "pass2",
+      "treatment": "praxis",
+      "artifact": "results/static-address/pass2/praxis",
+      "unsupported_address": true,
+      "explicit_unsupported_spec": true,
+      "cleanup_complete": true
+    },
+    {
+      "pass": "pass3",
+      "treatment": "agentgateway",
+      "artifact": "results/static-address/pass3/agentgateway",
+      "unsupported_address": false,
+      "explicit_unsupported_spec": false,
+      "cleanup_complete": true
+    },
+    {
+      "pass": "pass3",
+      "treatment": "praxis",
+      "artifact": "results/static-address/pass3/praxis",
+      "unsupported_address": true,
+      "explicit_unsupported_spec": true,
+      "cleanup_complete": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "reviewed_at": "2026-10-05T22:59:27.281156+00:00",
+  "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/8bb74df00e56ec8f944d48c25e6c1c9c2f6848e3/conformance/tests/gateway-static-addresses.go",
+  "source_sha256": "ada1e30779d78daa6067817dd3f8af0de1a7e51401584e1008a9f9d2aa5dc4ab",
+  "assertions": [
+    "Unsupported address type rejection",
+    "Accepted but not programmed for unusable address",
+    "Accepted/programmed and listener conditions with usable address",
+    "Freshly polled status address matches usable address and excludes invalid/unusable addresses"
+  ],
+  "traffic_to_assigned_address": false,
+  "campaign_boundary": "MetalLB supplies IP allocation/status. HTTP capacity uses private NodePort, not traffic to the assigned test VIP."
+}

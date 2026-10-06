@@ -1,0 +1,159 @@
+{
+  "profile": "native",
+  "phase": "qualification-seeded",
+  "treatments": {
+    "agentgateway": {
+      "complete": true,
+      "load_cases": 4,
+      "nonzero_processes": [],
+      "fortio_status_counts": {
+        "200": 29696
+      },
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 0,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 3,
+      "protocol_passed": 18,
+      "protocol_total": 18,
+      "cancellation_passed": 3,
+      "cancellation_total": 3
+    },
+    "direct": {
+      "complete": true,
+      "load_cases": 4,
+      "nonzero_processes": [],
+      "fortio_status_counts": {
+        "200": 29696
+      },
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 0,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 3,
+      "protocol_passed": 18,
+      "protocol_total": 18,
+      "cancellation_passed": 3,
+      "cancellation_total": 3
+    },
+    "praxis": {
+      "complete": true,
+      "load_cases": 4,
+      "nonzero_processes": [],
+      "fortio_status_counts": {
+        "200": 26611
+      },
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 0,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 3,
+      "protocol_passed": 18,
+      "protocol_total": 18,
+      "cancellation_passed": 3,
+      "cancellation_total": 3
+    }
+  },
+  "issues": [],
+  "generated_message_corpora": [
+    {
+      "treatment": "agentgateway",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 2
+      },
+      "messages": 4,
+      "sha256": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+      "artifact": "agentgateway/ai/01-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "agentgateway",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 2
+      },
+      "messages": 4,
+      "sha256": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+      "artifact": "agentgateway/ai/02-aiperf-anthropic/result/inputs.json"
+    },
+    {
+      "treatment": "agentgateway",
+      "case": {
+        "tool": "aiperf",
+        "api": "translation",
+        "concurrency": 2
+      },
+      "messages": 4,
+      "sha256": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+      "artifact": "agentgateway/ai/03-aiperf-translation/result/inputs.json"
+    },
+    {
+      "treatment": "direct",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 2
+      },
+      "messages": 4,
+      "sha256": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+      "artifact": "direct/ai/01-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "direct",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 2
+      },
+      "messages": 4,
+      "sha256": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+      "artifact": "direct/ai/02-aiperf-anthropic/result/inputs.json"
+    },
+    {
+      "treatment": "direct",
+      "case": {
+        "tool": "aiperf",
+        "api": "translation",
+        "concurrency": 2
+      },
+      "messages": 4,
+      "sha256": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+      "artifact": "direct/ai/03-aiperf-translation/result/inputs.json"
+    },
+    {
+      "treatment": "praxis",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 2
+      },
+      "messages": 4,
+      "sha256": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+      "artifact": "praxis/ai/01-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "praxis",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 2
+      },
+      "messages": 4,
+      "sha256": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+      "artifact": "praxis/ai/02-aiperf-anthropic/result/inputs.json"
+    },
+    {
+      "treatment": "praxis",
+      "case": {
+        "tool": "aiperf",
+        "api": "translation",
+        "concurrency": 2
+      },
+      "messages": 4,
+      "sha256": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+      "artifact": "praxis/ai/03-aiperf-translation/result/inputs.json"
+    }
+  ]
+}

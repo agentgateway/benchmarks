@@ -1,0 +1,306 @@
+[
+    {
+        "Id": "7edd4a3f38f74f4f0ab4fdf5812e206da5661703e76d4b00b9fd8e660a37d22a",
+        "Created": "2026-10-05T20:12:51.939701139Z",
+        "Path": "praxis-ai",
+        "Args": [
+            "-c",
+            "/etc/config.yaml"
+        ],
+        "State": {
+            "Status": "created",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "0001-01-01T00:00:00Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+        "ResolvConfPath": "",
+        "HostnamePath": "",
+        "HostsPath": "",
+        "LogPath": "",
+        "Name": "/praxis-ai-nightly",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/opt/gateway-benchmark/praxis-native.yaml:/etc/config.yaml:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {
+                    "max-file": "3",
+                    "max-size": "10m"
+                }
+            },
+            "NetworkMode": "host",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 2147483648,
+            "NanoCpus": 2000000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "2,3",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 4294967296,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": [
+                {
+                    "Name": "nofile",
+                    "Hard": 65536,
+                    "Soft": 65536
+                }
+            ],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/opt/gateway-benchmark/praxis-native.yaml",
+                "Destination": "/etc/config.yaml",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "gwcmp160-1005-gateway.c.solo-oss.internal",
+            "Domainname": "",
+            "User": "praxis:praxis",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8080/tcp": {},
+                "9901/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "-c",
+                "/etc/config.yaml"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "NONE"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 2000000000
+            },
+            "Image": "ghcr.io/praxis-proxy/ai@sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+            "Volumes": null,
+            "WorkingDir": "/etc/praxis",
+            "Entrypoint": [
+                "praxis-ai"
+            ],
+            "Labels": {
+                "org.opencontainers.image.created": "2026-10-02T05:09:18.917Z",
+                "org.opencontainers.image.description": "AI Gateway",
+                "org.opencontainers.image.licenses": "Apache-2.0",
+                "org.opencontainers.image.revision": "f5f51a751d6f25acde96fb840665b24f2696ce46",
+                "org.opencontainers.image.source": "https://github.com/praxis-proxy/ai",
+                "org.opencontainers.image.title": "ai",
+                "org.opencontainers.image.url": "https://github.com/praxis-proxy/ai",
+                "org.opencontainers.image.version": "main"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "host": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+            "size": 1617,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+[
+    {
+        "Id": "sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+        "RepoTags": [
+            "ghcr.io/praxis-proxy/ai@sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4"
+        ],
+        "RepoDigests": [
+            "ghcr.io/praxis-proxy/ai@sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-02T05:25:19.479690282Z",
+        "Config": {
+            "User": "praxis:praxis",
+            "ExposedPorts": {
+                "8080/tcp": {},
+                "9901/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "praxis-ai"
+            ],
+            "WorkingDir": "/etc/praxis",
+            "Labels": {
+                "org.opencontainers.image.created": "2026-10-02T05:09:18.917Z",
+                "org.opencontainers.image.description": "AI Gateway",
+                "org.opencontainers.image.licenses": "Apache-2.0",
+                "org.opencontainers.image.revision": "f5f51a751d6f25acde96fb840665b24f2696ce46",
+                "org.opencontainers.image.source": "https://github.com/praxis-proxy/ai",
+                "org.opencontainers.image.title": "ai",
+                "org.opencontainers.image.url": "https://github.com/praxis-proxy/ai",
+                "org.opencontainers.image.version": "main"
+            },
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "wget -qO- http://127.0.0.1:9901/healthy || exit 1"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 2000000000
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 23721167,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:74d97c428c51a828f9051a7a40a53ff1fc99e54fc30323ce36760701b0b7f711",
+                "sha256:96e8dcf4f63d3656e92090397278f4cd13afd2482cb11c30922d2aeea498a0b1",
+                "sha256:f1ae6594d03c8c347e5f85161671aed47c7fbfcbd51ced03076f0f8e2cb648a9",
+                "sha256:00f6d60cbf8cb8a4bbb15cdc0d01c79c9f0cb0fea1b13c9cb72d1081005fcb2b",
+                "sha256:63a06e8ba6bc32a3b634f70b2379006f07ff63dc5c6657d317a420de2cf1612c",
+                "sha256:2d449ac653818c6abb87184842989d207b76d89ca6871993530d6af257cb37c1",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-05T20:12:51.895846642Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+            "size": 1617
+        }
+    }
+]

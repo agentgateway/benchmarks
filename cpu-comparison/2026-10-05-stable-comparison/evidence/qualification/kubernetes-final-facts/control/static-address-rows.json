@@ -1,0 +1,68 @@
+[
+  {
+    "pass": 1,
+    "treatment": "agentgateway",
+    "test": "GatewayStaticAddresses",
+    "suite": "conformance/v1.6.1",
+    "exit": 0,
+    "passed": true,
+    "failed": false,
+    "cleanup_complete": true,
+    "artifact": "results/static-address/pass1/agentgateway"
+  },
+  {
+    "pass": 1,
+    "treatment": "praxis",
+    "test": "GatewayStaticAddresses",
+    "suite": "conformance/v1.6.1",
+    "exit": 1,
+    "passed": false,
+    "failed": true,
+    "cleanup_complete": true,
+    "artifact": "results/static-address/pass1/praxis"
+  },
+  {
+    "pass": 2,
+    "treatment": "agentgateway",
+    "test": "GatewayStaticAddresses",
+    "suite": "conformance/v1.6.1",
+    "exit": 0,
+    "passed": true,
+    "failed": false,
+    "cleanup_complete": true,
+    "artifact": "results/static-address/pass2/agentgateway"
+  },
+  {
+    "pass": 2,
+    "treatment": "praxis",
+    "test": "GatewayStaticAddresses",
+    "suite": "conformance/v1.6.1",
+    "exit": 1,
+    "passed": false,
+    "failed": true,
+    "cleanup_complete": true,
+    "artifact": "results/static-address/pass2/praxis"
+  },
+  {
+    "pass": 3,
+    "treatment": "agentgateway",
+    "test": "GatewayStaticAddresses",
+    "suite": "conformance/v1.6.1",
+    "exit": 0,
+    "passed": true,
+    "failed": false,
+    "cleanup_complete": true,
+    "artifact": "results/static-address/pass3/agentgateway"
+  },
+  {
+    "pass": 3,
+    "treatment": "praxis",
+    "test": "GatewayStaticAddresses",
+    "suite": "conformance/v1.6.1",
+    "exit": 1,
+    "passed": false,
+    "failed": true,
+    "cleanup_complete": true,
+    "artifact": "results/static-address/pass3/praxis"
+  }
+]

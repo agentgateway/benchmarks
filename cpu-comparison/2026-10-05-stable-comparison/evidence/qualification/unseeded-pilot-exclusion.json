@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-10-05T19:13:59.416246+00:00",
+  "reason": "Freeze AIPerf random seed uniformly before any gateway performance treatment; original runner used system entropy",
+  "scope": "Partial common pass1 direct baseline only; exclude the whole partial pilot, including unchanged Fortio cases, from final aggregates",
+  "kubernetes": "Unaffected; no AIPerf in Kubernetes workload",
+  "seed": 42
+}

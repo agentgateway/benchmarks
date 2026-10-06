@@ -1,0 +1,23 @@
+{
+  "case": "results/praxis-nightly-20261002/pass3/praxis",
+  "reviewed_at": "2026-10-03T10:19:52.726099+00:00",
+  "infrastructure_valid": true,
+  "counts": {
+    "not-executed": 107
+  },
+  "classification": "Product operator/nightly pairing setup-blocked; individual feature coverage not evaluated",
+  "runtime_review": "nightly-praxis-pass3-runtime.json",
+  "setup_review": "nightly-praxis-pass3-setup.json",
+  "operator_startup_LeadershipLost_exits": 1,
+  "checks": {
+    "node_issues": {},
+    "collection_errors": [],
+    "all_four_empty_router_failures": true,
+    "fixture_pods_ready": true,
+    "cleanup_complete": true,
+    "outer_timeout_reached": false
+  },
+  "notes": [
+    "Same immutable nightly image and empty-router failure as both earlier measured repetitions. Ten runtime snapshots with maximum 33.23-second gap, healthy nodes and all 24 observed fixture pods Ready. Four data-plane exit-code-one crash loops are product initialization failures. One operator startup LeadershipLost exit retained separately. Cleanup and job finished."
+  ]
+}

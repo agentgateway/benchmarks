@@ -1,0 +1,7 @@
+{
+  "repository": "praxis",
+  "ref": "31ac6dc86fba30ff510b17f9139021de60d8ba79",
+  "path": "crates/filter/src/registry.rs",
+  "blob_sha": "f6950c90aabb3b6bef5c96885a2a6cb77ffeb9f3",
+  "url": "https://github.com/praxis-proxy/praxis/blob/31ac6dc86fba30ff510b17f9139021de60d8ba79/crates/filter/src/registry.rs"
+}

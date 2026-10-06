@@ -1,0 +1,85 @@
+{
+  "profile": "kubernetes",
+  "phase": "pass3",
+  "treatments": {
+    "agentgateway": {
+      "complete": true,
+      "load_cases": 14,
+      "nonzero_processes": [],
+      "fortio_status_counts": {
+        "200": 1949684
+      },
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 4,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 0,
+      "protocol_passed": 0,
+      "protocol_total": 0,
+      "cancellation_passed": 0,
+      "cancellation_total": 0
+    },
+    "direct": {
+      "complete": true,
+      "load_cases": 14,
+      "nonzero_processes": [],
+      "fortio_status_counts": {
+        "200": 7893467
+      },
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 0,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 0,
+      "protocol_passed": 0,
+      "protocol_total": 0,
+      "cancellation_passed": 0,
+      "cancellation_total": 0
+    },
+    "praxis-nightly": {
+      "complete": true,
+      "load_cases": 0,
+      "nonzero_processes": [],
+      "fortio_status_counts": {},
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 0,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 0,
+      "protocol_passed": 0,
+      "protocol_total": 0,
+      "cancellation_passed": 0,
+      "cancellation_total": 0,
+      "setup_block": {
+        "recorded_at": "2026-10-06T00:45:16.379276+00:00",
+        "classification": "stock operator/core nightly configuration incompatibility",
+        "infrastructure_nodes_ready": true,
+        "image": "ghcr.io/praxis-proxy/praxis@sha256:be62d256d5ec92aacb1216baba506aac763e2100f9eb361820a5c27c54e17be8",
+        "http": "not evaluated",
+        "scale": "not evaluated",
+        "recovery": "not evaluated",
+        "reason": "Operator cluster name contains tilde, rejected by the pinned nightly",
+        "modified_product_config": false
+      }
+    },
+    "praxis-release": {
+      "complete": true,
+      "load_cases": 14,
+      "nonzero_processes": [],
+      "fortio_status_counts": {
+        "200": 2246548
+      },
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 4,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 0,
+      "protocol_passed": 0,
+      "protocol_total": 0,
+      "cancellation_passed": 0,
+      "cancellation_total": 0
+    }
+  },
+  "issues": [],
+  "generated_message_corpora": []
+}

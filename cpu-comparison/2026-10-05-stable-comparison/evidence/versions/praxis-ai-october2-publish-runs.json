@@ -1,0 +1,1 @@
+{"total_count":1,"workflow_runs":[{"conclusion":"success","created_at":"2026-10-02T05:09:00Z","event":"schedule","head_sha":"f5f51a751d6f25acde96fb840665b24f2696ce46","html_url":"https://github.com/praxis-proxy/ai/actions/runs/36967646910","id":36967646910,"status":"completed","updated_at":"2026-10-02T05:30:19Z"}]}

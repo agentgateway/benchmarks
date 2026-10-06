@@ -1,0 +1,37 @@
+{
+  "archives": [
+    {
+      "file": "kbackend.tar.gz",
+      "bytes": 1167094,
+      "sha256": "7bb3e2c69cfe732e537499812eae3006f2d0c9cb453df4347e7850463cbf7497",
+      "archive_entries": 8
+    },
+    {
+      "file": "kclient.tar.gz",
+      "bytes": 70235142,
+      "sha256": "352bd7958e1ca44a5cd93a09611535239dbbb3f891405c64c07177dd89c44fed",
+      "archive_entries": 769
+    },
+    {
+      "file": "kcontrol.tar.gz",
+      "bytes": 1166826,
+      "sha256": "e8b7988857b904867574bdbe34b1a863884fc78b6588ec17a57ca04f4efbdef1",
+      "archive_entries": 46
+    },
+    {
+      "file": "kcontroller.tar.gz",
+      "bytes": 1676380,
+      "sha256": "715fa7a5ca48173ede4ca3c7d62997d2a9725f3b6136d1f58efbaf56f042e684",
+      "archive_entries": 11
+    },
+    {
+      "file": "kgateway.tar.gz",
+      "bytes": 15169954,
+      "sha256": "e49016193132c1060a8ab9946acdf8856cdb0c0cd06e43772d2489312ff47310",
+      "archive_entries": 8
+    }
+  ],
+  "problems": [],
+  "passed": true,
+  "scope": "Archive readability, checksums, unsafe paths and known credential filenames, and private-key content patterns. Also inspect exported file inventory and Git diff; this is not a general secret scanner."
+}

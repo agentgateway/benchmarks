@@ -1,0 +1,62 @@
+{
+  "kgateway": {
+    "container_records": 123,
+    "profiles": [
+      "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n"
+    ],
+    "pids": [
+      163864,
+      166483,
+      167119,
+      167663,
+      169539,
+      169689,
+      169820,
+      170192,
+      170324,
+      172827,
+      173445
+    ],
+    "read_errors": [
+      "[Errno 2] No such file or directory: '/proc/170192/net/sockstat'"
+    ]
+  },
+  "kbackend": {
+    "container_records": 211,
+    "profiles": [
+      "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n"
+    ],
+    "pids": [
+      34263
+    ],
+    "read_errors": []
+  },
+  "kcontroller": {
+    "container_records": 365,
+    "profiles": [
+      "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n"
+    ],
+    "pids": [
+      143211,
+      143218,
+      148794,
+      148796,
+      151434,
+      151442,
+      152198,
+      152496,
+      153504,
+      153511,
+      153624,
+      157076,
+      157083,
+      157290,
+      157653,
+      157862,
+      159853,
+      159860,
+      160145
+    ],
+    "read_errors": []
+  }
+}

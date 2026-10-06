@@ -1,0 +1,3139 @@
+{
+  "phase": "pass1",
+  "windows": 232,
+  "issues": [],
+  "checks": [
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/00-fortio-openai/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/01-fortio-openai/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/02-fortio-openai/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/03-fortio-openai/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/04-fortio-openai/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/05-fortio-openai/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/06-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/07-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/08-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/09-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/10-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/11-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/12-fortio-openai/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/13-fortio-openai/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/14-aiperf-openai/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 8,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/15-aiperf-openai/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 9,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/16-aiperf-anthropic/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 8,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/ai/17-aiperf-anthropic/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 8,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/00-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/01-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/02-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/03-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/04-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/05-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 8,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/06-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/07-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/08-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/09-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/10-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 8,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/11-fortio/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/12-nighthawk/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 8,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/agentgateway/http/13-nighthawk/execution.json",
+      "expected_container": "/agentgateway",
+      "samples": 7,
+      "pids": [
+        32266
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/00-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/01-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/02-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/03-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/04-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/05-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/06-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/07-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/08-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/09-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/10-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/11-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/12-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/13-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/14-aiperf-openai/execution.json",
+      "expected_container": null,
+      "samples": 9,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/15-aiperf-openai/execution.json",
+      "expected_container": null,
+      "samples": 9,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/16-aiperf-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 9,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/ai/17-aiperf-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 9,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/00-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/01-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/02-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/03-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/04-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/05-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/06-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/07-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/08-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/09-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/10-fortio/execution.json",
+      "expected_container": null,
+      "samples": 8,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/11-fortio/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/12-nighthawk/execution.json",
+      "expected_container": null,
+      "samples": 8,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/direct/http/13-nighthawk/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/00-fortio-openai/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/01-fortio-openai/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/02-fortio-openai/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/03-fortio-openai/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/04-fortio-openai/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/05-fortio-openai/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/06-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/07-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/08-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/09-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/10-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/11-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/12-fortio-openai/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/13-fortio-openai/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/14-aiperf-openai/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 8,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/15-aiperf-openai/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 9,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/16-aiperf-anthropic/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 8,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/ai/17-aiperf-anthropic/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 8,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/00-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/01-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/02-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/03-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/04-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/05-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/06-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/07-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/08-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/09-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/10-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/11-fortio/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/12-nighthawk/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-nightly/http/13-nighthawk/execution.json",
+      "expected_container": "/praxis-nightly",
+      "samples": 7,
+      "pids": [
+        48646
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/00-fortio-openai/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/01-fortio-openai/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/02-fortio-openai/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/03-fortio-openai/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/04-fortio-openai/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/05-fortio-openai/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/06-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/07-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/08-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/09-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/10-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/11-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/12-fortio-openai/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/13-fortio-openai/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 6,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/14-aiperf-openai/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 8,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/15-aiperf-openai/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 8,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/16-aiperf-anthropic/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 8,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/ai/17-aiperf-anthropic/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 9,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/00-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/01-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 6,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/02-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/03-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/04-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/05-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/06-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/07-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/08-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/09-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/10-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/11-fortio/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/12-nighthawk/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 7,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/common/pass1/praxis-release/http/13-nighthawk/execution.json",
+      "expected_container": "/praxis-release",
+      "samples": 8,
+      "pids": [
+        42981
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/00-fortio-openai/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/01-fortio-openai/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/02-fortio-openai/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/03-fortio-openai/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/04-fortio-openai/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/05-fortio-openai/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/06-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/07-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/08-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/09-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/10-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/11-fortio-anthropic/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/12-fortio-translation/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/13-fortio-translation/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/14-fortio-translation/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/15-fortio-translation/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/16-fortio-translation/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/17-fortio-translation/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/18-fortio-openai/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/19-fortio-openai/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/20-aiperf-openai/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 7,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/21-aiperf-openai/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 8,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/22-aiperf-anthropic/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 8,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/23-aiperf-anthropic/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 8,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/24-aiperf-translation/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 8,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/agentgateway/ai/25-aiperf-translation/execution.json",
+      "expected_container": "/agentgateway-native",
+      "samples": 8,
+      "pids": [
+        56756
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/00-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/01-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/02-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/03-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/04-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/05-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/06-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/07-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/08-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/09-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/10-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/11-fortio-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/12-fortio-translation/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/13-fortio-translation/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/14-fortio-translation/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/15-fortio-translation/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/16-fortio-translation/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/17-fortio-translation/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/18-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/19-fortio-openai/execution.json",
+      "expected_container": null,
+      "samples": 7,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/20-aiperf-openai/execution.json",
+      "expected_container": null,
+      "samples": 9,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/21-aiperf-openai/execution.json",
+      "expected_container": null,
+      "samples": 9,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/22-aiperf-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 8,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/23-aiperf-anthropic/execution.json",
+      "expected_container": null,
+      "samples": 9,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/24-aiperf-translation/execution.json",
+      "expected_container": null,
+      "samples": 8,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/direct/ai/25-aiperf-translation/execution.json",
+      "expected_container": null,
+      "samples": 8,
+      "pids": [],
+      "cpu_affinities": [],
+      "cpu_quotas": [],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/00-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/01-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/02-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/03-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/04-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/05-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/06-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/07-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/08-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/09-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/10-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/11-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/12-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/13-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/14-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/15-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/16-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/17-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/18-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/19-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 7,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/20-aiperf-openai/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 9,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/21-aiperf-openai/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 9,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/22-aiperf-anthropic/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 8,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/23-aiperf-anthropic/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 8,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/24-aiperf-translation/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 8,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis/ai/25-aiperf-translation/execution.json",
+      "expected_container": "/praxis-ai",
+      "samples": 9,
+      "pids": [
+        61443
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/00-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/01-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 6,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/02-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/03-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/04-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/05-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/06-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/07-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/08-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/09-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/10-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/11-fortio-anthropic/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/12-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/13-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/14-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/15-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/16-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/17-fortio-translation/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/18-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/19-fortio-openai/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 7,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/20-aiperf-openai/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 8,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/21-aiperf-openai/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 9,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/22-aiperf-anthropic/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 8,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/23-aiperf-anthropic/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 9,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/24-aiperf-translation/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 8,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    },
+    {
+      "artifact": "results/native/pass1/praxis-ai-nightly/ai/25-aiperf-translation/execution.json",
+      "expected_container": "/praxis-ai-nightly",
+      "samples": 9,
+      "pids": [
+        66360
+      ],
+      "cpu_affinities": [
+        "2-3"
+      ],
+      "cpu_quotas": [
+        "200000 100000"
+      ],
+      "passed": true
+    }
+  ]
+}

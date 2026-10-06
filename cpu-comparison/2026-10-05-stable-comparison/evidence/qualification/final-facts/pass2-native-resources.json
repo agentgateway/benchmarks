@@ -1,0 +1,47 @@
+{
+  "phase": "pass2",
+  "profile": "native",
+  "input": "/private/tmp/gateway-comparison-benchmarks/campaigns/2026-10-05-stable-comparison/evidence/qualification/final-facts/cpu-hosts.json",
+  "windows": 312,
+  "roles": {
+    "backend": {
+      "windows": 104,
+      "minimum_samples": 6,
+      "maximum_fd_count": 627,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 75.12900079567636,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.008397374019821569,
+      "peak_mean_quota_busy_percent": 96.97358088596769,
+      "through_gateways_peak_mean_host_busy_percent": 48.612462454868606,
+      "through_gateways_peak_mean_quota_busy_percent": 61.952806248938
+    },
+    "client": {
+      "windows": 104,
+      "minimum_samples": 7,
+      "maximum_fd_count": 518,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 76.64990476530471,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.0318711821558359,
+      "peak_mean_quota_busy_percent": null,
+      "through_gateways_peak_mean_host_busy_percent": 62.202285506609044,
+      "through_gateways_peak_mean_quota_busy_percent": null
+    },
+    "gateway": {
+      "windows": 104,
+      "minimum_samples": 6,
+      "maximum_fd_count": 1152,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 28.79158165480364,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 2.4744081792241035,
+      "peak_mean_quota_busy_percent": 99.80746751227896,
+      "through_gateways_peak_mean_host_busy_percent": 28.79158165480364,
+      "through_gateways_peak_mean_quota_busy_percent": 99.80746751227896
+    }
+  },
+  "events_to_review": [],
+  "approved": false,
+  "note": "Restart/OOM counters may predate a window. Attribute using raw timestamps/lifecycle evidence; intended product capacity/recovery constraints are not automatically infrastructure failures. Short qualification cases can contain few samples. This summary does not approve a pass."
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "treatment": "agentgateway",
+    "count": 1000,
+    "marker": "created",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          10.11173307199897
+        ],
+        "arithmetic_mean": null,
+        "min": 10.11173307199897,
+        "max": 10.11173307199897,
+        "sample_stddev": null
+      },
+      "status_convergence_seconds": {
+        "per_pass": [
+          11.35575173899997
+        ],
+        "arithmetic_mean": null,
+        "min": 11.35575173899997,
+        "max": 11.35575173899997,
+        "sample_stddev": null
+      },
+      "all_route_traffic_verified_seconds": {
+        "per_pass": [
+          12.324077158998989
+        ],
+        "arithmetic_mean": null,
+        "min": 12.324077158998989,
+        "max": 12.324077158998989,
+        "sample_stddev": null
+      }
+    },
+    "converged_passes": 1
+  },
+  {
+    "treatment": "agentgateway",
+    "count": 1000,
+    "marker": "updated",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          10.107101342999158
+        ],
+        "arithmetic_mean": null,
+        "min": 10.107101342999158,
+        "max": 10.107101342999158,
+        "sample_stddev": null
+      },
+      "status_convergence_seconds": {
+        "per_pass": [
+          10.740143020999312
+        ],
+        "arithmetic_mean": null,
+        "min": 10.740143020999312,
+        "max": 10.740143020999312,
+        "sample_stddev": null
+      },
+      "all_route_traffic_verified_seconds": {
+        "per_pass": [
+          11.726178274999256
+        ],
+        "arithmetic_mean": null,
+        "min": 11.726178274999256,
+        "max": 11.726178274999256,
+        "sample_stddev": null
+      }
+    },
+    "converged_passes": 1
+  },
+  {
+    "treatment": "agentgateway",
+    "count": 5000,
+    "marker": "created",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          50.11046414899829
+        ],
+        "arithmetic_mean": null,
+        "min": 50.11046414899829,
+        "max": 50.11046414899829,
+        "sample_stddev": null
+      },
+      "status_convergence_seconds": {
+        "per_pass": [
+          53.363317138999264
+        ],
+        "arithmetic_mean": null,
+        "min": 53.363317138999264,
+        "max": 53.363317138999264,
+        "sample_stddev": null
+      },
+      "all_route_traffic_verified_seconds": {
+        "per_pass": [
+          57.921122441999614
+        ],
+        "arithmetic_mean": null,
+        "min": 57.921122441999614,
+        "max": 57.921122441999614,
+        "sample_stddev": null
+      }
+    },
+    "converged_passes": 1
+  },
+  {
+    "treatment": "agentgateway",
+    "count": 5000,
+    "marker": "updated",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          50.114869824999914
+        ],
+        "arithmetic_mean": null,
+        "min": 50.114869824999914,
+        "max": 50.114869824999914,
+        "sample_stddev": null
+      },
+      "status_convergence_seconds": {
+        "per_pass": [
+          52.67934173700087
+        ],
+        "arithmetic_mean": null,
+        "min": 52.67934173700087,
+        "max": 52.67934173700087,
+        "sample_stddev": null
+      },
+      "all_route_traffic_verified_seconds": {
+        "per_pass": [
+          57.09470595499988
+        ],
+        "arithmetic_mean": null,
+        "min": 57.09470595499988,
+        "max": 57.09470595499988,
+        "sample_stddev": null
+      }
+    },
+    "converged_passes": 1
+  },
+  {
+    "treatment": "praxis-release",
+    "count": 1000,
+    "marker": "created",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          10.106724257999304
+        ],
+        "arithmetic_mean": null,
+        "min": 10.106724257999304,
+        "max": 10.106724257999304,
+        "sample_stddev": null
+      }
+    },
+    "converged_passes": 0
+  },
+  {
+    "treatment": "praxis-release",
+    "count": 1000,
+    "marker": "updated",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          10.105823403999239
+        ],
+        "arithmetic_mean": null,
+        "min": 10.105823403999239,
+        "max": 10.105823403999239,
+        "sample_stddev": null
+      }
+    },
+    "converged_passes": 0
+  },
+  {
+    "treatment": "praxis-release",
+    "count": 5000,
+    "marker": "created",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          50.10321846700026
+        ],
+        "arithmetic_mean": null,
+        "min": 50.10321846700026,
+        "max": 50.10321846700026,
+        "sample_stddev": null
+      }
+    },
+    "converged_passes": 0
+  },
+  {
+    "treatment": "praxis-release",
+    "count": 5000,
+    "marker": "updated",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          50.10981836599967
+        ],
+        "arithmetic_mean": null,
+        "min": 50.10981836599967,
+        "max": 50.10981836599967,
+        "sample_stddev": null
+      }
+    },
+    "converged_passes": 0
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-10-05T20:07:03.169370+00:00",
+  "results": [
+    {
+      "image": "ghcr.io/praxis-proxy/ai:0.5.0",
+      "status": 200,
+      "digest": "sha256:74f94c017f72ada82b13fba8226e98b7e5d79de73e65effb7c8ace7fdce15240",
+      "manifest": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.oci.image.index.v1+json",
+        "manifests": [
+          {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:5121c638ee4b2c4dd9184c403b11d9384cd1ea26c1542085d2953a74bb15b4f8",
+            "size": 1617,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          },
+          {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:7004eb53d60971e4106ff6813f36f777324355198ee9fd47305b8a3698f736c9",
+            "size": 838,
+            "annotations": {
+              "vnd.docker.reference.digest": "sha256:5121c638ee4b2c4dd9184c403b11d9384cd1ea26c1542085d2953a74bb15b4f8",
+              "vnd.docker.reference.type": "attestation-manifest"
+            },
+            "platform": {
+              "architecture": "unknown",
+              "os": "unknown"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "image": "ghcr.io/praxis-proxy/ai:sha-f5f51a7",
+      "status": 200,
+      "digest": "sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65",
+      "manifest": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.oci.image.index.v1+json",
+        "manifests": [
+          {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+            "size": 1617,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          },
+          {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:c1bdee8f268dbfc437148c21b361ebcb02c5e264557cc2f828ddaab770e59357",
+            "size": 838,
+            "annotations": {
+              "vnd.docker.reference.digest": "sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+              "vnd.docker.reference.type": "attestation-manifest"
+            },
+            "platform": {
+              "architecture": "unknown",
+              "os": "unknown"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "phase": "pass3",
+  "profile": "native",
+  "input": "/private/tmp/gateway-comparison-benchmarks/campaigns/2026-10-05-stable-comparison/evidence/qualification/final-facts/cpu-hosts.json",
+  "windows": 312,
+  "roles": {
+    "backend": {
+      "windows": 104,
+      "minimum_samples": 6,
+      "maximum_fd_count": 621,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 75.08175309917739,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.008312603648424545,
+      "peak_mean_quota_busy_percent": 96.87108278700595,
+      "through_gateways_peak_mean_host_busy_percent": 50.311906735316136,
+      "through_gateways_peak_mean_quota_busy_percent": 63.82739154860977
+    },
+    "client": {
+      "windows": 104,
+      "minimum_samples": 6,
+      "maximum_fd_count": 518,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 76.32330072019454,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.03776754121168616,
+      "peak_mean_quota_busy_percent": null,
+      "through_gateways_peak_mean_host_busy_percent": 61.472607422123076,
+      "through_gateways_peak_mean_quota_busy_percent": null
+    },
+    "gateway": {
+      "windows": 104,
+      "minimum_samples": 6,
+      "maximum_fd_count": 1146,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 28.40169229604324,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.012478163214374845,
+      "peak_mean_quota_busy_percent": 99.80744595439364,
+      "through_gateways_peak_mean_host_busy_percent": 28.40169229604324,
+      "through_gateways_peak_mean_quota_busy_percent": 99.80744595439364
+    }
+  },
+  "events_to_review": [],
+  "approved": false,
+  "note": "Restart/OOM counters may predate a window. Attribute using raw timestamps/lifecycle evidence; intended product capacity/recovery constraints are not automatically infrastructure failures. Short qualification cases can contain few samples. This summary does not approve a pass."
+}

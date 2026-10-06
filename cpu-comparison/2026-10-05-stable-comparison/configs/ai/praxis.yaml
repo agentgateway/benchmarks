@@ -1,0 +1,20 @@
+runtime:
+  threads: 2
+listeners:
+- name: common
+  address: "10.128.0.63:8080"
+  filter_chains: [common]
+filter_chains:
+- name: common
+  filters:
+  - filter: router
+    routes:
+    - path_prefix: "/"
+      cluster: mock
+  - filter: load_balancer
+    clusters:
+    - name: mock
+      endpoints: ["10.128.15.192:8081"]
+insecure_options:
+  allow_private_endpoints: true
+  allow_private_upstreams: true

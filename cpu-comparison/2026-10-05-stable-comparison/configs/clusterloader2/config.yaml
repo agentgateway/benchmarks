@@ -1,0 +1,73 @@
+# Draft, not measured. All placeholders must be resolved and qualified first.
+{{$routes := DefaultParam .Routes 10}}
+{{$gateway := DefaultParam .Gateway "benchmark"}}
+{{$gatewayNamespace := DefaultParam .GatewayNamespace "gateway-benchmark"}}
+{{$namespace := DefaultParam .BenchmarkNamespace "gateway-scale"}}
+name: gateway-route-scale
+namespace:
+  number: 1
+  prefix: gwcmp-cl2
+  deleteStaleNamespaces: false
+  deleteAutomanagedNamespaces: true
+tuningSets:
+- name: RouteChanges
+  globalQPSLoad:
+    qps: 100
+    burst: 1
+steps:
+- name: Mark created mutation start
+  measurements:
+  - Identifier: Startcreated
+    Method: Exec
+    Params:
+      command: ["/opt/gateway-benchmark/venv/bin/python", "/opt/gateway-benchmark/observe-routes.py", "--namespace", "{{$namespace}}", "--count", "{{$routes}}", "--marker", "created", "--start-only"]
+      timeout: 30s
+      retries: 1
+- name: Create routes
+  phases:
+  - namespaceList: ["{{$namespace}}"]
+    replicasPerNamespace: {{$routes}}
+    tuningSet: RouteChanges
+    objectBundle:
+    - basename: route
+      objectTemplatePath: route.yaml
+      templateFillMap:
+        Gateway: "{{$gateway}}"
+        GatewayNamespace: "{{$gatewayNamespace}}"
+        Marker: "created"
+- name: Verify created routes
+  measurements:
+  - Identifier: VerifyCreated
+    Method: Exec
+    Params:
+      command: ["/opt/gateway-benchmark/venv/bin/python", "/opt/gateway-benchmark/observe-routes.py", "--namespace", "{{$namespace}}", "--count", "{{$routes}}", "--marker", "created"]
+      timeout: 330s
+      retries: 1
+- name: Mark updated mutation start
+  measurements:
+  - Identifier: Startupdated
+    Method: Exec
+    Params:
+      command: ["/opt/gateway-benchmark/venv/bin/python", "/opt/gateway-benchmark/observe-routes.py", "--namespace", "{{$namespace}}", "--count", "{{$routes}}", "--marker", "updated", "--start-only"]
+      timeout: 30s
+      retries: 1
+- name: Update routes
+  phases:
+  - namespaceList: ["{{$namespace}}"]
+    replicasPerNamespace: {{$routes}}
+    tuningSet: RouteChanges
+    objectBundle:
+    - basename: route
+      objectTemplatePath: route.yaml
+      templateFillMap:
+        Gateway: "{{$gateway}}"
+        GatewayNamespace: "{{$gatewayNamespace}}"
+        Marker: "updated"
+- name: Verify updated routes
+  measurements:
+  - Identifier: VerifyUpdated
+    Method: Exec
+    Params:
+      command: ["/opt/gateway-benchmark/venv/bin/python", "/opt/gateway-benchmark/observe-routes.py", "--namespace", "{{$namespace}}", "--count", "{{$routes}}", "--marker", "updated"]
+      timeout: 330s
+      retries: 1

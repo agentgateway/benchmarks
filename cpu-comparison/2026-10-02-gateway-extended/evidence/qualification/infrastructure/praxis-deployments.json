@@ -1,0 +1,196 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "1",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"labels\":{\"app.kubernetes.io/managed-by\":\"praxis-operator\",\"app.kubernetes.io/name\":\"praxis-operator\"},\"name\":\"praxis-operator\",\"namespace\":\"praxis-system\"},\"spec\":{\"replicas\":2,\"selector\":{\"matchLabels\":{\"app.kubernetes.io/name\":\"praxis-operator\"}},\"template\":{\"metadata\":{\"labels\":{\"app.kubernetes.io/name\":\"praxis-operator\"}},\"spec\":{\"automountServiceAccountToken\":true,\"containers\":[{\"env\":[{\"name\":\"PRAXIS_IMAGE\",\"value\":\"ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8\"},{\"name\":\"POD_NAME\",\"valueFrom\":{\"fieldRef\":{\"fieldPath\":\"metadata.name\"}}},{\"name\":\"POD_NAMESPACE\",\"valueFrom\":{\"fieldRef\":{\"fieldPath\":\"metadata.namespace\"}}}],\"image\":\"praxis-operator:fb8beaa\",\"imagePullPolicy\":\"IfNotPresent\",\"livenessProbe\":{\"failureThreshold\":3,\"httpGet\":{\"path\":\"/healthz\",\"port\":\"observability\"},\"periodSeconds\":10},\"name\":\"operator\",\"ports\":[{\"containerPort\":8080,\"name\":\"observability\",\"protocol\":\"TCP\"}],\"readinessProbe\":{\"failureThreshold\":3,\"httpGet\":{\"path\":\"/readyz\",\"port\":\"observability\"},\"periodSeconds\":5},\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"2Gi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"128Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"privileged\":false,\"readOnlyRootFilesystem\":true,\"runAsGroup\":65534,\"runAsNonRoot\":true,\"runAsUser\":65534,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}],\"nodeSelector\":{\"benchmark-role\":\"kcontroller\"},\"securityContext\":{\"fsGroup\":65534,\"runAsGroup\":65534,\"runAsNonRoot\":true,\"runAsUser\":65534,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}},\"serviceAccountName\":\"praxis-operator\",\"tolerations\":[{\"effect\":\"NoSchedule\",\"key\":\"benchmark-role\",\"operator\":\"Equal\",\"value\":\"kcontroller\"}]}}}}\n"
+                },
+                "creationTimestamp": "2026-10-02T23:32:55Z",
+                "generation": 1,
+                "labels": {
+                    "app.kubernetes.io/managed-by": "praxis-operator",
+                    "app.kubernetes.io/name": "praxis-operator"
+                },
+                "name": "praxis-operator",
+                "namespace": "praxis-system",
+                "resourceVersion": "1495",
+                "uid": "28962bd3-fb44-4b9f-acad-8339d27f061f"
+            },
+            "spec": {
+                "progressDeadlineSeconds": 600,
+                "replicas": 2,
+                "revisionHistoryLimit": 10,
+                "selector": {
+                    "matchLabels": {
+                        "app.kubernetes.io/name": "praxis-operator"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": "25%",
+                        "maxUnavailable": "25%"
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "labels": {
+                            "app.kubernetes.io/name": "praxis-operator"
+                        }
+                    },
+                    "spec": {
+                        "automountServiceAccountToken": true,
+                        "containers": [
+                            {
+                                "env": [
+                                    {
+                                        "name": "PRAXIS_IMAGE",
+                                        "value": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8"
+                                    },
+                                    {
+                                        "name": "POD_NAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.name"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_NAMESPACE",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.namespace"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "image": "praxis-operator:fb8beaa",
+                                "imagePullPolicy": "IfNotPresent",
+                                "livenessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "/healthz",
+                                        "port": "observability",
+                                        "scheme": "HTTP"
+                                    },
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "name": "operator",
+                                "ports": [
+                                    {
+                                        "containerPort": 8080,
+                                        "name": "observability",
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "readinessProbe": {
+                                    "failureThreshold": 3,
+                                    "httpGet": {
+                                        "path": "/readyz",
+                                        "port": "observability",
+                                        "scheme": "HTTP"
+                                    },
+                                    "periodSeconds": 5,
+                                    "successThreshold": 1,
+                                    "timeoutSeconds": 1
+                                },
+                                "resources": {
+                                    "limits": {
+                                        "cpu": "2",
+                                        "memory": "2Gi"
+                                    },
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "128Mi"
+                                    }
+                                },
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "ALL"
+                                        ]
+                                    },
+                                    "privileged": false,
+                                    "readOnlyRootFilesystem": true,
+                                    "runAsGroup": 65534,
+                                    "runAsNonRoot": true,
+                                    "runAsUser": 65534,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File"
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "nodeSelector": {
+                            "benchmark-role": "kcontroller"
+                        },
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {
+                            "fsGroup": 65534,
+                            "runAsGroup": 65534,
+                            "runAsNonRoot": true,
+                            "runAsUser": 65534,
+                            "seccompProfile": {
+                                "type": "RuntimeDefault"
+                            }
+                        },
+                        "serviceAccount": "praxis-operator",
+                        "serviceAccountName": "praxis-operator",
+                        "terminationGracePeriodSeconds": 30,
+                        "tolerations": [
+                            {
+                                "effect": "NoSchedule",
+                                "key": "benchmark-role",
+                                "operator": "Equal",
+                                "value": "kcontroller"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 2,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-10-02T23:32:55Z",
+                        "lastUpdateTime": "2026-10-02T23:32:57Z",
+                        "message": "ReplicaSet \"praxis-operator-677b8b444d\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2026-10-02T23:33:04Z",
+                        "lastUpdateTime": "2026-10-02T23:33:04Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 1,
+                "readyReplicas": 2,
+                "replicas": 2,
+                "terminatingReplicas": 0,
+                "updatedReplicas": 2
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

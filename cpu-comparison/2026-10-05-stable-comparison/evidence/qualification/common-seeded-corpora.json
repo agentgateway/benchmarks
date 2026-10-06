@@ -1,0 +1,14 @@
+{
+  "anthropic": {
+    "agentgateway": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+    "direct": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+    "praxis-release": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+    "praxis-nightly": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f"
+  },
+  "openai": {
+    "agentgateway": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+    "direct": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+    "praxis-release": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f",
+    "praxis-nightly": "f59dc57d0104fccf35a7871661eb47e2aab147c4b741d3c91ad5c3b77d7a308f"
+  }
+}

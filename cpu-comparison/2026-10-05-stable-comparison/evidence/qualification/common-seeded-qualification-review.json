@@ -1,0 +1,30 @@
+{
+  "reviewed_at": "2026-10-05T19:30:52.684584+00:00",
+  "infrastructure_valid": true,
+  "scope": "Approval to run common profile pass1 only; repetitions require separate review",
+  "qualification_label": "qualification-seeded",
+  "protocol_checks": {
+    "passed": 48,
+    "total": 48
+  },
+  "cancellation_checks": {
+    "passed": 8,
+    "total": 8
+  },
+  "load_cases": 20,
+  "all_load_processes_exit_zero": true,
+  "measured_fortio_non_200_responses": 0,
+  "aiperf_request_errors": 0,
+  "nighthawk": "No non-2xx responses or stream resets; in-flight requests at cutoff are reported separately from failures.",
+  "resources": "No collector errors, OOM, network error/drop increments or CPU steal in sampled qualification intervals; client/backend headroom. All observed nofile limits 65536. Two distinct guest cores 2 and 3. Short request-count qualification is not a capacity result.",
+  "excluded_attempts": [
+    "qualification: duplicate image entrypoint config argument",
+    "qualification-v2: draft filter-chain YAML schema"
+  ],
+  "config_identity": "qualified-gateway-inspect.json",
+  "host_review": "common-seeded-host-review.json",
+  "archive_manifest_sha256": "5b42cd441594f2075ef8b0ee550962c1e0e70c95f38103bc3f8975c311861a4f",
+  "aiperf_random_seed": 42,
+  "corpus_review": "common-seeded-corpora.json",
+  "seed_review": "All AIPerf outputs complete, zero request errors, input/output lengths 128/64. Canonical generated message contents have identical SHA256 across treatments and API profiles; random session IDs excluded."
+}

@@ -1,0 +1,22 @@
+{
+  "reviewed_at": "2026-10-06T04:38:03.051452+00:00",
+  "workload": "client/results/common/pass2/praxis-release/http/12-nighthawk/execution.json",
+  "result": "client/results/common/pass2/praxis-release/http/12-nighthawk/result.json",
+  "telemetry": "client/host-samples.jsonl",
+  "measurement_start": "2026-10-05T23:56:33.584327Z",
+  "measurement_duration_seconds": 30.000000001,
+  "measurement_end": "2026-10-05T23:57:03.584327001Z",
+  "sample_started_at": "2026-10-05T23:57:03.663364Z",
+  "container_finished_at": "2026-10-05T23:57:03.672741052Z",
+  "container": "/elegant_mirzakhani",
+  "state": {
+    "Status": "removing",
+    "Running": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "OOMKilled": false
+  },
+  "successful_requests": 30000,
+  "healthy_measured_container_samples": 6,
+  "finding": "One collector attempt to read /proc/0/fd and /proc/0/cgroup raced with normal Docker --rm teardown after the measured interval. It is retained as a telemetry limitation, not a request or descriptor-limit failure. No other standalone resource event was found."
+}

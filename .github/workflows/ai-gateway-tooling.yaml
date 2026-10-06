@@ -1,10 +1,10 @@
 name: AI gateway tooling
 on:
   pull_request:
-    paths: ['ai-gateway/**', '.github/workflows/ai-gateway-tooling.yaml']
+    paths: ['ai-gateway/**', 'cpu-comparison/**', '.github/workflows/ai-gateway-tooling.yaml']
   push:
     branches: [main]
-    paths: ['ai-gateway/**', '.github/workflows/ai-gateway-tooling.yaml']
+    paths: ['ai-gateway/**', 'cpu-comparison/**', '.github/workflows/ai-gateway-tooling.yaml']
 permissions:
   contents: read
 jobs:
@@ -22,3 +22,33 @@ jobs:
           python3 -m unittest discover -s ai-gateway -p 'test_*.py'
           python3 ai-gateway/campaign.py --initial --dry-run > /tmp/ai-plan.json
           GOTOOLCHAIN=go1.27.1 CGO_ENABLED=0 go build -trimpath -o /tmp/mock-server ai-gateway/mock/main.go
+      - name: Validate retained CPU comparison snapshots
+        run: |
+          python3 - <<'PYCODE'
+          import ast
+          import json
+          import hashlib
+          import subprocess
+          from pathlib import Path
+          root = Path('cpu-comparison')
+          for path in root.rglob('*.py'):
+              ast.parse(path.read_text(), filename=str(path))
+          for path in root.rglob('*.sh'):
+              subprocess.run(['bash', '-n', str(path)], check=True)
+          for path in root.rglob('*.json'):
+              json.loads(path.read_text())
+          current = root / '2026-10-05-stable-comparison'
+          data = current / 'reports/data'
+          rows = json.loads((data / 'load-rows.json').read_text())
+          groups = json.loads((data / 'load-summary.json').read_text())
+          review = json.loads((current / 'evidence/qualification/final-review.json').read_text())
+          assert review['infrastructure_valid'] and review['all_three_passes_reviewed']
+          claims = json.loads((data / 'article-calculations.json').read_text())
+          assert claims['source_sha256'] == hashlib.sha256((data / 'load-summary.json').read_bytes()).hexdigest()
+          assert len(rows) == 822 and len(groups) == 274
+          assert all(g['passes'] == [1, 2, 3] and g['three_complete_passes'] for g in groups)
+          assert all(r['artifact_valid'] and all(v == 0 for v in r['exits']) for r in rows)
+          assert len(json.loads((data / 'resource-rows.json').read_text())) == 606
+          assert len(json.loads((data / 'resource-summary.json').read_text())) == 202
+          print('Frozen snapshot syntax, JSON and complete three-pass dimensions verified')
+          PYCODE

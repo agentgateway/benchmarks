@@ -1,0 +1,45 @@
+{
+  "case": "results/praxis-v0.5.2/pass3/praxis",
+  "infrastructure_valid": true,
+  "reviewed_at": "2026-10-03T09:31:05.512854+00:00",
+  "counts": {
+    "pass": 52,
+    "fail": 55
+  },
+  "all_selected_cases_scored": true,
+  "all_outcomes_identical_across_three_repetitions": true,
+  "runtime_review": "praxis-pass3-runtime.json",
+  "cleanup_complete": true,
+  "operator_restarts": {
+    "total": 2,
+    "reason": "LeadershipLost in both captured logs; one during startup and one mid-run. Root cause of leadership change not established.",
+    "logs": [
+      "praxis-operator-677b8b444d-lq2vr-operator-restart1.log",
+      "praxis-operator-677b8b444d-k6plj-operator-restart1.log"
+    ]
+  },
+  "classified_terminating_pods": {
+    "praxis-same-namespace-646698d784-p8k56": {
+      "deletion_timestamp": "2026-10-03T07:44:06Z",
+      "restart_count": 0,
+      "termination": {
+        "containerID": "containerd://0e35a8359ec246ee0ed31395de7ebf1d72324067c6d9ec1976e6ca3d75da6012",
+        "exitCode": 137,
+        "finishedAt": "2026-10-03T07:44:07Z",
+        "reason": "Error",
+        "startedAt": "2026-10-03T07:43:24Z"
+      }
+    }
+  },
+  "checks": {
+    "node_issues": {},
+    "collection_errors": [],
+    "image_matches_pin": true,
+    "outer_timeout_reached": false,
+    "no_recorded_OOMKilled": true
+  },
+  "notes": [
+    "Replacement full third pair after automatic maintenance was frozen. Original interrupted/superseded halves excluded; see maintenance-interruption.md.",
+    "Warning events reflect readiness/configuration and endpoint changes during resource creation/deletion. No unresolved infrastructure fault identified."
+  ]
+}

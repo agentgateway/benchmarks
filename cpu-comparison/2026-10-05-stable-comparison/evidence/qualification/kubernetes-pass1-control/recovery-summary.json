@@ -1,0 +1,231 @@
+[
+  {
+    "treatment": "agentgateway",
+    "kind": "controller",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "requests": {
+        "per_pass": [
+          262
+        ],
+        "arithmetic_mean": null,
+        "min": 262,
+        "max": 262,
+        "sample_stddev": null
+      },
+      "failed_requests": {
+        "per_pass": [
+          0
+        ],
+        "arithmetic_mean": null,
+        "min": 0,
+        "max": 0,
+        "sample_stddev": null
+      },
+      "pre_mutation_failures": {
+        "per_pass": [
+          0
+        ],
+        "arithmetic_mean": null,
+        "min": 0,
+        "max": 0,
+        "sample_stddev": null
+      },
+      "post_mutation_failed_requests": {
+        "per_pass": [
+          0
+        ],
+        "arithmetic_mean": null,
+        "min": 0,
+        "max": 0,
+        "sample_stddev": null
+      },
+      "max_dispatch_delay_seconds": {
+        "per_pass": [
+          0.04885713499970734
+        ],
+        "arithmetic_mean": null,
+        "min": 0.04885713499970734,
+        "max": 0.04885713499970734,
+        "sample_stddev": null
+      }
+    }
+  },
+  {
+    "treatment": "agentgateway",
+    "kind": "data-plane",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "requests": {
+        "per_pass": [
+          228
+        ],
+        "arithmetic_mean": null,
+        "min": 228,
+        "max": 228,
+        "sample_stddev": null
+      },
+      "failed_requests": {
+        "per_pass": [
+          0
+        ],
+        "arithmetic_mean": null,
+        "min": 0,
+        "max": 0,
+        "sample_stddev": null
+      },
+      "pre_mutation_failures": {
+        "per_pass": [
+          0
+        ],
+        "arithmetic_mean": null,
+        "min": 0,
+        "max": 0,
+        "sample_stddev": null
+      },
+      "post_mutation_failed_requests": {
+        "per_pass": [
+          0
+        ],
+        "arithmetic_mean": null,
+        "min": 0,
+        "max": 0,
+        "sample_stddev": null
+      },
+      "max_dispatch_delay_seconds": {
+        "per_pass": [
+          0.024601944998721592
+        ],
+        "arithmetic_mean": null,
+        "min": 0.024601944998721592,
+        "max": 0.024601944998721592,
+        "sample_stddev": null
+      }
+    }
+  },
+  {
+    "treatment": "praxis-release",
+    "kind": "controller",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "requests": {
+        "per_pass": [
+          236
+        ],
+        "arithmetic_mean": null,
+        "min": 236,
+        "max": 236,
+        "sample_stddev": null
+      },
+      "failed_requests": {
+        "per_pass": [
+          0
+        ],
+        "arithmetic_mean": null,
+        "min": 0,
+        "max": 0,
+        "sample_stddev": null
+      },
+      "pre_mutation_failures": {
+        "per_pass": [
+          0
+        ],
+        "arithmetic_mean": null,
+        "min": 0,
+        "max": 0,
+        "sample_stddev": null
+      },
+      "post_mutation_failed_requests": {
+        "per_pass": [
+          0
+        ],
+        "arithmetic_mean": null,
+        "min": 0,
+        "max": 0,
+        "sample_stddev": null
+      },
+      "max_dispatch_delay_seconds": {
+        "per_pass": [
+          0.048414393997518346
+        ],
+        "arithmetic_mean": null,
+        "min": 0.048414393997518346,
+        "max": 0.048414393997518346,
+        "sample_stddev": null
+      }
+    }
+  },
+  {
+    "treatment": "praxis-release",
+    "kind": "data-plane",
+    "passes": [
+      1
+    ],
+    "three_complete_passes": false,
+    "metrics": {
+      "requests": {
+        "per_pass": [
+          244
+        ],
+        "arithmetic_mean": null,
+        "min": 244,
+        "max": 244,
+        "sample_stddev": null
+      },
+      "failed_requests": {
+        "per_pass": [
+          34
+        ],
+        "arithmetic_mean": null,
+        "min": 34,
+        "max": 34,
+        "sample_stddev": null
+      },
+      "pre_mutation_failures": {
+        "per_pass": [
+          0
+        ],
+        "arithmetic_mean": null,
+        "min": 0,
+        "max": 0,
+        "sample_stddev": null
+      },
+      "post_mutation_failed_requests": {
+        "per_pass": [
+          34
+        ],
+        "arithmetic_mean": null,
+        "min": 34,
+        "max": 34,
+        "sample_stddev": null
+      },
+      "max_dispatch_delay_seconds": {
+        "per_pass": [
+          0.024292824000440305
+        ],
+        "arithmetic_mean": null,
+        "min": 0.024292824000440305,
+        "max": 0.024292824000440305,
+        "sample_stddev": null
+      },
+      "observed_recovery_after_mutation_seconds": {
+        "per_pass": [
+          4.275916512997355
+        ],
+        "arithmetic_mean": null,
+        "min": 4.275916512997355,
+        "max": 4.275916512997355,
+        "sample_stddev": null
+      }
+    }
+  }
+]

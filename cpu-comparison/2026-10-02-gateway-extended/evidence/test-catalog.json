@@ -1,0 +1,1555 @@
+{
+  "features": [
+    {
+      "Name": "BackendTLSPolicy",
+      "Channel": "standard"
+    },
+    {
+      "Name": "BackendTLSPolicySANValidation",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GRPCRoute",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GRPCRouteNamedRouteRule",
+      "Channel": "standard"
+    },
+    {
+      "Name": "Gateway",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GatewayAddressEmpty",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GatewayBackendClientCertificate",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GatewayFrontendClientCertificateValidation",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GatewayFrontendClientCertificateValidationInsecureFallback",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GatewayHTTPListenerIsolation",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GatewayHTTPSListenerDetectMisdirectedRequests",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GatewayInfrastructurePropagation",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GatewayPort8080",
+      "Channel": "standard"
+    },
+    {
+      "Name": "GatewayStaticAddresses",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRoute",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRoute303RedirectStatusCode",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRoute307RedirectStatusCode",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRoute308RedirectStatusCode",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteBackendProtocolH2C",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteBackendProtocolWebSocket",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteBackendRequestHeaderModification",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteBackendTimeout",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteCORS",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteDestinationPortMatching",
+      "Channel": "experimental"
+    },
+    {
+      "Name": "HTTPRouteHostRewrite",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteMethodMatching",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteNamedRouteRule",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteParentRefPort",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRoutePathRedirect",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRoutePathRewrite",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRoutePortRedirect",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteQueryParamMatching",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteRequestMirror",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteRequestMultipleMirrors",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteRequestPercentageMirror",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteRequestTimeout",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteResponseHeaderModification",
+      "Channel": "standard"
+    },
+    {
+      "Name": "HTTPRouteSchemeRedirect",
+      "Channel": "standard"
+    },
+    {
+      "Name": "ListenerSet",
+      "Channel": "standard"
+    },
+    {
+      "Name": "ReferenceGrant",
+      "Channel": "standard"
+    },
+    {
+      "Name": "TLSRoute",
+      "Channel": "standard"
+    },
+    {
+      "Name": "TLSRouteModeMixed",
+      "Channel": "experimental"
+    },
+    {
+      "Name": "TLSRouteModeTerminate",
+      "Channel": "standard"
+    }
+  ],
+  "tests": [
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "BackendTLSPolicy"
+      ],
+      "name": "BackendTLSPolicy",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/backendtlspolicy.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "BackendTLSPolicy"
+      ],
+      "name": "BackendTLSPolicyConflictResolution",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/backendtlspolicy-conflict-resolution.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "BackendTLSPolicy"
+      ],
+      "name": "BackendTLSPolicyInvalidCACertificateRef",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/backendtlspolicy-invalid-ca-certificate-ref.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "BackendTLSPolicy"
+      ],
+      "name": "BackendTLSPolicyInvalidKind",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/backendtlspolicy-invalid-kind.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "BackendTLSPolicy"
+      ],
+      "name": "BackendTLSPolicyObservedGenerationBump",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/backendtlspolicy-observed-generation-bump.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "BackendTLSPolicy",
+        "BackendTLSPolicySANValidation"
+      ],
+      "name": "BackendTLSPolicySANValidation",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/backendtlspolicy-san.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GRPCRoute"
+      ],
+      "name": "GRPCExactMethodMatching",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/grpcroute-exact-method-matching.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GRPCRoute"
+      ],
+      "name": "GRPCRouteHeaderMatching",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/grpcroute-header-matching.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GRPCRoute"
+      ],
+      "name": "GRPCRouteListenerHostnameMatching",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/grpcroute-listener-hostname-matching.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GRPCRoute",
+        "GRPCRouteNamedRouteRule"
+      ],
+      "name": "GRPCRouteNamedRule",
+      "provisional": true,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/grpcroute-named-rule.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GRPCRoute"
+      ],
+      "name": "GRPCRouteWeight",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/grpcroute-weight.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GatewayBackendClientCertificate",
+        "HTTPRoute",
+        "BackendTLSPolicy"
+      ],
+      "name": "GatewayBackendClientCertificateFeature",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-tls-backend-client-certificate.go"
+    },
+    {
+      "features": [
+        "Gateway"
+      ],
+      "name": "GatewayClassObservedGenerationBump",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gatewayclass-observed-generation-bump.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "GatewayFrontendClientCertificateValidation"
+      ],
+      "name": "GatewayFrontendClientCertificateValidation",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-with-clientcertificate-validation.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "GatewayFrontendClientCertificateValidation",
+        "GatewayFrontendClientCertificateValidationInsecureFallback"
+      ],
+      "name": "GatewayFrontendClientCertificateValidationInsecureFallback",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-with-clientcertificate-validation-insecure-fallback.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "GatewayFrontendClientCertificateValidation"
+      ],
+      "name": "GatewayFrontendInvalidDefaultClientCertificateValidation",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-invalid-default-frontend-client-certificate-validation.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GatewayHTTPListenerIsolation",
+        "HTTPRoute"
+      ],
+      "name": "GatewayHTTPListenerIsolation",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-http-listener-isolation.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GatewayInfrastructurePropagation"
+      ],
+      "name": "GatewayInfrastructure",
+      "provisional": true,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-infrastructure.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "ReferenceGrant",
+        "GatewayFrontendClientCertificateValidation"
+      ],
+      "name": "GatewayInvalidFrontendClientCertificateValidation",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-with-invalid-clientcertificate-validation.go"
+    },
+    {
+      "features": [
+        "Gateway"
+      ],
+      "name": "GatewayInvalidRouteKind",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-invalid-route-kind.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GatewayBackendClientCertificate",
+        "HTTPRoute",
+        "BackendTLSPolicy"
+      ],
+      "name": "GatewayInvalidTLSBackendConfiguration",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-invalid-tls-backend-configuration.go"
+    },
+    {
+      "features": [
+        "Gateway"
+      ],
+      "name": "GatewayInvalidTLSConfiguration",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-invalid-tls-configuration.go"
+    },
+    {
+      "features": [
+        "Gateway"
+      ],
+      "name": "GatewayModifyListeners",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-modify-listeners.go"
+    },
+    {
+      "features": [
+        "Gateway"
+      ],
+      "name": "GatewayObservedGenerationBump",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-observed-generation-bump.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GatewayAddressEmpty"
+      ],
+      "name": "GatewayOptionalAddressValue",
+      "provisional": true,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-optional-address-value.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ReferenceGrant"
+      ],
+      "name": "GatewaySecretInvalidReferenceGrant",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-secret-invalid-reference-grant.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ReferenceGrant"
+      ],
+      "name": "GatewaySecretMissingReferenceGrant",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-secret-missing-reference-grant.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ReferenceGrant"
+      ],
+      "name": "GatewaySecretReferenceGrantAllInNamespace",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-secret-reference-grant-all-in-namespace.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ReferenceGrant"
+      ],
+      "name": "GatewaySecretReferenceGrantSpecific",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-secret-reference-grant-specific.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GatewayStaticAddresses"
+      ],
+      "name": "GatewayStaticAddresses",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-static-addresses.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "GatewayWithAttachedRoutes",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-with-attached-routes.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GatewayPort8080",
+        "HTTPRoute"
+      ],
+      "name": "GatewayWithAttachedRoutesWithPort8080",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/gateway-with-attached-routes.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRoute303RedirectStatusCode"
+      ],
+      "name": "HTTPRoute303Redirect",
+      "provisional": true,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-303-redirect.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRoute307RedirectStatusCode"
+      ],
+      "name": "HTTPRoute307Redirect",
+      "provisional": true,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-307-redirect.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRoute308RedirectStatusCode"
+      ],
+      "name": "HTTPRoute308Redirect",
+      "provisional": true,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-308-redirect.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteBackendProtocolH2C"
+      ],
+      "name": "HTTPRouteBackendProtocolH2C",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-backend-protocol-h2c.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteBackendProtocolWebSocket"
+      ],
+      "name": "HTTPRouteBackendProtocolWebSocket",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-backend-protocol-websocket.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteBackendRequestHeaderModification"
+      ],
+      "name": "HTTPRouteBackendRequestHeaderModifier",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-request-header-modifier.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteCORS"
+      ],
+      "name": "HTTPRouteCORS",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-cors.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteCORS"
+      ],
+      "name": "HTTPRouteCORSAllowCredentialsBehavior",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-cors-allow-credentials-behavior.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteCrossNamespace",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-cross-namespace.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "TLSRoute"
+      ],
+      "name": "HTTPRouteDisallowedKind",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-disallowed-kind.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteExactPathMatching",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-exact-path-matching.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteHTTPSListener",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-https-listener.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "GatewayHTTPSListenerDetectMisdirectedRequests",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteHTTPSListenerDetectMisdirectedRequests",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-https-listener-detect-misdirected-requests.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteHeaderMatching",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-header-matching.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteHostnameIntersection",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-hostname-intersection.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteInvalidBackendRefUnknownKind",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-invalid-backendref-unknown-kind.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "ReferenceGrant"
+      ],
+      "name": "HTTPRouteInvalidCrossNamespaceBackendRef",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-invalid-cross-namespace-backend-ref.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteInvalidCrossNamespaceParentRef",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-invalid-cross-namespace-parent-ref.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteInvalidNonExistentBackendRef",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-invalid-nonexistent-backendref.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteDestinationPortMatching"
+      ],
+      "name": "HTTPRouteInvalidParentRefNotMatchingListenerPort",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-invalid-parentref-not-matching-listener-port.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteInvalidParentRefNotMatchingSectionName",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-invalid-parentref-not-matching-section-name.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteParentRefPort"
+      ],
+      "name": "HTTPRouteInvalidParentRefSectionNameNotMatchingPort",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-invalid-parentref-section-name-not-matching-port.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "ReferenceGrant"
+      ],
+      "name": "HTTPRouteInvalidReferenceGrant",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-invalid-reference-grant.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteListenerHostnameMatching",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-listener-hostname-matching.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteParentRefPort"
+      ],
+      "name": "HTTPRouteListenerPortMatching",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-listener-port-matching.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteMatching",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-matching.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteMatchingAcrossRoutes",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-matching-across-routes.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteMethodMatching"
+      ],
+      "name": "HTTPRouteMethodMatching",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-method-matching.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteNamedRouteRule"
+      ],
+      "name": "HTTPRouteNamedRule",
+      "provisional": true,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-named-rule.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteObservedGenerationBump",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-observed-generation-bump.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "ReferenceGrant"
+      ],
+      "name": "HTTPRoutePartiallyInvalidViaInvalidReferenceGrant",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-partially-invalid-via-invalid-reference-grant.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRoutePathMatchOrder",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-path-match-order.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteQueryParamMatching"
+      ],
+      "name": "HTTPRouteQueryParamMatching",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-query-param-matching.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteRedirectHostAndStatus",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-redirect-host-and-status.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRoutePathRedirect"
+      ],
+      "name": "HTTPRouteRedirectPath",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-redirect-path.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRoutePortRedirect"
+      ],
+      "name": "HTTPRouteRedirectPort",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-redirect-port.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRoutePortRedirect",
+        "GatewayPort8080"
+      ],
+      "name": "HTTPRouteRedirectPortAndScheme",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-redirect-port-and-scheme.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteSchemeRedirect"
+      ],
+      "name": "HTTPRouteRedirectScheme",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-redirect-scheme.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "ReferenceGrant"
+      ],
+      "name": "HTTPRouteReferenceGrant",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-reference-grant.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteRequestHeaderModifier",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-request-header-modifier.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRouteBackendRequestHeaderModification",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteRequestHeaderModifierBackendWeights",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-request-header-modifier-backend-weights.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteRequestMirror"
+      ],
+      "name": "HTTPRouteRequestMirror",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-request-mirror.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteRequestMirror",
+        "HTTPRouteRequestMultipleMirrors"
+      ],
+      "name": "HTTPRouteRequestMultipleMirrors",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-request-multiple-mirrors.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteRequestPercentageMirror"
+      ],
+      "name": "HTTPRouteRequestPercentageMirror",
+      "provisional": true,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-request-percentage-mirror.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteResponseHeaderModification"
+      ],
+      "name": "HTTPRouteResponseHeaderModifier",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-response-header-modifier.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteHostRewrite"
+      ],
+      "name": "HTTPRouteRewriteHost",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-rewrite-host.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRoutePathRewrite"
+      ],
+      "name": "HTTPRouteRewritePath",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-rewrite-path.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteServiceTypes",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-service-types.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteSimpleSameNamespace",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-simple-same-namespace.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteBackendTimeout"
+      ],
+      "name": "HTTPRouteTimeoutBackendRequest",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-timeout-backend-request.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute",
+        "HTTPRouteRequestTimeout"
+      ],
+      "name": "HTTPRouteTimeoutRequest",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-timeout-request.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "HTTPRoute"
+      ],
+      "name": "HTTPRouteWeight",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/httproute-weight.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ListenerSet"
+      ],
+      "name": "ListenerSetAllowedNamespaceNone",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/listenerset-allowed-namespace-none.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ListenerSet"
+      ],
+      "name": "ListenerSetAllowedNamespaceSame",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/listenerset-allowed-namespace-same.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ListenerSet"
+      ],
+      "name": "ListenerSetAllowedNamespaceSelector",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/listenerset-allowed-namespace-selector.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ListenerSet",
+        "HTTPRoute",
+        "ReferenceGrant"
+      ],
+      "name": "ListenerSetAllowedRoutesNamespaces",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/listenerset-allowed-routes-namespaces.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ListenerSet",
+        "TLSRoute"
+      ],
+      "name": "ListenerSetAllowedRoutesSupportedKinds",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/listenerset-allowed-routes-supported-kinds.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ListenerSet"
+      ],
+      "name": "ListenerSetDefaultNotAllowed",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/listenerset-default-not-allowed.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ListenerSet",
+        "HTTPRoute"
+      ],
+      "name": "ListenerSetHTTPRouting",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/listenerset-http-routing.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ListenerSet"
+      ],
+      "name": "ListenerSetHostnameConflict",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/listenerset-hostname-conflict.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ListenerSet"
+      ],
+      "name": "ListenerSetProtocolConflict",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/listenerset-protocol-conflict.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "ListenerSet",
+        "ReferenceGrant"
+      ],
+      "name": "ListenerSetReferenceGrant",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/listenerset-reference-grant.go"
+    },
+    {
+      "features": [
+        "Mesh"
+      ],
+      "name": "MeshBasic",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/mesh-basic.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "MeshConsumerRoute",
+        "HTTPRoute",
+        "HTTPRouteResponseHeaderModification"
+      ],
+      "name": "MeshConsumerRoute",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/mesh-consumer-route.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "HTTPRouteResponseHeaderModification"
+      ],
+      "name": "MeshFrontend",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/mesh-frontend.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "MeshClusterIPMatching",
+        "HTTPRoute",
+        "HTTPRouteResponseHeaderModification"
+      ],
+      "name": "MeshFrontendHostname",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/mesh-frontend-hostname.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "GRPCRoute"
+      ],
+      "name": "MeshGRPCRouteWeight",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/grpcroute-weight.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "HTTPRoute303RedirectStatusCode"
+      ],
+      "name": "MeshHTTPRoute303Redirect",
+      "provisional": true,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-303-redirect.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "HTTPRoute307RedirectStatusCode"
+      ],
+      "name": "MeshHTTPRoute307Redirect",
+      "provisional": true,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-307-redirect.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "HTTPRoute308RedirectStatusCode"
+      ],
+      "name": "MeshHTTPRoute308Redirect",
+      "provisional": true,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-308-redirect.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "MeshHTTPRouteBackendRequestHeaderModification"
+      ],
+      "name": "MeshHTTPRouteBackendRequestHeaderModifier",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-request-header-modifier.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute"
+      ],
+      "name": "MeshHTTPRouteMatching",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-matching.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "MeshHTTPRouteNamedRouteRule"
+      ],
+      "name": "MeshHTTPRouteNamedRule",
+      "provisional": true,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-named-rule.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "MeshHTTPRouteQueryParamMatching"
+      ],
+      "name": "MeshHTTPRouteQueryParamMatching",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-query-param-matching.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute"
+      ],
+      "name": "MeshHTTPRouteRedirectHostAndStatus",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-redirect-host-and-status.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "MeshHTTPRouteRedirectPath"
+      ],
+      "name": "MeshHTTPRouteRedirectPath",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-redirect-path.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "MeshHTTPRouteRedirectPort"
+      ],
+      "name": "MeshHTTPRouteRedirectPort",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-redirect-port.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute"
+      ],
+      "name": "MeshHTTPRouteRequestHeaderModifier",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-request-header-modifier.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "MeshHTTPRouteRewritePath"
+      ],
+      "name": "MeshHTTPRouteRewritePath",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-rewrite-path.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "MeshHTTPRouteSchemeRedirect"
+      ],
+      "name": "MeshHTTPRouteSchemeRedirect",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-redirect-scheme.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute"
+      ],
+      "name": "MeshHTTPRouteSimpleSameNamespace",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-simple-same-namespace.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute"
+      ],
+      "name": "MeshHTTPRouteWeight",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/httproute-weight.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute",
+        "HTTPRouteParentRefPort",
+        "HTTPRouteResponseHeaderModification"
+      ],
+      "name": "MeshPorts",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/mesh-ports.go"
+    },
+    {
+      "features": [
+        "Mesh",
+        "HTTPRoute"
+      ],
+      "name": "MeshTrafficSplit",
+      "provisional": false,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/mesh/mesh-split.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute"
+      ],
+      "name": "TLSRouteHostnameIntersection",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-hostname-intersection.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute"
+      ],
+      "name": "TLSRouteInvalidBackendRefNonexistent",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-invalid-backendref-nonexistent.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute"
+      ],
+      "name": "TLSRouteInvalidBackendRefUnknownKind",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-invalid-backendref-unknown-kind.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute"
+      ],
+      "name": "TLSRouteInvalidNoMatchingListener",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-invalid-no-matching-listener.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute"
+      ],
+      "name": "TLSRouteInvalidNoMatchingListenerHostname",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-invalid-no-matching-listener-hostname.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute",
+        "ReferenceGrant"
+      ],
+      "name": "TLSRouteInvalidReferenceGrant",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-invalid-reference-grant.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute",
+        "TLSRouteModeTerminate"
+      ],
+      "name": "TLSRouteListenerMixedTerminationNotSupported",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-listener-mixed-termination-not-supported.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute"
+      ],
+      "name": "TLSRouteListenerPassthroughSupportedKinds",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-listener-passthrough-supported-kinds.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute"
+      ],
+      "name": "TLSRouteListenerTerminateNotSupported",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-listener-terminate-not-supported.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute",
+        "TLSRouteModeTerminate"
+      ],
+      "name": "TLSRouteListenerTerminateSupportedKinds",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-listener-terminate-supported-kinds.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute",
+        "TLSRouteModeTerminate",
+        "TLSRouteModeMixed"
+      ],
+      "name": "TLSRouteMixedTerminationSameNamespace",
+      "provisional": true,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-mixed-termination-same-namespace.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute"
+      ],
+      "name": "TLSRouteSimpleSameNamespace",
+      "provisional": false,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-simple-same-namespace.go"
+    },
+    {
+      "features": [
+        "Gateway",
+        "TLSRoute",
+        "TLSRouteModeTerminate"
+      ],
+      "name": "TLSRouteTerminateSimpleSameNamespace",
+      "provisional": true,
+      "selected": true,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/tlsroute-terminate-simple-same-namespace.go"
+    },
+    {
+      "features": [
+        "UDPRoute",
+        "Gateway"
+      ],
+      "name": "UDPRoute",
+      "provisional": true,
+      "selected": false,
+      "source_url": "https://github.com/kubernetes-sigs/gateway-api/blob/e7677b70ae75d14a4448fba94870e7deea6cf0ad/conformance/tests/udproute-simple.go"
+    }
+  ]
+}

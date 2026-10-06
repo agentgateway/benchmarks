@@ -1,0 +1,22 @@
+{
+  "reviewed_at": "2026-10-05T22:18:34.068324+00:00",
+  "infrastructure_valid": true,
+  "scope": "Approval for fresh Kubernetes pass1 only; repetitions require complete first-pass review",
+  "qualification_label": "qualification-image-pin",
+  "http_load_cases": 9,
+  "all_load_processes_exit_zero": true,
+  "confirmed_http_errors_or_resets": 0,
+  "startup_review": "kubernetes-image-pin-startup-audit.json",
+  "host_review": "kubernetes-image-pin-host-review.json",
+  "load_review": "kubernetes-image-pin-audit.json",
+  "namespace_review": "kubernetes-image-pin-pod-profile-review.json",
+  "control_review": "kubernetes-image-pin-control-review.json",
+  "resources": "At least six samples per HTTP window; descriptor headroom, no OOM/steal/collector errors/network drops during HTTP. Through-gateway peak sampled client busy40.26%, backend quota66.62%; intentional gateway quota saturation.",
+  "baseline_limit": "Direct unlimited path approaches client92.07% mean host busy and service94.93% mean quota. Treat as full-path service capacity, not an unconstrained backend ceiling.",
+  "controller_restart": "Praxis startup exit1 at22:03:57 precedes HTTP start22:04:13; restart count stays unchanged during HTTP.",
+  "transient_read": "One disappearing-process sockstat read at22:06:46 during route mutation; not within HTTP windows. Retained as a telemetry limitation at process transition.",
+  "scale": "Both ten-route create/update phases fully verified for each runnable implementation; tool exits0",
+  "recovery": "All commands exit0 and all pre-mutation probes succeed. Controller probes have zero errors; Praxis sole-pod deletion has62 failures, retained recovery behavior.",
+  "nightly": "Requested digest verified, stock cluster-name validation failure with exit1 and Ready nodes; dependent workloads not evaluated",
+  "archive_manifest_sha256": "6e727ea3b5ccafbb6e22d0228a5364cfbb9e30652d658ea2c8338c56a781b271"
+}

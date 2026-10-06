@@ -1,0 +1,51 @@
+[
+  {
+    "routes": 1000,
+    "artifact": "diagnostics/pass1-praxis-release-1000/praxis-benchmark-76cf4bf6bb-4rwhd.log",
+    "sha256": "283a017bf30135020ca1cc89feb080b329e3425bd8223200a27774270c970849",
+    "matches": 1,
+    "first_match": "fatal: config: filter chain 'http-chain' has too many filters (1003, max 100)"
+  },
+  {
+    "routes": 1000,
+    "artifact": "diagnostics/pass1-praxis-release-1000/praxis-benchmark-76cf4bf6bb-4rwhd-previous.log",
+    "sha256": "283a017bf30135020ca1cc89feb080b329e3425bd8223200a27774270c970849",
+    "matches": 1,
+    "first_match": "fatal: config: filter chain 'http-chain' has too many filters (1003, max 100)"
+  },
+  {
+    "routes": 1000,
+    "artifact": "diagnostics/pass1-praxis-release-1000/praxis-benchmark-689685876b-2zwd4.log",
+    "sha256": "7d1d75f9f9fdd2b35aaf79ff3fbde8a171afdff9a2d560bd7c48993472648ff1",
+    "matches": 1,
+    "first_match": "2026-10-05T20:47:11.109121Z ERROR praxis::watcher: config reload failed: invalid config path=/etc/praxis/config.yaml error=config: filter chain 'http-chain' has too many filters (1003, max 100)"
+  },
+  {
+    "routes": 5000,
+    "artifact": "diagnostics/pass1-praxis-release-5000/praxis-benchmark-7f875c48d6-j5dtv-previous.log",
+    "sha256": "17ab1656ab9170b0444d7bb906a1a92dcc72f37ff95e4f693e3fccbaa266d3b0",
+    "matches": 1,
+    "first_match": "fatal: config: filter chain 'http-chain' has too many filters (4296, max 100)"
+  },
+  {
+    "routes": 5000,
+    "artifact": "diagnostics/pass1-praxis-release-5000/praxis-benchmark-646fb67587-xq44t.log",
+    "sha256": "9a52abb7053e967d0f75e1ee0f7d4437a4241a2dfc8eebf834d836e0c7116bf4",
+    "matches": 3,
+    "first_match": "2026-10-05T20:58:11.988734Z ERROR praxis::watcher: config reload failed: invalid config path=/etc/praxis/config.yaml error=config: filter chain 'http-chain' has too many filters (200, max 100)"
+  },
+  {
+    "routes": 5000,
+    "artifact": "diagnostics/pass1-praxis-release-5000/praxis-benchmark-7f875c48d6-j5dtv.log",
+    "sha256": "17ab1656ab9170b0444d7bb906a1a92dcc72f37ff95e4f693e3fccbaa266d3b0",
+    "matches": 1,
+    "first_match": "fatal: config: filter chain 'http-chain' has too many filters (4296, max 100)"
+  },
+  {
+    "routes": 5000,
+    "artifact": "diagnostics/pass1-praxis-release-5000/controller.log",
+    "sha256": "70864b5cd9b0ed6b9ebbeffacee4d46c66bece0952eee80eec0f676e8094a84e",
+    "matches": 52,
+    "first_match": "[pod/praxis-operator-589f5cb84b-fbd4k/operator] {\"timestamp\":\"2026-10-05T20:58:52.908339Z\",\"level\":\"ERROR\",\"fields\":{\"message\":\"Gateway reconciliation failed, retrying in 15s\",\"error\":\"finalizer: failed to apply object: kubernetes api: ApiError: ConfigMap \\\"praxis-benchmark\\\" is invalid: []: Too long: may not be more than 1048576 bytes: Invalid (Status { status: Some(Failure), code: 422, message: \\\"ConfigMap \\\\\\\"praxis-benchmark\\\\\\\" is invalid: []: Too long: may not be more than 1048576 bytes\\\", metadata: Some(ListMeta { continue_: None, remaining_item_count: None, resource_version: None, self_link: None }), reason: \\\"Invalid\\\", details: Some(StatusDetails { name: \\\"praxis-benchmark\\\", group: \\\"\\\", kind: \\\"ConfigMap\\\", uid: \\\"\\\", causes: [StatusCause { reason: \\\"FieldValueTooLong\\\", message: \\\"Too long: may not be more than 1048576 bytes\\\", field: \\\"[]\\\" }], retry_after_seconds: 0 }) })\"},\"target\":\"praxis_operator::controller::gateway\"}"
+  }
+]

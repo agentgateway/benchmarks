@@ -7,7 +7,30 @@ performs as an AI proxy, Kubernetes Gateway API implementation and inference gat
 deterministic backend; inference tests compare EPP integration against a plain
 Kubernetes Service. These workloads answer different questions.
 
+## Current CPU comparison: agentgateway v1.6.0 and Praxis
+
+The [three-pass comparison](cpu-comparison/2026-10-05-stable-comparison/README.md)
+separates agentgateway versus direct service from Praxis versus agentgateway.
+It includes core v0.5.2 and core nightly-20261002 for transport, plus the separate
+Praxis AI v0.5.0 and October 2 AI nightly for native AI workloads. It runs on
+native GCE VMs with dedicated client/gateway/backend roles, using Fortio,
+Nighthawk, AIPerf and ClusterLoader2. Streaming uses a deterministic CPU service;
+these are not GPU inference or model-quality results.
+
+The [extended Gateway API evidence](cpu-comparison/2026-10-02-gateway-extended/README.md)
+retains every selected upstream case and the original suite version. The newer
+campaign adds a separate corrected static-address check and lifecycle evidence.
+Read full matrices, exclusions, version pins and source-supported feature
+boundaries together; no overall gateway score is implied.
+
+Earlier October 1 results below are historical, single-run experiments with
+agentgateway v1.5.0 and different infrastructure. Do not relabel them as v1.6.0
+or Praxis nightly measurements.
+
 ## Layout
+
+- [`cpu-comparison/`](cpu-comparison/2026-10-05-stable-comparison/README.md) - current
+  three-pass CPU comparison and retained extended Gateway API evidence.
 
 - [`ai-gateway/`](ai-gateway/README.md) - native CPU-only protocol qualification
   and Fortio proxy measurements for agentgateway, Praxis AI, and a direct backend.
@@ -22,7 +45,7 @@ Kubernetes Service. These workloads answer different questions.
 - [`inference/reports/`](inference/reports/README.md) - curated, published benchmark
   results with their campaign manifests and provenance, safe to link to directly.
 
-## Quick start
+## Inference quick start
 
 Run the `service` treatment locally on Kind:
 
@@ -39,7 +62,7 @@ than most laptops provide for the router pod - see
 See [`inference/README.md`](inference/README.md) for the full set of treatments,
 GKE campaign instructions, and configuration reference.
 
-## Current results
+## Historical CPU and other inference results
 
 The [initial CPU AI comparison](ai-gateway/results/2026-10-01-initial/README.md)
 and [Gateway API comparison](gateway-api/results/2026-10-01-initial/README.md)

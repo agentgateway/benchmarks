@@ -1,0 +1,4191 @@
+[
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/pass1/agentgateway/http-execution.json",
+    "samples": 103,
+    "host_busy_percent": {
+      "mean": 8.66632441563127,
+      "max": 34.68021814576103
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.024542315963146575,
+      "max": 0.25094102885821834
+    },
+    "busiest_sampled_vcpu_percent": 41.965973534971646,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0031677884339974495,
+          "max": 0.03383432172727755
+        },
+        "tx_mbps": {
+          "mean": 0.0031677884339974495,
+          "max": 0.03383432172727755
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 255.16290927583464,
+          "max": 2193.828056413164
+        },
+        "tx_mbps": {
+          "mean": 7.135100086046523,
+          "max": 32.42011019981063
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/pass1/agentgateway/recovery-execution.json",
+    "samples": 10,
+    "host_busy_percent": {
+      "mean": 1.424375805551295,
+      "max": 2.8417442430181286
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.03270111423998161,
+      "max": 0.17169487368162864
+    },
+    "busiest_sampled_vcpu_percent": 4.12573673870334,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.007116129264068187,
+          "max": 0.02389360021147354
+        },
+        "tx_mbps": {
+          "mean": 0.007116129264068187,
+          "max": 0.02389360021147354
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.05671361821671084,
+          "max": 0.13520030104058306
+        },
+        "tx_mbps": {
+          "mean": 0.03231550997427978,
+          "max": 0.04920625003236006
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/pass1/agentgateway/scale-1000-execution.json",
+    "samples": 16,
+    "host_busy_percent": {
+      "mean": 2.7849962081405506,
+      "max": 9.188398732634658
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.021214736045811377,
+      "max": 0.12254901960784313
+    },
+    "busiest_sampled_vcpu_percent": 13.438735177865613,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0032014947881477763,
+          "max": 0.01316593215615756
+        },
+        "tx_mbps": {
+          "mean": 0.0032014947881477763,
+          "max": 0.01316593215615756
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.6681887806564638,
+          "max": 3.2169840013400632
+        },
+        "tx_mbps": {
+          "mean": 0.24714662031675666,
+          "max": 0.776385726598918
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/pass1/agentgateway/scale-5000-execution.json",
+    "samples": 32,
+    "host_busy_percent": {
+      "mean": 4.753975373743504,
+      "max": 17.390261453585993
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.01979218940219107,
+      "max": 0.1226391954868776
+    },
+    "busiest_sampled_vcpu_percent": 32.58620689655172,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0035904847912536907,
+          "max": 0.03055652021099567
+        },
+        "tx_mbps": {
+          "mean": 0.0035904847912536907,
+          "max": 0.03055652021099567
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 1.5233517013954994,
+          "max": 3.2331683744002997
+        },
+        "tx_mbps": {
+          "mean": 0.5717507545447154,
+          "max": 1.3883600247341452
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/pass1/direct/http-execution.json",
+    "samples": 102,
+    "host_busy_percent": {
+      "mean": 23.467799248927083,
+      "max": 93.63241678726483
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.019874005858006125,
+      "max": 0.3091986601391394
+    },
+    "busiest_sampled_vcpu_percent": 94.99036608863199,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0033035861881114087,
+          "max": 0.03323170785370837
+        },
+        "tx_mbps": {
+          "mean": 0.0033035861881114087,
+          "max": 0.03323170785370837
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 779.7667427873162,
+          "max": 5827.3042201418175
+        },
+        "tx_mbps": {
+          "mean": 28.605452588485125,
+          "max": 144.53577916932232
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/pass1/praxis-release/http-execution.json",
+    "samples": 102,
+    "host_busy_percent": {
+      "mean": 9.565762056447495,
+      "max": 40.35393818544367
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.025240833873505425,
+      "max": 0.27383619616629323
+    },
+    "busiest_sampled_vcpu_percent": 42.337164750957854,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.003168875516369141,
+          "max": 0.030073529339992064
+        },
+        "tx_mbps": {
+          "mean": 0.003168875516369141,
+          "max": 0.030073529339992064
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 282.31558391609127,
+          "max": 2454.462907258991
+        },
+        "tx_mbps": {
+          "mean": 8.186555254785079,
+          "max": 41.58646284577007
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/pass1/praxis-release/recovery-execution.json",
+    "samples": 9,
+    "host_busy_percent": {
+      "mean": 1.5023027561219713,
+      "max": 2.1829776796664215
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.027604353520462727,
+      "max": 0.0736196319018405
+    },
+    "busiest_sampled_vcpu_percent": 6.666666666666667,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.004694797899617521,
+          "max": 0.017905687676313835
+        },
+        "tx_mbps": {
+          "mean": 0.004694797899617521,
+          "max": 0.017905687676313835
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.05928407824303723,
+          "max": 0.17325815894513058
+        },
+        "tx_mbps": {
+          "mean": 0.033029513334124835,
+          "max": 0.04629922683562106
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/pass1/praxis-release/scale-1000-execution.json",
+    "samples": 132,
+    "host_busy_percent": {
+      "mean": 2.7882924863040963,
+      "max": 7.004653441097233
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.02095148731273873,
+      "max": 0.14742014742014742
+    },
+    "busiest_sampled_vcpu_percent": 9.765625,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.004129463772517538,
+          "max": 0.04216295254009996
+        },
+        "tx_mbps": {
+          "mean": 0.004129463772517538,
+          "max": 0.04216295254009996
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.18406331364613987,
+          "max": 2.217369498156469
+        },
+        "tx_mbps": {
+          "mean": 0.0744333012277776,
+          "max": 0.7274197601513652
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/pass1/praxis-release/scale-5000-execution.json",
+    "samples": 148,
+    "host_busy_percent": {
+      "mean": 6.29160588913639,
+      "max": 16.27963823026155
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.020335252513125266,
+      "max": 0.14713094654242276
+    },
+    "busiest_sampled_vcpu_percent": 27.897838899803535,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.006721198148901762,
+          "max": 0.09679193966377493
+        },
+        "tx_mbps": {
+          "mean": 0.006721198148901762,
+          "max": 0.09679193966377493
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.6554846263594196,
+          "max": 5.518803019077793
+        },
+        "tx_mbps": {
+          "mean": 0.1575381946540253,
+          "max": 0.7399909198575719
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/pass1/agentgateway/http-execution.json",
+    "samples": 102,
+    "host_busy_percent": {
+      "mean": 7.517704922026024,
+      "max": 31.799485861182518
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.004866088824547686,
+      "max": 0.05115089514066496
+    },
+    "busiest_sampled_vcpu_percent": 99.81024667931689,
+    "container_quota_busy_percent": {
+      "mean": 24.04838641807448,
+      "max": 100.1456168900895
+    },
+    "container_throttled_period_percent": {
+      "mean": 2.8437968014456185,
+      "max": 34.61538461538461
+    },
+    "max_fd": 1028,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 104640512,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 256.3118858400764,
+          "max": 2211.453281584533
+        },
+        "tx_mbps": {
+          "mean": 6.377821244247628,
+          "max": 29.793137452858332
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0031365266599372313,
+          "max": 0.04104324576590139
+        },
+        "tx_mbps": {
+          "mean": 0.0031365266599372313,
+          "max": 0.04104324576590139
+        }
+      },
+      "vethff3c217d": {
+        "rx_mbps": {
+          "mean": 261.2900787574183,
+          "max": 2216.2766157904807
+        },
+        "tx_mbps": {
+          "mean": 264.8168599973364,
+          "max": 2251.8305752025
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 259.85446708556617,
+          "max": 2210.4842520250018
+        },
+        "tx_mbps": {
+          "mean": 264.8168546283371,
+          "max": 2251.8305752025
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 290.41770522525525,
+          "max": 2466.0411098168443
+        },
+        "tx_mbps": {
+          "mean": 264.14353408754323,
+          "max": 2229.4709806011783
+        }
+      }
+    }
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/pass1/agentgateway/recovery-execution.json",
+    "samples": 9,
+    "host_busy_percent": {
+      "mean": 0.9429884392462321,
+      "max": 1.7220470531166627
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.01212415344700026,
+      "max": 0.07276255154014068
+    },
+    "busiest_sampled_vcpu_percent": 3.6538461538461537,
+    "container_quota_busy_percent": {
+      "mean": 0.176140233407683,
+      "max": 0.22372349676529296
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 24,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 10002432,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.01911414958640694,
+          "max": 0.03641549181979427
+        },
+        "tx_mbps": {
+          "mean": 0.022381214663495123,
+          "max": 0.031865086806184585
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.038516765825110745,
+          "max": 0.27045398375712054
+        },
+        "tx_mbps": {
+          "mean": 0.038516765825110745,
+          "max": 0.27045398375712054
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.03654702962925732,
+          "max": 0.0465002586607824
+        },
+        "tx_mbps": {
+          "mean": 0.0439904693755563,
+          "max": 0.06317390512805841
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.08621487599898016,
+          "max": 0.3185627224395603
+        },
+        "tx_mbps": {
+          "mean": 0.05352129281760659,
+          "max": 0.08793024118393217
+        }
+      },
+      "vethf2489dbc": {
+        "rx_mbps": {
+          "mean": 0.038554048831384406,
+          "max": 0.05050248435785532
+        },
+        "tx_mbps": {
+          "mean": 0.041481422751283296,
+          "max": 0.05225874236214272
+        }
+      },
+      "vethf88aa488": {
+        "rx_mbps": {
+          "mean": 0.00010672051618918364,
+          "max": 0.00010672051618918364
+        },
+        "tx_mbps": {
+          "mean": 0.00021344103237836727,
+          "max": 0.00021344103237836727
+        }
+      }
+    }
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/pass1/agentgateway/scale-1000-execution.json",
+    "samples": 15,
+    "host_busy_percent": {
+      "mean": 0.9398995142929807,
+      "max": 1.9207391198638464
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0173308003441464,
+      "max": 0.12156576707999027
+    },
+    "busiest_sampled_vcpu_percent": 2.9239766081871346,
+    "container_quota_busy_percent": {
+      "mean": 0.3076023474392831,
+      "max": 1.5051170652797385
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 327,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 37154816,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.1494587221577266,
+          "max": 0.4241517894516418
+        },
+        "tx_mbps": {
+          "mean": 0.07754695388739166,
+          "max": 0.3765126981772588
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.019954491178088382,
+          "max": 0.2050103357378043
+        },
+        "tx_mbps": {
+          "mean": 0.019954491178088382,
+          "max": 0.2050103357378043
+        }
+      },
+      "vethff3c217d": {
+        "rx_mbps": {
+          "mean": 0.12761197983255762,
+          "max": 0.7061025891354855
+        },
+        "tx_mbps": {
+          "mean": 0.2134944283911834,
+          "max": 0.8480632671531118
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.11722308497795475,
+          "max": 0.651925467858041
+        },
+        "tx_mbps": {
+          "mean": 0.21342471646457836,
+          "max": 0.8480632671531118
+        }
+      },
+      "veth78b1088e": {
+        "rx_mbps": {
+          "mean": 3.253296303410442e-05,
+          "max": 0.00010848697358320454
+        },
+        "tx_mbps": {
+          "mean": 0.000125486544730185,
+          "max": 0.0006042800288013876
+        }
+      },
+      "vetha2b37e07": {
+        "rx_mbps": {
+          "mean": 3.2530771178835195e-05,
+          "max": 0.00010846051798999266
+        },
+        "tx_mbps": {
+          "mean": 0.00011154162098861452,
+          "max": 0.0004648307913856828
+        }
+      },
+      "veth6edfac54": {
+        "rx_mbps": {
+          "mean": 3.253296303410442e-05,
+          "max": 0.00010848697358320454
+        },
+        "tx_mbps": {
+          "mean": 0.000125486544730185,
+          "max": 0.0006042800288013876
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.25997183064961565,
+          "max": 0.957687285987941
+        },
+        "tx_mbps": {
+          "mean": 0.1550818772307945,
+          "max": 0.8141296976304633
+        }
+      }
+    }
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/pass1/agentgateway/scale-5000-execution.json",
+    "samples": 32,
+    "host_busy_percent": {
+      "mean": 0.9906791081798971,
+      "max": 2.114216281895504
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.01251888862316994,
+      "max": 0.14580801944106925
+    },
+    "busiest_sampled_vcpu_percent": 5.242718446601942,
+    "container_quota_busy_percent": {
+      "mean": 0.5792562709329029,
+      "max": 4.9178079529479115
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 42,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 34750464,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.32787593580657176,
+          "max": 0.8216600168604488
+        },
+        "tx_mbps": {
+          "mean": 0.16527802130241084,
+          "max": 1.23339965433965
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.01215656760529199,
+          "max": 0.23374771573108544
+        },
+        "tx_mbps": {
+          "mean": 0.01215656760529199,
+          "max": 0.23374771573108544
+        }
+      },
+      "veth787dfe66": {
+        "rx_mbps": {
+          "mean": 2.5242863628091038e-05,
+          "max": 0.00024775822360512036
+        },
+        "tx_mbps": {
+          "mean": 9.61529051813344e-05,
+          "max": 0.0012945367183367542
+        }
+      },
+      "vethff3c217d": {
+        "rx_mbps": {
+          "mean": 0.2685331578104145,
+          "max": 2.452826352742973
+        },
+        "tx_mbps": {
+          "mean": 0.45931273150100854,
+          "max": 2.3983679308210086
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.24736968738357626,
+          "max": 2.2695926606352788
+        },
+        "tx_mbps": {
+          "mean": 0.45924676806899645,
+          "max": 2.3982594571695124
+        }
+      },
+      "veth187de50c": {
+        "rx_mbps": {
+          "mean": 2.008588491390746e-05,
+          "max": 0.00010851945330237191
+        },
+        "tx_mbps": {
+          "mean": 8.605905162705171e-05,
+          "max": 0.0010220026723711216
+        }
+      },
+      "veth997df31c": {
+        "rx_mbps": {
+          "mean": 3.040704376817319e-05,
+          "max": 0.0003871222243830006
+        },
+        "tx_mbps": {
+          "mean": 9.122068128549171e-05,
+          "max": 0.0011613666731490019
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.5242836607302386,
+          "max": 2.7331625584230452
+        },
+        "tx_mbps": {
+          "mean": 0.32083259227381705,
+          "max": 2.7846395045524512
+        }
+      }
+    }
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/pass1/direct/http-execution.json",
+    "samples": 104,
+    "host_busy_percent": {
+      "mean": 0.41623368747855116,
+      "max": 0.5166051660516605
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.00501728916178616,
+      "max": 0.04921259842519685
+    },
+    "busiest_sampled_vcpu_percent": 1.5748031496062993,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.003489207916658674,
+          "max": 0.042108036981318875
+        },
+        "tx_mbps": {
+          "mean": 0.003489207916658674,
+          "max": 0.042108036981318875
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.004581090234443562,
+          "max": 0.03899982300919655
+        },
+        "tx_mbps": {
+          "mean": 0.0015732366499143198,
+          "max": 0.004449073873007491
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/pass1/praxis-release/http-execution.json",
+    "samples": 102,
+    "host_busy_percent": {
+      "mean": 7.777425663232308,
+      "max": 33.68560105680317
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.004131033838632258,
+      "max": 0.04861448711716091
+    },
+    "busiest_sampled_vcpu_percent": 100.0,
+    "container_quota_busy_percent": {
+      "mean": 22.5820367531904,
+      "max": 100.53748618788848
+    },
+    "container_throttled_period_percent": {
+      "mean": 4.9576717603918325,
+      "max": 46.15384615384615
+    },
+    "max_fd": 924,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 240332800,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "veth972511d5": {
+        "rx_mbps": {
+          "mean": 289.9632094520143,
+          "max": 2506.1088493635175
+        },
+        "tx_mbps": {
+          "mean": 288.50598714289885,
+          "max": 2522.858755194046
+        }
+      },
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 278.7969893189522,
+          "max": 2476.8670117038205
+        },
+        "tx_mbps": {
+          "mean": 10.660702239428291,
+          "max": 58.26488393318281
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0030542565689562376,
+          "max": 0.03874623575516801
+        },
+        "tx_mbps": {
+          "mean": 0.0030542565689562376,
+          "max": 0.03874623575516801
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 287.9591354863841,
+          "max": 2495.786796387008
+        },
+        "tx_mbps": {
+          "mean": 288.5059813133129,
+          "max": 2522.8653356660247
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 316.6568816265068,
+          "max": 2764.5762372841054
+        },
+        "tx_mbps": {
+          "mean": 293.87997953666877,
+          "max": 2527.687698648185
+        }
+      }
+    }
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/pass1/praxis-release/recovery-execution.json",
+    "samples": 9,
+    "host_busy_percent": {
+      "mean": 1.0009991007767027,
+      "max": 1.5772870662460567
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.012073617136901336,
+      "max": 0.0485319097306479
+    },
+    "busiest_sampled_vcpu_percent": 2.6717557251908395,
+    "container_quota_busy_percent": {
+      "mean": 0.16643139360056894,
+      "max": 0.20935354180494412
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 28,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 5914624,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.012553972061523717,
+          "max": 0.013959407367499867
+        },
+        "tx_mbps": {
+          "mean": 0.02206402125969868,
+          "max": 0.024552134134602707
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.03306305042268475,
+          "max": 0.128474649020916
+        },
+        "tx_mbps": {
+          "mean": 0.03306305042268475,
+          "max": 0.128474649020916
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.03987179689264157,
+          "max": 0.04418671455284087
+        },
+        "tx_mbps": {
+          "mean": 0.0371369962039031,
+          "max": 0.041091165616074524
+        }
+      },
+      "veth97e089b0": {
+        "rx_mbps": {
+          "mean": 0.03361845939141089,
+          "max": 0.04802593890985138
+        },
+        "tx_mbps": {
+          "mean": 0.028991062006680824,
+          "max": 0.041091165616074524
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.07058303186059886,
+          "max": 0.1638277741687305
+        },
+        "tx_mbps": {
+          "mean": 0.05380242806920876,
+          "max": 0.05629864638392269
+        }
+      },
+      "veth493ee424": {
+        "rx_mbps": {
+          "mean": 0.03880120498760693,
+          "max": 0.045310390673679916
+        },
+        "tx_mbps": {
+          "mean": 0.033354025317407734,
+          "max": 0.03863400098704251
+        }
+      }
+    }
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/pass1/praxis-release/scale-1000-execution.json",
+    "samples": 130,
+    "host_busy_percent": {
+      "mean": 1.0902730722327891,
+      "max": 7.904366918760673
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.03194562508145038,
+      "max": 0.6830934374237619
+    },
+    "busiest_sampled_vcpu_percent": 10.617760617760618,
+    "container_quota_busy_percent": {
+      "mean": 0.16107125968344232,
+      "max": 0.4198533596571299
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 145,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 185298944,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "veth972511d5": {
+        "rx_mbps": {
+          "mean": 0.07351297999385734,
+          "max": 0.15403677996712942
+        },
+        "tx_mbps": {
+          "mean": 0.061137077384720545,
+          "max": 0.12895893526236218
+        }
+      },
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.018761707089081033,
+          "max": 0.039360355640530954
+        },
+        "tx_mbps": {
+          "mean": 0.039714554718613376,
+          "max": 0.08384375599553417
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.4620427353112011,
+          "max": 18.88315472616723
+        },
+        "tx_mbps": {
+          "mean": 0.4620427353112011,
+          "max": 18.88315472616723
+        }
+      },
+      "veth1795a176": {
+        "rx_mbps": {
+          "mean": 6.060462393112617e-06,
+          "max": 0.00010850076506379288
+        },
+        "tx_mbps": {
+          "mean": 0.0001236690303160098,
+          "max": 0.003044795118690261
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.06807531912819381,
+          "max": 0.14243211810881318
+        },
+        "tx_mbps": {
+          "mean": 0.061021304021515566,
+          "max": 0.12895893526236218
+        }
+      },
+      "veth0875273f": {
+        "rx_mbps": {
+          "mean": 6.0472588869954075e-06,
+          "max": 0.00010853712482121582
+        },
+        "tx_mbps": {
+          "mean": 0.0001225530224467822,
+          "max": 0.003044795118690261
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.5249638277655305,
+          "max": 18.766732270781212
+        },
+        "tx_mbps": {
+          "mean": 0.0890970147687932,
+          "max": 0.24691827525940616
+        }
+      },
+      "veth70cb1d38": {
+        "rx_mbps": {
+          "mean": 6.06072511525455e-06,
+          "max": 0.00010850076506379288
+        },
+        "tx_mbps": {
+          "mean": 0.0001236690303160098,
+          "max": 0.003044795118690261
+        }
+      },
+      "veth49470d97": {
+        "rx_mbps": {
+          "mean": 5.338374705632692e-05,
+          "max": 0.00010676749411265384
+        },
+        "tx_mbps": {
+          "mean": 0.0019071037200005074,
+          "max": 0.002075422535880652
+        }
+      },
+      "veth42f95ac3": {
+        "rx_mbps": {
+          "mean": 1.1385692160071209e-05,
+          "max": 0.00010848003907629058
+        },
+        "tx_mbps": {
+          "mean": 3.8471450659281504e-05,
+          "max": 0.0004575309464144538
+        }
+      },
+      "veth9a2d32ac": {
+        "rx_mbps": {
+          "mean": 1.3300344607181705e-05,
+          "max": 0.00014876622831962505
+        },
+        "tx_mbps": {
+          "mean": 2.4737014757033093e-05,
+          "max": 0.0003870040290160015
+        }
+      }
+    }
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/pass1/praxis-release/scale-5000-execution.json",
+    "samples": 146,
+    "host_busy_percent": {
+      "mean": 1.598905444462515,
+      "max": 22.53691600096829
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.05856841415580672,
+      "max": 1.5008472524812395
+    },
+    "busiest_sampled_vcpu_percent": 29.580152671755727,
+    "container_quota_busy_percent": {
+      "mean": 0.15859564606757803,
+      "max": 1.4385095640998478
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 63,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 202305536,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [
+      "Command '['nsenter', '-t', '0', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1.",
+      "Command '['nsenter', '-t', '0', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1.",
+      "Command '['nsenter', '-t', '227765', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1."
+    ],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "veth972511d5": {
+        "rx_mbps": {
+          "mean": 0.06453783980012934,
+          "max": 0.15173003174884359
+        },
+        "tx_mbps": {
+          "mean": 0.05479720081436491,
+          "max": 0.1288966912913219
+        }
+      },
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.016634039606125226,
+          "max": 0.03936625694529798
+        },
+        "tx_mbps": {
+          "mean": 0.034524941429392005,
+          "max": 0.0819004126778475
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 1.200992016131478,
+          "max": 26.901613579140935
+        },
+        "tx_mbps": {
+          "mean": 1.200992016131478,
+          "max": 26.901613579140935
+        }
+      },
+      "veth74bdc027": {
+        "rx_mbps": {
+          "mean": 6.261782734921893e-06,
+          "max": 0.00024398064191153763
+        },
+        "tx_mbps": {
+          "mean": 0.00028637889810968634,
+          "max": 0.006106230487007429
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.06009230734734094,
+          "max": 0.1407212379495151
+        },
+        "tx_mbps": {
+          "mean": 0.05454459773394879,
+          "max": 0.1288966912913219
+        }
+      },
+      "veth1db994eb": {
+        "rx_mbps": {
+          "mean": 5.297411660066688e-06,
+          "max": 0.00010848508454368175
+        },
+        "tx_mbps": {
+          "mean": 0.0002882688889977335,
+          "max": 0.006106230487007429
+        }
+      },
+      "veth7b4cb4bf": {
+        "rx_mbps": {
+          "mean": 5.2968763402248205e-06,
+          "max": 0.00010852496876594045
+        },
+        "tx_mbps": {
+          "mean": 0.00028734537072289227,
+          "max": 0.006106230487007429
+        }
+      },
+      "veth099f3898": {
+        "rx_mbps": {
+          "mean": 0.00010672335599676935,
+          "max": 0.00010674153083629772
+        },
+        "tx_mbps": {
+          "mean": 0.0006632159175654697,
+          "max": 0.0007014443454956707
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 1.250462624898335,
+          "max": 26.650652051705936
+        },
+        "tx_mbps": {
+          "mean": 0.08567580472449371,
+          "max": 0.3136359983691354
+        }
+      },
+      "vethcdf66408": {
+        "rx_mbps": {
+          "mean": 0.0007499864193191602,
+          "max": 0.001814327895172328
+        },
+        "tx_mbps": {
+          "mean": 0.003968685432196899,
+          "max": 0.005156998910693319
+        }
+      },
+      "veth07feb732": {
+        "rx_mbps": {
+          "mean": 1.0751808003866083e-05,
+          "max": 0.0001921104554316856
+        },
+        "tx_mbps": {
+          "mean": 2.0579885504466818e-05,
+          "max": 0.0003315454634062962
+        }
+      }
+    }
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/pass1/agentgateway/http-execution.json",
+    "samples": 101,
+    "host_busy_percent": {
+      "mean": 10.307655724700377,
+      "max": 47.253555664541445
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0036076703869463663,
+      "max": 0.024539877300613498
+    },
+    "busiest_sampled_vcpu_percent": 51.039697542533084,
+    "container_quota_busy_percent": {
+      "mean": 10.872087984226518,
+      "max": 56.15621299340011
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 501,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 30609408,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 6.363684745362515,
+          "max": 29.798157416839455
+        },
+        "tx_mbps": {
+          "mean": 255.7167047679018,
+          "max": 2217.850532338736
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0032837542335747657,
+          "max": 0.034730978202752505
+        },
+        "tx_mbps": {
+          "mean": 0.0032837542335747657,
+          "max": 0.034730978202752505
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 255.7170323175277,
+          "max": 2217.8567494256627
+        },
+        "tx_mbps": {
+          "mean": 7.1610856009767385,
+          "max": 32.649841625470174
+        }
+      },
+      "veth041634ca": {
+        "rx_mbps": {
+          "mean": 257.05892844156585,
+          "max": 2227.11900389867
+        },
+        "tx_mbps": {
+          "mean": 7.161085602844495,
+          "max": 32.649841625470174
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 10.011454904803406,
+          "max": 44.05865600251143
+        },
+        "tx_mbps": {
+          "mean": 282.8676893876529,
+          "max": 2444.381211226363
+        }
+      }
+    }
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/pass1/agentgateway/recovery-execution.json",
+    "samples": 10,
+    "host_busy_percent": {
+      "mean": 1.0224869030758938,
+      "max": 1.128451380552221
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.002670940170940171,
+      "max": 0.02403846153846154
+    },
+    "busiest_sampled_vcpu_percent": 2.3121387283236996,
+    "container_quota_busy_percent": {
+      "mean": 0.05907123545457577,
+      "max": 0.07042883394267112
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 8,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 10428416,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.018806719140110676,
+          "max": 0.019045951742226355
+        },
+        "tx_mbps": {
+          "mean": 0.013664208343304993,
+          "max": 0.013836802547771284
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0071907865510814715,
+          "max": 0.015753307860232404
+        },
+        "tx_mbps": {
+          "mean": 0.0071907865510814715,
+          "max": 0.015753307860232404
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.013940701165137723,
+          "max": 0.014450631352870386
+        },
+        "tx_mbps": {
+          "mean": 0.021377981592539983,
+          "max": 0.021997498518251554
+        }
+      },
+      "veth041634ca": {
+        "rx_mbps": {
+          "mean": 0.015118638630744306,
+          "max": 0.01569693115728151
+        },
+        "tx_mbps": {
+          "mean": 0.021377981592539983,
+          "max": 0.021997498518251554
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.03765727137301218,
+          "max": 0.04914181360229494
+        },
+        "tx_mbps": {
+          "mean": 0.02053629380495316,
+          "max": 0.021912057266838796
+        }
+      }
+    }
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/pass1/agentgateway/scale-1000-execution.json",
+    "samples": 15,
+    "host_busy_percent": {
+      "mean": 1.0160710805182156,
+      "max": 1.4681107099879662
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.005151103069705426,
+      "max": 0.024067388688327317
+    },
+    "busiest_sampled_vcpu_percent": 2.697495183044316,
+    "container_quota_busy_percent": {
+      "mean": 0.07444467377705184,
+      "max": 0.4998687629201081
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 312,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 19611648,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.04769725780285345,
+          "max": 0.3214007644334088
+        },
+        "tx_mbps": {
+          "mean": 0.03421263196819607,
+          "max": 0.21496727187774176
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0036749774595306265,
+          "max": 0.013173468827782751
+        },
+        "tx_mbps": {
+          "mean": 0.0036749774595306265,
+          "max": 0.013173468827782751
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.03452379096902381,
+          "max": 0.21558997769062252
+        },
+        "tx_mbps": {
+          "mean": 0.05201360437565478,
+          "max": 0.34628132113473353
+        }
+      },
+      "veth041634ca": {
+        "rx_mbps": {
+          "mean": 0.038914000688893044,
+          "max": 0.23941885346352643
+        },
+        "tx_mbps": {
+          "mean": 0.05201360437565478,
+          "max": 0.34628132113473353
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.0706410785821535,
+          "max": 0.4434142026728308
+        },
+        "tx_mbps": {
+          "mean": 0.05556909678983922,
+          "max": 0.32434208843350976
+        }
+      }
+    }
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/pass1/agentgateway/scale-5000-execution.json",
+    "samples": 32,
+    "host_busy_percent": {
+      "mean": 1.0676942304466144,
+      "max": 1.9782870928829916
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.003872518624458731,
+      "max": 0.02403846153846154
+    },
+    "busiest_sampled_vcpu_percent": 4.038461538461538,
+    "container_quota_busy_percent": {
+      "mean": 0.14930018045621488,
+      "max": 1.527492066714924
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 15,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 12406784,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.09655701114585971,
+          "max": 0.9561054319301622
+        },
+        "tx_mbps": {
+          "mean": 0.06437293871631,
+          "max": 0.6367661408606172
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.003661100718343005,
+          "max": 0.03494388384129068
+        },
+        "tx_mbps": {
+          "mean": 0.003661100718343005,
+          "max": 0.03494388384129068
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.06469405427003966,
+          "max": 0.6373882603126505
+        },
+        "tx_mbps": {
+          "mean": 0.10417586464139161,
+          "max": 1.0284464034710208
+        }
+      },
+      "veth041634ca": {
+        "rx_mbps": {
+          "mean": 0.07188067278885359,
+          "max": 0.7078828427637714
+        },
+        "tx_mbps": {
+          "mean": 0.10417586464139161,
+          "max": 1.0284464034710208
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.1343735479205396,
+          "max": 1.2944646811603837
+        },
+        "tx_mbps": {
+          "mean": 0.09860031154687872,
+          "max": 0.9609871495068566
+        }
+      }
+    }
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/pass1/direct/http-execution.json",
+    "samples": 99,
+    "host_busy_percent": {
+      "mean": 20.6054143159014,
+      "max": 77.37397420867526
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.004199812783450304,
+      "max": 0.048887802493277926
+    },
+    "busiest_sampled_vcpu_percent": 85.33834586466165,
+    "container_quota_busy_percent": {
+      "mean": 24.951792646138713,
+      "max": 96.893222360992
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.1498218334953029,
+      "max": 3.7037037037037037
+    },
+    "max_fd": 519,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 28938240,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.003393882319782699,
+          "max": 0.0347805714808967
+        },
+        "tx_mbps": {
+          "mean": 0.003393882319782699,
+          "max": 0.0347805714808967
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 775.4579814644856,
+          "max": 5799.018944751526
+        },
+        "tx_mbps": {
+          "mean": 28.563010264116745,
+          "max": 144.90489804308942
+        }
+      },
+      "veth041634ca": {
+        "rx_mbps": {
+          "mean": 780.0168166351928,
+          "max": 5823.613864564404
+        },
+        "tx_mbps": {
+          "mean": 28.563010375775537,
+          "max": 144.90513736749153
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 28.567220625681752,
+          "max": 144.9156750277396
+        },
+        "tx_mbps": {
+          "mean": 780.0179854924875,
+          "max": 5823.548480339353
+        }
+      }
+    }
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/pass1/praxis-release/http-execution.json",
+    "samples": 100,
+    "host_busy_percent": {
+      "mean": 11.96222274953273,
+      "max": 55.53917956276099
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.00411688850856894,
+      "max": 0.02462447672986949
+    },
+    "busiest_sampled_vcpu_percent": 56.777996070726914,
+    "container_quota_busy_percent": {
+      "mean": 12.705407848843532,
+      "max": 65.89132305623473
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 414,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 27021312,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 10.696735042047708,
+          "max": 58.47099231399839
+        },
+        "tx_mbps": {
+          "mean": 278.81392670282605,
+          "max": 2471.987047251006
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0033238503607315147,
+          "max": 0.03468946917815539
+        },
+        "tx_mbps": {
+          "mean": 0.0033238503607315147,
+          "max": 0.03468946917815539
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 278.81425319218584,
+          "max": 2471.9808510273083
+        },
+        "tx_mbps": {
+          "mean": 11.796763090309653,
+          "max": 63.03734810123055
+        }
+      },
+      "veth041634ca": {
+        "rx_mbps": {
+          "mean": 280.4024205744081,
+          "max": 2483.2723394144577
+        },
+        "tx_mbps": {
+          "mean": 11.796763092547693,
+          "max": 63.03734810123055
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 15.72812707243854,
+          "max": 79.34758586627255
+        },
+        "tx_mbps": {
+          "mean": 308.83903157248733,
+          "max": 2726.965687131282
+        }
+      }
+    }
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/pass1/praxis-release/recovery-execution.json",
+    "samples": 9,
+    "host_busy_percent": {
+      "mean": 1.0277238480874424,
+      "max": 1.1778846153846154
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.009012257016083847,
+      "max": 0.02403846153846154
+    },
+    "busiest_sampled_vcpu_percent": 2.3121387283236996,
+    "container_quota_busy_percent": {
+      "mean": 0.051581990426457926,
+      "max": 0.05837548433905943
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 9,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 8359936,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.02202736473511287,
+          "max": 0.024364641718530897
+        },
+        "tx_mbps": {
+          "mean": 0.012533200249528842,
+          "max": 0.013852806328261715
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.004599812116382109,
+          "max": 0.01911064705510373
+        },
+        "tx_mbps": {
+          "mean": 0.004599812116382109,
+          "max": 0.01911064705510373
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.012844425466493097,
+          "max": 0.014212796968921143
+        },
+        "tx_mbps": {
+          "mean": 0.024436223237369315,
+          "max": 0.026826750363188094
+        }
+      },
+      "veth041634ca": {
+        "rx_mbps": {
+          "mean": 0.013933969573938635,
+          "max": 0.01543960194255003
+        },
+        "tx_mbps": {
+          "mean": 0.024436223237369315,
+          "max": 0.026826750363188094
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.03771767872430283,
+          "max": 0.045522709407348795
+        },
+        "tx_mbps": {
+          "mean": 0.018849061785411656,
+          "max": 0.021234092629713604
+        }
+      }
+    }
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/pass1/praxis-release/scale-1000-execution.json",
+    "samples": 129,
+    "host_busy_percent": {
+      "mean": 0.9780352087761345,
+      "max": 1.2007684918347743
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.004881235104747248,
+      "max": 0.04806536890170632
+    },
+    "busiest_sampled_vcpu_percent": 3.6468330134357005,
+    "container_quota_busy_percent": {
+      "mean": 0.04778458711244064,
+      "max": 0.10772539698791095
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 126,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 13778944,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.03970751705140422,
+          "max": 0.08313510827172522
+        },
+        "tx_mbps": {
+          "mean": 0.01875835725447809,
+          "max": 0.03904029421858358
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.004191449297306716,
+          "max": 0.037085923572975826
+        },
+        "tx_mbps": {
+          "mean": 0.004191449297306716,
+          "max": 0.037085923572975826
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.019083472160730752,
+          "max": 0.03964729927948477
+        },
+        "tx_mbps": {
+          "mean": 0.04280796797772631,
+          "max": 0.08949334967763725
+        }
+      },
+      "veth041634ca": {
+        "rx_mbps": {
+          "mean": 0.02123264028835629,
+          "max": 0.04405682258629049
+        },
+        "tx_mbps": {
+          "mean": 0.04280796797772631,
+          "max": 0.08949334967763725
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.05742030406466215,
+          "max": 0.11139285137416653
+        },
+        "tx_mbps": {
+          "mean": 0.029963430516155617,
+          "max": 0.06069111820546473
+        }
+      }
+    }
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/pass1/praxis-release/scale-5000-execution.json",
+    "samples": 146,
+    "host_busy_percent": {
+      "mean": 0.9858501942720113,
+      "max": 1.1761881901104176
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.004640040820170587,
+      "max": 0.04812319538017324
+    },
+    "busiest_sampled_vcpu_percent": 3.4615384615384617,
+    "container_quota_busy_percent": {
+      "mean": 0.04286409350456484,
+      "max": 0.11031301385478283
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 23,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 11296768,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0342397180007783,
+          "max": 0.08125044526361082
+        },
+        "tx_mbps": {
+          "mean": 0.01649686820433553,
+          "max": 0.039053843571563746
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.006644850027512395,
+          "max": 0.10101524816041964
+        },
+        "tx_mbps": {
+          "mean": 0.006644850027512395,
+          "max": 0.10101524816041964
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.01682253002019468,
+          "max": 0.03967655249465365
+        },
+        "tx_mbps": {
+          "mean": 0.03677013882181259,
+          "max": 0.08701626862555428
+        }
+      },
+      "veth041634ca": {
+        "rx_mbps": {
+          "mean": 0.018709754781713793,
+          "max": 0.044089329307661046
+        },
+        "tx_mbps": {
+          "mean": 0.03677088083929531,
+          "max": 0.08701626862555428
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.05171439493953989,
+          "max": 0.11445410505017556
+        },
+        "tx_mbps": {
+          "mean": 0.026615732896359504,
+          "max": 0.06160359435190051
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/pass1/agentgateway/http-execution.json",
+    "samples": 101,
+    "host_busy_percent": {
+      "mean": 1.1272964959047145,
+      "max": 1.2407539966595085
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.004054725649626683,
+      "max": 0.023894862604540025
+    },
+    "busiest_sampled_vcpu_percent": 3.612167300380228,
+    "container_quota_busy_percent": {
+      "mean": 0.045166035713204836,
+      "max": 0.14880659992539802
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 13,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 36536320,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 2.856601619380618e-05,
+          "max": 0.00015875032557214467
+        },
+        "tx_mbps": {
+          "mean": 2.856601619380618e-05,
+          "max": 0.00015875032557214467
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0033659708465768948,
+          "max": 0.03702795140860225
+        },
+        "tx_mbps": {
+          "mean": 0.0033659708465768948,
+          "max": 0.03702795140860225
+        }
+      },
+      "veth684d398d": {
+        "rx_mbps": {
+          "mean": 0.0014120640332717918,
+          "max": 0.005508132933843654
+        },
+        "tx_mbps": {
+          "mean": 0.00373770740443386,
+          "max": 0.01155861287164489
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.005559989420878606,
+          "max": 0.010833170036091399
+        },
+        "tx_mbps": {
+          "mean": 0.009847960241168754,
+          "max": 0.024218335439369142
+        }
+      },
+      "vethd933d892": {
+        "rx_mbps": {
+          "mean": 0.003890517544667878,
+          "max": 0.00697128936927295
+        },
+        "tx_mbps": {
+          "mean": 0.005097730475608081,
+          "max": 0.012991116672398412
+        }
+      },
+      "veth7380d5cf": {
+        "rx_mbps": {
+          "mean": 0.0009418215973025135,
+          "max": 0.003919262183467765
+        },
+        "tx_mbps": {
+          "mean": 0.0010381508810460383,
+          "max": 0.0027387426961344146
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.01284330082874107,
+          "max": 0.06333269533999909
+        },
+        "tx_mbps": {
+          "mean": 0.006296682316680763,
+          "max": 0.011404819946764636
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/pass1/agentgateway/recovery-execution.json",
+    "samples": 9,
+    "host_busy_percent": {
+      "mean": 1.607706244570278,
+      "max": 3.3221797323135753
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.03568270441492472,
+      "max": 0.21510516252390058
+    },
+    "busiest_sampled_vcpu_percent": 4.339622641509434,
+    "container_quota_busy_percent": {
+      "mean": 0.15843273802516877,
+      "max": 0.5636998079648375
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 14,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 37212160,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0028023007334819715,
+          "max": 0.010693894105959894
+        },
+        "tx_mbps": {
+          "mean": 0.00404366240763216,
+          "max": 0.018788916136425343
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.07943930067757862,
+          "max": 0.30767666713352954
+        },
+        "tx_mbps": {
+          "mean": 0.07943930067757862,
+          "max": 0.30767666713352954
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.03054942104377226,
+          "max": 0.0744244869864387
+        },
+        "tx_mbps": {
+          "mean": 0.29913437911659346,
+          "max": 0.9364959401640607
+        }
+      },
+      "veth1601ceca": {
+        "rx_mbps": {
+          "mean": 0.0005217429062571281,
+          "max": 0.0005217429062571281
+        },
+        "tx_mbps": {
+          "mean": 0.0021678265198578333,
+          "max": 0.0021678265198578333
+        }
+      },
+      "vethc5612fad": {
+        "rx_mbps": {
+          "mean": 0.009701447819252742,
+          "max": 0.016075640438076255
+        },
+        "tx_mbps": {
+          "mean": 0.10556052998530915,
+          "max": 0.2075695468543417
+        }
+      },
+      "veth7380d5cf": {
+        "rx_mbps": {
+          "mean": 0.0008619396114335105,
+          "max": 0.0016499234398053425
+        },
+        "tx_mbps": {
+          "mean": 0.0012648405560373888,
+          "max": 0.002661499606266036
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.3739000617304347,
+          "max": 1.22057103208278
+        },
+        "tx_mbps": {
+          "mean": 0.041380255781998394,
+          "max": 0.11428147193156293
+        }
+      },
+      "veth722123da": {
+        "rx_mbps": {
+          "mean": 0.025680114599601657,
+          "max": 0.06642137402956193
+        },
+        "tx_mbps": {
+          "mean": 0.17507948164093665,
+          "max": 0.577296616354861
+        }
+      },
+      "vethaa31fb73": {
+        "rx_mbps": {
+          "mean": 0.0027734497735108243,
+          "max": 0.006299860898485124
+        },
+        "tx_mbps": {
+          "mean": 0.05061331801760202,
+          "max": 0.1454492361859613
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/pass1/agentgateway/scale-1000-execution.json",
+    "samples": 15,
+    "host_busy_percent": {
+      "mean": 2.5709909037295144,
+      "max": 7.393274505127594
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.003411922031347716,
+      "max": 0.023894862604540025
+    },
+    "busiest_sampled_vcpu_percent": 12.110091743119266,
+    "container_quota_busy_percent": {
+      "mean": 2.5619677558711094,
+      "max": 13.414184627585687
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 13,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 66691072,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.028966930355977614,
+          "max": 0.11074472188302217
+        },
+        "tx_mbps": {
+          "mean": 0.11303160080621369,
+          "max": 0.41946240879408975
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.10926295819622103,
+          "max": 1.4814774869732332
+        },
+        "tx_mbps": {
+          "mean": 0.10926295819622103,
+          "max": 1.4814774869732332
+        }
+      },
+      "veth684d398d": {
+        "rx_mbps": {
+          "mean": 0.17158237076998356,
+          "max": 0.6484447938303446
+        },
+        "tx_mbps": {
+          "mean": 1.1742479052524082,
+          "max": 5.478792700366151
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.6332585896675362,
+          "max": 3.1138346387588456
+        },
+        "tx_mbps": {
+          "mean": 3.18912935469281,
+          "max": 15.632482094927129
+        }
+      },
+      "vethd933d892": {
+        "rx_mbps": {
+          "mean": 0.4989063073420691,
+          "max": 2.633497658480042
+        },
+        "tx_mbps": {
+          "mean": 2.011832637107044,
+          "max": 10.153689394560976
+        }
+      },
+      "veth7380d5cf": {
+        "rx_mbps": {
+          "mean": 0.001179305238902736,
+          "max": 0.0028407432424174526
+        },
+        "tx_mbps": {
+          "mean": 0.0030488123333575856,
+          "max": 0.012184145919865077
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 3.2071547772337485,
+          "max": 15.678802300272164
+        },
+        "tx_mbps": {
+          "mean": 0.7800251718100544,
+          "max": 3.325168957203063
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/pass1/agentgateway/scale-5000-execution.json",
+    "samples": 31,
+    "host_busy_percent": {
+      "mean": 5.104188336418166,
+      "max": 10.976766239924135
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.00556427652251226,
+      "max": 0.04770992366412214
+    },
+    "busiest_sampled_vcpu_percent": 15.855855855855856,
+    "container_quota_busy_percent": {
+      "mean": 7.058506111627486,
+      "max": 19.60847472797159
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 13,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 177184768,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.06880328439042804,
+          "max": 0.12328400711077755
+        },
+        "tx_mbps": {
+          "mean": 0.2665691535674942,
+          "max": 0.43959788509783304
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.004037479871787312,
+          "max": 0.03627872671196278
+        },
+        "tx_mbps": {
+          "mean": 0.004037479871787312,
+          "max": 0.03627872671196278
+        }
+      },
+      "veth684d398d": {
+        "rx_mbps": {
+          "mean": 0.4016382674119504,
+          "max": 0.6626247786059928
+        },
+        "tx_mbps": {
+          "mean": 2.730746512201127,
+          "max": 5.5221981145061685
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 1.4787518347112716,
+          "max": 3.1411395259671915
+        },
+        "tx_mbps": {
+          "mean": 7.426436048916226,
+          "max": 15.764196532149533
+        }
+      },
+      "vethd933d892": {
+        "rx_mbps": {
+          "mean": 1.1649173214595754,
+          "max": 2.648089102787965
+        },
+        "tx_mbps": {
+          "mean": 4.693703806312952,
+          "max": 10.239870964537726
+        }
+      },
+      "veth7380d5cf": {
+        "rx_mbps": {
+          "mean": 0.0011108033718739718,
+          "max": 0.0029934434731558393
+        },
+        "tx_mbps": {
+          "mean": 0.0019857304021468876,
+          "max": 0.01174552221445358
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 7.453960917880803,
+          "max": 15.799635342061366
+        },
+        "tx_mbps": {
+          "mean": 1.5951751351018721,
+          "max": 3.3520433342784677
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/pass1/direct/http-execution.json",
+    "samples": 103,
+    "host_busy_percent": {
+      "mean": 0.45094136942609275,
+      "max": 0.5663629647869983
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.004825596290122097,
+      "max": 0.07381889763779527
+    },
+    "busiest_sampled_vcpu_percent": 1.7647058823529411,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.00324195038657025,
+          "max": 0.03562246890677872
+        },
+        "tx_mbps": {
+          "mean": 0.00324195038657025,
+          "max": 0.03562246890677872
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.0008146091818469455,
+          "max": 0.002461053888170731
+        },
+        "tx_mbps": {
+          "mean": 0.0010622959273237059,
+          "max": 0.0033107783764138223
+        }
+      },
+      "veth7380d5cf": {
+        "rx_mbps": {
+          "mean": 0.0009502852497797126,
+          "max": 0.0028575919826841737
+        },
+        "tx_mbps": {
+          "mean": 0.0010622959273237059,
+          "max": 0.0033107783764138223
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.004819416658557545,
+          "max": 0.03412179642564707
+        },
+        "tx_mbps": {
+          "mean": 0.0018534641350227493,
+          "max": 0.005354239264779178
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/pass1/praxis-release/http-execution.json",
+    "samples": 100,
+    "host_busy_percent": {
+      "mean": 1.1160873042609056,
+      "max": 1.2413463833850562
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.005296985330636947,
+      "max": 0.04743833017077799
+    },
+    "busiest_sampled_vcpu_percent": 3.8240917782026767,
+    "container_quota_busy_percent": {
+      "mean": 0.016608867136807235,
+      "max": 0.05401606060575744
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 25,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 4136960,
+    "max_restart_count": 1,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.003324223016965057,
+          "max": 0.03673198259718181
+        },
+        "tx_mbps": {
+          "mean": 0.003324223016965057,
+          "max": 0.03673198259718181
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.025707324005974613,
+          "max": 0.05316033703093072
+        },
+        "tx_mbps": {
+          "mean": 0.03750911023541063,
+          "max": 0.08794321975386457
+        }
+      },
+      "vethdcbaa1ee": {
+        "rx_mbps": {
+          "mean": 0.02038123331000722,
+          "max": 0.04875737943250581
+        },
+        "tx_mbps": {
+          "mean": 0.03216150043032849,
+          "max": 0.08348995870044099
+        }
+      },
+      "veth5d25dd36": {
+        "rx_mbps": {
+          "mean": 0.005236999701167927,
+          "max": 0.006797692567636286
+        },
+        "tx_mbps": {
+          "mean": 0.0043177976775779295,
+          "max": 0.00574872248812907
+        }
+      },
+      "veth7380d5cf": {
+        "rx_mbps": {
+          "mean": 0.0009667953203803571,
+          "max": 0.0023043890762294767
+        },
+        "tx_mbps": {
+          "mean": 0.0010653960558466373,
+          "max": 0.0024335368857634054
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.03894479714032347,
+          "max": 0.12003435425757905
+        },
+        "tx_mbps": {
+          "mean": 0.025252859051968952,
+          "max": 0.05736808209987922
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/pass1/praxis-release/recovery-execution.json",
+    "samples": 9,
+    "host_busy_percent": {
+      "mean": 1.6709044126197212,
+      "max": 3.1548757170172084
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.03859953880661715,
+      "max": 0.19120458891013384
+    },
+    "busiest_sampled_vcpu_percent": 4.356060606060606,
+    "container_quota_busy_percent": {
+      "mean": 0.02553820698379251,
+      "max": 0.15593969376335198
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 25,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 3579904,
+    "max_restart_count": 1,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.05704616904257341,
+          "max": 0.3491626847527646
+        },
+        "tx_mbps": {
+          "mean": 0.05704616904257341,
+          "max": 0.3491626847527646
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.0501363386626791,
+          "max": 0.1291096915665969
+        },
+        "tx_mbps": {
+          "mean": 0.09374189078266788,
+          "max": 0.21515227416334334
+        }
+      },
+      "vethb7d42823": {
+        "rx_mbps": {
+          "mean": 0.006762479910424901,
+          "max": 0.006762479910424901
+        },
+        "tx_mbps": {
+          "mean": 0.0050642307812951825,
+          "max": 0.0050642307812951825
+        }
+      },
+      "veth7380d5cf": {
+        "rx_mbps": {
+          "mean": 0.0009118136059984792,
+          "max": 0.00219497399093054
+        },
+        "tx_mbps": {
+          "mean": 0.0012907598547294513,
+          "max": 0.00280093734859466
+        }
+      },
+      "veth4e6d4ee0": {
+        "rx_mbps": {
+          "mean": 0.004823922892934213,
+          "max": 0.005447876508725487
+        },
+        "tx_mbps": {
+          "mean": 0.0042166402574904055,
+          "max": 0.005818387001762233
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.144343534526364,
+          "max": 0.41399287262695966
+        },
+        "tx_mbps": {
+          "mean": 0.055721212017272786,
+          "max": 0.13398439136802576
+        }
+      },
+      "veth362b3f9c": {
+        "rx_mbps": {
+          "mean": 0.05167143079548594,
+          "max": 0.12427254723359196
+        },
+        "tx_mbps": {
+          "mean": 0.09784124282002055,
+          "max": 0.20785449553920113
+        }
+      },
+      "veth74eb9c94": {
+        "rx_mbps": {
+          "mean": 0.00535683912702104,
+          "max": 0.006130438570076875
+        },
+        "tx_mbps": {
+          "mean": 0.004485604694729775,
+          "max": 0.005196076210217081
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/pass1/praxis-release/scale-1000-execution.json",
+    "samples": 128,
+    "host_busy_percent": {
+      "mean": 1.4375776393330515,
+      "max": 6.612749762131304
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.004505521443435419,
+      "max": 0.023872045834328
+    },
+    "busiest_sampled_vcpu_percent": 12.264150943396226,
+    "container_quota_busy_percent": {
+      "mean": 0.595873282316488,
+      "max": 18.40000985332868
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 52,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 23629824,
+    "max_restart_count": 1,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.013330816394296155,
+          "max": 1.148866506705271
+        },
+        "tx_mbps": {
+          "mean": 0.013330816394296155,
+          "max": 1.148866506705271
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 1.6049673375981883,
+          "max": 24.308908489777032
+        },
+        "tx_mbps": {
+          "mean": 1.993192489314417,
+          "max": 33.923371418142715
+        }
+      },
+      "vethdcbaa1ee": {
+        "rx_mbps": {
+          "mean": 1.6055670224927183,
+          "max": 24.425403831413846
+        },
+        "tx_mbps": {
+          "mean": 1.9876957676981968,
+          "max": 33.91706788017155
+        }
+      },
+      "veth5d25dd36": {
+        "rx_mbps": {
+          "mean": 0.005232452743408816,
+          "max": 0.006800744211659173
+        },
+        "tx_mbps": {
+          "mean": 0.0043074498186272585,
+          "max": 0.005751303224819584
+        }
+      },
+      "veth7380d5cf": {
+        "rx_mbps": {
+          "mean": 0.0009617156429438342,
+          "max": 0.0025185266019784962
+        },
+        "tx_mbps": {
+          "mean": 0.0011943131456260846,
+          "max": 0.012437775813761728
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 1.996016424407341,
+          "max": 33.955567202049444
+        },
+        "tx_mbps": {
+          "mean": 1.6186339951562423,
+          "max": 24.43302706812089
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/pass1/praxis-release/scale-5000-execution.json",
+    "samples": 145,
+    "host_busy_percent": {
+      "mean": 2.2522120850715446,
+      "max": 10.159409945277183
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.004470248345562473,
+      "max": 0.04770992366412214
+    },
+    "busiest_sampled_vcpu_percent": 29.942418426103647,
+    "container_quota_busy_percent": {
+      "mean": 2.0471389869567247,
+      "max": 33.25277588251937
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 35,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 103792640,
+    "max_restart_count": 1,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.05913166712963909,
+          "max": 7.514843057294941
+        },
+        "tx_mbps": {
+          "mean": 0.05913166712963909,
+          "max": 7.514843057294941
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 4.8821458127300925,
+          "max": 39.82491390578159
+        },
+        "tx_mbps": {
+          "mean": 2.8871626984685665,
+          "max": 39.041861416620414
+        }
+      },
+      "vethdcbaa1ee": {
+        "rx_mbps": {
+          "mean": 4.893173595694228,
+          "max": 39.933945429256234
+        },
+        "tx_mbps": {
+          "mean": 2.8815645955087312,
+          "max": 39.03472206562567
+        }
+      },
+      "veth5d25dd36": {
+        "rx_mbps": {
+          "mean": 0.005236047842199497,
+          "max": 0.006795451303915041
+        },
+        "tx_mbps": {
+          "mean": 0.004310131058736793,
+          "max": 0.00574682707979338
+        }
+      },
+      "veth7380d5cf": {
+        "rx_mbps": {
+          "mean": 0.000990661567850829,
+          "max": 0.003163822828782652
+        },
+        "tx_mbps": {
+          "mean": 0.001289933397092966,
+          "max": 0.012792113915093944
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 2.8944054187421555,
+          "max": 39.085981052742085
+        },
+        "tx_mbps": {
+          "mean": 4.945812183301538,
+          "max": 39.94059248991207
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/pass1/agentgateway/http-execution.json",
+    "samples": 104,
+    "host_busy_percent": {
+      "mean": 1.0837578651087694,
+      "max": 2.705361534677816
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.006218362933159656,
+      "max": 0.04928536224741252
+    },
+    "busiest_sampled_vcpu_percent": 7.874015748031496,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.046700519628334713,
+          "max": 0.2307810554666082
+        },
+        "tx_mbps": {
+          "mean": 0.046700519628334713,
+          "max": 0.2307810554666082
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.0019830275329807867,
+          "max": 0.0030598146336036796
+        },
+        "tx_mbps": {
+          "mean": 0.002299421369622193,
+          "max": 0.0035917454544023
+        }
+      },
+      "vethdf62a999": {
+        "rx_mbps": {
+          "mean": 0.002326944933190967,
+          "max": 0.0035881279516359697
+        },
+        "tx_mbps": {
+          "mean": 0.002299421369622193,
+          "max": 0.0035917454544023
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.011733259301222454,
+          "max": 0.024031260800867937
+        },
+        "tx_mbps": {
+          "mean": 0.019439546204828403,
+          "max": 0.09879044274862694
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/pass1/agentgateway/recovery-execution.json",
+    "samples": 9,
+    "host_busy_percent": {
+      "mean": 2.1285629647454556,
+      "max": 7.838304165639635
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.01539484905518023,
+      "max": 0.04924895345973898
+    },
+    "busiest_sampled_vcpu_percent": 9.393346379647749,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0007456772837592945,
+          "max": 0.001988967845377791
+        },
+        "tx_mbps": {
+          "mean": 0.001361568964332636,
+          "max": 0.003631754578427169
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.39040913177102476,
+          "max": 1.3997706352753208
+        },
+        "tx_mbps": {
+          "mean": 0.39040913177102476,
+          "max": 1.3997706352753208
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.003608499392586556,
+          "max": 0.006583363934239581
+        },
+        "tx_mbps": {
+          "mean": 0.007210853342943297,
+          "max": 0.015982552535998597
+        }
+      },
+      "vethdf62a999": {
+        "rx_mbps": {
+          "mean": 0.00409301300833691,
+          "max": 0.00735436018848848
+        },
+        "tx_mbps": {
+          "mean": 0.007210853342943297,
+          "max": 0.015982552535998597
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.053236795014434776,
+          "max": 0.12169675216212746
+        },
+        "tx_mbps": {
+          "mean": 0.46760074324351936,
+          "max": 1.3991728642013879
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/pass1/agentgateway/scale-1000-execution.json",
+    "samples": 15,
+    "host_busy_percent": {
+      "mean": 8.963065866624126,
+      "max": 35.70034163006345
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.10662003015754307,
+      "max": 0.4148365056124939
+    },
+    "busiest_sampled_vcpu_percent": 39.4392523364486,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.6020356351383819,
+          "max": 2.472831250186289
+        },
+        "tx_mbps": {
+          "mean": 0.6020356351383819,
+          "max": 2.472831250186289
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.00199093371946064,
+          "max": 0.002628433936311825
+        },
+        "tx_mbps": {
+          "mean": 0.0030290559744940064,
+          "max": 0.008963615351303557
+        }
+      },
+      "vethdf62a999": {
+        "rx_mbps": {
+          "mean": 0.0023397628006805796,
+          "max": 0.003090610716979095
+        },
+        "tx_mbps": {
+          "mean": 0.0030290559744940064,
+          "max": 0.008963615351303557
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.780539951653396,
+          "max": 3.4678503796490276
+        },
+        "tx_mbps": {
+          "mean": 3.9091765854983422,
+          "max": 16.40019495035057
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/pass1/agentgateway/scale-5000-execution.json",
+    "samples": 33,
+    "host_busy_percent": {
+      "mean": 20.31166978100927,
+      "max": 37.71289537712895
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.223103691906441,
+      "max": 0.4361521686455052
+    },
+    "busiest_sampled_vcpu_percent": 40.74074074074074,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 1.2582608698768893,
+          "max": 2.7357201051015
+        },
+        "tx_mbps": {
+          "mean": 1.2582608698768893,
+          "max": 2.7357201051015
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.002030711483284662,
+          "max": 0.0031417129553449378
+        },
+        "tx_mbps": {
+          "mean": 0.002731494400916045,
+          "max": 0.008946419875358162
+        }
+      },
+      "vethdf62a999": {
+        "rx_mbps": {
+          "mean": 0.00238476414298957,
+          "max": 0.0036703136328591584
+        },
+        "tx_mbps": {
+          "mean": 0.002731494400916045,
+          "max": 0.008946419875358162
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 1.8144339816422164,
+          "max": 3.557951852885638
+        },
+        "tx_mbps": {
+          "mean": 8.820451889241255,
+          "max": 16.820534200833244
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/pass1/direct/http-execution.json",
+    "samples": 103,
+    "host_busy_percent": {
+      "mean": 1.0544514100065652,
+      "max": 2.6801081878534547
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.004831661935839597,
+      "max": 0.04932182490752158
+    },
+    "busiest_sampled_vcpu_percent": 7.509881422924901,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.04659478793619009,
+          "max": 0.24167946085236544
+        },
+        "tx_mbps": {
+          "mean": 0.04659478793619009,
+          "max": 0.24167946085236544
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.0020184524862546867,
+          "max": 0.003993433433247251
+        },
+        "tx_mbps": {
+          "mean": 0.0023105189324630626,
+          "max": 0.0038837744184925128
+        }
+      },
+      "vethdf62a999": {
+        "rx_mbps": {
+          "mean": 0.0023659292061654225,
+          "max": 0.0044118081056551935
+        },
+        "tx_mbps": {
+          "mean": 0.0023105189324630626,
+          "max": 0.0038837744184925128
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.007384759029996483,
+          "max": 0.020306991434988653
+        },
+        "tx_mbps": {
+          "mean": 0.011817436483109756,
+          "max": 0.0784551950202119
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/pass1/praxis-release/http-execution.json",
+    "samples": 103,
+    "host_busy_percent": {
+      "mean": 1.1823186373067482,
+      "max": 6.219392752203722
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.14388743856191835,
+      "max": 8.617283950617283
+    },
+    "busiest_sampled_vcpu_percent": 19.921104536489153,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.045334157813900544,
+          "max": 0.23403093685026463
+        },
+        "tx_mbps": {
+          "mean": 0.045334157813900544,
+          "max": 0.23403093685026463
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.0019784891578432115,
+          "max": 0.002773676964253203
+        },
+        "tx_mbps": {
+          "mean": 0.0023054931835913344,
+          "max": 0.00345974386729869
+        }
+      },
+      "vethdf62a999": {
+        "rx_mbps": {
+          "mean": 0.002321947965764462,
+          "max": 0.0032582444656655608
+        },
+        "tx_mbps": {
+          "mean": 0.0023054931835913344,
+          "max": 0.00345974386729869
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.030484881819348907,
+          "max": 0.06443925350854644
+        },
+        "tx_mbps": {
+          "mean": 0.04528217402061503,
+          "max": 0.15382815876595465
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/pass1/praxis-release/recovery-execution.json",
+    "samples": 10,
+    "host_busy_percent": {
+      "mean": 1.2401306539486099,
+      "max": 1.7993591323638156
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.04107788621619579,
+      "max": 0.32043381809218635
+    },
+    "busiest_sampled_vcpu_percent": 3.747534516765286,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.2654176046977009,
+          "max": 0.9069801017826254
+        },
+        "tx_mbps": {
+          "mean": 0.2654176046977009,
+          "max": 0.9069801017826254
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.0019408029270953327,
+          "max": 0.00277288791678889
+        },
+        "tx_mbps": {
+          "mean": 0.003301556287236483,
+          "max": 0.00815924122150724
+        }
+      },
+      "vethdf62a999": {
+        "rx_mbps": {
+          "mean": 0.002280842046539614,
+          "max": 0.00325731756986375
+        },
+        "tx_mbps": {
+          "mean": 0.003301556287236483,
+          "max": 0.00815924122150724
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.06682544479834361,
+          "max": 0.1529808825671083
+        },
+        "tx_mbps": {
+          "mean": 0.1943523279347164,
+          "max": 0.44213802049012974
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/pass1/praxis-release/scale-1000-execution.json",
+    "samples": 132,
+    "host_busy_percent": {
+      "mean": 2.6644350303796642,
+      "max": 40.38834951456311
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.028600545557222353,
+      "max": 0.8370260955194485
+    },
+    "busiest_sampled_vcpu_percent": 43.144424131627055,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 1.1322879745697454,
+          "max": 42.3749375013585
+        },
+        "tx_mbps": {
+          "mean": 1.1322879745697454,
+          "max": 42.3749375013585
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.002059938341665493,
+          "max": 0.004472049283909309
+        },
+        "tx_mbps": {
+          "mean": 0.003362854455745129,
+          "max": 0.04278338527841893
+        }
+      },
+      "vethdf62a999": {
+        "rx_mbps": {
+          "mean": 0.002420166582854729,
+          "max": 0.005346167119507637
+        },
+        "tx_mbps": {
+          "mean": 0.003362854455745129,
+          "max": 0.04278338527841893
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 1.6630479353977672,
+          "max": 24.749173013871623
+        },
+        "tx_mbps": {
+          "mean": 2.602544111495166,
+          "max": 54.1461012518977
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/pass1/praxis-release/scale-5000-execution.json",
+    "samples": 149,
+    "host_busy_percent": {
+      "mean": 6.136945606407546,
+      "max": 43.26946398253699
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.207148487086516,
+      "max": 11.52232913890945
+    },
+    "busiest_sampled_vcpu_percent": 48.134328358208954,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "flannel.1": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "lo": {
+        "rx_mbps": {
+          "mean": 2.8216212992802854,
+          "max": 59.365668677877004
+        },
+        "tx_mbps": {
+          "mean": 2.8216212992802854,
+          "max": 59.365668677877004
+        }
+      },
+      "cni0": {
+        "rx_mbps": {
+          "mean": 0.0021787701156738746,
+          "max": 0.0063063453181248985
+        },
+        "tx_mbps": {
+          "mean": 0.005662198066849332,
+          "max": 0.0924716464950198
+        }
+      },
+      "vethdf62a999": {
+        "rx_mbps": {
+          "mean": 0.002560170681985427,
+          "max": 0.007556957535784856
+        },
+        "tx_mbps": {
+          "mean": 0.005662198066849332,
+          "max": 0.0924716464950198
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 5.083544809451591,
+          "max": 39.91964027002815
+        },
+        "tx_mbps": {
+          "mean": 4.686641590598657,
+          "max": 68.19322001750622
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  }
+]

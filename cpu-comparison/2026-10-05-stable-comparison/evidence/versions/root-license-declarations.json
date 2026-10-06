@@ -1,0 +1,51 @@
+{
+  "reviewed_at": "2026-10-05T23:55:59.487897+00:00",
+  "scope": "Pinned root LICENSE and Cargo workspace declarations; not a transitive dependency license inventory.",
+  "sources": [
+    {
+      "source": "agentgateway",
+      "revision": "ea5608642b9d5c94c5baf5fd9f2f9849b808e963",
+      "root_license_declaration": "Apache-2.0",
+      "files": {
+        "LICENSE": "3b1ee5b1e14fda40515c18ec2f0796d632e65a20b2aca8f017c654bc26ca77bd",
+        "Cargo.toml": "0fc6bc0078d791e3b6549c63c2c1b36a084311e845c7e754502f2b42db8285e1"
+      }
+    },
+    {
+      "source": "praxis-release",
+      "revision": "af54edcd24de01e4dac7da59a809bf88bd246fe5",
+      "root_license_declaration": "MIT",
+      "files": {
+        "LICENSE": "b5372663783a16a15b8814ec7a5c2a9412058e9728f96fe7ae69ee5b9f15a3f2",
+        "Cargo.toml": "e7eece227ff2fbad87a77d696fcc3edc6988785f9d8b3f79925713a8d74f5ca1"
+      }
+    },
+    {
+      "source": "praxis-nightly",
+      "revision": "31ac6dc86fba30ff510b17f9139021de60d8ba79",
+      "root_license_declaration": "Apache-2.0",
+      "files": {
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "Cargo.toml": "10928f103e7c87c0601ece40c159dab3f0d0af02d527d9edee10f8b38e59d846"
+      }
+    },
+    {
+      "source": "praxis-ai",
+      "revision": "2f8732c1389b889660bcb3495af4d4d28dd4e682",
+      "root_license_declaration": "Apache-2.0",
+      "files": {
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "Cargo.toml": "db18d88f8344580c6808bd1354ffbb6d601205684eef926a5de60b63b4f169f0"
+      }
+    },
+    {
+      "source": "praxis-ai-nightly",
+      "revision": "f5f51a751d6f25acde96fb840665b24f2696ce46",
+      "root_license_declaration": "Apache-2.0",
+      "files": {
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "Cargo.toml": "db18d88f8344580c6808bd1354ffbb6d601205684eef926a5de60b63b4f169f0"
+      }
+    }
+  ]
+}

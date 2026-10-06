@@ -1,0 +1,20 @@
+{'name': 'praxis', 'attempt': 0} 30985
+net.ipv4.ip_local_port_range = 32768	60999
+net.ipv4.tcp_tw_reuse = 2
+net.ipv4.tcp_tw_reuse_delay = 1000
+
+Total: 123
+TCP:   186 (estab 119, closed 65, orphaned 0, timewait 33)
+
+Transport Total     IP        IPv6
+RAW	  0         0         0        
+UDP	  0         0         0        
+TCP	  121       121       0        
+INET	  121       121       0        
+FRAG	  0         0         0        
+
+
+net.ipv4.ip_local_port_range = 32768	60999
+net.ipv4.tcp_tw_reuse = 2
+net.ipv4.tcp_tw_reuse_delay = 1000
+

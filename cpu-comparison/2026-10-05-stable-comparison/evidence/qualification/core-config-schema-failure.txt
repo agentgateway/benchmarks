@@ -1,0 +1,244 @@
+fatal: config: invalid YAML: listeners[0]: unknown field `filter_chain`, expected one of `name`, `address`, `cluster`, `downstream_read_timeout_ms`, `filter_chains`, `max_connections`, `protocol`, `tcp_session_timeout_ms`, `tcp_max_duration_secs`, `tls`, `upstream` at line 6 column 3
+[
+    {
+        "Id": "ef6f69453de4fc01a9f27e635b311b2d33a0cd037f12470448b0f36f8f820886",
+        "Created": "2026-10-05T18:35:13.342373939Z",
+        "Path": "praxis",
+        "Args": [
+            "-c",
+            "/etc/config.yaml"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 1,
+            "Error": "",
+            "StartedAt": "2026-10-05T18:38:09.958430238Z",
+            "FinishedAt": "2026-10-05T18:38:10.034157174Z",
+            "Health": {
+                "Status": "unhealthy",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+        "ResolvConfPath": "/var/lib/docker/containers/ef6f69453de4fc01a9f27e635b311b2d33a0cd037f12470448b0f36f8f820886/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/ef6f69453de4fc01a9f27e635b311b2d33a0cd037f12470448b0f36f8f820886/hostname",
+        "HostsPath": "/var/lib/docker/containers/ef6f69453de4fc01a9f27e635b311b2d33a0cd037f12470448b0f36f8f820886/hosts",
+        "LogPath": "/var/lib/docker/containers/ef6f69453de4fc01a9f27e635b311b2d33a0cd037f12470448b0f36f8f820886/ef6f69453de4fc01a9f27e635b311b2d33a0cd037f12470448b0f36f8f820886-json.log",
+        "Name": "/praxis-release",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/opt/gateway-benchmark/praxis.yaml:/etc/config.yaml:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {
+                    "max-file": "3",
+                    "max-size": "10m"
+                }
+            },
+            "NetworkMode": "host",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 2147483648,
+            "NanoCpus": 2000000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "2,3",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 4294967296,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [
+                {
+                    "Name": "nofile",
+                    "Hard": 65536,
+                    "Soft": 65536
+                }
+            ],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/opt/gateway-benchmark/praxis.yaml",
+                "Destination": "/etc/config.yaml",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "gwcmp160-1005-gateway.c.solo-oss.internal",
+            "Domainname": "",
+            "User": "praxis:praxis",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8080/tcp": {},
+                "9901/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "-c",
+                "/etc/config.yaml"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "wget -qO- http://127.0.0.1:9901/healthy || exit 1"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 2000000000
+            },
+            "Image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+            "Volumes": null,
+            "WorkingDir": "/etc/praxis",
+            "Entrypoint": [
+                "praxis"
+            ],
+            "Labels": {
+                "org.opencontainers.image.created": "2026-08-10T20:02:52.279Z",
+                "org.opencontainers.image.description": " AI and cloud-native proxy server and framework",
+                "org.opencontainers.image.licenses": "MIT",
+                "org.opencontainers.image.revision": "af54edcd24de01e4dac7da59a809bf88bd246fe5",
+                "org.opencontainers.image.source": "https://github.com/praxis-proxy/praxis",
+                "org.opencontainers.image.title": "praxis",
+                "org.opencontainers.image.url": "https://github.com/praxis-proxy/praxis",
+                "org.opencontainers.image.version": "0.5.2"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "host": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "d38424101ebb00fc41afe958505ef0917133261fda34ffb6c932e69d10a0f5d5",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:bee549c3eaf16d2c27b1f3fc7520c0695c976ffa2662714940135784e5e6ea99",
+            "size": 1239,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

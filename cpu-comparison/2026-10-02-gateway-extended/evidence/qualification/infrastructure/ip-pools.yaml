@@ -1,0 +1,49 @@
+apiVersion: v1
+items:
+- apiVersion: metallb.io/v1beta1
+  kind: IPAddressPool
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"metallb.io/v1beta1","kind":"IPAddressPool","metadata":{"annotations":{},"name":"conformance-internal","namespace":"metallb-system"},"spec":{"addresses":["198.18.0.1-198.18.0.254"]}}
+    creationTimestamp: "2026-10-02T23:32:42Z"
+    generation: 1
+    name: conformance-internal
+    namespace: metallb-system
+    resourceVersion: "1288"
+    uid: 5e7a5579-8b40-49d2-b0ee-ff21c2556572
+  spec:
+    addresses:
+    - 198.18.0.1-198.18.0.254
+    autoAssign: true
+    avoidBuggyIPs: false
+  status:
+    assignedIPv4: 0
+    assignedIPv6: 0
+    availableIPv4: 254
+    availableIPv6: 0
+- apiVersion: metallb.io/v1beta1
+  kind: IPAddressPool
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"metallb.io/v1beta1","kind":"IPAddressPool","metadata":{"annotations":{},"name":"conformance-static","namespace":"metallb-system"},"spec":{"addresses":["198.18.1.254/32"],"autoAssign":false}}
+    creationTimestamp: "2026-10-02T23:32:43Z"
+    generation: 1
+    name: conformance-static
+    namespace: metallb-system
+    resourceVersion: "1292"
+    uid: 2d38a055-2a84-4d02-b037-629fce01f4c2
+  spec:
+    addresses:
+    - 198.18.1.254/32
+    autoAssign: false
+    avoidBuggyIPs: false
+  status:
+    assignedIPv4: 0
+    assignedIPv6: 0
+    availableIPv4: 1
+    availableIPv6: 0
+kind: List
+metadata:
+  resourceVersion: ""

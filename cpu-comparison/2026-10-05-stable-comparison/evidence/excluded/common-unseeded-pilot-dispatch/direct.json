@@ -1,0 +1,23 @@
+{
+  "command": [
+    "sudo",
+    "systemd-run",
+    "--unit=common-pass1-direct",
+    "--property=LimitNOFILE=65536",
+    "--property=RuntimeMaxSec=2400",
+    "/opt/gateway-benchmark/venv/bin/python",
+    "/opt/gateway-benchmark/run-common.py",
+    "--treatment",
+    "direct",
+    "--gateway",
+    "10.128.15.208",
+    "--backend",
+    "10.128.15.210",
+    "--output",
+    "/opt/gateway-benchmark/results/common/pass1/direct"
+  ],
+  "stdout": "",
+  "stderr": "Running as unit: common-pass1-direct.service; invocation ID: 10c5c53d84944ee887f91feb5f175fef\n",
+  "exit": 0,
+  "utc": "2026-10-05T18:57:52.179785+00:00"
+}

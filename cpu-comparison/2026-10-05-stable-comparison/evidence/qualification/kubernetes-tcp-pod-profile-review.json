@@ -1,0 +1,10 @@
+{
+  "kgateway": {
+    "sampled_container_records": 120,
+    "all_intended_profile": true
+  },
+  "kbackend": {
+    "sampled_container_records": 190,
+    "all_intended_profile": true
+  }
+}

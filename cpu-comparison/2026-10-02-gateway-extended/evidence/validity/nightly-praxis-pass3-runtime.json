@@ -1,0 +1,371 @@
+{
+  "case": "results/praxis-nightly-20261002/pass3/praxis",
+  "snapshots": 10,
+  "truncated_row": false,
+  "first_snapshot": "2026-10-03 10:12:35.338948+00:00",
+  "last_snapshot": "2026-10-03 10:17:25.442199+00:00",
+  "maximum_snapshot_gap_seconds": 33.229129,
+  "node_issues": {},
+  "collection_errors": [],
+  "containers_with_restart_count": {
+    "gateway-conformance-infra/praxis-all-namespaces-66bb875dc4-8ddxd/praxis": 5,
+    "gateway-conformance-infra/praxis-backend-namespaces-6946fbdfdd-pf2cb/praxis": 5,
+    "gateway-conformance-infra/praxis-same-namespace-55cc77d97d-2lbvk/praxis": 5,
+    "gateway-conformance-infra/praxis-same-namespace-with-https-listener-858c9546b5-ff7p9/praxis": 5,
+    "praxis-system/praxis-operator-7cb48c4786-qqbh2/operator": 1
+  },
+  "terminations": {
+    "gateway-conformance-infra/praxis-all-namespaces-66bb875dc4-8ddxd/praxis": {
+      "containerID": "containerd://85887ad97265b31646b1df4a173f242f3ecc50b627769746fcae18bc84d04734",
+      "exitCode": 1,
+      "finishedAt": "2026-10-03T10:15:39Z",
+      "reason": "Error",
+      "startedAt": "2026-10-03T10:15:39Z"
+    },
+    "gateway-conformance-infra/praxis-backend-namespaces-6946fbdfdd-pf2cb/praxis": {
+      "containerID": "containerd://f4ed903f73197002a24667ef3f66ad58133d802c911d12d0117d65cc11cc9e20",
+      "exitCode": 1,
+      "finishedAt": "2026-10-03T10:15:26Z",
+      "reason": "Error",
+      "startedAt": "2026-10-03T10:15:26Z"
+    },
+    "gateway-conformance-infra/praxis-same-namespace-55cc77d97d-2lbvk/praxis": {
+      "containerID": "containerd://a810188b1593cbdd58f363b99f11351a4af2ef9dd635232431962148a6aa0a51",
+      "exitCode": 1,
+      "finishedAt": "2026-10-03T10:15:30Z",
+      "reason": "Error",
+      "startedAt": "2026-10-03T10:15:30Z"
+    },
+    "gateway-conformance-infra/praxis-same-namespace-with-https-listener-858c9546b5-ff7p9/praxis": {
+      "containerID": "containerd://9f61f96a3805e8d4415e8eab2c7f5abf67b1a08a4a66cac65725113f59adfe48",
+      "exitCode": 1,
+      "finishedAt": "2026-10-03T10:15:31Z",
+      "reason": "Error",
+      "startedAt": "2026-10-03T10:15:31Z"
+    },
+    "praxis-system/praxis-operator-7cb48c4786-qqbh2/operator": {
+      "containerID": "containerd://1f27de17a089dde643a1ffaccb3c5806d313c903abfa61267d53a40ebe8e946b",
+      "exitCode": 1,
+      "finishedAt": "2026-10-03T10:12:38Z",
+      "reason": "Error",
+      "startedAt": "2026-10-03T10:12:32Z"
+    }
+  },
+  "observed_image_ids": [
+    "docker.io/library/alpine@sha256:5291449c3df73caf6ed85e649dec1b9e818b39a5d8c871e97afc13e9cd5e8fa8",
+    "docker.io/rancher/mirrored-coredns-coredns@sha256:900f9c109f7a33545d3c811516e8376df9019147b750f5ce3e254468769176ea",
+    "gcr.io/k8s-staging-gateway-api/echo-basic@sha256:0a56ed5de3f279bba546e27c24f0a0ee982d7f1f99499081b8904cd826d1407d",
+    "ghcr.io/praxis-proxy/praxis@sha256:be62d256d5ec92aacb1216baba506aac763e2100f9eb361820a5c27c54e17be8",
+    "quay.io/metallb/controller@sha256:f51ab515de9ccd20dc3dccb093e48df8adddac019326c456f449e55ba91b6420",
+    "registry.k8s.io/coredns/coredns@sha256:af8c8d35a5d184b386c4a6d1a012c8b218d40d1376474c7d071bb6c07201f47d",
+    "sha256:ca8507c2ba2604ac9e6f027c6bbd7d5748b5b18583f4e3ab5b97d4e181511b2c"
+  ],
+  "warning_events": [
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: HTTP probe failed with statuscode: 500",
+      "firstTimestamp": "2026-10-03T09:31:46Z",
+      "lastTimestamp": "2026-10-03T09:31:46Z",
+      "count": 1,
+      "object": "agentgateway-system/Pod/agentgateway-64f7c949ff-4887f"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: HTTP probe failed with statuscode: 500",
+      "firstTimestamp": "2026-10-03T09:54:32Z",
+      "lastTimestamp": "2026-10-03T09:54:32Z",
+      "count": 1,
+      "object": "agentgateway-system/Pod/agentgateway-64f7c949ff-4qvt2"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: HTTP probe failed with statuscode: 500",
+      "firstTimestamp": "2026-10-03T10:06:18Z",
+      "lastTimestamp": "2026-10-03T10:06:18Z",
+      "count": 1,
+      "object": "agentgateway-system/Pod/agentgateway-64f7c949ff-59rhx"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: HTTP probe failed with statuscode: 500",
+      "firstTimestamp": "2026-10-03T10:06:18Z",
+      "lastTimestamp": "2026-10-03T10:06:18Z",
+      "count": 1,
+      "object": "agentgateway-system/Pod/agentgateway-64f7c949ff-5qpvh"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: HTTP probe failed with statuscode: 500",
+      "firstTimestamp": "2026-10-03T09:31:46Z",
+      "lastTimestamp": "2026-10-03T09:31:46Z",
+      "count": 1,
+      "object": "agentgateway-system/Pod/agentgateway-64f7c949ff-8tldd"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: HTTP probe failed with statuscode: 500",
+      "firstTimestamp": "2026-10-03T09:54:32Z",
+      "lastTimestamp": "2026-10-03T09:54:32Z",
+      "count": 1,
+      "object": "agentgateway-system/Pod/agentgateway-64f7c949ff-z7zj7"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.103.18 for Service gateway-conformance-infra/praxis-same-namespace-with-https-listener has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.103.18"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.11.246 for Service gateway-conformance-infra/praxis-same-namespace has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.11.246"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.159.121 for Service gateway-conformance-infra/praxis-backend-namespaces has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.159.121"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.177.172 for Service gateway-conformance-infra/praxis-all-namespaces has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.177.172"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.177.21 for Service gateway-conformance-infra/praxis-same-namespace-with-https-listener has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.177.21"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.189.249 for Service gateway-conformance-infra/praxis-same-namespace-with-https-listener has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.189.249"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.200.224 for Service gateway-conformance-infra/praxis-backend-namespaces has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.200.224"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.38.95 for Service gateway-conformance-infra/praxis-all-namespaces has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.38.95"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.46.91 for Service gateway-conformance-infra/praxis-all-namespaces has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.46.91"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/gateway-allows-listenerset-in-selected-namespace: endpoints \"gateway-allows-listenerset-in-selected-namespace\" already exists",
+      "firstTimestamp": "2026-10-02T23:48:52Z",
+      "lastTimestamp": "2026-10-03T09:57:32Z",
+      "count": 2,
+      "object": "/Endpoints/gateway-allows-listenerset-in-selected-namespace"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/gateway-tls-exact-hostname: endpoints \"gateway-tls-exact-hostname\" already exists",
+      "firstTimestamp": "2026-10-03T00:06:45Z",
+      "lastTimestamp": "2026-10-03T10:10:07Z",
+      "count": 2,
+      "object": "/Endpoints/gateway-tls-exact-hostname"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/gateway-tlsroute-https-only: endpoints \"gateway-tlsroute-https-only\" already exists",
+      "firstTimestamp": "2026-10-03T06:34:49Z",
+      "lastTimestamp": "2026-10-03T09:35:39Z",
+      "count": 2,
+      "object": "/Endpoints/gateway-tlsroute-https-only"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/gw-tlsroute-empty-hostname-x-4: endpoints \"gw-tlsroute-empty-hostname-x-4\" already exists",
+      "firstTimestamp": "2026-10-03T09:57:47Z",
+      "lastTimestamp": "2026-10-03T09:57:47Z",
+      "count": 1,
+      "object": "/Endpoints/gw-tlsroute-empty-hostname-x-4"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/gw-tlsroute-exact-hostname-x-1: endpoints \"gw-tlsroute-exact-hostname-x-1\" already exists",
+      "firstTimestamp": "2026-10-03T09:35:08Z",
+      "lastTimestamp": "2026-10-03T09:35:08Z",
+      "count": 1,
+      "object": "/Endpoints/gw-tlsroute-exact-hostname-x-1"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/http-listener-isolation: endpoints \"http-listener-isolation\" already exists",
+      "firstTimestamp": "2026-10-03T09:32:10Z",
+      "lastTimestamp": "2026-10-03T09:32:10Z",
+      "count": 1,
+      "object": "/Endpoints/http-listener-isolation"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/praxis-all-namespaces: endpoints \"praxis-all-namespaces\" already exists",
+      "firstTimestamp": "2026-10-03T10:12:35Z",
+      "lastTimestamp": "2026-10-03T10:12:35Z",
+      "count": 1,
+      "object": "/Endpoints/praxis-all-namespaces"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/praxis-backend-namespaces: endpoints \"praxis-backend-namespaces\" already exists",
+      "firstTimestamp": "2026-10-03T06:17:25Z",
+      "lastTimestamp": "2026-10-03T09:38:28Z",
+      "count": 2,
+      "object": "/Endpoints/praxis-backend-namespaces"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/same-namespace-with-http-listener-on-8080: endpoints \"same-namespace-with-http-listener-on-8080\" already exists",
+      "firstTimestamp": "2026-10-03T09:56:46Z",
+      "lastTimestamp": "2026-10-03T09:56:46Z",
+      "count": 1,
+      "object": "/Endpoints/same-namespace-with-http-listener-on-8080"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.1.36:8080/readyz\": dial tcp 10.42.1.36:8080: connect: connection refused",
+      "firstTimestamp": "2026-10-03T09:38:29Z",
+      "lastTimestamp": "2026-10-03T09:38:29Z",
+      "count": 1,
+      "object": "praxis-system/Pod/praxis-operator-7cb48c4786-7strd"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"secret-volume\" : secret \"tls-passthrough-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T10:12:36Z",
+      "lastTimestamp": "2026-10-03T10:12:36Z",
+      "count": 1,
+      "object": "gateway-conformance-app-backend/Pod/tls-backend-58b6fcfb64-mqk98"
+    },
+    {
+      "reason": "BackOff",
+      "message": "Back-off restarting failed container praxis in pod praxis-all-namespaces-66bb875dc4-8ddxd_gateway-conformance-infra(1cea9bf0-5c0a-4227-aa85-b03862465545)",
+      "firstTimestamp": "2026-10-03T10:12:38Z",
+      "lastTimestamp": "2026-10-03T10:16:47Z",
+      "count": 18,
+      "object": "gateway-conformance-infra/Pod/praxis-all-namespaces-66bb875dc4-8ddxd"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: Get \"http://10.42.3.186:9901/healthy\": dial tcp 10.42.3.186:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T10:12:50Z",
+      "lastTimestamp": "2026-10-03T10:12:50Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/praxis-all-namespaces-66bb875dc4-8ddxd"
+    },
+    {
+      "reason": "BackOff",
+      "message": "Back-off restarting failed container praxis in pod praxis-backend-namespaces-6946fbdfdd-pf2cb_gateway-conformance-infra(39853a97-f213-4ea8-8603-a4c978bf2122)",
+      "firstTimestamp": "2026-10-03T10:12:38Z",
+      "lastTimestamp": "2026-10-03T10:16:59Z",
+      "count": 18,
+      "object": "gateway-conformance-infra/Pod/praxis-backend-namespaces-6946fbdfdd-pf2cb"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: Get \"http://10.42.3.181:9901/healthy\": dial tcp 10.42.3.181:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T10:12:36Z",
+      "lastTimestamp": "2026-10-03T10:12:49Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-55cc77d97d-2lbvk"
+    },
+    {
+      "reason": "BackOff",
+      "message": "Back-off restarting failed container praxis in pod praxis-same-namespace-55cc77d97d-2lbvk_gateway-conformance-infra(a610188d-3a89-4dc5-97c6-7a1ed4003d10)",
+      "firstTimestamp": "2026-10-03T10:12:38Z",
+      "lastTimestamp": "2026-10-03T10:16:53Z",
+      "count": 20,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-55cc77d97d-2lbvk"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"tls-0\" : secret \"tls-validity-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T10:12:35Z",
+      "lastTimestamp": "2026-10-03T10:12:35Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-https-listener-858c9546b5-ff7p9"
+    },
+    {
+      "reason": "BackOff",
+      "message": "Back-off restarting failed container praxis in pod praxis-same-namespace-with-https-listener-858c9546b5-ff7p9_gateway-conformance-infra(a2cbe64f-8333-4c91-a989-d47d02111390)",
+      "firstTimestamp": "2026-10-03T10:12:38Z",
+      "lastTimestamp": "2026-10-03T10:16:38Z",
+      "count": 21,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-https-listener-858c9546b5-ff7p9"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"secret-volume\" : secret \"tls-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T10:12:36Z",
+      "lastTimestamp": "2026-10-03T10:12:36Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/tls-backend-2-5fffcbf4cc-nss24"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"secret-volume\" : secret \"tls-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T10:12:36Z",
+      "lastTimestamp": "2026-10-03T10:12:36Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/tls-backend-86b4d79785-7xcn2"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.1.44:8080/readyz\": dial tcp 10.42.1.44:8080: connect: connection refused",
+      "firstTimestamp": "2026-10-03T10:12:38Z",
+      "lastTimestamp": "2026-10-03T10:12:38Z",
+      "count": 1,
+      "object": "praxis-system/Pod/praxis-operator-7cb48c4786-qqbh2"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.2.177 for Service gateway-conformance-infra/praxis-backend-namespaces has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.2.177"
+    }
+  ],
+  "warning_reason_counts": {
+    "Unhealthy": 10,
+    "IPAddressWrongReference": 10,
+    "FailedToCreateEndpoint": 9,
+    "FailedMount": 4,
+    "BackOff": 4
+  },
+  "cleanup_complete": true,
+  "job_finished": true,
+  "review_note": "Events can precede the run; assess timestamps and product behavior before classifying infrastructure validity."
+}

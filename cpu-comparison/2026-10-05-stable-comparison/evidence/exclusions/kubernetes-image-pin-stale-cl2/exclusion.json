@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-05T21:56:48.551306+00:00",
+  "excluded_scope": "Whole qualification-image-pin attempt before restarting it",
+  "reason": "The deliberately stopped image-switch qualification left its campaign-owned gwcmp-cl2-1 namespace. ClusterLoader2 rejected it at preflight before any new scale mutation. Cleanup was missing between these interrupted attempts.",
+  "product_attribution": "None; the gateway image and topology gate passed. This is interrupted-harness fixture cleanup.",
+  "retained_remote_path": "results/excluded/kubernetes-image-pin-stale-cl2-qualification"
+}

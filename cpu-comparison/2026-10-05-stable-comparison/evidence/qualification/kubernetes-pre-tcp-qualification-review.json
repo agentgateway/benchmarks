@@ -1,0 +1,15 @@
+{
+  "reviewed_at": "2026-10-05T18:59:38.339113+00:00",
+  "infrastructure_valid": true,
+  "scope": "Approval for first measured Kubernetes pass; repeats require a separate first-pass review",
+  "http_load_cases": 6,
+  "all_load_processes_exit_zero": true,
+  "confirmed_http_errors_or_resets": 0,
+  "cutoff_note": "Nighthawk has up to three requests still in flight at measurement cutoff, not confirmed HTTP failures",
+  "scale_qualification": "10-route create/update complete for both runnable implementations",
+  "recovery_qualification": "Both controller probes complete; Praxis data-plane replacement has 65 failed probes retained as product recovery behavior",
+  "nightly": "Verified operator/core naming incompatibility; HTTP, scale and recovery not evaluated. Repeat stock setup attempt in each measured pass without modifying generated config.",
+  "host_review": "kubernetes-host-review.json",
+  "resource_parity": "Both runnable gateways: 2-vCPU limit, 256Mi memory, one dedicated gateway-node data-plane pod; pinned image identities verified",
+  "resource_findings": "No collector errors, OOM, network error/drop increments; ample client/backend and control-plane headroom"
+}

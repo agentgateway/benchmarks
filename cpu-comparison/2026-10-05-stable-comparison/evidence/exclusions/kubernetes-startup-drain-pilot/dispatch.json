@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-05T20:14:03.560408+00:00",
+  "command": "sudo systemd-run --unit=kubernetes-tcp-pass1 --property=LimitNOFILE=65536 --property=RuntimeMaxSec=7200 /opt/gateway-benchmark/venv/bin/python /opt/gateway-benchmark/run-kubernetes.py pass1",
+  "exit": 0,
+  "stdout": "",
+  "stderr": "Running as unit: kubernetes-tcp-pass1.service; invocation ID: e463cfa9a4884102acf01ffb4a09f174\n"
+}

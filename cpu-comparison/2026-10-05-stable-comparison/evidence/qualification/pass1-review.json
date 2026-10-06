@@ -1,0 +1,29 @@
+{
+  "reviewed_at": "2026-10-05T22:23:40.278605+00:00",
+  "infrastructure_valid": true,
+  "scope": "This CPU profile first pass is valid. Repetitions remain gated on complete fresh Kubernetes first-pass review.",
+  "profile": "common",
+  "pass": "pass1",
+  "load_cases": 128,
+  "treatments": [
+    "agentgateway",
+    "direct",
+    "praxis-nightly",
+    "praxis-release"
+  ],
+  "aiperf_random_seed": 42,
+  "canonical_message_sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+  "protocol_passed": 48,
+  "cancellation_passed": 8,
+  "load_process_errors": 0,
+  "confirmed_http_or_aiperf_errors": 0,
+  "nighthawk_cutoff_inflight": 1,
+  "resources": "At least six samples per case; no collector errors, restarts, OOM, steal, NIC error/drop increments, or descriptor-limit concerns. Every gateway case has one unchanged process pinned to guest cores2-3; direct has no running gateway.",
+  "upstream_capacity": "Peak through-gateway backend quota mean88.67% / sampled maximum89.02% in common; the busiest cases have zero quota throttling. Native peak mean63.52%. Client headroom remains through gateways.",
+  "baseline_limit": "Unlimited direct path approaches backend quota and, for common HTTP, client CPU capacity. Retain as observed full-path service reference, not isolated gateway overhead or unconstrained upstream capacity.",
+  "audit": "common-pass1-audit.json",
+  "resource_review": "common-pass1-resource-gate.json",
+  "image_input_review": "cpu-pass1-input-image-review.json",
+  "isolation_review": "cpu-pass1-isolation-review.json",
+  "archive_manifest_sha256": "27fbd9cd06d61cc94481ffa93404f29367e1b4ef8f2044d5e553a868fd6d5772"
+}

@@ -1,0 +1,48 @@
+{
+  "reviewed_at": "2026-10-06T00:18:23.648763+00:00",
+  "observations": [
+    {
+      "treatment": "agentgateway",
+      "first_probe": "2026-10-05T22:43:35.460076+00:00",
+      "last_probe": "2026-10-05T22:43:58.136708+00:00",
+      "first_and_last_host_samples": [
+        {
+          "utc": "2026-10-05T22:43:39.517010+00:00",
+          "pids": [
+            188152
+          ]
+        },
+        {
+          "utc": "2026-10-05T22:43:55.090448+00:00",
+          "pids": [
+            188788,
+            188152
+          ]
+        }
+      ],
+      "original_pid_present_in_last_sample": true
+    },
+    {
+      "treatment": "praxis-release",
+      "first_probe": "2026-10-05T23:19:12.671184+00:00",
+      "last_probe": "2026-10-05T23:19:36.947575+00:00",
+      "first_and_last_host_samples": [
+        {
+          "utc": "2026-10-05T23:19:14.688771+00:00",
+          "pids": [
+            234927
+          ]
+        },
+        {
+          "utc": "2026-10-05T23:19:35.504891+00:00",
+          "pids": [
+            235508,
+            234927
+          ]
+        }
+      ],
+      "original_pid_present_in_last_sample": true
+    }
+  ],
+  "interpretation": "Both first-pass deletion windows retain original and replacement process IDs near their ends. Probes reuse HTTP connections. Observations establish scheduled-probe continuity/failures in these graceful windows, not complete handoff to the replacement, fresh-connection availability, or hard-failure recovery."
+}

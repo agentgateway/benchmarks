@@ -1,0 +1,23 @@
+[
+  {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "creationTimestamp": "2026-10-05T19:32:32Z",
+      "labels": {
+        "kubernetes.io/metadata.name": "gwcmp-cl2-1"
+      },
+      "name": "gwcmp-cl2-1",
+      "resourceVersion": "44421",
+      "uid": "25710813-8d97-417f-b2bd-1f26520e1275"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    },
+    "status": {
+      "phase": "Active"
+    }
+  }
+]

@@ -1,0 +1,14 @@
+config:
+  workerThreads: 2
+  adminAddr: 10.128.0.63:23500
+  statsAddr: 10.128.0.63:23501
+  readinessAddr: 10.128.0.63:23502
+  logging:
+    filter: "false"
+binds:
+- port: 8080
+  listeners:
+  - protocol: HTTP
+    routes:
+    - backends:
+      - host: 10.128.15.192:8081

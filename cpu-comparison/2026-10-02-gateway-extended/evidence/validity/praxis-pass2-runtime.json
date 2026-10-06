@@ -1,0 +1,1362 @@
+{
+  "case": "results/praxis-v0.5.2/pass2/praxis",
+  "snapshots": 318,
+  "truncated_row": false,
+  "first_snapshot": "2026-10-03 03:09:47.607373+00:00",
+  "last_snapshot": "2026-10-03 05:59:40.428319+00:00",
+  "maximum_snapshot_gap_seconds": 34.727883,
+  "node_issues": {},
+  "collection_errors": [],
+  "containers_with_restart_count": {
+    "praxis-system/praxis-operator-677b8b444d-jpwxx/operator": 2,
+    "praxis-system/praxis-operator-677b8b444d-pg4ns/operator": 1
+  },
+  "terminations": {
+    "praxis-system/praxis-operator-677b8b444d-jpwxx/operator": {
+      "containerID": "containerd://a5de4ecf77e555f766c588032dc219f9df0ea234c62369c184275e200e205764",
+      "exitCode": 1,
+      "finishedAt": "2026-10-03T03:53:29Z",
+      "reason": "Error",
+      "startedAt": "2026-10-03T03:09:52Z"
+    },
+    "praxis-system/praxis-operator-677b8b444d-pg4ns/operator": {
+      "containerID": "containerd://ab6ff88667e59b8499090f41a09b5e2cf5673a5e9e0e6de3f5936ed65b2ac961",
+      "exitCode": 1,
+      "finishedAt": "2026-10-03T03:43:36Z",
+      "reason": "Error",
+      "startedAt": "2026-10-03T03:09:45Z"
+    },
+    "gateway-conformance-infra/praxis-backend-namespaces-bb4b9f9c8-49tc2/praxis": {
+      "containerID": "containerd://354c2e94af850d51ba61a8d397c23e058eabd6dc659204762836a36cd7322146",
+      "exitCode": 137,
+      "finishedAt": "2026-10-03T04:06:39Z",
+      "reason": "Error",
+      "startedAt": "2026-10-03T04:06:12Z"
+    },
+    "gateway-conformance-infra/praxis-httproute-listener-hostname-matching-6f5b8d7b5f-kg4gc/praxis": {
+      "containerID": "containerd://432953cba9632a0031307158bb830a25fb4cf94fd12e18f577efbf6e8c41e4fe",
+      "exitCode": 137,
+      "finishedAt": "2026-10-03T04:16:21Z",
+      "reason": "Error",
+      "startedAt": "2026-10-03T04:16:00Z"
+    },
+    "gateway-conformance-infra/praxis-httproute-listener-hostname-matching-79c47ddb55-v5dm4/praxis": {
+      "containerID": "containerd://507c06ff254d8f9b9f30912ebe144b08b9c01020d016857738bc84ab894b3649",
+      "exitCode": 137,
+      "finishedAt": "2026-10-03T04:16:22Z",
+      "reason": "Error",
+      "startedAt": "2026-10-03T04:16:01Z"
+    }
+  },
+  "observed_image_ids": [
+    "",
+    "docker.io/library/alpine@sha256:5291449c3df73caf6ed85e649dec1b9e818b39a5d8c871e97afc13e9cd5e8fa8",
+    "docker.io/rancher/mirrored-coredns-coredns@sha256:900f9c109f7a33545d3c811516e8376df9019147b750f5ce3e254468769176ea",
+    "gcr.io/k8s-staging-gateway-api/echo-basic@sha256:0a56ed5de3f279bba546e27c24f0a0ee982d7f1f99499081b8904cd826d1407d",
+    "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+    "quay.io/metallb/controller@sha256:f51ab515de9ccd20dc3dccb093e48df8adddac019326c456f449e55ba91b6420",
+    "registry.k8s.io/coredns/coredns@sha256:af8c8d35a5d184b386c4a6d1a012c8b218d40d1376474c7d071bb6c07201f47d",
+    "sha256:ca8507c2ba2604ac9e6f027c6bbd7d5748b5b18583f4e3ab5b97d4e181511b2c"
+  ],
+  "warning_events": [
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: HTTP probe failed with statuscode: 500",
+      "firstTimestamp": "2026-10-03T03:07:12Z",
+      "lastTimestamp": "2026-10-03T03:07:12Z",
+      "count": 1,
+      "object": "agentgateway-system/Pod/agentgateway-64f7c949ff-rcdtv"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: HTTP probe failed with statuscode: 500",
+      "firstTimestamp": "2026-10-03T03:07:12Z",
+      "lastTimestamp": "2026-10-03T03:07:12Z",
+      "count": 1,
+      "object": "agentgateway-system/Pod/agentgateway-64f7c949ff-wp5fn"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/all-namespaces: endpoints \"all-namespaces\" already exists",
+      "firstTimestamp": "2026-10-03T00:03:33Z",
+      "lastTimestamp": "2026-10-03T03:07:29Z",
+      "count": 2,
+      "object": "/Endpoints/all-namespaces"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/praxis-gateway-tlsroute-http-only: endpoints \"praxis-gateway-tlsroute-http-only\" already exists",
+      "firstTimestamp": "2026-10-03T02:39:42Z",
+      "lastTimestamp": "2026-10-03T02:39:42Z",
+      "count": 1,
+      "object": "/Endpoints/praxis-gateway-tlsroute-http-only"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"tls-0\" : secret \"tls-validity-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:09:48Z",
+      "lastTimestamp": "2026-10-03T03:09:48Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-https-listener-6965c9b7b7-bcrf8"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"secret-volume\" : secret \"tls-passthrough-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:09:49Z",
+      "lastTimestamp": "2026-10-03T03:09:49Z",
+      "count": 1,
+      "object": "gateway-conformance-app-backend/Pod/tls-backend-58b6fcfb64-pblq9"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.175:9901/ready\": dial tcp 10.42.3.175:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:10:03Z",
+      "lastTimestamp": "2026-10-03T03:10:15Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-646698d784-hpgxb"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"secret-volume\" : secret \"tls-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:09:48Z",
+      "lastTimestamp": "2026-10-03T03:09:49Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/tls-backend-2-5fffcbf4cc-n4252"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"secret-volume\" : secret \"tls-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:09:48Z",
+      "lastTimestamp": "2026-10-03T03:09:49Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/tls-backend-86b4d79785-zjvjw"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.163.129 for Service gateway-conformance-infra/praxis-backend-namespaces has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.163.129"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.204.44 for Service gateway-conformance-infra/praxis-same-namespace has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.204.44"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.224.220 for Service gateway-conformance-infra/praxis-same-namespace-with-https-listener has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.224.220"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.44.162 for Service gateway-conformance-infra/praxis-all-namespaces has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.44.162"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.204:9901/ready\": dial tcp 10.42.3.204:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:18:09Z",
+      "lastTimestamp": "2026-10-03T03:18:21Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-566ff44f67-nb6mj"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.205:9901/ready\": dial tcp 10.42.3.205:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:23:07Z",
+      "lastTimestamp": "2026-10-03T03:23:19Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-79fdf45cc-z6z5s"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.206:9901/ready\": dial tcp 10.42.3.206:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:25:44Z",
+      "lastTimestamp": "2026-10-03T03:25:56Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-6897866bb9-5brxc"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.207:9901/ready\": dial tcp 10.42.3.207:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:26:41Z",
+      "lastTimestamp": "2026-10-03T03:26:53Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-769c5f44f6-w8zbk"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.208:9901/ready\": dial tcp 10.42.3.208:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:32:48Z",
+      "lastTimestamp": "2026-10-03T03:33:00Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-dfb4877f6-55lgb"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.178:9901/ready\": dial tcp 10.42.3.178:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:32:48Z",
+      "lastTimestamp": "2026-10-03T03:33:00Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-https-listener-6965c9b7b7-bcrf8"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.212:9901/ready\": dial tcp 10.42.3.212:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:37:54Z",
+      "lastTimestamp": "2026-10-03T03:38:06Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-http-listener-isolation-786cc7d58c-2l8cx"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.213:9901/ready\": dial tcp 10.42.3.213:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:37:54Z",
+      "lastTimestamp": "2026-10-03T03:38:06Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-http-listener-isolation-with-hostname-intersection-5pfq8"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.211:9901/ready\": dial tcp 10.42.3.211:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:37:52Z",
+      "lastTimestamp": "2026-10-03T03:38:04Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-75865db4f5-gr25s"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.210:9901/ready\": dial tcp 10.42.3.210:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:37:52Z",
+      "lastTimestamp": "2026-10-03T03:38:04Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-https-listener-7889d6d45-6hswx"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/praxis-gateway-with-infrastructure-metadata: endpoints \"praxis-gateway-with-infrastructure-metadata\" already exists",
+      "firstTimestamp": "2026-10-03T00:43:42Z",
+      "lastTimestamp": "2026-10-03T03:38:52Z",
+      "count": 2,
+      "object": "/Endpoints/praxis-gateway-with-infrastructure-metadata"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.218:9901/ready\": dial tcp 10.42.3.218:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:39:01Z",
+      "lastTimestamp": "2026-10-03T03:39:13Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-infrastructure-metadata-87d9675d7-zzkg6"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.216:9901/ready\": dial tcp 10.42.3.216:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:38:54Z",
+      "lastTimestamp": "2026-10-03T03:39:06Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-http-listener-isolation-656c84c58f-cdx85"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-http-listener-isolation\" not found",
+      "firstTimestamp": "2026-10-03T03:38:53Z",
+      "lastTimestamp": "2026-10-03T03:38:54Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-http-listener-isolation-786cc7d58c-p8h5s"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.217:9901/ready\": dial tcp 10.42.3.217:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:38:54Z",
+      "lastTimestamp": "2026-10-03T03:39:06Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-http-listener-isolation-with-hostname-intersection-g7zcv"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-http-listener-isolation-with-hostname-intersection\" not found",
+      "firstTimestamp": "2026-10-03T03:38:53Z",
+      "lastTimestamp": "2026-10-03T03:38:54Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-http-listener-isolation-with-hostname-intersection-m7x5b"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.179.229 for Service gateway-conformance-infra/praxis-gateway-client-certificate-malformed-secret has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.179.229"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.233.16 for Service gateway-conformance-infra/praxis-gateway-client-certificate-unsupported-kind has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.233.16"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.59.173 for Service gateway-conformance-infra/praxis-gateway-client-certificate-unsupported-group has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.59.173"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/praxis-gateway-only-invalid-route-kind: endpoints \"praxis-gateway-only-invalid-route-kind\" already exists",
+      "firstTimestamp": "2026-10-03T03:40:08Z",
+      "lastTimestamp": "2026-10-03T03:40:08Z",
+      "count": 1,
+      "object": "/Endpoints/praxis-gateway-only-invalid-route-kind"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-only-invalid-route-kind\" not found",
+      "firstTimestamp": "2026-10-03T03:40:08Z",
+      "lastTimestamp": "2026-10-03T03:40:10Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-only-invalid-route-kind-5687c5b796-bdmdt"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-supported-and-invalid-route-kind\" not found",
+      "firstTimestamp": "2026-10-03T03:40:08Z",
+      "lastTimestamp": "2026-10-03T03:40:10Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-supported-and-invalid-route-kind-77968ccbf69q47k"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.219:9901/ready\": dial tcp 10.42.3.219:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:40:08Z",
+      "lastTimestamp": "2026-10-03T03:40:20Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-invalid-default-client-validation-config-6fb849fc6clvr79"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-invalid-default-client-validation-config\" not found",
+      "firstTimestamp": "2026-10-03T03:40:08Z",
+      "lastTimestamp": "2026-10-03T03:40:10Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-invalid-default-client-validation-config-fd95b969b-b2trh"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.84.105 for Service gateway-conformance-infra/praxis-gateway-client-certificate-malformed-secret has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.84.105"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.174.246 for Service gateway-conformance-infra/praxis-gateway-certificate-nonexistent-secret has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.174.246"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.198.39 for Service gateway-conformance-infra/praxis-gateway-remove-listener has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.198.39"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-add-listener\" not found",
+      "firstTimestamp": "2026-10-03T03:43:22Z",
+      "lastTimestamp": "2026-10-03T03:43:22Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-add-listener-54df6c47b-2wvtv"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.229:9901/ready\": dial tcp 10.42.3.229:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:23Z",
+      "lastTimestamp": "2026-10-03T03:43:35Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-add-listener-69db7b4555-67vrz"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.227:9901/ready\": dial tcp 10.42.3.227:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:18Z",
+      "lastTimestamp": "2026-10-03T03:43:30Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-add-listener-7cb5c58847-tlslm"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"tls-0\" : secret \"malformed-certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:43:09Z",
+      "lastTimestamp": "2026-10-03T03:43:12Z",
+      "count": 4,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-certificate-malformed-secret-5bc697b484-f9s7p"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"tls-0\" : secret \"nonexistent-certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:43:08Z",
+      "lastTimestamp": "2026-10-03T03:43:12Z",
+      "count": 4,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-certificate-nonexistent-secret-7dff58c9d9-4pthv"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-certificate-unsupported-group\" not found",
+      "firstTimestamp": "2026-10-03T03:43:10Z",
+      "lastTimestamp": "2026-10-03T03:43:26Z",
+      "count": 6,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-certificate-unsupported-group-656cf5746f-znjs7"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.226:9901/ready\": dial tcp 10.42.3.226:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:15Z",
+      "lastTimestamp": "2026-10-03T03:43:27Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-certificate-unsupported-group-656cf5746f-znjs7"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-certificate-unsupported-kind\" not found",
+      "firstTimestamp": "2026-10-03T03:43:10Z",
+      "lastTimestamp": "2026-10-03T03:43:26Z",
+      "count": 6,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-certificate-unsupported-kind-6ff5d8ccfc-bfc8j"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.225:9901/ready\": dial tcp 10.42.3.225:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:15Z",
+      "lastTimestamp": "2026-10-03T03:43:27Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-certificate-unsupported-kind-6ff5d8ccfc-bfc8j"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.223:9901/ready\": dial tcp 10.42.3.223:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:12Z",
+      "lastTimestamp": "2026-10-03T03:43:24Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-client-certificate-malformed-secret-796576dns8zb"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.224:9901/ready\": dial tcp 10.42.3.224:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:09Z",
+      "lastTimestamp": "2026-10-03T03:43:21Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-client-certificate-missing-reference-grant-hpccj"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.220:9901/ready\": dial tcp 10.42.3.220:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:11Z",
+      "lastTimestamp": "2026-10-03T03:43:23Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-client-certificate-nonexistent-secret-654bc6gdb5"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.221:9901/ready\": dial tcp 10.42.3.221:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:12Z",
+      "lastTimestamp": "2026-10-03T03:43:24Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-client-certificate-unsupported-group-65cb9bmxxn6"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.222:9901/ready\": dial tcp 10.42.3.222:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:12Z",
+      "lastTimestamp": "2026-10-03T03:43:24Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-client-certificate-unsupported-kind-c98cfc8sn9wk"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-observed-generation-bump\" not found",
+      "firstTimestamp": "2026-10-03T03:43:26Z",
+      "lastTimestamp": "2026-10-03T03:43:42Z",
+      "count": 6,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-observed-generation-bump-76599fbcb6-4snh6"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.228:9901/ready\": dial tcp 10.42.3.228:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:24Z",
+      "lastTimestamp": "2026-10-03T03:43:36Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-remove-listener-59d49cdfc5-b5rcb"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-remove-listener\" not found",
+      "firstTimestamp": "2026-10-03T03:43:22Z",
+      "lastTimestamp": "2026-10-03T03:43:38Z",
+      "count": 6,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-remove-listener-dc7d54c89-mst5d"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.230:9901/ready\": dial tcp 10.42.3.230:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:24Z",
+      "lastTimestamp": "2026-10-03T03:43:36Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-remove-listener-dc7d54c89-mst5d"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.12.127 for Service gateway-conformance-infra/praxis-gateway-secret-missing-reference-grant has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.12.127"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.200.226 for Service gateway-conformance-infra/praxis-gateway-secret-reference-grant-all-in-namespace has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.200.226"
+    },
+    {
+      "reason": "IPAddressWrongReference",
+      "message": "IPAddress: 10.43.5.136 for Service gateway-conformance-infra/praxis-gateway-secret-invalid-reference-grant has a wrong reference; cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.5.136"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.231:9901/ready\": dial tcp 10.42.3.231:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:28Z",
+      "lastTimestamp": "2026-10-03T03:43:40Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-observed-generation-bump-76599fbcb6-4snh6"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-secret-invalid-reference-grant\" not found",
+      "firstTimestamp": "2026-10-03T03:43:32Z",
+      "lastTimestamp": "2026-10-03T03:43:32Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-secret-invalid-reference-grant-6cdd866fcf-zl275"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"tls-0\" : secret \"certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:43:32Z",
+      "lastTimestamp": "2026-10-03T03:43:32Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-secret-invalid-reference-grant-6cdd866fcf-zl275"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-secret-missing-reference-grant\" not found",
+      "firstTimestamp": "2026-10-03T03:43:32Z",
+      "lastTimestamp": "2026-10-03T03:43:33Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-secret-missing-reference-grant-5c6b86b9dc-nxbcm"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"tls-0\" : secret \"certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:43:32Z",
+      "lastTimestamp": "2026-10-03T03:43:33Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-secret-missing-reference-grant-5c6b86b9dc-nxbcm"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"tls-0\" : secret \"certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:43:32Z",
+      "lastTimestamp": "2026-10-03T03:43:34Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-secret-reference-grant-all-in-namespace-849p29tc"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-secret-reference-grant-all-in-namespace\" not found",
+      "firstTimestamp": "2026-10-03T03:43:32Z",
+      "lastTimestamp": "2026-10-03T03:43:34Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-secret-reference-grant-all-in-namespace-849p29tc"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"tls-0\" : secret \"certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:43:32Z",
+      "lastTimestamp": "2026-10-03T03:43:34Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-secret-reference-grant-specific-69b9b45c9-fmpgq"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-secret-reference-grant-specific\" not found",
+      "firstTimestamp": "2026-10-03T03:43:32Z",
+      "lastTimestamp": "2026-10-03T03:43:34Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-secret-reference-grant-specific-69b9b45c9-fmpgq"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.232:9901/ready\": dial tcp 10.42.3.232:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:43:34Z",
+      "lastTimestamp": "2026-10-03T03:43:46Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-without-address-value-7f95cd9c8c-k2t2h"
+    },
+    {
+      "reason": "IPAddressNotAllocated",
+      "message": "IPAddress: 10.43.104.205 for Service gateway-conformance-infra/praxis-gateway-observed-generation-bump appears to have leaked: cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.104.205"
+    },
+    {
+      "reason": "IPAddressNotAllocated",
+      "message": "IPAddress: 10.43.132.82 for Service gateway-conformance-infra/praxis-gateway-certificate-malformed-secret appears to have leaked: cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.132.82"
+    },
+    {
+      "reason": "IPAddressNotAllocated",
+      "message": "IPAddress: 10.43.211.33 for Service gateway-conformance-infra/praxis-gateway-certificate-unsupported-group appears to have leaked: cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.211.33"
+    },
+    {
+      "reason": "IPAddressNotAllocated",
+      "message": "IPAddress: 10.43.238.96 for Service gateway-conformance-infra/praxis-gateway-certificate-unsupported-kind appears to have leaked: cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.238.96"
+    },
+    {
+      "reason": "IPAddressNotAllocated",
+      "message": "IPAddress: 10.43.230.207 for Service gateway-conformance-infra/praxis-gateway-secret-reference-grant-specific appears to have leaked: cleaning up",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null,
+      "object": "/IPAddress/10.43.230.207"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.234:9901/ready\": dial tcp 10.42.3.234:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:46:43Z",
+      "lastTimestamp": "2026-10-03T03:46:55Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-tls-backend-client-certificate-85bc997489-sx6hw"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.235:9901/ready\": dial tcp 10.42.3.235:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:47:43Z",
+      "lastTimestamp": "2026-10-03T03:47:55Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-tls-backend-client-certificate-67f4bc66d9-z6857"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-tls-backend-client-certificate\" not found",
+      "firstTimestamp": "2026-10-03T03:47:41Z",
+      "lastTimestamp": "2026-10-03T03:47:41Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-tls-backend-client-certificate-fd4f4fd78-tshn7"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-with-one-attached-route\" not found",
+      "firstTimestamp": "2026-10-03T03:47:42Z",
+      "lastTimestamp": "2026-10-03T03:47:58Z",
+      "count": 6,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-one-attached-route-5c549cc878-ghxtp"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-with-one-attached-route\" not found",
+      "firstTimestamp": "2026-10-03T03:47:42Z",
+      "lastTimestamp": "2026-10-03T03:47:58Z",
+      "count": 6,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-one-attached-route-85476bcf-g7vzn"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-with-two-attached-routes\" not found",
+      "firstTimestamp": "2026-10-03T03:47:42Z",
+      "lastTimestamp": "2026-10-03T03:47:58Z",
+      "count": 6,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-two-attached-routes-587d5c486d-jvl7c"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-with-two-attached-routes\" not found",
+      "firstTimestamp": "2026-10-03T03:47:42Z",
+      "lastTimestamp": "2026-10-03T03:47:58Z",
+      "count": 6,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-two-attached-routes-6d56b6956b-pgr7c"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-with-two-listeners-and-one-attached-route\" not found",
+      "firstTimestamp": "2026-10-03T03:47:42Z",
+      "lastTimestamp": "2026-10-03T03:47:58Z",
+      "count": 6,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-two-listeners-and-one-attached-route-5l5z7z"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"tls-0\" : secret \"does-not-exist\" not found",
+      "firstTimestamp": "2026-10-03T03:47:41Z",
+      "lastTimestamp": "2026-10-03T03:47:41Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-unresolved-gateway-with-one-attached-unresolved-roubg4fp"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-unresolved-gateway-with-one-attached-unresolved-route\" not found",
+      "firstTimestamp": "2026-10-03T03:47:41Z",
+      "lastTimestamp": "2026-10-03T03:47:41Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-unresolved-gateway-with-one-attached-unresolved-roubg4fp"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"tls-0\" : secret \"does-not-exist\" not found",
+      "firstTimestamp": "2026-10-03T03:47:41Z",
+      "lastTimestamp": "2026-10-03T03:47:41Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-unresolved-gateway-with-one-attached-unresolved-roumzzbx"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.239:9901/ready\": dial tcp 10.42.3.239:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:47:46Z",
+      "lastTimestamp": "2026-10-03T03:47:58Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-one-attached-route-5c549cc878-ghxtp"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.237:9901/ready\": dial tcp 10.42.3.237:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:47:47Z",
+      "lastTimestamp": "2026-10-03T03:47:59Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-one-attached-route-85476bcf-g7vzn"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.236:9901/ready\": dial tcp 10.42.3.236:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:47:46Z",
+      "lastTimestamp": "2026-10-03T03:47:58Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-two-attached-routes-587d5c486d-jvl7c"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.238:9901/ready\": dial tcp 10.42.3.238:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:47:46Z",
+      "lastTimestamp": "2026-10-03T03:47:58Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-two-attached-routes-6d56b6956b-pgr7c"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.240:9901/ready\": dial tcp 10.42.3.240:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T03:47:46Z",
+      "lastTimestamp": "2026-10-03T03:47:58Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-two-listeners-and-one-attached-route-5l5z7z"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.241:9901/ready\": dial tcp 10.42.3.241:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:00:48Z",
+      "lastTimestamp": "2026-10-03T04:01:00Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-grpcroute-listener-hostname-matching-85c5c44b9c-qs5kt"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.214:9901/ready\": dial tcp 10.42.3.214:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:02:54Z",
+      "lastTimestamp": "2026-10-03T04:03:06Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-646698d784-6mrcx"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.243:9901/ready\": dial tcp 10.42.3.243:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:03:31Z",
+      "lastTimestamp": "2026-10-03T04:03:43Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-7b87b4975f-swxqb"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.244:9901/ready\": dial tcp 10.42.3.244:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:03:35Z",
+      "lastTimestamp": "2026-10-03T04:03:47Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-7b8dcb86dc-gvcfx"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.242:9901/ready\": dial tcp 10.42.3.242:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:03:28Z",
+      "lastTimestamp": "2026-10-03T04:03:40Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-7cdb546ccb-qtcnh"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.246:9901/ready\": dial tcp 10.42.3.246:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:04:13Z",
+      "lastTimestamp": "2026-10-03T04:04:25Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-7d96447fd4-bn8dj"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.247:9901/ready\": dial tcp 10.42.3.247:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:04:19Z",
+      "lastTimestamp": "2026-10-03T04:04:31Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-c8d9b4cd8-xvwx5"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.176:9901/ready\": dial tcp 10.42.3.176:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:06:18Z",
+      "lastTimestamp": "2026-10-03T04:06:30Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-backend-namespaces-78f6c454f8-68tfk"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.249:9901/ready\": dial tcp 10.42.3.249:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:06:26Z",
+      "lastTimestamp": "2026-10-03T04:06:38Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-backend-namespaces-bb4b9f9c8-49tc2"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.248:9901/ready\": dial tcp 10.42.3.248:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:11:26Z",
+      "lastTimestamp": "2026-10-03T04:11:38Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-646698d784-q5z8f"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.2:9901/ready\": dial tcp 10.42.3.2:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:11:38Z",
+      "lastTimestamp": "2026-10-03T04:11:50Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-hostname-intersection-5cdd59d486-hlgh5"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.4:9901/ready\": dial tcp 10.42.3.4:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:11:38Z",
+      "lastTimestamp": "2026-10-03T04:11:50Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-hostname-intersection-6d4b869cd6-qnztk"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-httproute-hostname-intersection\" not found",
+      "firstTimestamp": "2026-10-03T04:11:38Z",
+      "lastTimestamp": "2026-10-03T04:11:39Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-hostname-intersection-7758858bb7-xps4g"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.3:9901/ready\": dial tcp 10.42.3.3:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:11:38Z",
+      "lastTimestamp": "2026-10-03T04:11:50Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-hostname-intersection-all-6986c8d5b6-8ppls"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-httproute-hostname-intersection-all\" not found",
+      "firstTimestamp": "2026-10-03T04:11:38Z",
+      "lastTimestamp": "2026-10-03T04:11:39Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-hostname-intersection-all-b54bbbc4c-b77xv"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.254:9901/ready\": dial tcp 10.42.3.254:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:11:38Z",
+      "lastTimestamp": "2026-10-03T04:11:50Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-hostname-intersection-all-b54bbbc4c-v88s5"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.251:9901/ready\": dial tcp 10.42.3.251:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:11:32Z",
+      "lastTimestamp": "2026-10-03T04:11:44Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-555b5d6494-m8flr"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.252:9901/ready\": dial tcp 10.42.3.252:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:11:39Z",
+      "lastTimestamp": "2026-10-03T04:11:51Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-79668cdff5-4bt9b"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.215:9901/ready\": dial tcp 10.42.3.215:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:11:45Z",
+      "lastTimestamp": "2026-10-03T04:11:57Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-https-listener-6965c9b7b7-hlq7h"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-gateway-with-one-not-matching-port-and-section-f8dae0cc\" not found",
+      "firstTimestamp": "2026-10-03T04:15:59Z",
+      "lastTimestamp": "2026-10-03T04:16:01Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-with-one-not-matching-port-and-section-f8dahxvrc"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.10:9901/ready\": dial tcp 10.42.3.10:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:16:09Z",
+      "lastTimestamp": "2026-10-03T04:16:21Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-listener-hostname-matching-6f5b8d7b5f-kg4gc"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.11:9901/ready\": dial tcp 10.42.3.11:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:16:09Z",
+      "lastTimestamp": "2026-10-03T04:16:21Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-listener-hostname-matching-79c47ddb55-v5dm4"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-httproute-listener-hostname-matching\" not found",
+      "firstTimestamp": "2026-10-03T04:16:07Z",
+      "lastTimestamp": "2026-10-03T04:16:08Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-listener-hostname-matching-995458976-fjnmt"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.12:9901/ready\": dial tcp 10.42.3.12:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:16:13Z",
+      "lastTimestamp": "2026-10-03T04:16:25Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-listener-port-matching-57bbb99fd9-xrqs7"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-httproute-listener-port-matching\" not found",
+      "firstTimestamp": "2026-10-03T04:16:12Z",
+      "lastTimestamp": "2026-10-03T04:16:28Z",
+      "count": 6,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-listener-port-matching-855b97bb5f-h7x8w"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.13:9901/ready\": dial tcp 10.42.3.13:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:16:14Z",
+      "lastTimestamp": "2026-10-03T04:16:26Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-httproute-listener-port-matching-855b97bb5f-h7x8w"
+    },
+    {
+      "reason": "FailedToUpdateEndpoint",
+      "message": "Failed to update endpoint gateway-conformance-infra/praxis-httproute-listener-port-matching: Operation cannot be fulfilled on endpoints \"praxis-httproute-listener-port-matching\": StorageError: invalid object, Code: 4, Key: /registry/services/endpoints/gateway-conformance-infra/praxis-httproute-listener-port-matching, ResourceVersion: 0, AdditionalErrorMsg: Precondition failed: UID in precondition: e72bc303-292d-4830-a467-54ddcd83a3b5, UID in object meta: ",
+      "firstTimestamp": "2026-10-03T04:16:11Z",
+      "lastTimestamp": "2026-10-03T04:16:11Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Endpoints/praxis-httproute-listener-port-matching"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.7:9901/ready\": dial tcp 10.42.3.7:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:16:03Z",
+      "lastTimestamp": "2026-10-03T04:16:15Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-6454bb5f7c-hx2rm"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.9:9901/ready\": dial tcp 10.42.3.9:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:16:17Z",
+      "lastTimestamp": "2026-10-03T04:16:29Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-646698d784-45k7f"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.253:9901/ready\": dial tcp 10.42.3.253:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:15:58Z",
+      "lastTimestamp": "2026-10-03T04:16:10Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-646698d784-7gdf5"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.15:9901/ready\": dial tcp 10.42.3.15:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:16:21Z",
+      "lastTimestamp": "2026-10-03T04:16:33Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-7f68764c7c-r7vrp"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.5:9901/ready\": dial tcp 10.42.3.5:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:15:52Z",
+      "lastTimestamp": "2026-10-03T04:16:04Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-https-listener-6f86df4b67-cc77c"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.6:9901/ready\": dial tcp 10.42.3.6:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:15:59Z",
+      "lastTimestamp": "2026-10-03T04:16:11Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-https-listener-ddcf496fc-t9d8g"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.16:9901/ready\": dial tcp 10.42.3.16:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:16:26Z",
+      "lastTimestamp": "2026-10-03T04:16:38Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-697bdf7759-gpl4n"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.19:9901/ready\": dial tcp 10.42.3.19:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:17:11Z",
+      "lastTimestamp": "2026-10-03T04:17:23Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-557fff5bc-cd82p"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.22:9901/ready\": dial tcp 10.42.3.22:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:17:22Z",
+      "lastTimestamp": "2026-10-03T04:17:34Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-5c94b69f6b-7x85k"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.21:9901/ready\": dial tcp 10.42.3.21:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:17:19Z",
+      "lastTimestamp": "2026-10-03T04:17:31Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-6f7dcf69b4-6c7z9"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.18:9901/ready\": dial tcp 10.42.3.18:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:17:04Z",
+      "lastTimestamp": "2026-10-03T04:17:16Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-6f858895b4-4h2s2"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.24:9901/ready\": dial tcp 10.42.3.24:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:17:28Z",
+      "lastTimestamp": "2026-10-03T04:17:40Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-c4d78bfb8-xkpsf"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.27:9901/ready\": dial tcp 10.42.3.27:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:18:40Z",
+      "lastTimestamp": "2026-10-03T04:18:52Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-67f75898d7-7rqt6"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.26:9901/ready\": dial tcp 10.42.3.26:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:18:33Z",
+      "lastTimestamp": "2026-10-03T04:18:45Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-6f858895b4-q2wz5"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.28:9901/ready\": dial tcp 10.42.3.28:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:19:17Z",
+      "lastTimestamp": "2026-10-03T04:19:29Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-6f87d64764-cbzxh"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.29:9901/ready\": dial tcp 10.42.3.29:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:19:17Z",
+      "lastTimestamp": "2026-10-03T04:19:29Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-http-listener-on-8080-f479456bcmltnv"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.8:9901/ready\": dial tcp 10.42.3.8:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:19:15Z",
+      "lastTimestamp": "2026-10-03T04:19:27Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-https-listener-6965c9b7b7-82c8f"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.37:9901/ready\": dial tcp 10.42.3.37:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:20:12Z",
+      "lastTimestamp": "2026-10-03T04:20:24Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-5c579759dd-l42fn"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.35:9901/ready\": dial tcp 10.42.3.35:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:20:04Z",
+      "lastTimestamp": "2026-10-03T04:20:16Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-5d8f66555b-l2bj8"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.32:9901/ready\": dial tcp 10.42.3.32:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:19:53Z",
+      "lastTimestamp": "2026-10-03T04:20:05Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-6b95b87c5f-hfbdr"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.33:9901/ready\": dial tcp 10.42.3.33:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:20:00Z",
+      "lastTimestamp": "2026-10-03T04:20:12Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-776964f6-26q4d"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.31:9901/ready\": dial tcp 10.42.3.31:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:19:47Z",
+      "lastTimestamp": "2026-10-03T04:19:59Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-http-listener-on-8080-599cbf6898tqdm"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config\" : configmap \"praxis-same-namespace-with-http-listener-on-8080\" not found",
+      "firstTimestamp": "2026-10-03T04:19:45Z",
+      "lastTimestamp": "2026-10-03T04:19:47Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-http-listener-on-8080-f479456bc6bxk7"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.30:9901/ready\": dial tcp 10.42.3.30:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:19:53Z",
+      "lastTimestamp": "2026-10-03T04:20:05Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-with-https-listener-578846f467-hw2wm"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.38:9901/ready\": dial tcp 10.42.3.38:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:20:19Z",
+      "lastTimestamp": "2026-10-03T04:20:31Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-7df66666cb-7phhx"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.40:9901/ready\": dial tcp 10.42.3.40:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:20:28Z",
+      "lastTimestamp": "2026-10-03T04:20:40Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-7f78749567-2r9m7"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.39:9901/ready\": dial tcp 10.42.3.39:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:20:23Z",
+      "lastTimestamp": "2026-10-03T04:20:35Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-7fd786ff74-zkc54"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.42:9901/ready\": dial tcp 10.42.3.42:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:21:06Z",
+      "lastTimestamp": "2026-10-03T04:21:18Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-5dcb44c989-fffdm"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.43:9901/ready\": dial tcp 10.42.3.43:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:22:06Z",
+      "lastTimestamp": "2026-10-03T04:22:18Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-54679d69bf-x5zqs"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.44:9901/ready\": dial tcp 10.42.3.44:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:23:03Z",
+      "lastTimestamp": "2026-10-03T04:23:15Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-8954c8b67-qprxv"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.52:9901/ready\": dial tcp 10.42.3.52:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:24:30Z",
+      "lastTimestamp": "2026-10-03T04:24:42Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-5b55ddffb4-ckfww"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.48:9901/ready\": dial tcp 10.42.3.48:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:24:12Z",
+      "lastTimestamp": "2026-10-03T04:24:24Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-66586b85bb-cgqkw"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.46:9901/ready\": dial tcp 10.42.3.46:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:24:07Z",
+      "lastTimestamp": "2026-10-03T04:24:19Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-6c99869d5f-c6dbr"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.45:9901/ready\": dial tcp 10.42.3.45:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:24:04Z",
+      "lastTimestamp": "2026-10-03T04:24:16Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-6f7c6f7558-d8p8r"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.51:9901/ready\": dial tcp 10.42.3.51:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:24:27Z",
+      "lastTimestamp": "2026-10-03T04:24:39Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-78dcccfb5b-l8nnj"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.50:9901/ready\": dial tcp 10.42.3.50:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:24:20Z",
+      "lastTimestamp": "2026-10-03T04:24:32Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-9795d4b4d-lxhlm"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.55:9901/ready\": dial tcp 10.42.3.55:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:24:46Z",
+      "lastTimestamp": "2026-10-03T04:24:58Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-5ffdc464f8-tkwld"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.54:9901/ready\": dial tcp 10.42.3.54:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:24:35Z",
+      "lastTimestamp": "2026-10-03T04:24:47Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-658856d4df-sf5sk"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.56:9901/ready\": dial tcp 10.42.3.56:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:24:52Z",
+      "lastTimestamp": "2026-10-03T04:25:04Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-869569b7bf-lqck8"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.58:9901/ready\": dial tcp 10.42.3.58:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T04:25:14Z",
+      "lastTimestamp": "2026-10-03T04:25:26Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-same-namespace-54b8489758-clncr"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.60:9901/ready\": dial tcp 10.42.3.60:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T05:40:09Z",
+      "lastTimestamp": "2026-10-03T05:40:21Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-tlsroute-http-only-7fcbc7c694-wgc6s"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.61:9901/ready\": dial tcp 10.42.3.61:9901: connect: connection refused",
+      "firstTimestamp": "2026-10-03T05:40:09Z",
+      "lastTimestamp": "2026-10-03T05:40:21Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/Pod/praxis-gateway-tlsroute-https-only-7b5966b445-js6vs"
+    }
+  ],
+  "warning_reason_counts": {
+    "Unhealthy": 99,
+    "FailedToCreateEndpoint": 4,
+    "FailedMount": 39,
+    "IPAddressWrongReference": 13,
+    "IPAddressNotAllocated": 5,
+    "FailedToUpdateEndpoint": 1
+  },
+  "cleanup_complete": true,
+  "job_finished": true,
+  "review_note": "Events can precede the run; assess timestamps and product behavior before classifying infrastructure validity."
+}

@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "treatment": "agentgateway",
+      "http_start": "2026-10-05T22:29:32.174786+00:00",
+      "http_end": "2026-10-05T22:38:17.997338+00:00",
+      "pod_samples": 101,
+      "network_profiles": [
+        "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n"
+      ],
+      "controller_restart_values": {
+        "agentgateway-system/controller": [
+          0
+        ]
+      }
+    },
+    {
+      "treatment": "praxis-release",
+      "http_start": "2026-10-05T22:44:25.995098+00:00",
+      "http_end": "2026-10-05T22:53:08.584450+00:00",
+      "pod_samples": 101,
+      "network_profiles": [
+        "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n"
+      ],
+      "controller_restart_values": {
+        "praxis-system/operator": [
+          0,
+          1
+        ]
+      }
+    }
+  ],
+  "gateway_collector_error_samples": [
+    {
+      "utc": "2026-10-05T23:05:03.047551+00:00",
+      "collector_error": "Command '['nsenter', '-t', '0', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1."
+    },
+    {
+      "utc": "2026-10-05T23:05:08.327404+00:00",
+      "collector_error": "Command '['nsenter', '-t', '0', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1."
+    },
+    {
+      "utc": "2026-10-05T23:10:54.488876+00:00",
+      "collector_error": "Command '['nsenter', '-t', '227765', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1."
+    }
+  ],
+  "interpretation": "Stable controller restart counters during HTTP. Praxis startup exit1 at22:44:09 precedes HTTP22:44:25. Three namespace reads fail during the known crashing 5000-route configuration; no HTTP collector failures. Control API/observer outputs and crash diagnostics retained."
+}

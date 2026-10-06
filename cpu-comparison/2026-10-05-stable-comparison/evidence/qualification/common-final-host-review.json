@@ -1,0 +1,3144 @@
+[
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/agentgateway/ai/00-fortio-openai/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 11.039072254245337,
+      "max": 12.711864406779661
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.01685630004214075,
+      "max": 0.05056890012642225
+    },
+    "busiest_sampled_vcpu_percent": 21.157684630738522,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 374.11947514166764,
+          "max": 401.31080917309737
+        },
+        "tx_mbps": {
+          "mean": 374.29015870293705,
+          "max": 401.4876349850218
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/agentgateway/ai/01-aiperf-openai/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/agentgateway/ai/02-aiperf-anthropic/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/agentgateway/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 3.6265295567384888,
+      "max": 3.775019001773499
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 6.613226452905812,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 129.80612684320994,
+          "max": 132.69526916860607
+        },
+        "tx_mbps": {
+          "mean": 3.0084685298767555,
+          "max": 3.1615061146858476
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/agentgateway/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 3.668354870212772,
+      "max": 4.321634363541121
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.1178627553693033,
+      "max": 0.2357255107386066
+    },
+    "busiest_sampled_vcpu_percent": 22.84263959390863,
+    "container_quota_busy_percent": {
+      "mean": 7.303532038190401,
+      "max": 7.303532038190401
+    },
+    "container_throttled_period_percent": null,
+    "max_fd": 18,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 48099328,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 121.05285958624071,
+          "max": 133.02204478933228
+        },
+        "tx_mbps": {
+          "mean": 1.7019838799225717,
+          "max": 1.8622607682478598
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/direct/ai/00-fortio-openai/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 12.22821171933439,
+      "max": 12.8456510809452
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 17.159763313609467,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 401.5035827662468,
+          "max": 402.09580976751147
+        },
+        "tx_mbps": {
+          "mean": 401.7796303891881,
+          "max": 402.41433069931117
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/direct/ai/01-aiperf-openai/execution.json",
+    "samples": 2,
+    "host_busy_percent": {
+      "mean": 14.63110667996012,
+      "max": 14.63110667996012
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 40.8,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 3,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.11329170344477851,
+          "max": 0.11329170344477851
+        },
+        "tx_mbps": {
+          "mean": 0.030635139632331575,
+          "max": 0.030635139632331575
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/direct/ai/02-aiperf-anthropic/execution.json",
+    "samples": 2,
+    "host_busy_percent": {
+      "mean": 9.865470852017937,
+      "max": 9.865470852017937
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.02491280518186348,
+      "max": 0.02491280518186348
+    },
+    "busiest_sampled_vcpu_percent": 18.290258449304176,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 4,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.0882887391769739,
+          "max": 0.0882887391769739
+        },
+        "tx_mbps": {
+          "mean": 0.031568917912838224,
+          "max": 0.031568917912838224
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/direct/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 4.153262608357706,
+      "max": 4.439959636730575
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.05054334091483447,
+      "max": 0.10108668182966894
+    },
+    "busiest_sampled_vcpu_percent": 6.543967280163599,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 132.06493935165946,
+          "max": 137.38121603361884
+        },
+        "tx_mbps": {
+          "mean": 3.665309835347844,
+          "max": 3.898805724362273
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/direct/http/01-nighthawk/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 8.849482918175918,
+      "max": 12.695694716242661
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.08153946510110893,
+      "max": 0.2446183953033268
+    },
+    "busiest_sampled_vcpu_percent": 75.4325259515571,
+    "container_quota_busy_percent": {
+      "mean": 10.370550764771263,
+      "max": 10.402711759820614
+    },
+    "container_throttled_period_percent": null,
+    "max_fd": 18,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 47783936,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 125.43828529282536,
+          "max": 133.626097564367
+        },
+        "tx_mbps": {
+          "mean": 1.921417571256382,
+          "max": 2.0605054531134885
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/ai/00-fortio-openai/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 11.31474701969125,
+      "max": 11.671288127048147
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 18.199608610567516,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 400.7487217973741,
+          "max": 403.97314978466113
+        },
+        "tx_mbps": {
+          "mean": 399.43063230177063,
+          "max": 402.6497215962356
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/ai/01-aiperf-openai/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/ai/02-aiperf-anthropic/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 4.01165916943342,
+      "max": 4.464509656383245
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.02508151492350138,
+      "max": 0.05016302984700276
+    },
+    "busiest_sampled_vcpu_percent": 6.586826347305389,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 130.6506318478147,
+          "max": 134.40901998192876
+        },
+        "tx_mbps": {
+          "mean": 3.44992252206987,
+          "max": 3.649176166855565
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 7.281429663550812,
+      "max": 8.865514650638618
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.10017530678687704,
+      "max": 0.20035061357375408
+    },
+    "busiest_sampled_vcpu_percent": 27.056672760511884,
+    "container_quota_busy_percent": {
+      "mean": 7.655661471998458,
+      "max": 7.655661471998458
+    },
+    "container_throttled_period_percent": null,
+    "max_fd": 19,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 48160768,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 121.79773265483772,
+          "max": 133.8033000925712
+        },
+        "tx_mbps": {
+          "mean": 1.6674004581375703,
+          "max": 1.8393553499857755
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/praxis-release/ai/00-fortio-openai/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 19.18492728050723,
+      "max": 19.57808078209416
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 21.855670103092784,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 9,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 408.9621142518297,
+          "max": 411.5605174880818
+        },
+        "tx_mbps": {
+          "mean": 409.7222245497512,
+          "max": 412.3732315887988
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/praxis-release/ai/01-aiperf-openai/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/praxis-release/ai/02-aiperf-anthropic/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/praxis-release/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 3.450663315662422,
+      "max": 3.889585947302384
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 8.637236084452976,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 130.50133109871084,
+          "max": 134.0962218236363
+        },
+        "tx_mbps": {
+          "mean": 3.4411191978855347,
+          "max": 3.6251102881634605
+        }
+      }
+    }
+  },
+  {
+    "role": "client",
+    "workload": "results/common/qualification-nohealth/praxis-release/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 5.341078436035013,
+      "max": 6.716226608561907
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.11535503716995642,
+      "max": 0.23071007433991284
+    },
+    "busiest_sampled_vcpu_percent": 18.386491557223266,
+    "container_quota_busy_percent": {
+      "mean": 8.100504656590077,
+      "max": 8.100504656590077
+    },
+    "container_throttled_period_percent": null,
+    "max_fd": 18,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 48091136,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 121.33979633739108,
+          "max": 133.82513035090855
+        },
+        "tx_mbps": {
+          "mean": 1.677295416908483,
+          "max": 1.8585211880881993
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/agentgateway/ai/00-fortio-openai/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 9.721960337879926,
+      "max": 10.985134794658604
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 37.93103448275862,
+    "container_quota_busy_percent": {
+      "mean": 31.776241044904584,
+      "max": 34.44124201335134
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 932,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 88248320,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 748.9842338669193,
+          "max": 803.3856069814502
+        },
+        "tx_mbps": {
+          "mean": 746.4391299423874,
+          "max": 800.4433725378593
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/agentgateway/ai/01-aiperf-openai/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 375,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 75284480,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/agentgateway/ai/02-aiperf-anthropic/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 377,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 32858112,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/agentgateway/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 3.057908222793472,
+      "max": 3.0992251937015745
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 11.46881287726358,
+    "container_quota_busy_percent": {
+      "mean": 10.77746601539814,
+      "max": 11.121389426551733
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 901,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 65462272,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 132.75692363502299,
+          "max": 135.84123330411114
+        },
+        "tx_mbps": {
+          "mean": 131.94005893706708,
+          "max": 134.8701421996686
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/agentgateway/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.4472971984492722,
+      "max": 0.4864311315924219
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.025510204081632654,
+      "max": 0.05102040816326531
+    },
+    "busiest_sampled_vcpu_percent": 1.312910284463895,
+    "container_quota_busy_percent": {
+      "mean": 9.401154529794432,
+      "max": 10.032066002822713
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 318,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 41029632,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 123.3512788138488,
+          "max": 135.53734336514447
+        },
+        "tx_mbps": {
+          "mean": 122.78392460012606,
+          "max": 134.90812795380955
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/direct/ai/00-fortio-openai/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.08718240827092721,
+      "max": 0.099626400996264
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 0.398406374501992,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.00020561630693380025,
+          "max": 0.00023908463556486254
+        },
+        "tx_mbps": {
+          "mean": 0.00020561630693380025,
+          "max": 0.00023908463556486254
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/direct/ai/01-aiperf-openai/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/direct/ai/02-aiperf-anthropic/execution.json",
+    "samples": 2,
+    "host_busy_percent": {
+      "mean": 0.099601593625498,
+      "max": 0.099601593625498
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 0.199203187250996,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.009514425506834909,
+          "max": 0.009514425506834909
+        },
+        "tx_mbps": {
+          "mean": 0.0006008272053729917,
+          "max": 0.0006008272053729917
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/direct/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.16202640049281516,
+      "max": 0.2493143854400399
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 0.398406374501992,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.00951600935587545,
+          "max": 0.018965067142492447
+        },
+        "tx_mbps": {
+          "mean": 0.0006009294661494237,
+          "max": 0.0011349073630403952
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/direct/http/01-nighthawk/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 0.06643414715163594,
+      "max": 0.07473841554559044
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 0.3976143141153082,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 7.331994983783552e-05,
+          "max": 0.00015301679071908153
+        },
+        "tx_mbps": {
+          "mean": 7.331994983783552e-05,
+          "max": 0.00015301679071908153
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/ai/00-fortio-openai/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 10.185974155723484,
+      "max": 10.685483870967742
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 37.67820773930754,
+    "container_quota_busy_percent": {
+      "mean": 34.34733055154572,
+      "max": 34.68703648041456
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 663,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 85270528,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 799.5165845543319,
+          "max": 804.8558587555165
+        },
+        "tx_mbps": {
+          "mean": 800.6852525415089,
+          "max": 805.9553835925243
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/ai/01-aiperf-openai/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 154,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 69709824,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/ai/02-aiperf-anthropic/execution.json",
+    "samples": 2,
+    "host_busy_percent": {
+      "mean": 0.29754525167369206,
+      "max": 0.29754525167369206
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 0.5964214711729622,
+    "container_quota_busy_percent": {
+      "mean": 0.3999782792441683,
+      "max": 0.3999782792441683
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 154,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 69709824,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.11785462501838524,
+          "max": 0.11785462501838524
+        },
+        "tx_mbps": {
+          "mean": 0.12476524139007629,
+          "max": 0.12476524139007629
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 3.4928460226851508,
+      "max": 4.006968641114983
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.025031289111389236,
+      "max": 0.05006257822277847
+    },
+    "busiest_sampled_vcpu_percent": 13.582677165354331,
+    "container_quota_busy_percent": {
+      "mean": 10.290325872674737,
+      "max": 10.668885063001202
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 660,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 76505088,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 133.92549199833945,
+          "max": 138.40565447674524
+        },
+        "tx_mbps": {
+          "mean": 133.49040465983734,
+          "max": 137.9079193237295
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 7.685571485517773,
+      "max": 7.985865724381625
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 28.48,
+    "container_quota_busy_percent": {
+      "mean": 9.49271293789485,
+      "max": 10.401157247616204
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 151,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 37851136,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 123.40162364539243,
+          "max": 135.53391729311323
+        },
+        "tx_mbps": {
+          "mean": 123.65480091854708,
+          "max": 135.79681871857912
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/praxis-release/ai/00-fortio-openai/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 12.208527863035135,
+      "max": 12.299741602067183
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 42.79749478079332,
+    "container_quota_busy_percent": {
+      "mean": 38.35442664079415,
+      "max": 39.07835092693165
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 145,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 44429312,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 811.1647906584701,
+          "max": 815.764173887256
+        },
+        "tx_mbps": {
+          "mean": 810.4912057248289,
+          "max": 814.9901906711187
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/praxis-release/ai/01-aiperf-openai/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 140,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 12746752,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/praxis-release/ai/02-aiperf-anthropic/execution.json",
+    "samples": 2,
+    "host_busy_percent": {
+      "mean": 0.3223406893131664,
+      "max": 0.3223406893131664
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 0.7936507936507936,
+    "container_quota_busy_percent": {
+      "mean": 0.3601143523108305,
+      "max": 0.3601143523108305
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 140,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 12742656,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.12512321182924435,
+          "max": 0.12512321182924435
+        },
+        "tx_mbps": {
+          "mean": 0.12293182328360297,
+          "max": 0.12293182328360297
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/praxis-release/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 2.604846298619824,
+      "max": 2.625
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 9.036144578313253,
+    "container_quota_busy_percent": {
+      "mean": 8.210739781019353,
+      "max": 8.429669029550123
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 659,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 65425408,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 133.97739503070028,
+          "max": 137.80286374587354
+        },
+        "tx_mbps": {
+          "mean": 133.743050176113,
+          "max": 137.56245158817615
+        }
+      }
+    }
+  },
+  {
+    "role": "gateway",
+    "workload": "results/common/qualification-nohealth/praxis-release/http/01-nighthawk/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 2.0877389717145665,
+      "max": 4.673807205452775
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.016771488469601678,
+      "max": 0.050314465408805034
+    },
+    "busiest_sampled_vcpu_percent": 18.683274021352315,
+    "container_quota_busy_percent": {
+      "mean": 7.000393585890902,
+      "max": 7.569075386322021
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 149,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 59428864,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 120.290403498615,
+          "max": 135.51564446834007
+        },
+        "tx_mbps": {
+          "mean": 120.5682005762982,
+          "max": 135.82175567666948
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/agentgateway/ai/00-fortio-openai/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 17.815415315540037,
+      "max": 19.63083063108007
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 23.962264150943398,
+    "container_quota_busy_percent": {
+      "mean": 21.655318838406785,
+      "max": 23.715641565003626
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 407,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 22306816,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 361.66131694009283,
+          "max": 399.1601178432173
+        },
+        "tx_mbps": {
+          "mean": 363.87239226482603,
+          "max": 401.80027786329396
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/agentgateway/ai/01-aiperf-openai/execution.json",
+    "samples": 2,
+    "host_busy_percent": {
+      "mean": 0.2232696601339618,
+      "max": 0.2232696601339618
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 0.3968253968253968,
+    "container_quota_busy_percent": {
+      "mean": 0.11343268376067407,
+      "max": 0.11343268376067407
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 361,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 20275200,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.05952173451697618,
+          "max": 0.05952173451697618
+        },
+        "tx_mbps": {
+          "mean": 0.14418378286970965,
+          "max": 0.14418378286970965
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/agentgateway/ai/02-aiperf-anthropic/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 361,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 18870272,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/agentgateway/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 2.0540905512688052,
+      "max": 2.0775969962453065
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 3.366336633663366,
+    "container_quota_busy_percent": {
+      "mean": 2.8345436335871206,
+      "max": 2.8770421534825945
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 376,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 19763200,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 2.1293762868896424,
+          "max": 2.1906177313934747
+        },
+        "tx_mbps": {
+          "mean": 128.83139451335944,
+          "max": 130.84451110183596
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/agentgateway/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.5980955600631057,
+      "max": 0.6130268199233716
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 1.0121457489878543,
+    "container_quota_busy_percent": {
+      "mean": 2.887570362330136,
+      "max": 3.2246125410473083
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 303,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 19116032,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 1.7322055147940156,
+          "max": 1.8968200271667326
+        },
+        "tx_mbps": {
+          "mean": 121.66031497922216,
+          "max": 133.69959386045488
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/direct/ai/00-fortio-openai/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 18.923073636666086,
+      "max": 19.078781776994713
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 24.814814814814813,
+    "container_quota_busy_percent": {
+      "mean": 23.33325055575325,
+      "max": 23.376066896607174
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 519,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 26558464,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 400.87154798356767,
+          "max": 402.5800022615175
+        },
+        "tx_mbps": {
+          "mean": 400.6258729465213,
+          "max": 402.26085555344196
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/direct/ai/01-aiperf-openai/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 10,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 17285120,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/direct/ai/02-aiperf-anthropic/execution.json",
+    "samples": 2,
+    "host_busy_percent": {
+      "mean": 0.24795437639474338,
+      "max": 0.24795437639474338
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 0.5928853754940712,
+    "container_quota_busy_percent": {
+      "mean": 0.08475007425586001,
+      "max": 0.08475007425586001
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 10,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 17285120,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 0.03089570778095063,
+          "max": 0.03089570778095063
+        },
+        "tx_mbps": {
+          "mean": 0.08845850522462366,
+          "max": 0.08845850522462366
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/direct/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 2.473145141144142,
+      "max": 2.598051461403947
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 4.339250493096647,
+    "container_quota_busy_percent": {
+      "mean": 2.80792758958655,
+      "max": 2.9531122974352138
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 519,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 26861568,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 3.655481535430683,
+          "max": 3.8705961256097865
+        },
+        "tx_mbps": {
+          "mean": 131.66611642009468,
+          "max": 135.61344753007714
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/direct/http/01-nighthawk/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 0.4631466975653879,
+      "max": 0.5297679112008072
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 1.0080645161290323,
+    "container_quota_busy_percent": {
+      "mean": 2.0444950934786945,
+      "max": 2.2244866013451072
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 9,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 24068096,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 1.8330366545775882,
+          "max": 2.075295809576002
+        },
+        "tx_mbps": {
+          "mean": 119.28906152737336,
+          "max": 133.60531397757953
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/ai/00-fortio-openai/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 22.69664933169676,
+      "max": 22.77722277722278
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 29.227941176470587,
+    "container_quota_busy_percent": {
+      "mean": 27.260416364048268,
+      "max": 27.3163715437445
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 133,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 14073856,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 398.7377250467762,
+          "max": 402.2542241074828
+        },
+        "tx_mbps": {
+          "mean": 398.85616802956633,
+          "max": 402.36452393646454
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/ai/01-aiperf-openai/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 133,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 13484032,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/ai/02-aiperf-anthropic/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 133,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 13230080,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 2.8263396376748346,
+      "max": 3.1071339796172013
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 4.500978473581213,
+    "container_quota_busy_percent": {
+      "mean": 3.0421238875405416,
+      "max": 3.0889437361592087
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 130,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 13836288,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 2.3599865932073643,
+          "max": 2.5328433707998093
+        },
+        "tx_mbps": {
+          "mean": 129.52158740980653,
+          "max": 132.107959975543
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/praxis-nightly/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.7362805252733804,
+      "max": 0.9610520991401112
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 1.6161616161616161,
+    "container_quota_busy_percent": {
+      "mean": 2.909209610492348,
+      "max": 3.223767308045978
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 130,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 13557760,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 1.8462935865348458,
+          "max": 2.0282196469556077
+        },
+        "tx_mbps": {
+          "mean": 121.71762575835797,
+          "max": 133.70216604830702
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/praxis-release/ai/00-fortio-openai/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 23.48364793460141,
+      "max": 23.72838887496868
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 27.884615384615383,
+    "container_quota_busy_percent": {
+      "mean": 28.42531549950055,
+      "max": 28.727106390456928
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 128,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 14020608,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 400.6270588385587,
+          "max": 403.5535739810639
+        },
+        "tx_mbps": {
+          "mean": 400.42776404547476,
+          "max": 403.4179650320494
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/praxis-release/ai/01-aiperf-openai/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 125,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 13672448,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/praxis-release/ai/02-aiperf-anthropic/execution.json",
+    "samples": 1,
+    "host_busy_percent": null,
+    "host_steal_percent": null,
+    "host_iowait_percent": null,
+    "busiest_sampled_vcpu_percent": null,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 125,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 13303808,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {}
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/praxis-release/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 2.129879062771366,
+      "max": 2.473145141144142
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 3.7549407114624507,
+    "container_quota_busy_percent": {
+      "mean": 2.97590287743818,
+      "max": 2.9888491983403775
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 133,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 14192640,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 2.3570479903903467,
+          "max": 2.4161319820811564
+        },
+        "tx_mbps": {
+          "mean": 129.57815873425926,
+          "max": 132.25613833882
+        }
+      }
+    }
+  },
+  {
+    "role": "backend",
+    "workload": "results/common/qualification-nohealth/praxis-release/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 1.1968612485661763,
+      "max": 1.6796189521183253
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.012534469791927802,
+      "max": 0.025068939583855605
+    },
+    "busiest_sampled_vcpu_percent": 3.3932135728542914,
+    "container_quota_busy_percent": {
+      "mean": 2.8234006670051057,
+      "max": 3.1473612049301187
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 133,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": 13799424,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {},
+    "interface_mbps": {
+      "lo": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "docker0": {
+        "rx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "tx_mbps": {
+          "mean": 0.0,
+          "max": 0.0
+        }
+      },
+      "ens4": {
+        "rx_mbps": {
+          "mean": 1.8771849101721845,
+          "max": 2.0682566530047217
+        },
+        "tx_mbps": {
+          "mean": 121.24965676316353,
+          "max": 133.68228874613177
+        }
+      }
+    }
+  }
+]

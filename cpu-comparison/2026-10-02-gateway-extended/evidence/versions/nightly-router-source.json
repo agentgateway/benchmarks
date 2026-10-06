@@ -1,0 +1,5 @@
+{
+  "url": "https://github.com/praxis-proxy/praxis/blob/31ac6dc86fba30ff510b17f9139021de60d8ba79/crates/filter/src/builtins/http/traffic_management/router/mod.rs#L249",
+  "sha256": "c5699b8e4c0ce4f15195b0c6c3049f849a00f5f17a837bc9b14afb4ac26d4c4e",
+  "observation": "from_config rejects cfg.routes.is_empty() with the same fatal error observed in nightly data-plane logs."
+}
