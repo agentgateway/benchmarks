@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-05T20:09:42.820756+00:00",
+  "workflow_run": "https://github.com/praxis-proxy/ai/actions/runs/36967646910",
+  "event": "schedule",
+  "created_at": "2026-10-02T05:09:00Z",
+  "source_revision": "f5f51a751d6f25acde96fb840665b24f2696ce46",
+  "index_digest": "sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65",
+  "linux_amd64_image": "ghcr.io/praxis-proxy/ai@sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+  "retained_tag": "sha-f5f51a7",
+  "log_sha256": "cc9786649ce6c59bfedcddb49a64ceaaf36e57ad491adfab79e9565a899daf3f",
+  "matching_log_lines": [
+    {
+      "line": 4370,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:25:21.3448833Z #47 exporting manifest list sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65 done"
+    },
+    {
+      "line": 4373,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:25:23.5471781Z #47 pushing manifest for ghcr.io/praxis-proxy/ai:main@sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65"
+    },
+    {
+      "line": 4374,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:25:24.6395447Z #47 pushing manifest for ghcr.io/praxis-proxy/ai:main@sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65 1.1s done"
+    },
+    {
+      "line": 4376,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:25:24.7462907Z #47 pushing manifest for ghcr.io/praxis-proxy/ai:nightly@sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65"
+    },
+    {
+      "line": 4377,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:25:25.3011046Z #47 pushing manifest for ghcr.io/praxis-proxy/ai:nightly@sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65 0.6s done"
+    },
+    {
+      "line": 4379,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:25:25.4183915Z #47 pushing manifest for ghcr.io/praxis-proxy/ai:sha-f5f51a7@sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65"
+    },
+    {
+      "line": 4380,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:25:25.8501247Z #47 pushing manifest for ghcr.io/praxis-proxy/ai:sha-f5f51a7@sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65 0.4s done"
+    },
+    {
+      "line": 4454,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:26:03.6660972Z sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65"
+    },
+    {
+      "line": 4457,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:26:03.6662772Z sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65"
+    },
+    {
+      "line": 4728,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:26:03.6791737Z     \"digest\": \"sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65\","
+    },
+    {
+      "line": 4731,
+      "text": "container\tUNKNOWN STEP\t2026-10-02T05:26:03.6792929Z   \"containerimage.digest\": \"sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65\","
+    }
+  ],
+  "correction": "The dated tag nightly-20261002 is absent, but that does not imply no October2 build. AI publishes rolling nightly and SHA tags. The SHA-tag index matches the October2 scheduled workflow digest."
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "pass": 1,
+    "treatment": "agentgateway",
+    "kind": "controller",
+    "requests": 262,
+    "failed_requests": 0,
+    "max_dispatch_delay_seconds": 0.0501028109993058,
+    "note": "Scheduled 10 requests/sec; report individual failures and recovery interval, not a production availability estimate.",
+    "mutation_seconds": 10.051083925000057,
+    "first_failed_probe_seconds": null,
+    "last_failed_probe_seconds": null,
+    "first_post_mutation_failed_probe_seconds": null,
+    "last_post_mutation_failed_probe_seconds": null,
+    "observed_recovery_after_mutation_seconds": null,
+    "post_mutation_failed_requests": 0,
+    "recovery_censored": false,
+    "command_exits": [
+      0,
+      0
+    ],
+    "pre_mutation_failures": 0,
+    "post_mutation_observation_seconds": 16.049837892998767,
+    "first_to_last_post_mutation_failed_probe_span_seconds": 0
+  },
+  {
+    "pass": 1,
+    "treatment": "agentgateway",
+    "kind": "data-plane",
+    "requests": 227,
+    "failed_requests": 0,
+    "max_dispatch_delay_seconds": 0.024917139000535826,
+    "note": "Scheduled 10 requests/sec; report individual failures and recovery interval, not a production availability estimate.",
+    "mutation_seconds": 10.025846866999927,
+    "first_failed_probe_seconds": null,
+    "last_failed_probe_seconds": null,
+    "first_post_mutation_failed_probe_seconds": null,
+    "last_post_mutation_failed_probe_seconds": null,
+    "observed_recovery_after_mutation_seconds": null,
+    "post_mutation_failed_requests": 0,
+    "recovery_censored": false,
+    "command_exits": [
+      0,
+      0
+    ],
+    "pre_mutation_failures": 0,
+    "post_mutation_observation_seconds": 12.575288589001502,
+    "first_to_last_post_mutation_failed_probe_span_seconds": 0
+  },
+  {
+    "pass": 1,
+    "treatment": "praxis-release",
+    "kind": "controller",
+    "requests": 220,
+    "failed_requests": 0,
+    "max_dispatch_delay_seconds": 0.04933941599847458,
+    "note": "Scheduled 10 requests/sec; report individual failures and recovery interval, not a production availability estimate.",
+    "mutation_seconds": 10.05017840399887,
+    "first_failed_probe_seconds": null,
+    "last_failed_probe_seconds": null,
+    "first_post_mutation_failed_probe_seconds": null,
+    "last_post_mutation_failed_probe_seconds": null,
+    "observed_recovery_after_mutation_seconds": null,
+    "post_mutation_failed_requests": 0,
+    "recovery_censored": false,
+    "command_exits": [
+      0,
+      0
+    ],
+    "pre_mutation_failures": 0,
+    "post_mutation_observation_seconds": 11.850553928001318,
+    "first_to_last_post_mutation_failed_probe_span_seconds": 0
+  },
+  {
+    "pass": 1,
+    "treatment": "praxis-release",
+    "kind": "data-plane",
+    "requests": 234,
+    "failed_requests": 27,
+    "max_dispatch_delay_seconds": 0.02509180900051433,
+    "note": "Scheduled 10 requests/sec; report individual failures and recovery interval, not a production availability estimate.",
+    "mutation_seconds": 10.02566128699982,
+    "first_failed_probe_seconds": 10.500766515999203,
+    "last_failed_probe_seconds": 13.10052293499939,
+    "first_post_mutation_failed_probe_seconds": 10.500766515999203,
+    "last_post_mutation_failed_probe_seconds": 13.10052293499939,
+    "observed_recovery_after_mutation_seconds": 3.1755853310005477,
+    "post_mutation_failed_requests": 27,
+    "recovery_censored": false,
+    "command_exits": [
+      0,
+      0
+    ],
+    "pre_mutation_failures": 0,
+    "post_mutation_observation_seconds": 13.275648876999185,
+    "first_to_last_post_mutation_failed_probe_span_seconds": 2.5997564190001867
+  }
+]

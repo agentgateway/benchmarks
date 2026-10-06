@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-05T20:05:15.528289+00:00",
+  "results": [
+    {
+      "image": "ghcr.io/praxis-proxy/ai:v0.5.0",
+      "status": 404,
+      "registry_error": {
+        "errors": [
+          {
+            "code": "MANIFEST_UNKNOWN",
+            "message": "manifest unknown"
+          }
+        ]
+      }
+    },
+    {
+      "image": "ghcr.io/praxis-proxy/ai:nightly-20261002",
+      "status": 404,
+      "registry_error": {
+        "errors": [
+          {
+            "code": "MANIFEST_UNKNOWN",
+            "message": "manifest unknown"
+          }
+        ]
+      }
+    }
+  ]
+}

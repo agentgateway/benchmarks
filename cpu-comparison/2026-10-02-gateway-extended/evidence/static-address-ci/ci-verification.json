@@ -1,0 +1,51 @@
+{
+  "checked_on": "2026-10-05",
+  "runs": [
+    {
+      "commit": "ea5608642b9d5c94c5baf5fd9f2f9849b808e963",
+      "job_url": "https://github.com/agentgateway/agentgateway/actions/runs/37027877882/job/110907035317",
+      "downloaded_log_sha256": "5aa1f0628fcaddee8b0eeed9fd0979a9849ac2c06250d4e9155c4985d7cd2e01",
+      "excerpts": [
+        {
+          "line": 1875,
+          "text": "controller-conformance\tUNKNOWN STEP\t2026-10-02T15:36:34.1864964Z === RUN   TestConformance/GatewayStaticAddresses"
+        },
+        {
+          "line": 152762,
+          "text": "controller-conformance\tUNKNOWN STEP\t2026-10-02T15:38:41.7103588Z     --- PASS: TestConformance/GatewayStaticAddresses (0.34s)"
+        }
+      ]
+    },
+    {
+      "commit": "a9e2404cb6212bb6a018819d8f73254c434a4bb0",
+      "job_url": "https://github.com/agentgateway/agentgateway/actions/runs/37330195266/job/111831058271",
+      "downloaded_log_sha256": "6fee03e17250e59888b8772225ed53e438a5c2a0a6b4323c61372cdd95af7434",
+      "excerpts": [
+        {
+          "line": 2125,
+          "text": "controller-conformance\tUNKNOWN STEP\t2026-10-05T15:09:00.3574324Z === RUN   TestConformance/GatewayStaticAddresses"
+        },
+        {
+          "line": 151526,
+          "text": "controller-conformance\tUNKNOWN STEP\t2026-10-05T15:10:47.3666615Z     --- PASS: TestConformance/GatewayStaticAddresses (0.67s)"
+        }
+      ]
+    }
+  ],
+  "release_module": "https://github.com/agentgateway/agentgateway/blob/ea5608642b9d5c94c5baf5fd9f2f9849b808e963/go.mod#L61-L64",
+  "release_gateway_api": "v1.6.2",
+  "release_conformance_module": "v1.6.1",
+  "benchmark_conformance": "v1.5.1",
+  "ci_suite_commit": "8bb74df00e56ec8f944d48c25e6c1c9c2f6848e3",
+  "upstream_fix": {
+    "body": "\r\n**What type of PR is this?**\r\n\r\n/area conformance-test\r\n\r\n**What this PR does / why we need it**:\r\nThis test was assuming that observing Programmed=True and matching listener status implies status.addresses has already been written in the same status observation. Gateway API does not require that atomicity. Address publication is an eventually consistent status field, and the suite already has GatewayMustHaveAddress timeout semantics for this. The test should wait for the address field it asserts, rather than relying on other status fields as a proxy.\r\n\r\nIn the late v1.6.0 change after rc1 this test was made parallel which makes this issue happen much more often for us, as Metallb gets overwhelmed and delays provisioning of the address.\r\n\r\n**Which issue(s) this PR fixes**:\r\n<!--\r\n*Automatically closes linked issue when PR is merged.\r\nUsage: `Fixes #<issue number>`, or `Fixes (paste link of issue)`.\r\n-->\r\nFixes #\r\n\r\n**Does this PR introduce a user-facing change?**:\r\n<!--\r\nIf no, just write \"NONE\" in the release-note block below.\r\nIf yes, please enter a release note below:\r\n-->\r\n```release-note\r\nNONE\r\n```\r\n",
+    "html_url": "https://github.com/kubernetes-sigs/gateway-api/pull/5033",
+    "merge_commit_sha": "022ffb57fc7772335372a7297de4008a07e90e27",
+    "merged_at": "2026-07-01T20:32:13Z",
+    "number": 5033,
+    "state": "closed",
+    "title": "conformance: make static address test eventually consistent"
+  },
+  "new_gcp_test_executed": false,
+  "original_campaign_results_modified": false
+}

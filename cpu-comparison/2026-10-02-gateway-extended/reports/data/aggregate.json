@@ -1,0 +1,2539 @@
+{
+  "praxis-v0.5.2": {
+    "agentgateway": {
+      "repetitions_recorded": 3,
+      "repetitions_cleaned_up": 3,
+      "repetitions_with_all_107_tests_scored": 3,
+      "repetition_counts": [
+        {
+          "pass": 106,
+          "fail": 1
+        },
+        {
+          "pass": 106,
+          "fail": 1
+        },
+        {
+          "pass": 106,
+          "fail": 1
+        }
+      ],
+      "mean_pass_count": 106,
+      "mean_pass_percentage": 99.06542056074767,
+      "categories": {
+        "grpc": [
+          {
+            "pass": 5
+          },
+          {
+            "pass": 5
+          },
+          {
+            "pass": 5
+          }
+        ],
+        "http-core": [
+          {
+            "pass": 33
+          },
+          {
+            "pass": 33
+          },
+          {
+            "pass": 33
+          }
+        ],
+        "http-gateway-extended": [
+          {
+            "pass": 53,
+            "fail": 1
+          },
+          {
+            "pass": 53,
+            "fail": 1
+          },
+          {
+            "pass": 53,
+            "fail": 1
+          }
+        ],
+        "tls": [
+          {
+            "pass": 15
+          },
+          {
+            "pass": 15
+          },
+          {
+            "pass": 15
+          }
+        ]
+      },
+      "channels": {
+        "experimental": [
+          {
+            "pass": 2
+          },
+          {
+            "pass": 2
+          },
+          {
+            "pass": 2
+          }
+        ],
+        "standard": [
+          {
+            "pass": 104,
+            "fail": 1
+          },
+          {
+            "pass": 104,
+            "fail": 1
+          },
+          {
+            "pass": 104,
+            "fail": 1
+          }
+        ]
+      },
+      "repeatability": {
+        "BackendTLSPolicy": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "BackendTLSPolicyConflictResolution": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "BackendTLSPolicyInvalidCACertificateRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "BackendTLSPolicyInvalidKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "BackendTLSPolicyObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "BackendTLSPolicySANValidation": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GRPCExactMethodMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GRPCRouteHeaderMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GRPCRouteListenerHostnameMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GRPCRouteNamedRule": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GRPCRouteWeight": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayBackendClientCertificateFeature": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayClassObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayFrontendClientCertificateValidation": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayFrontendClientCertificateValidationInsecureFallback": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayFrontendInvalidDefaultClientCertificateValidation": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayHTTPListenerIsolation": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInfrastructure": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInvalidFrontendClientCertificateValidation": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInvalidRouteKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInvalidTLSBackendConfiguration": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInvalidTLSConfiguration": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayModifyListeners": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayOptionalAddressValue": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretMissingReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretReferenceGrantAllInNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretReferenceGrantSpecific": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayStaticAddresses": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayWithAttachedRoutes": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayWithAttachedRoutesWithPort8080": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoute303Redirect": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoute307Redirect": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoute308Redirect": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteBackendProtocolH2C": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteBackendProtocolWebSocket": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteBackendRequestHeaderModifier": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteCORS": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteCORSAllowCredentialsBehavior": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteCrossNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteDisallowedKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteExactPathMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHTTPSListener": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHTTPSListenerDetectMisdirectedRequests": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHeaderMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHostnameIntersection": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidBackendRefUnknownKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidCrossNamespaceBackendRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidCrossNamespaceParentRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidNonExistentBackendRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidParentRefNotMatchingListenerPort": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidParentRefNotMatchingSectionName": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidParentRefSectionNameNotMatchingPort": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteListenerHostnameMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteListenerPortMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteMatchingAcrossRoutes": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteMethodMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteNamedRule": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoutePartiallyInvalidViaInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoutePathMatchOrder": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteQueryParamMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectHostAndStatus": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectPath": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectPort": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectPortAndScheme": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectScheme": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestHeaderModifier": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestHeaderModifierBackendWeights": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestMirror": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestMultipleMirrors": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestPercentageMirror": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteResponseHeaderModifier": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRewriteHost": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRewritePath": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteServiceTypes": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteSimpleSameNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteTimeoutBackendRequest": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteTimeoutRequest": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteWeight": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedNamespaceNone": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedNamespaceSame": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedNamespaceSelector": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedRoutesNamespaces": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedRoutesSupportedKinds": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetDefaultNotAllowed": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetHTTPRouting": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetHostnameConflict": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetProtocolConflict": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteHostnameIntersection": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteInvalidBackendRefNonexistent": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteInvalidBackendRefUnknownKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteInvalidNoMatchingListener": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteInvalidNoMatchingListenerHostname": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteListenerMixedTerminationNotSupported": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteListenerPassthroughSupportedKinds": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteListenerTerminateNotSupported": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteListenerTerminateSupportedKinds": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteMixedTerminationSameNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteSimpleSameNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteTerminateSimpleSameNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      }
+    },
+    "praxis": {
+      "repetitions_recorded": 3,
+      "repetitions_cleaned_up": 3,
+      "repetitions_with_all_107_tests_scored": 3,
+      "repetition_counts": [
+        {
+          "fail": 55,
+          "pass": 52
+        },
+        {
+          "fail": 55,
+          "pass": 52
+        },
+        {
+          "fail": 55,
+          "pass": 52
+        }
+      ],
+      "mean_pass_count": 52,
+      "mean_pass_percentage": 48.598130841121495,
+      "categories": {
+        "grpc": [
+          {
+            "fail": 5
+          },
+          {
+            "fail": 5
+          },
+          {
+            "fail": 5
+          }
+        ],
+        "http-core": [
+          {
+            "pass": 33
+          },
+          {
+            "pass": 33
+          },
+          {
+            "pass": 33
+          }
+        ],
+        "http-gateway-extended": [
+          {
+            "fail": 37,
+            "pass": 17
+          },
+          {
+            "fail": 37,
+            "pass": 17
+          },
+          {
+            "fail": 37,
+            "pass": 17
+          }
+        ],
+        "tls": [
+          {
+            "fail": 13,
+            "pass": 2
+          },
+          {
+            "fail": 13,
+            "pass": 2
+          },
+          {
+            "fail": 13,
+            "pass": 2
+          }
+        ]
+      },
+      "channels": {
+        "experimental": [
+          {
+            "pass": 1,
+            "fail": 1
+          },
+          {
+            "pass": 1,
+            "fail": 1
+          },
+          {
+            "pass": 1,
+            "fail": 1
+          }
+        ],
+        "standard": [
+          {
+            "fail": 54,
+            "pass": 51
+          },
+          {
+            "fail": 54,
+            "pass": 51
+          },
+          {
+            "fail": 54,
+            "pass": 51
+          }
+        ]
+      },
+      "repeatability": {
+        "BackendTLSPolicy": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "BackendTLSPolicyConflictResolution": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "BackendTLSPolicyInvalidCACertificateRef": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "BackendTLSPolicyInvalidKind": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "BackendTLSPolicyObservedGenerationBump": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "BackendTLSPolicySANValidation": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GRPCExactMethodMatching": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GRPCRouteHeaderMatching": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GRPCRouteListenerHostnameMatching": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GRPCRouteNamedRule": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GRPCRouteWeight": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayBackendClientCertificateFeature": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayClassObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayFrontendClientCertificateValidation": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayFrontendClientCertificateValidationInsecureFallback": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayFrontendInvalidDefaultClientCertificateValidation": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayHTTPListenerIsolation": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayInfrastructure": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInvalidFrontendClientCertificateValidation": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayInvalidRouteKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInvalidTLSBackendConfiguration": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayInvalidTLSConfiguration": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayModifyListeners": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayOptionalAddressValue": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretMissingReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretReferenceGrantAllInNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretReferenceGrantSpecific": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayStaticAddresses": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayWithAttachedRoutes": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayWithAttachedRoutesWithPort8080": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoute303Redirect": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRoute307Redirect": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoute308Redirect": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteBackendProtocolH2C": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteBackendProtocolWebSocket": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteBackendRequestHeaderModifier": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteCORS": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteCORSAllowCredentialsBehavior": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteCrossNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteDisallowedKind": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteExactPathMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHTTPSListener": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHTTPSListenerDetectMisdirectedRequests": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteHeaderMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHostnameIntersection": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidBackendRefUnknownKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidCrossNamespaceBackendRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidCrossNamespaceParentRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidNonExistentBackendRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidParentRefNotMatchingListenerPort": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidParentRefNotMatchingSectionName": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidParentRefSectionNameNotMatchingPort": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteListenerHostnameMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteListenerPortMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteMatchingAcrossRoutes": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteMethodMatching": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteNamedRule": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoutePartiallyInvalidViaInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoutePathMatchOrder": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteQueryParamMatching": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteRedirectHostAndStatus": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectPath": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteRedirectPort": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectPortAndScheme": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteRedirectScheme": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestHeaderModifier": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestHeaderModifierBackendWeights": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteRequestMirror": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteRequestMultipleMirrors": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteRequestPercentageMirror": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "HTTPRouteResponseHeaderModifier": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRewriteHost": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRewritePath": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteServiceTypes": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteSimpleSameNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteTimeoutBackendRequest": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteTimeoutRequest": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteWeight": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedNamespaceNone": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "ListenerSetAllowedNamespaceSame": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "ListenerSetAllowedNamespaceSelector": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "ListenerSetAllowedRoutesNamespaces": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "ListenerSetAllowedRoutesSupportedKinds": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "ListenerSetDefaultNotAllowed": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "ListenerSetHTTPRouting": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "ListenerSetHostnameConflict": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "ListenerSetProtocolConflict": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "ListenerSetReferenceGrant": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteHostnameIntersection": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteInvalidBackendRefNonexistent": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteInvalidBackendRefUnknownKind": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteInvalidNoMatchingListener": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteInvalidNoMatchingListenerHostname": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteInvalidReferenceGrant": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteListenerMixedTerminationNotSupported": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteListenerPassthroughSupportedKinds": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteListenerTerminateNotSupported": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteListenerTerminateSupportedKinds": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteMixedTerminationSameNamespace": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteSimpleSameNamespace": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "TLSRouteTerminateSimpleSameNamespace": [
+          "fail",
+          "fail",
+          "fail"
+        ]
+      }
+    }
+  },
+  "praxis-nightly-20261002": {
+    "agentgateway": {
+      "repetitions_recorded": 3,
+      "repetitions_cleaned_up": 3,
+      "repetitions_with_all_107_tests_scored": 3,
+      "repetition_counts": [
+        {
+          "pass": 106,
+          "fail": 1
+        },
+        {
+          "pass": 106,
+          "fail": 1
+        },
+        {
+          "pass": 106,
+          "fail": 1
+        }
+      ],
+      "mean_pass_count": 106,
+      "mean_pass_percentage": 99.06542056074767,
+      "categories": {
+        "grpc": [
+          {
+            "pass": 5
+          },
+          {
+            "pass": 5
+          },
+          {
+            "pass": 5
+          }
+        ],
+        "http-core": [
+          {
+            "pass": 33
+          },
+          {
+            "pass": 33
+          },
+          {
+            "pass": 33
+          }
+        ],
+        "http-gateway-extended": [
+          {
+            "pass": 53,
+            "fail": 1
+          },
+          {
+            "pass": 53,
+            "fail": 1
+          },
+          {
+            "pass": 53,
+            "fail": 1
+          }
+        ],
+        "tls": [
+          {
+            "pass": 15
+          },
+          {
+            "pass": 15
+          },
+          {
+            "pass": 15
+          }
+        ]
+      },
+      "channels": {
+        "experimental": [
+          {
+            "pass": 2
+          },
+          {
+            "pass": 2
+          },
+          {
+            "pass": 2
+          }
+        ],
+        "standard": [
+          {
+            "pass": 104,
+            "fail": 1
+          },
+          {
+            "pass": 104,
+            "fail": 1
+          },
+          {
+            "pass": 104,
+            "fail": 1
+          }
+        ]
+      },
+      "repeatability": {
+        "BackendTLSPolicy": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "BackendTLSPolicyConflictResolution": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "BackendTLSPolicyInvalidCACertificateRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "BackendTLSPolicyInvalidKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "BackendTLSPolicyObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "BackendTLSPolicySANValidation": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GRPCExactMethodMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GRPCRouteHeaderMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GRPCRouteListenerHostnameMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GRPCRouteNamedRule": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GRPCRouteWeight": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayBackendClientCertificateFeature": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayClassObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayFrontendClientCertificateValidation": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayFrontendClientCertificateValidationInsecureFallback": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayFrontendInvalidDefaultClientCertificateValidation": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayHTTPListenerIsolation": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInfrastructure": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInvalidFrontendClientCertificateValidation": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInvalidRouteKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInvalidTLSBackendConfiguration": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayInvalidTLSConfiguration": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayModifyListeners": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayOptionalAddressValue": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretMissingReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretReferenceGrantAllInNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewaySecretReferenceGrantSpecific": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayStaticAddresses": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "GatewayWithAttachedRoutes": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "GatewayWithAttachedRoutesWithPort8080": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoute303Redirect": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoute307Redirect": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoute308Redirect": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteBackendProtocolH2C": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteBackendProtocolWebSocket": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteBackendRequestHeaderModifier": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteCORS": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteCORSAllowCredentialsBehavior": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteCrossNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteDisallowedKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteExactPathMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHTTPSListener": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHTTPSListenerDetectMisdirectedRequests": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHeaderMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteHostnameIntersection": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidBackendRefUnknownKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidCrossNamespaceBackendRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidCrossNamespaceParentRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidNonExistentBackendRef": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidParentRefNotMatchingListenerPort": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidParentRefNotMatchingSectionName": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidParentRefSectionNameNotMatchingPort": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteListenerHostnameMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteListenerPortMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteMatchingAcrossRoutes": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteMethodMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteNamedRule": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteObservedGenerationBump": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoutePartiallyInvalidViaInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRoutePathMatchOrder": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteQueryParamMatching": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectHostAndStatus": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectPath": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectPort": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectPortAndScheme": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRedirectScheme": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestHeaderModifier": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestHeaderModifierBackendWeights": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestMirror": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestMultipleMirrors": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRequestPercentageMirror": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteResponseHeaderModifier": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRewriteHost": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteRewritePath": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteServiceTypes": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteSimpleSameNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteTimeoutBackendRequest": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteTimeoutRequest": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "HTTPRouteWeight": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedNamespaceNone": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedNamespaceSame": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedNamespaceSelector": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedRoutesNamespaces": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetAllowedRoutesSupportedKinds": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetDefaultNotAllowed": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetHTTPRouting": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetHostnameConflict": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetProtocolConflict": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "ListenerSetReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteHostnameIntersection": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteInvalidBackendRefNonexistent": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteInvalidBackendRefUnknownKind": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteInvalidNoMatchingListener": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteInvalidNoMatchingListenerHostname": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteInvalidReferenceGrant": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteListenerMixedTerminationNotSupported": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteListenerPassthroughSupportedKinds": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteListenerTerminateNotSupported": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteListenerTerminateSupportedKinds": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteMixedTerminationSameNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteSimpleSameNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "TLSRouteTerminateSimpleSameNamespace": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      }
+    },
+    "praxis": {
+      "repetitions_recorded": 3,
+      "repetitions_cleaned_up": 3,
+      "repetitions_with_all_107_tests_scored": 0,
+      "repetition_counts": [
+        {
+          "not-executed": 107
+        },
+        {
+          "not-executed": 107
+        },
+        {
+          "not-executed": 107
+        }
+      ],
+      "mean_pass_count": null,
+      "mean_pass_percentage": null,
+      "categories": {
+        "grpc": [
+          {
+            "not-executed": 5
+          },
+          {
+            "not-executed": 5
+          },
+          {
+            "not-executed": 5
+          }
+        ],
+        "http-core": [
+          {
+            "not-executed": 33
+          },
+          {
+            "not-executed": 33
+          },
+          {
+            "not-executed": 33
+          }
+        ],
+        "http-gateway-extended": [
+          {
+            "not-executed": 54
+          },
+          {
+            "not-executed": 54
+          },
+          {
+            "not-executed": 54
+          }
+        ],
+        "tls": [
+          {
+            "not-executed": 15
+          },
+          {
+            "not-executed": 15
+          },
+          {
+            "not-executed": 15
+          }
+        ]
+      },
+      "channels": {
+        "experimental": [
+          {
+            "not-executed": 2
+          },
+          {
+            "not-executed": 2
+          },
+          {
+            "not-executed": 2
+          }
+        ],
+        "standard": [
+          {
+            "not-executed": 105
+          },
+          {
+            "not-executed": 105
+          },
+          {
+            "not-executed": 105
+          }
+        ]
+      },
+      "repeatability": {
+        "BackendTLSPolicy": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "BackendTLSPolicyConflictResolution": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "BackendTLSPolicyInvalidCACertificateRef": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "BackendTLSPolicyInvalidKind": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "BackendTLSPolicyObservedGenerationBump": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "BackendTLSPolicySANValidation": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GRPCExactMethodMatching": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GRPCRouteHeaderMatching": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GRPCRouteListenerHostnameMatching": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GRPCRouteNamedRule": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GRPCRouteWeight": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayBackendClientCertificateFeature": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayClassObservedGenerationBump": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayFrontendClientCertificateValidation": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayFrontendClientCertificateValidationInsecureFallback": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayFrontendInvalidDefaultClientCertificateValidation": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayHTTPListenerIsolation": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayInfrastructure": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayInvalidFrontendClientCertificateValidation": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayInvalidRouteKind": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayInvalidTLSBackendConfiguration": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayInvalidTLSConfiguration": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayModifyListeners": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayObservedGenerationBump": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayOptionalAddressValue": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewaySecretInvalidReferenceGrant": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewaySecretMissingReferenceGrant": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewaySecretReferenceGrantAllInNamespace": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewaySecretReferenceGrantSpecific": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayStaticAddresses": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayWithAttachedRoutes": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "GatewayWithAttachedRoutesWithPort8080": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRoute303Redirect": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRoute307Redirect": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRoute308Redirect": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteBackendProtocolH2C": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteBackendProtocolWebSocket": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteBackendRequestHeaderModifier": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteCORS": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteCORSAllowCredentialsBehavior": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteCrossNamespace": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteDisallowedKind": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteExactPathMatching": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteHTTPSListener": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteHTTPSListenerDetectMisdirectedRequests": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteHeaderMatching": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteHostnameIntersection": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteInvalidBackendRefUnknownKind": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteInvalidCrossNamespaceBackendRef": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteInvalidCrossNamespaceParentRef": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteInvalidNonExistentBackendRef": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteInvalidParentRefNotMatchingListenerPort": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteInvalidParentRefNotMatchingSectionName": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteInvalidParentRefSectionNameNotMatchingPort": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteInvalidReferenceGrant": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteListenerHostnameMatching": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteListenerPortMatching": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteMatching": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteMatchingAcrossRoutes": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteMethodMatching": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteNamedRule": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteObservedGenerationBump": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRoutePartiallyInvalidViaInvalidReferenceGrant": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRoutePathMatchOrder": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteQueryParamMatching": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRedirectHostAndStatus": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRedirectPath": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRedirectPort": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRedirectPortAndScheme": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRedirectScheme": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteReferenceGrant": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRequestHeaderModifier": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRequestHeaderModifierBackendWeights": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRequestMirror": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRequestMultipleMirrors": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRequestPercentageMirror": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteResponseHeaderModifier": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRewriteHost": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteRewritePath": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteServiceTypes": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteSimpleSameNamespace": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteTimeoutBackendRequest": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteTimeoutRequest": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "HTTPRouteWeight": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "ListenerSetAllowedNamespaceNone": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "ListenerSetAllowedNamespaceSame": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "ListenerSetAllowedNamespaceSelector": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "ListenerSetAllowedRoutesNamespaces": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "ListenerSetAllowedRoutesSupportedKinds": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "ListenerSetDefaultNotAllowed": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "ListenerSetHTTPRouting": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "ListenerSetHostnameConflict": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "ListenerSetProtocolConflict": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "ListenerSetReferenceGrant": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteHostnameIntersection": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteInvalidBackendRefNonexistent": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteInvalidBackendRefUnknownKind": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteInvalidNoMatchingListener": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteInvalidNoMatchingListenerHostname": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteInvalidReferenceGrant": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteListenerMixedTerminationNotSupported": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteListenerPassthroughSupportedKinds": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteListenerTerminateNotSupported": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteListenerTerminateSupportedKinds": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteMixedTerminationSameNamespace": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteSimpleSameNamespace": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ],
+        "TLSRouteTerminateSimpleSameNamespace": [
+          "not-executed",
+          "not-executed",
+          "not-executed"
+        ]
+      }
+    }
+  }
+}

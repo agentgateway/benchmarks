@@ -1,0 +1,26 @@
+name: agw-praxis-ai-bench
+services:
+  mock:
+    image: agw-praxis-mock:local
+    build: ./mock
+    cpuset: "${MOCK_CPUSET:-4-5}"
+    cpus: 2
+    mem_limit: 2g
+    ports: ["127.0.0.1:28081:8081"]
+  agentgateway:
+    image: ghcr.io/agentgateway/agentgateway@sha256:bf2f339ef326d32def2aaeb44b1b4549801293c19b89e764a4228667d97d9896
+    command: ["-f", "/etc/agentgateway/config.yaml"]
+    volumes: ["./configs/agentgateway.yaml:/etc/agentgateway/config.yaml:ro"]
+    cpuset: "${GATEWAY_CPUSET:-2-3}"
+    cpus: 2
+    mem_limit: 2g
+    ports: ["127.0.0.1:28080:8080", "127.0.0.1:28501:23501"]
+  praxis:
+    image: ghcr.io/praxis-proxy/ai@sha256:5121c638ee4b2c4dd9184c403b11d9384cd1ea26c1542085d2953a74bb15b4f8
+    platform: linux/amd64
+    command: ["-c", "/etc/praxis/config.yaml"]
+    volumes: ["./configs/praxis.yaml:/etc/praxis/config.yaml:ro"]
+    cpuset: "${GATEWAY_CPUSET:-2-3}"
+    cpus: 2
+    mem_limit: 2g
+    ports: ["127.0.0.1:28082:8080", "127.0.0.1:28083:8082", "127.0.0.1:28084:8084"]

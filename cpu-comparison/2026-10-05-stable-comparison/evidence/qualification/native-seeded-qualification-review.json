@@ -1,0 +1,25 @@
+{
+  "reviewed_at": "2026-10-05T19:30:52.687044+00:00",
+  "infrastructure_valid": true,
+  "scope": "Approval to run native profile pass1 only; repetitions require separate review",
+  "protocol_checks": {
+    "passed": 54,
+    "total": 54
+  },
+  "cancellation_checks": {
+    "passed": 9,
+    "total": 9
+  },
+  "load_cases": 12,
+  "all_load_processes_exit_zero": true,
+  "measured_fortio_non_200_responses": 0,
+  "aiperf_request_errors": 0,
+  "resources": "No collector errors, OOM or network error/drop increments. Client/backend headroom. Praxis AI reaches gateway CPU quota at the offered qualification load; this is product allocation saturation, not a client/backend constraint.",
+  "native_work_caveat": "Praxis token_count versus agentgateway built-in LLM accounting are distinct implementations; no equal-accounting-efficiency claim",
+  "host_review": "native-seeded-host-review.json",
+  "archive_manifest_sha256": "5b42cd441594f2075ef8b0ee550962c1e0e70c95f38103bc3f8975c311861a4f",
+  "qualification_label": "qualification-seeded",
+  "aiperf_random_seed": 42,
+  "corpus_review": "native-seeded-corpora.json",
+  "seed_review": "All AIPerf outputs complete, zero request errors, input/output lengths 128/64. Canonical generated message contents have identical SHA256 across treatments and API profiles; random session IDs excluded."
+}

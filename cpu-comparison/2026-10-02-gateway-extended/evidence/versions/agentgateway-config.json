@@ -1,0 +1,116 @@
+{
+  "architecture": "amd64",
+  "author": "github.com/chainguard-dev/apko",
+  "config": {
+    "User": "65532",
+    "Env": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin",
+      "SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt",
+      "AGENTGATEWAY_ENV=container"
+    ],
+    "Entrypoint": [
+      "/app/agentgateway"
+    ],
+    "WorkingDir": "/",
+    "Labels": {
+      "dev.chainguard.image.title": "glibc-dynamic",
+      "dev.chainguard.package.main": "",
+      "org.opencontainers.image.authors": "Chainguard Team https://www.chainguard.dev/",
+      "org.opencontainers.image.created": "2026-10-02T15:36:42.244Z",
+      "org.opencontainers.image.description": "Next Generation Agentic Proxy for AI Agents and MCP servers",
+      "org.opencontainers.image.licenses": "Apache-2.0",
+      "org.opencontainers.image.revision": "ea5608642b9d5c94c5baf5fd9f2f9849b808e963",
+      "org.opencontainers.image.source": "https://github.com/agentgateway/agentgateway",
+      "org.opencontainers.image.title": "agentgateway",
+      "org.opencontainers.image.url": "https://github.com/agentgateway/agentgateway",
+      "org.opencontainers.image.vendor": "Chainguard",
+      "org.opencontainers.image.version": "v1.6.0"
+    }
+  },
+  "created": "2026-10-02T15:46:56.705930279Z",
+  "history": [
+    {
+      "created": "2026-10-01T15:12:42Z",
+      "created_by": "apko",
+      "author": "apko",
+      "comment": "glibc-dynamic by Chainguard"
+    },
+    {
+      "created": "2026-10-01T15:12:42Z",
+      "created_by": "apko",
+      "author": "apko",
+      "comment": "glibc-dynamic by Chainguard"
+    },
+    {
+      "created": "2026-10-01T15:12:42Z",
+      "created_by": "apko",
+      "author": "apko",
+      "comment": "glibc-dynamic by Chainguard"
+    },
+    {
+      "created": "2026-10-01T15:12:42Z",
+      "created_by": "apko",
+      "author": "apko",
+      "comment": "glibc-dynamic by Chainguard"
+    },
+    {
+      "created": "2026-10-01T15:12:42Z",
+      "created_by": "apko",
+      "author": "apko",
+      "comment": "glibc-dynamic by Chainguard"
+    },
+    {
+      "created": "2026-10-02T15:46:56.705930279Z",
+      "created_by": "ARG TARGETARCH=amd64",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-10-02T15:46:56.705930279Z",
+      "created_by": "ENV AGENTGATEWAY_ENV=container",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-10-02T15:46:56.705930279Z",
+      "created_by": "WORKDIR /",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-10-02T15:46:56.705930279Z",
+      "created_by": "COPY /out/agentgateway /app/agentgateway # buildkit",
+      "comment": "buildkit.dockerfile.v0"
+    },
+    {
+      "created": "2026-10-02T15:46:56.705930279Z",
+      "created_by": "LABEL org.opencontainers.image.source=https://github.com/agentgateway/agentgateway",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-10-02T15:46:56.705930279Z",
+      "created_by": "LABEL org.opencontainers.image.description=Agentgateway is an open source project that is built on AI-native protocols to connect, secure, and observe agent-to-agent and agent-to-tool communication across any agent framework and environment.",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-10-02T15:46:56.705930279Z",
+      "created_by": "ENTRYPOINT [\"/app/agentgateway\"]",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    }
+  ],
+  "os": "linux",
+  "rootfs": {
+    "type": "layers",
+    "diff_ids": [
+      "sha256:d1e0a911319a014feadfd3b2a8a63cfab174a69175d6501dac1e9a0f25cefc44",
+      "sha256:cf2c94266c5671f5c3ff8d0b6ed93ddd4571ed810824b81bd816bac9c20b6e66",
+      "sha256:681678b071bfb90c71118931ac743913ddf56ecb24f1bb480821993322913b60",
+      "sha256:799794a559ba5279aa06482453b3bda9c44c1504a404d2e263e0044f32e230e2",
+      "sha256:f81d06fa53fc03e1485e4a24fa58d05be77fb52c19afc667ab524350b5826f17",
+      "sha256:dada87f18614ab8ebccee3eec3b6a552275dc3954a2d441b811c332a86728f0d"
+    ]
+  }
+}

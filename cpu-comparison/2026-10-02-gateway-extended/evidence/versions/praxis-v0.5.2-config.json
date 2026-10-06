@@ -1,0 +1,113 @@
+{
+  "architecture": "amd64",
+  "config": {
+    "User": "praxis:praxis",
+    "ExposedPorts": {
+      "8080/tcp": {},
+      "9901/tcp": {}
+    },
+    "Env": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    ],
+    "Entrypoint": [
+      "praxis",
+      "-c",
+      "/etc/praxis/config.yaml"
+    ],
+    "WorkingDir": "/etc/praxis",
+    "Labels": {
+      "org.opencontainers.image.created": "2026-08-10T20:02:52.279Z",
+      "org.opencontainers.image.description": " AI and cloud-native proxy server and framework",
+      "org.opencontainers.image.licenses": "MIT",
+      "org.opencontainers.image.revision": "af54edcd24de01e4dac7da59a809bf88bd246fe5",
+      "org.opencontainers.image.source": "https://github.com/praxis-proxy/praxis",
+      "org.opencontainers.image.title": "praxis",
+      "org.opencontainers.image.url": "https://github.com/praxis-proxy/praxis",
+      "org.opencontainers.image.version": "0.5.2"
+    },
+    "Healthcheck": {
+      "Test": [
+        "CMD-SHELL",
+        "wget -qO- http://127.0.0.1:9901/healthy || exit 1"
+      ],
+      "Interval": 5000000000,
+      "Timeout": 3000000000,
+      "StartPeriod": 2000000000
+    }
+  },
+  "created": "2026-08-10T20:11:00.395891932Z",
+  "history": [
+    {
+      "created": "2026-06-22T19:20:09.106506185Z",
+      "created_by": "ADD alpine-minirootfs-3.23.5-x86_64.tar.gz / # buildkit",
+      "comment": "buildkit.dockerfile.v0"
+    },
+    {
+      "created": "2026-06-22T19:20:09.106506185Z",
+      "created_by": "CMD [\"/bin/sh\"]",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-08-10T20:02:55.55133006Z",
+      "created_by": "LABEL org.opencontainers.image.source=https://github.com/praxis-proxy/praxis org.opencontainers.image.description=Praxis proxy server org.opencontainers.image.licenses=MIT",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-08-10T20:02:55.55133006Z",
+      "created_by": "RUN /bin/sh -c apk add --no-cache ca-certificates     && addgroup -S praxis     && adduser -S -G praxis -h /nonexistent -s /sbin/nologin praxis     && mkdir -p /etc/praxis # buildkit",
+      "comment": "buildkit.dockerfile.v0"
+    },
+    {
+      "created": "2026-08-10T20:11:00.37368632Z",
+      "created_by": "COPY --chown=root:root --chmod=0555 /usr/local/bin/praxis /usr/local/bin/praxis # buildkit",
+      "comment": "buildkit.dockerfile.v0"
+    },
+    {
+      "created": "2026-08-10T20:11:00.385730535Z",
+      "created_by": "COPY --chown=praxis:praxis --chmod=0444 examples/configs/operations/container-default.yaml /etc/praxis/config.yaml # buildkit",
+      "comment": "buildkit.dockerfile.v0"
+    },
+    {
+      "created": "2026-08-10T20:11:00.385730535Z",
+      "created_by": "USER praxis:praxis",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-08-10T20:11:00.395891932Z",
+      "created_by": "WORKDIR /etc/praxis",
+      "comment": "buildkit.dockerfile.v0"
+    },
+    {
+      "created": "2026-08-10T20:11:00.395891932Z",
+      "created_by": "EXPOSE [8080/tcp 9901/tcp]",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-08-10T20:11:00.395891932Z",
+      "created_by": "HEALTHCHECK {Test:[CMD-SHELL wget -qO- http://127.0.0.1:9901/healthy || exit 1] Interval:5s Timeout:3s StartPeriod:2s StartInterval:0s Retries:0}",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-08-10T20:11:00.395891932Z",
+      "created_by": "ENTRYPOINT [\"praxis\" \"-c\" \"/etc/praxis/config.yaml\"]",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    }
+  ],
+  "os": "linux",
+  "rootfs": {
+    "type": "layers",
+    "diff_ids": [
+      "sha256:31ad4a471c6852bfec14d757cc75a566c82a9769f12c3918cf6bf52cc0eeb3d0",
+      "sha256:3746fcad148c375b780a7dfbcdca2720ffe1f0066890537d600e180ee15b5ba3",
+      "sha256:6330ddde12ee1954ef886baeedaa0a5dd99e5d582ee9e21a970f3d667fc13329",
+      "sha256:f0bc934893f6fd68f3684f3e1243efcb939a9bb1b226c0c52552da274f6087e6",
+      "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+    ]
+  }
+}

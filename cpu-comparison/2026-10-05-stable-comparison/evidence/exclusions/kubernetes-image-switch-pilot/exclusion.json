@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-05T21:47:27.140934+00:00",
+  "excluded_scope": "Entire qualification-single-pod attempt; no accepted Kubernetes pass1 exists",
+  "observed": "Nightly switch completed against a Ready release-image pod although the operator template requested nightly. Later snapshot contains release and nightly data-plane pods and a nightly deployment. Qualification stopped before acceptance.",
+  "cause_boundary": "Rolling controller rollout and asynchronous data-plane reconciliation did not guarantee the requested image was serving at the topology barrier. The snapshot does not establish exact leader timing.",
+  "correction": "Stop both controllers and wait for their pods to disappear before changing treatment; require requested data-plane image digest at stable single-pod barrier.",
+  "cpu_profiles": "Unaffected",
+  "original_export_manifest_sha256": "addb5b7a40f482f139df5dca48286d9f5e9ec078da48d14ccf71073791604ca9"
+}

@@ -1,0 +1,31 @@
+{
+  "reviewed_at": "2026-10-03T10:22:57.528232+00:00",
+  "infrastructure_valid": true,
+  "source": "host-runtime-review.json",
+  "measured_windows": 12,
+  "hosts": 5,
+  "maximum_sample_gap_seconds": 19.397567,
+  "minimum_mem_available_kib": 31037092,
+  "maximum_system_allocated_fds": 2945,
+  "maximum_observed_container_fds": 293,
+  "sampled_oom_kill_counters": [],
+  "classified_collection_observations": [
+    {
+      "count": 111,
+      "classification": "Container disappeared between runtime enumeration and /proc reads",
+      "detail": "All affected container error and cgroup_error fields were ENOENT paths under /proc; each such container counted once."
+    },
+    {
+      "count": 1,
+      "utc": "2026-10-03T07:44:00.493386+00:00",
+      "classification": "Runtime inspect race during test-container removal",
+      "detail": "Container 243c0c817a5db2776dfc1be1a6934dd3850c04cf8ee71d8d2a453a980c23f727 belonged to praxis-httproute-listener-port-matching-5ccd4b6f9b-4nhnt. Present running/restart0 at 07:43:34, absent at 07:44:07. HTTPRouteListenerPortMatching passed. One missing container sample does not invalidate the completed correctness test."
+    }
+  ],
+  "archive_inventory_review": "Five readable archives, all 12 measured JOB-FINISHED markers, both excluded-attempt directories. Client .kube contains discovery/HTTP caches only, no kubeconfig. Known credential patterns checked; generated fixture keys sanitized with hash ledger.",
+  "limitations": [
+    "Sampled counters do not prove absence of every transient resource event.",
+    "Measured runs include disclosed host-package differences after excluded maintenance interruption.",
+    "Product operator leadership exits and terminating data-plane exit137 observations remain in per-case reviews."
+  ]
+}

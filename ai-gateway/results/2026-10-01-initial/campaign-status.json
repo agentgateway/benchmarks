@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "completed_trials": 54,
+  "planned_trials": 54,
+  "all_targets_met": false,
+  "cleanup_exit_code": 0
+}

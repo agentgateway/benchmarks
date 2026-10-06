@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-05T19:53:45.350176+00:00",
+  "finding": "Praxis Docker images inherit a five-second wget healthcheck against disabled port9901 admin listener; agentgateway has no inherited healthcheck. Minimal profile uses external readiness/protocol probes.",
+  "action": "Disable inherited Docker healthchecks for all standalone containers; requalify before Praxis measurement. Local dispatcher suspended after starting agentgateway; remote agentgateway run may complete unchanged.",
+  "retained_accepted_cases": "Seeded direct and agentgateway pass1 remain valid: no Praxis container was active and neither treatment had an inherited probe. No comparative Praxis performance case had started.",
+  "before_evidence": "qualified-gateway-inspect.json"
+}

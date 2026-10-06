@@ -1,0 +1,66 @@
+{
+  "verified_at": "2026-10-06T04:57:32.935838+00:00",
+  "repository": "danehans/agentgateway-benchmarks",
+  "visibility": "PUBLIC",
+  "tag": "cpu-2026-10-05-v1.6.0",
+  "source_commit": "e9ab209e803c7308385a5a5b9b88ad05ee2b34e0",
+  "release_url": "https://github.com/danehans/agentgateway-benchmarks/releases/tag/cpu-2026-10-05-v1.6.0",
+  "assets": {
+    "accepted-results.tar.gz": {
+      "sha256": "bdf54c5e9c3b3618d569c0e1d249edb0cb059afc36277b517ae2b02f46f2a296",
+      "bytes": 456412949,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/accepted-results.tar.gz"
+    },
+    "cpu-content-audit.json": {
+      "sha256": "fe87ea68adaae80a93b3f105fb2b40fd80d86d54631e745f3168453d8fb0b685",
+      "bytes": 1509046,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/cpu-content-audit.json"
+    },
+    "cpu-manifest.json": {
+      "sha256": "4604126cfb17fa6ce72407dfe4b6a712ad87e9f278e1ca6336d86c525694936d",
+      "bytes": 1559119,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/cpu-manifest.json"
+    },
+    "cpu-reanalysis.json": {
+      "sha256": "4892a56ea7e86cec736e291405b0bfbf2a5b2699835c13f6586eca3dce78ef06",
+      "bytes": 7166,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/cpu-reanalysis.json"
+    },
+    "cpu-redactions.json": {
+      "sha256": "4f12afa8f8bb8ce363fc5986c17bb009cfbe06b60274a1c8641260887bcdc948",
+      "bytes": 5560,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/cpu-redactions.json"
+    },
+    "extended-content-audit.json": {
+      "sha256": "ba8f90426eb9cbed746246acf948950bee531a395a5a7cb93849c21238f330ca",
+      "bytes": 115627,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/extended-content-audit.json"
+    },
+    "extended-gateway-api-results.tar.gz": {
+      "sha256": "aab7f074ad75b5b673c891846853ea5294defa6a9d2ecee254913e9fd1350baf",
+      "bytes": 69258937,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/extended-gateway-api-results.tar.gz"
+    },
+    "extended-manifest.json": {
+      "sha256": "0c64fa5bc13bfb38934756f75e0eb42e4a9d390c14f9050faf952f2d9a160264",
+      "bytes": 663,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/extended-manifest.json"
+    },
+    "extended-reanalysis.json": {
+      "sha256": "61ba3c5ce25002e8e48ad60abca7038681327065f30b9c46cceae75831190a55",
+      "bytes": 1332,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/extended-reanalysis.json"
+    },
+    "extended-redactions.json": {
+      "sha256": "809dbec8486711954821fca5f1d0c089b926882c4e56c88fef46af5292100daf",
+      "bytes": 819,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/extended-redactions.json"
+    },
+    "SHA256SUMS": {
+      "sha256": "cd2b68f7f8f67fbb53b66c230a9a4c28212cdb3728979fee7fd81164f55e66b3",
+      "bytes": 902,
+      "url": "https://github.com/danehans/agentgateway-benchmarks/releases/download/cpu-2026-10-05-v1.6.0/SHA256SUMS"
+    }
+  },
+  "scope": "Reviewed technical subset. Current accepted CPU/Kubernetes data and historical extended conformance are separate archives. Internal strategy and cloud-administration inventories excluded."
+}

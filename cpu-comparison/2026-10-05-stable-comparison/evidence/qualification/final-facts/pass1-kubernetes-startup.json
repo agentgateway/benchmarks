@@ -1,0 +1,454 @@
+{
+  "phase": "pass1",
+  "checks": [
+    {
+      "treatment": "agentgateway",
+      "stage": "switch",
+      "barrier": {
+        "single_pod_barrier": true,
+        "expected_image": "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+        "stable_seconds": 11.952065317000233,
+        "wait_seconds": 12.518324202999793,
+        "pod": "benchmark-5f4788449b-85zz4",
+        "pod_uid": "11afe6b8-6240-479d-a8ef-d27cdaff5827",
+        "image_ids": [
+          "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c"
+        ],
+        "endpoints": [
+          {
+            "addresses": [
+              "10.42.1.9"
+            ],
+            "conditions": {
+              "ready": true,
+              "serving": true,
+              "terminating": false
+            },
+            "nodeName": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "benchmark-5f4788449b-85zz4",
+              "namespace": "gateway-benchmark",
+              "uid": "11afe6b8-6240-479d-a8ef-d27cdaff5827"
+            }
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "recovery-switch",
+      "barrier": {
+        "single_pod_barrier": true,
+        "expected_image": "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+        "stable_seconds": 10.15749558799871,
+        "wait_seconds": 10.626899595001305,
+        "pod": "benchmark-576fbb998-z7lxd",
+        "pod_uid": "61853338-1d78-4a3b-bade-ee742c4b7ec9",
+        "image_ids": [
+          "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c"
+        ],
+        "endpoints": [
+          {
+            "addresses": [
+              "10.42.1.16"
+            ],
+            "conditions": {
+              "ready": true,
+              "serving": true,
+              "terminating": false
+            },
+            "nodeName": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "benchmark-576fbb998-z7lxd",
+              "namespace": "gateway-benchmark",
+              "uid": "61853338-1d78-4a3b-bade-ee742c4b7ec9"
+            }
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/00-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/01-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/02-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/03-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/04-fortio/execution.json",
+      "samples": 8,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/05-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/06-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/07-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/08-fortio/execution.json",
+      "samples": 6,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/09-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/10-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/11-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/12-nighthawk/execution.json",
+      "samples": 8,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/13-nighthawk/execution.json",
+      "samples": 7,
+      "pids": [
+        179893
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "switch",
+      "barrier": {
+        "single_pod_barrier": true,
+        "expected_image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+        "stable_seconds": 10.662829516000784,
+        "wait_seconds": 10.809664009999324,
+        "pod": "praxis-benchmark-689685876b-wnb88",
+        "pod_uid": "c48b48c8-2702-4c41-bb42-0b35e3231d99",
+        "image_ids": [
+          "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8"
+        ],
+        "endpoints": [
+          {
+            "addresses": [
+              "10.42.1.18"
+            ],
+            "conditions": {
+              "ready": true,
+              "serving": true,
+              "terminating": false
+            },
+            "nodeName": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "praxis-benchmark-689685876b-wnb88",
+              "namespace": "gateway-benchmark",
+              "uid": "c48b48c8-2702-4c41-bb42-0b35e3231d99"
+            }
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "recovery-switch",
+      "barrier": {
+        "single_pod_barrier": true,
+        "expected_image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+        "stable_seconds": 11.966773149997607,
+        "wait_seconds": 12.827431630001229,
+        "pod": "praxis-benchmark-689685876b-lpfxm",
+        "pod_uid": "090bc415-bbcd-488a-988d-625e5801301a",
+        "image_ids": [
+          "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8"
+        ],
+        "endpoints": [
+          {
+            "addresses": [
+              "10.42.1.109"
+            ],
+            "conditions": {
+              "ready": true,
+              "serving": true,
+              "terminating": false
+            },
+            "nodeName": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "praxis-benchmark-689685876b-lpfxm",
+              "namespace": "gateway-benchmark",
+              "uid": "090bc415-bbcd-488a-988d-625e5801301a"
+            }
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/00-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/01-fortio/execution.json",
+      "samples": 6,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/02-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/03-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/04-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/05-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/06-fortio/execution.json",
+      "samples": 6,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/07-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/08-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/09-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/10-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/11-fortio/execution.json",
+      "samples": 6,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/12-nighthawk/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/13-nighthawk/execution.json",
+      "samples": 7,
+      "pids": [
+        189472
+      ],
+      "network_profile": "net.ipv4.ip_local_port_range = 10240\t65535\nnet.ipv4.tcp_tw_reuse = 1\nnet.ipv4.tcp_tw_reuse_delay = 1000\nnet.ipv4.tcp_timestamps = 1\n",
+      "cpu_quota": "200000/100000",
+      "passed": true
+    }
+  ],
+  "issues": []
+}

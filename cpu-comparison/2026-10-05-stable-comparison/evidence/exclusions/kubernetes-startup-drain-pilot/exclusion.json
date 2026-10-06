@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-05T21:25:58.288135+00:00",
+  "classification": "Insufficient startup topology stabilization barrier",
+  "excluded_scope": "Entire completed Kubernetes pass1 performance/scale/recovery attempt for all treatments; retain focused static-address pass1 separately",
+  "observed": "Praxis pre-HTTP placement contains one draining old pod and one replacement; two processes overlap the first fixed-rate case. Old process CPU is near idle, but single-pod topology was not strictly enforced and EndpointSlice eligibility was not captured.",
+  "inference_limit": "No claim that the overlap changed throughput. Exclusion follows the declared single-pod setup requirement rather than a favorable/unfavorable performance outcome.",
+  "correction": "Require exactly one nonterminating Ready pod, a fully observed one-replica deployment, and one matching Ready nonterminating EndpointSlice address, stable for ten seconds before endpoint qualification. Apply identically to both products.",
+  "cpu_profiles": "Unaffected; separate hosts, containers and measurements",
+  "original_export_manifest_sha256": "0fbde26ebe1bdf312dd963efbb6f1d6eae50d7e615d6b726f09d5812bbc7888f",
+  "next": "Requalify using sustained TCP qualification with the stricter barrier, then rerun the entire first Kubernetes pass before allowing repetitions."
+}

@@ -1,0 +1,225 @@
+{
+  "reviewed_at": "2026-10-03T10:22:58.019382+00:00",
+  "scope": "Two separate three-repetition comparisons, with an independent agentgateway reference run in each pair",
+  "measured_attempts": 12,
+  "runs": [
+    {
+      "case": "results/praxis-v0.5.2/pass1/agentgateway",
+      "counts": {
+        "pass": 106,
+        "fail": 1
+      },
+      "classification": "complete selected-case evaluation",
+      "review": "evidence/validity/praxis-v0.5.2-pass1.json",
+      "sha256": {
+        "full.log": "229e8cfa8caa5872c8a7994f1f9f8b4a7ad298470f6769ab5eb0624a263e2678",
+        "runtime.jsonl": "1834cc6a0a7568d8e7fb74ac5e0f480b926a55c8fcc568c656677d304db65736",
+        "start.txt": "68a24bc5778d837ac685276a162d8809d7d69ce4e3bb2e1080b51ce64624f3a8",
+        "end.txt": "f2e91dfce739ddcbd4062ad1a66a6b12bde56e11bedf1a2da268508097893895",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "3af3d14db4c861a6fea34cb036d91832f629b3418ffb49ad9168bde901a21adf",
+        "report.yaml": "a7af77a366c6f765041059bd299284331333cebdda1b505d863e2517d174fdb3"
+      }
+    },
+    {
+      "case": "results/praxis-v0.5.2/pass1/praxis",
+      "counts": {
+        "fail": 55,
+        "pass": 52
+      },
+      "classification": "complete selected-case evaluation",
+      "review": "evidence/validity/praxis-v0.5.2-pass1.json",
+      "sha256": {
+        "full.log": "aea8f5da228d3c5f35c3b396a794720e397fe6fef39558d6878c342d3d9f508a",
+        "runtime.jsonl": "f622a36e43909c8f68a1ac28e3b48013e33522b3fbf3e3fc4bfa64c4985c025a",
+        "start.txt": "a611bf7b84874e2f9f1bc15270c0b6901038ece519345ef7b4b225b28b17ab52",
+        "end.txt": "e66997a03e57db66f9e624632d718e73c58e0dcee487eb5de771201bc44eeaf1",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "da8021617bd1ff7c45b64c91671b8381ea959ade54c6d9cb7c7b9595d8134fe5",
+        "report.yaml": "cad75a6eb279e1d5d12069fa0f30584a757e4f8940cf87e2bb48004ace4a5cd5"
+      }
+    },
+    {
+      "case": "results/praxis-v0.5.2/pass2/agentgateway",
+      "counts": {
+        "pass": 106,
+        "fail": 1
+      },
+      "classification": "complete selected-case evaluation",
+      "review": "evidence/validity/praxis-v0.5.2-pass2-agentgateway.json",
+      "sha256": {
+        "full.log": "12e9301615bf180c9f5f35431505b19378059cabae3cec992008ea739add3edb",
+        "runtime.jsonl": "61c0b3ae7b258a1d8ff29bbe9e4374f4707f9e1fe7b8d5ec5cbd734e938bb39b",
+        "start.txt": "a42a6bc34b246451d30a618a101b29ce64707ba722ed7e9f9afb58c2dbbf6147",
+        "end.txt": "6be9f94c711f8e7b52c1877cd4e12a05260c676d67340382664577a9e0c12aeb",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "ad4a13cb3a7a0a152c4f8ca3b8dfb181c5092d50ed18a27672d1e2c021d2bd7f",
+        "report.yaml": "f8bdc516be1028574149e4694dfec8f59c0d0dd9e2adef49dd6c375c26c655b4"
+      }
+    },
+    {
+      "case": "results/praxis-v0.5.2/pass2/praxis",
+      "counts": {
+        "fail": 55,
+        "pass": 52
+      },
+      "classification": "complete selected-case evaluation",
+      "review": "evidence/validity/praxis-v0.5.2-pass2-praxis.json",
+      "sha256": {
+        "full.log": "cf274706ca2d516c4be68fcbc15ef4c739d135839224f13e379599f1cbc4357d",
+        "runtime.jsonl": "f5997735e95be68f9efe16f9fd38498b8954ed11217271c2b164ac0709851c10",
+        "start.txt": "06d1147ac6d3fb383b848f9a7bccf40ddfc8225938b03012537d5559ef5ae429",
+        "end.txt": "c9cfd1213641314272219906cdc8191dc77637cc1f4d7dd550cdd09125e256a2",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "e84d3f4f9e7129d337c94196fc64875e65254a71f6bf46d39f81e04bb1ef2d8f",
+        "report.yaml": "23c39fbd2d0d0c2086e06f9bb027ee9bb23cc76aedd912059f192ae025234851"
+      }
+    },
+    {
+      "case": "results/praxis-v0.5.2/pass3/agentgateway",
+      "counts": {
+        "pass": 106,
+        "fail": 1
+      },
+      "classification": "complete selected-case evaluation",
+      "review": "evidence/validity/praxis-v0.5.2-pass3-agentgateway.json",
+      "sha256": {
+        "full.log": "b78fa6c646c7a85a607af81b23cec11497dd5c4c65a1ca0c4ed933ab7077ade6",
+        "runtime.jsonl": "9f7f6ce41d7710ccdd98e9d7f2c81f130b24c3a4bd0f61afbda73005bbee0d66",
+        "start.txt": "577f0e60086f075c352af37abc059d68c5bb9db808d3d575bce0bf3b96a7b6bb",
+        "end.txt": "c448007c8da9fce15dd8d4893bd8dd8d0fa334f2ef2fe2aa968f31fa58c4ffb9",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "680c56a339298b4d4a1c99e809eeb673d4337729acd0f4b920113f07184a873a",
+        "report.yaml": "5a3f029994dc69bfbb3c6f209e21006e5a4092e12f2f41c106b418d50f8a71ca"
+      }
+    },
+    {
+      "case": "results/praxis-v0.5.2/pass3/praxis",
+      "counts": {
+        "fail": 55,
+        "pass": 52
+      },
+      "classification": "complete selected-case evaluation",
+      "review": "evidence/validity/praxis-v0.5.2-pass3-praxis.json",
+      "sha256": {
+        "full.log": "a90b694d89f6732f1ad43e1ba5a739baa9e0d4cfb7d187348201d14109b7e33f",
+        "runtime.jsonl": "91b195a22848c4e1231c24740c8fd2b3d854c9af52687e45203123c853db215e",
+        "start.txt": "ff2f09f40a736dec06cbbc06754c02f7fdfaf20b59d7f55e04eda02e0f48a3c2",
+        "end.txt": "39f291f03f1c04785ca530229cf7ae0fce4b35d49dbfeab70449195da8e8eb0d",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "0d6252ab50bd423792b0a4f1a7647f4f213f54b05038b50b570d0d0c13490243",
+        "report.yaml": "55282f0916157ae0eb1dc8366f0b4bd19b10284db8f3d9d18b3522d85b842083"
+      }
+    },
+    {
+      "case": "results/praxis-nightly-20261002/pass1/agentgateway",
+      "counts": {
+        "pass": 106,
+        "fail": 1
+      },
+      "classification": "complete selected-case evaluation",
+      "review": "evidence/validity/praxis-nightly-20261002-pass1.json",
+      "sha256": {
+        "full.log": "2771bc2d896f1cfe5b2ff9b47f9a36d039e84a024baca878234cb313e356e7ba",
+        "runtime.jsonl": "b2558574e8c7a5e52a99c6755deeb9a78f0732548af241f20a027846d33cd612",
+        "start.txt": "d0d92e07d95c06b2250b39ee44fef8458a86ac33a8ab8ce8f823ebe4a3cc63e0",
+        "end.txt": "2a1e78c5476b42de49f698efa4584d4bc5fc0d2af1fb698dcce4ff2d878262f3",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "2ddeed5e176edd85c571c57e9f431131d70c2a6d18ef06cc61295a0a6ccf3c27",
+        "report.yaml": "4bdc9f9b5b7816b7edf62e83a8e4e9719124299c3952d9c140efd37213cce923"
+      }
+    },
+    {
+      "case": "results/praxis-nightly-20261002/pass1/praxis",
+      "counts": {
+        "not-executed": 107
+      },
+      "classification": "product pairing setup-blocked; individual coverage not evaluated",
+      "review": "evidence/validity/praxis-nightly-20261002-pass1.json",
+      "sha256": {
+        "full.log": "caa854b26dbd215b700347b553fd739f85421de134584fd088e1be593dc33904",
+        "runtime.jsonl": "635beb77bee278d57c574a0a66af1b71ccd04584ddfe795b2a2e559f83026dda",
+        "start.txt": "f173d3cfdd24c8163ca9937a12599c430e052c3d421d2529e7cd1b0af719468f",
+        "end.txt": "53914e668a0805aef5720047e6dbb6db60904659701da23be4938d01953ad7d9",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "add7f0e0f860bc387e94693ca2233b05294fec8187be9024a9090f8091f6712e"
+      }
+    },
+    {
+      "case": "results/praxis-nightly-20261002/pass2/agentgateway",
+      "counts": {
+        "pass": 106,
+        "fail": 1
+      },
+      "classification": "complete selected-case evaluation",
+      "review": "evidence/validity/praxis-nightly-20261002-pass2-agentgateway.json",
+      "sha256": {
+        "full.log": "d4e5ee3f8203b00084096e725312d7314d2606aca59ff9bea808308e927a268c",
+        "runtime.jsonl": "9244f65f78beee7274604c7706dcb775943fcf48eb353ddb7693beecb2de82f2",
+        "start.txt": "9a0731ac50b457cbb419d791e6ad8c8418ef8c292a88a5441491a7093a2e0f54",
+        "end.txt": "004ec003c2798937524597fca8575b2f64d6d46761cb5f0d65b9d1fda0675c7e",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "5bdc6f7dab4814bdc721faf81a6f30828b4a4d8a221c6ef59abc148684b0496b",
+        "report.yaml": "45d8303bcf2d9bd70099bcf0c4f1803a5f75f2cfb5c47642cc8b51bf8950aafa"
+      }
+    },
+    {
+      "case": "results/praxis-nightly-20261002/pass2/praxis",
+      "counts": {
+        "not-executed": 107
+      },
+      "classification": "product pairing setup-blocked; individual coverage not evaluated",
+      "review": "evidence/validity/praxis-nightly-20261002-pass2-praxis.json",
+      "sha256": {
+        "full.log": "cf4cd25b919d0554075c52bef4b84596be05c4a3339a006ddd41eb4cb5e5b9fe",
+        "runtime.jsonl": "004080d84845e110d6ca6a5c993d995d4074d641c1175c430892434fedcd0828",
+        "start.txt": "2e77d3f965e08c479a3450aa4d7d7015534a029e6a6a2abf119ba033d87e5f77",
+        "end.txt": "f4e083bda3195b82e81682cf1b22573202463a39a5aa7cc7cff8d34ecfabf77b",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "86cedf0de081581eb3724c1d2265cb1ee195d908c9d5b57fa367d27d94e75825"
+      }
+    },
+    {
+      "case": "results/praxis-nightly-20261002/pass3/agentgateway",
+      "counts": {
+        "pass": 106,
+        "fail": 1
+      },
+      "classification": "complete selected-case evaluation",
+      "review": "evidence/validity/praxis-nightly-20261002-pass3-agentgateway.json",
+      "sha256": {
+        "full.log": "ea8fface7757ec05692b17103fb30a06e1d07ccf87f612816c0690f60c26b55f",
+        "runtime.jsonl": "acbf1a973283400f2f67497140606a27bbc11cfddf4c554383ddde34981754b2",
+        "start.txt": "5d88033e9358909afa77f646feddf1e6eef997a1bdbaa03d14f4cee605d26097",
+        "end.txt": "6c2e0efceed704cdfff6cb3da71cba6ea4d542e961769db4b52d6b941f864d23",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "76a7af80d8a69e33f14eb4bada13c4b4d58632eb5f70ee3fbe498cf5fcb7e3f2",
+        "report.yaml": "372f9283a2398fd4914194e861f09125322f78a4908bf3d78a4337591f08813b"
+      }
+    },
+    {
+      "case": "results/praxis-nightly-20261002/pass3/praxis",
+      "counts": {
+        "not-executed": 107
+      },
+      "classification": "product pairing setup-blocked; individual coverage not evaluated",
+      "review": "evidence/validity/praxis-nightly-20261002-pass3-praxis.json",
+      "sha256": {
+        "full.log": "665e8593f45341473edf315a83fee6a5067f0fd3f74cbed033ac61f6c442ba7a",
+        "runtime.jsonl": "6a6fc6f7ef1861042b17ca9d74ac0cde2f8cd29e3112c75b2c80fc079bfa6b29",
+        "start.txt": "a0ba3067ea91055b3cf4cff1157e5d41a3a4383c1287bf55a1f5c609d1eb1ad3",
+        "end.txt": "c96db65972795d992c62a03f95af1daf2c5423a93c1fd4aca901c1f869c266f9",
+        "exit-code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "command.txt": "62039cab63b9d613930a0cf622b84f518112b0ec0b688652ad29f893dfc6b0dc"
+      }
+    }
+  ],
+  "host_review": "evidence/validity/host-runtime-decision.json",
+  "exclusions": "evidence/exclusions.json",
+  "limitations": [
+    "Evaluator-selected coverage, not official certification or third-party assessment.",
+    "Case counts are not percentages of the whole specification or throughput measurements.",
+    "Nightly setup-blocked attempts do not produce individual-feature scores.",
+    "Host maintenance interrupted an excluded third release pair; package changes and its full replacement are documented."
+  ]
+}

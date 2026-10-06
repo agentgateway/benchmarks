@@ -1,0 +1,259 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Service",
+            "metadata": {
+                "annotations": {
+                    "meta.helm.sh/release-name": "agentgateway",
+                    "meta.helm.sh/release-namespace": "agentgateway-system"
+                },
+                "creationTimestamp": "2026-10-02T23:32:47Z",
+                "labels": {
+                    "agentgateway": "agentgateway",
+                    "app.kubernetes.io/instance": "agentgateway",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "app.kubernetes.io/name": "agentgateway",
+                    "app.kubernetes.io/version": "v1.6.0",
+                    "helm.sh/chart": "agentgateway-v1.6.0"
+                },
+                "name": "agentgateway",
+                "namespace": "agentgateway-system",
+                "resourceVersion": "1324",
+                "uid": "7294135a-5cf2-4e59-bf98-b16e87005c1a"
+            },
+            "spec": {
+                "clusterIP": "10.43.84.189",
+                "clusterIPs": [
+                    "10.43.84.189"
+                ],
+                "internalTrafficPolicy": "Cluster",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "ports": [
+                    {
+                        "name": "grpc-xds-agw",
+                        "port": 9978,
+                        "protocol": "TCP",
+                        "targetPort": "grpc-xds-agw"
+                    },
+                    {
+                        "name": "health",
+                        "port": 9093,
+                        "protocol": "TCP",
+                        "targetPort": "health"
+                    },
+                    {
+                        "name": "metrics",
+                        "port": 9092,
+                        "protocol": "TCP",
+                        "targetPort": "metrics"
+                    }
+                ],
+                "selector": {
+                    "agentgateway": "agentgateway",
+                    "app.kubernetes.io/instance": "agentgateway",
+                    "app.kubernetes.io/name": "agentgateway"
+                },
+                "sessionAffinity": "None",
+                "type": "ClusterIP"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Service",
+            "metadata": {
+                "creationTimestamp": "2026-10-02T23:18:14Z",
+                "labels": {
+                    "component": "apiserver",
+                    "provider": "kubernetes"
+                },
+                "name": "kubernetes",
+                "namespace": "default",
+                "resourceVersion": "200",
+                "uid": "3a1adc05-e60a-463a-a123-4b69e7d167c0"
+            },
+            "spec": {
+                "clusterIP": "10.43.0.1",
+                "clusterIPs": [
+                    "10.43.0.1"
+                ],
+                "internalTrafficPolicy": "Cluster",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "ports": [
+                    {
+                        "name": "https",
+                        "port": 443,
+                        "protocol": "TCP",
+                        "targetPort": 6443
+                    }
+                ],
+                "sessionAffinity": "None",
+                "type": "ClusterIP"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Service",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"name\":\"backend\",\"namespace\":\"gateway-backend\"},\"spec\":{\"externalTrafficPolicy\":\"Cluster\",\"ports\":[{\"nodePort\":30081,\"port\":8081,\"targetPort\":8081}],\"selector\":{\"app\":\"benchmark-backend\"},\"type\":\"NodePort\"}}\n"
+                },
+                "creationTimestamp": "2026-10-02T23:32:55Z",
+                "name": "backend",
+                "namespace": "gateway-backend",
+                "resourceVersion": "1402",
+                "uid": "0b299ec3-2389-4f19-a712-bf494ec1e3e7"
+            },
+            "spec": {
+                "clusterIP": "10.43.135.136",
+                "clusterIPs": [
+                    "10.43.135.136"
+                ],
+                "externalTrafficPolicy": "Cluster",
+                "internalTrafficPolicy": "Cluster",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "ports": [
+                    {
+                        "nodePort": 30081,
+                        "port": 8081,
+                        "protocol": "TCP",
+                        "targetPort": 8081
+                    }
+                ],
+                "selector": {
+                    "app": "benchmark-backend"
+                },
+                "sessionAffinity": "None",
+                "type": "NodePort"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Service",
+            "metadata": {
+                "annotations": {
+                    "objectset.rio.cattle.io/applied": "H4sIAAAAAAAA/4ySQYvbMBCF/0p5Z9m142TjFfRQdimUQgmk7aXsQZYnG9W2JKRJSgj+70WJl00b0vZm8958vHmjI5Q33yhE4ywk9iUEOmNbSKwp7I0mCAzEqlWsII9Q1jpWbJyN6dc1P0hzJM6DcblWzD3lxr01iQBxU3c/LYXsed9BoqvihbIvxZtPxrbv3rets/9EWDUQJLQL1Nr4X/bolU4z3a6hLB4i0wABH9xAvKVdTG7vAkPivlxUV1rUQfkE4LAjjAK9aqg/1dHVMVPev8DPidJnsMR0mtb9LjKFLE71Tpg/bdNeDy7Q4+f1X/baqriFRKNpVlez+7ouy+W8UkVV36lmURab2eZuSZvlfDYv9GKZ8k7si4i3ahkFoiedVptyf1xBoizyeZUXeVlAvAoR8vul9CRg/Ac1mP6wcr3Rh/SojH3uac1Kd6lXFzhNHV8indOcy19Up+LZaddD4uvjCqO4dGas/S33l4ff3ANxMPqVne567X8SiNSTZhduHHMcx18BAAD//5X9LCMyAwAA",
+                    "objectset.rio.cattle.io/id": "",
+                    "objectset.rio.cattle.io/owner-gvk": "k3s.cattle.io/v1, Kind=Addon",
+                    "objectset.rio.cattle.io/owner-name": "coredns",
+                    "objectset.rio.cattle.io/owner-namespace": "kube-system",
+                    "prometheus.io/port": "9153",
+                    "prometheus.io/scrape": "true"
+                },
+                "creationTimestamp": "2026-10-02T23:18:20Z",
+                "labels": {
+                    "k8s-app": "kube-dns",
+                    "kubernetes.io/cluster-service": "true",
+                    "kubernetes.io/name": "CoreDNS",
+                    "objectset.rio.cattle.io/hash": "bce283298811743a0386ab510f2f67ef74240c57"
+                },
+                "name": "kube-dns",
+                "namespace": "kube-system",
+                "resourceVersion": "289",
+                "uid": "1884c6be-e8f8-48e1-8b93-7f88a7801cf6"
+            },
+            "spec": {
+                "clusterIP": "10.43.0.10",
+                "clusterIPs": [
+                    "10.43.0.10"
+                ],
+                "internalTrafficPolicy": "Cluster",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "ports": [
+                    {
+                        "name": "dns",
+                        "port": 53,
+                        "protocol": "UDP",
+                        "targetPort": 53
+                    },
+                    {
+                        "name": "dns-tcp",
+                        "port": 53,
+                        "protocol": "TCP",
+                        "targetPort": 53
+                    },
+                    {
+                        "name": "metrics",
+                        "port": 9153,
+                        "protocol": "TCP",
+                        "targetPort": 9153
+                    }
+                ],
+                "selector": {
+                    "k8s-app": "kube-dns"
+                },
+                "sessionAffinity": "None",
+                "type": "ClusterIP"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Service",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"name\":\"metallb-webhook-service\",\"namespace\":\"metallb-system\"},\"spec\":{\"ports\":[{\"port\":443,\"targetPort\":9443}],\"selector\":{\"component\":\"controller\"}}}\n"
+                },
+                "creationTimestamp": "2026-10-02T23:32:26Z",
+                "name": "metallb-webhook-service",
+                "namespace": "metallb-system",
+                "resourceVersion": "1187",
+                "uid": "a45887bd-888a-4878-9130-05ae5c30b264"
+            },
+            "spec": {
+                "clusterIP": "10.43.165.41",
+                "clusterIPs": [
+                    "10.43.165.41"
+                ],
+                "internalTrafficPolicy": "Cluster",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "ports": [
+                    {
+                        "port": 443,
+                        "protocol": "TCP",
+                        "targetPort": 9443
+                    }
+                ],
+                "selector": {
+                    "component": "controller"
+                },
+                "sessionAffinity": "None",
+                "type": "ClusterIP"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

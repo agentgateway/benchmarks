@@ -1,0 +1,482 @@
+{
+  "case": "results/praxis-nightly-20261002/pass1/agentgateway",
+  "snapshots": 8,
+  "truncated_row": false,
+  "first_snapshot": "2026-10-03 09:31:49.312217+00:00",
+  "last_snapshot": "2026-10-03 09:35:33.893352+00:00",
+  "maximum_snapshot_gap_seconds": 32.740055,
+  "node_issues": {},
+  "collection_errors": [],
+  "containers_with_restart_count": {},
+  "terminations": {},
+  "observed_image_ids": [
+    "",
+    "docker.io/library/alpine@sha256:5291449c3df73caf6ed85e649dec1b9e818b39a5d8c871e97afc13e9cd5e8fa8",
+    "docker.io/rancher/mirrored-coredns-coredns@sha256:900f9c109f7a33545d3c811516e8376df9019147b750f5ce3e254468769176ea",
+    "gcr.io/k8s-staging-gateway-api/echo-basic@sha256:0a56ed5de3f279bba546e27c24f0a0ee982d7f1f99499081b8904cd826d1407d",
+    "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+    "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b",
+    "quay.io/metallb/controller@sha256:f51ab515de9ccd20dc3dccb093e48df8adddac019326c456f449e55ba91b6420",
+    "registry.k8s.io/coredns/coredns@sha256:af8c8d35a5d184b386c4a6d1a012c8b218d40d1376474c7d071bb6c07201f47d"
+  ],
+  "warning_events": [
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: HTTP probe failed with statuscode: 500",
+      "firstTimestamp": "2026-10-03T09:31:46Z",
+      "lastTimestamp": "2026-10-03T09:31:46Z",
+      "count": 1,
+      "object": "agentgateway-system/Pod/agentgateway-64f7c949ff-4887f"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Startup probe failed: HTTP probe failed with statuscode: 500",
+      "firstTimestamp": "2026-10-03T09:31:46Z",
+      "lastTimestamp": "2026-10-03T09:31:46Z",
+      "count": 1,
+      "object": "agentgateway-system/Pod/agentgateway-64f7c949ff-8tldd"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/http-listener-isolation: endpoints \"http-listener-isolation\" already exists",
+      "firstTimestamp": "2026-10-03T09:32:10Z",
+      "lastTimestamp": "2026-10-03T09:32:10Z",
+      "count": 1,
+      "object": "/Endpoints/http-listener-isolation"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"secret-volume\" : secret \"tls-passthrough-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T09:31:49Z",
+      "lastTimestamp": "2026-10-03T09:31:50Z",
+      "count": 2,
+      "object": "gateway-conformance-app-backend/Pod/tls-backend-58b6fcfb64-c8wdg"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"gateway-with-infrastructure-metadata-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:32:17Z",
+      "lastTimestamp": "2026-10-03T09:32:18Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-infrastructure-metadata-7848798bcb-kwgfr"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"gateway-with-infrastructure-metadata\" not found",
+      "firstTimestamp": "2026-10-03T09:32:17Z",
+      "lastTimestamp": "2026-10-03T09:32:18Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-infrastructure-metadata-7848798bcb-kwgfr"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"http-listener-isolation-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:32:14Z",
+      "lastTimestamp": "2026-10-03T09:32:15Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/http-listener-isolation-68d6fdd77b-2rfpf"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"http-listener-isolation\" not found",
+      "firstTimestamp": "2026-10-03T09:32:14Z",
+      "lastTimestamp": "2026-10-03T09:32:15Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/http-listener-isolation-68d6fdd77b-2rfpf"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"http-listener-isolation-with-hostname-intersection\" not found",
+      "firstTimestamp": "2026-10-03T09:32:14Z",
+      "lastTimestamp": "2026-10-03T09:32:15Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/http-listener-isolation-with-hostname-intersection-696d44bbncbl"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"http-listener-isolation-with-hostname-intersection-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:32:14Z",
+      "lastTimestamp": "2026-10-03T09:32:15Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/http-listener-isolation-with-hostname-intersection-696d44bbncbl"
+    },
+    {
+      "reason": "AgentGatewayNackError",
+      "message": "[{\"key\":\"listener/gateway-conformance-infra/invalid-default-client-validation-config.https\",\"warn\":\"TLS certificate is invalid: no certificate\"}]",
+      "firstTimestamp": "2026-10-03T09:32:18Z",
+      "lastTimestamp": "2026-10-03T09:32:18Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Gateway/invalid-default-client-validation-config"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"secret-volume\" : secret \"tls-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T09:31:49Z",
+      "lastTimestamp": "2026-10-03T09:31:50Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/tls-backend-2-5fffcbf4cc-hmjhq"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"secret-volume\" : secret \"tls-checks-certificate\" not found",
+      "firstTimestamp": "2026-10-03T09:31:49Z",
+      "lastTimestamp": "2026-10-03T09:31:50Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/tls-backend-86b4d79785-9dzxr"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-token\" : failed to fetch token: serviceaccounts \"gateway-certificate-nonexistent-secret\" not found",
+      "firstTimestamp": "2026-10-03T09:32:27Z",
+      "lastTimestamp": "2026-10-03T09:32:28Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-certificate-nonexistent-secret-f5f6dc4bd-gckwn"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: pods \"gateway-only-invalid-route-kind-59b874db96-\" is forbidden: error looking up service account gateway-conformance-infra/gateway-only-invalid-route-kind: serviceaccount \"gateway-only-invalid-route-kind\" not found",
+      "firstTimestamp": "2026-10-03T09:32:26Z",
+      "lastTimestamp": "2026-10-03T09:32:26Z",
+      "count": 5,
+      "object": "gateway-conformance-infra/ReplicaSet/gateway-only-invalid-route-kind-59b874db96"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: pods \"gateway-secret-reference-grant-all-in-namespace-86f4ddd95f-\" is forbidden: error looking up service account gateway-conformance-infra/gateway-secret-reference-grant-all-in-namespace: serviceaccount \"gateway-secret-reference-grant-all-in-namespace\" not found",
+      "firstTimestamp": "2026-10-03T09:32:33Z",
+      "lastTimestamp": "2026-10-03T09:32:33Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/ReplicaSet/gateway-secret-reference-grant-all-in-namespace-86f4ddd95f"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"gateway-static-addresses-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:32:34Z",
+      "lastTimestamp": "2026-10-03T09:32:35Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-static-addresses-5f7d9bc9dd-cvbxp"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"gateway-static-addresses\" not found",
+      "firstTimestamp": "2026-10-03T09:32:34Z",
+      "lastTimestamp": "2026-10-03T09:32:35Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-static-addresses-5f7d9bc9dd-cvbxp"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-token\" : failed to fetch token: serviceaccounts \"gateway-static-addresses\" not found",
+      "firstTimestamp": "2026-10-03T09:32:34Z",
+      "lastTimestamp": "2026-10-03T09:32:35Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-static-addresses-5f7d9bc9dd-cvbxp"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.215:15021/healthz/ready\": dial tcp 10.42.3.215:15021: connect: connection refused",
+      "firstTimestamp": "2026-10-03T09:32:46Z",
+      "lastTimestamp": "2026-10-03T09:32:46Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/gateway-tls-backend-client-certificate-7459877855-msmr8"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"gateway-with-one-attached-route-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:32:45Z",
+      "lastTimestamp": "2026-10-03T09:32:45Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-one-attached-route-9567b4dc-6snv5"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"gateway-with-one-attached-route\" not found",
+      "firstTimestamp": "2026-10-03T09:32:45Z",
+      "lastTimestamp": "2026-10-03T09:32:45Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-one-attached-route-9567b4dc-6snv5"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-token\" : failed to fetch token: serviceaccounts \"gateway-with-one-attached-route\" not found",
+      "firstTimestamp": "2026-10-03T09:32:45Z",
+      "lastTimestamp": "2026-10-03T09:32:45Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-one-attached-route-9567b4dc-6snv5"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : object \"gateway-conformance-infra\"/\"gateway-with-one-attached-route\" not registered",
+      "firstTimestamp": "2026-10-03T09:32:46Z",
+      "lastTimestamp": "2026-10-03T09:32:46Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/gateway-with-one-attached-route-9567b4dc-6snv5"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : object \"gateway-conformance-infra\"/\"gateway-with-one-attached-route-xds-ca\" not registered",
+      "firstTimestamp": "2026-10-03T09:32:46Z",
+      "lastTimestamp": "2026-10-03T09:32:46Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/gateway-with-one-attached-route-9567b4dc-6snv5"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-token\" : failed to fetch token: serviceaccounts \"gateway-with-one-attached-route\" is forbidden: User \"system:node:gwext-1002-kgateway.c.solo-oss.internal\" cannot create resource \"serviceaccounts/token\" in API group \"\" in the namespace \"gateway-conformance-infra\": no relationship found between node 'gwext-1002-kgateway.c.solo-oss.internal' and this object",
+      "firstTimestamp": "2026-10-03T09:32:46Z",
+      "lastTimestamp": "2026-10-03T09:32:46Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/gateway-with-one-attached-route-9567b4dc-6snv5"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"gateway-with-two-listeners-and-one-attached-route\" not found",
+      "firstTimestamp": "2026-10-03T09:32:45Z",
+      "lastTimestamp": "2026-10-03T09:32:46Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-two-listeners-and-one-attached-route-79f88d86frrvv"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"gateway-without-address-value\" not found",
+      "firstTimestamp": "2026-10-03T09:32:33Z",
+      "lastTimestamp": "2026-10-03T09:32:34Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-without-address-value-659fd5578b-jkd6f"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"gateway-without-address-value-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:32:33Z",
+      "lastTimestamp": "2026-10-03T09:32:34Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-without-address-value-659fd5578b-jkd6f"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-token\" : failed to fetch token: serviceaccounts \"gateway-without-address-value\" not found",
+      "firstTimestamp": "2026-10-03T09:32:33Z",
+      "lastTimestamp": "2026-10-03T09:32:34Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-without-address-value-659fd5578b-jkd6f"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.211:15021/healthz/ready\": dial tcp 10.42.3.211:15021: connect: connection refused",
+      "firstTimestamp": "2026-10-03T09:32:29Z",
+      "lastTimestamp": "2026-10-03T09:32:29Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/invalid-default-client-validation-config-5b887db45-mq72w"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"gateway-with-invalid-client-cert-validation\" not found",
+      "firstTimestamp": "2026-10-03T09:33:03Z",
+      "lastTimestamp": "2026-10-03T09:33:04Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-invalid-client-cert-validation-6bf454c5b5-6rnxj"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"gateway-with-invalid-client-cert-validation-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:33:03Z",
+      "lastTimestamp": "2026-10-03T09:33:04Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-invalid-client-cert-validation-6bf454c5b5-6rnxj"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-token\" : failed to fetch token: serviceaccounts \"gateway-with-invalid-client-cert-validation\" not found",
+      "firstTimestamp": "2026-10-03T09:33:03Z",
+      "lastTimestamp": "2026-10-03T09:33:04Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-invalid-client-cert-validation-6bf454c5b5-6rnxj"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.218:15021/healthz/ready\": dial tcp 10.42.3.218:15021: connect: connection refused",
+      "firstTimestamp": "2026-10-03T09:33:16Z",
+      "lastTimestamp": "2026-10-03T09:33:16Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/grpcroute-listener-hostname-matching-6f5c5cc75c-rwsdv"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"gateway-with-one-not-matching-port-and-section-name-route-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:33:50Z",
+      "lastTimestamp": "2026-10-03T09:33:52Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-with-one-not-matching-port-and-section-name-route-wwlll"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"gateway-with-one-not-matching-port-and-section-name-route\" not found",
+      "firstTimestamp": "2026-10-03T09:33:50Z",
+      "lastTimestamp": "2026-10-03T09:33:52Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-with-one-not-matching-port-and-section-name-route-wwlll"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-token\" : failed to fetch token: serviceaccounts \"gateway-with-one-not-matching-port-and-section-name-route\" not found",
+      "firstTimestamp": "2026-10-03T09:33:50Z",
+      "lastTimestamp": "2026-10-03T09:33:52Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-with-one-not-matching-port-and-section-name-route-wwlll"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"tlsroutes-only\" not found",
+      "firstTimestamp": "2026-10-03T09:33:37Z",
+      "lastTimestamp": "2026-10-03T09:33:38Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/tlsroutes-only-8668cdb649-9wtnh"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"tlsroutes-only-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:33:37Z",
+      "lastTimestamp": "2026-10-03T09:33:38Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/tlsroutes-only-8668cdb649-9wtnh"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-token\" : failed to fetch token: serviceaccounts \"tlsroutes-only\" not found",
+      "firstTimestamp": "2026-10-03T09:33:37Z",
+      "lastTimestamp": "2026-10-03T09:33:38Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/tlsroutes-only-8668cdb649-9wtnh"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.221:15021/healthz/ready\": dial tcp 10.42.3.221:15021: connect: connection refused",
+      "firstTimestamp": "2026-10-03T09:34:03Z",
+      "lastTimestamp": "2026-10-03T09:34:03Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/httproute-listener-hostname-matching-6c6b495fd9-9xp9p"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"httproute-listener-port-matching-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:34:04Z",
+      "lastTimestamp": "2026-10-03T09:34:04Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/httproute-listener-port-matching-b9c59b9cb-8p9fz"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"httproute-listener-port-matching\" not found",
+      "firstTimestamp": "2026-10-03T09:34:04Z",
+      "lastTimestamp": "2026-10-03T09:34:04Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/httproute-listener-port-matching-b9c59b9cb-8p9fz"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.223:15021/healthz/ready\": dial tcp 10.42.3.223:15021: connect: connection refused",
+      "firstTimestamp": "2026-10-03T09:34:18Z",
+      "lastTimestamp": "2026-10-03T09:34:18Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/same-namespace-with-http-listener-on-8080-c466ddb6f-v6rfk"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: pods \"gateway-allows-listenerset-in-same-namespace-69fdf585f9-\" is forbidden: error looking up service account gateway-conformance-infra/gateway-allows-listenerset-in-same-namespace: serviceaccount \"gateway-allows-listenerset-in-same-namespace\" not found",
+      "firstTimestamp": "2026-10-03T09:34:44Z",
+      "lastTimestamp": "2026-10-03T09:34:44Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/ReplicaSet/gateway-allows-listenerset-in-same-namespace-69fdf585f9"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: pods \"gateway-default-does-not-allow-listenerset-655b967bfb-\" is forbidden: error looking up service account gateway-conformance-infra/gateway-default-does-not-allow-listenerset: serviceaccount \"gateway-default-does-not-allow-listenerset\" not found",
+      "firstTimestamp": "2026-10-03T09:34:56Z",
+      "lastTimestamp": "2026-10-03T09:34:56Z",
+      "count": 4,
+      "object": "gateway-conformance-infra/ReplicaSet/gateway-default-does-not-allow-listenerset-655b967bfb"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: pods \"gateway-does-not-allow-listenerset-55bb9d5b89-\" is forbidden: error looking up service account gateway-conformance-infra/gateway-does-not-allow-listenerset: serviceaccount \"gateway-does-not-allow-listenerset\" not found",
+      "firstTimestamp": "2026-10-03T09:34:43Z",
+      "lastTimestamp": "2026-10-03T09:34:43Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/ReplicaSet/gateway-does-not-allow-listenerset-55bb9d5b89"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"gateway-with-listener-sets-test-supported-route-kinds-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:34:55Z",
+      "lastTimestamp": "2026-10-03T09:34:57Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-with-listener-sets-test-supported-route-kinds-59fcjr9b4"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"gateway-with-listener-sets-test-supported-route-kinds\" not found",
+      "firstTimestamp": "2026-10-03T09:34:55Z",
+      "lastTimestamp": "2026-10-03T09:34:57Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-with-listener-sets-test-supported-route-kinds-59fcjr9b4"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-token\" : failed to fetch token: serviceaccounts \"gateway-with-listener-sets-test-supported-route-kinds\" not found",
+      "firstTimestamp": "2026-10-03T09:34:55Z",
+      "lastTimestamp": "2026-10-03T09:34:57Z",
+      "count": 3,
+      "object": "gateway-conformance-infra/Pod/gateway-with-listener-sets-test-supported-route-kinds-59fcjr9b4"
+    },
+    {
+      "reason": "FailedToCreateEndpoint",
+      "message": "Failed to create endpoint for service gateway-conformance-infra/gw-tlsroute-exact-hostname-x-1: endpoints \"gw-tlsroute-exact-hostname-x-1\" already exists",
+      "firstTimestamp": "2026-10-03T09:35:08Z",
+      "lastTimestamp": "2026-10-03T09:35:08Z",
+      "count": 1,
+      "object": "/Endpoints/gw-tlsroute-exact-hostname-x-1"
+    },
+    {
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.42.3.231:15021/healthz/ready\": dial tcp 10.42.3.231:15021: connect: connection refused",
+      "firstTimestamp": "2026-10-03T09:35:29Z",
+      "lastTimestamp": "2026-10-03T09:35:29Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/Pod/gateway-tlsroute-invalid-backend-ref-nonexistent-6df8c7ffb775nq"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: pods \"gateway-with-listener-sets-test-reference-grant-6c59cbc9c-\" is forbidden: error looking up service account gateway-conformance-infra/gateway-with-listener-sets-test-reference-grant: serviceaccount \"gateway-with-listener-sets-test-reference-grant\" not found",
+      "firstTimestamp": "2026-10-03T09:35:07Z",
+      "lastTimestamp": "2026-10-03T09:35:07Z",
+      "count": 1,
+      "object": "gateway-conformance-infra/ReplicaSet/gateway-with-listener-sets-test-reference-grant-6c59cbc9c"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"config-volume\" : configmap \"gateway-with-listenerset-protocol-conflict\" not found",
+      "firstTimestamp": "2026-10-03T09:35:08Z",
+      "lastTimestamp": "2026-10-03T09:35:09Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-listenerset-protocol-conflict-5c464b5d89-bc69h"
+    },
+    {
+      "reason": "FailedMount",
+      "message": "MountVolume.SetUp failed for volume \"xds-ca\" : configmap \"gateway-with-listenerset-protocol-conflict-xds-ca\" not found",
+      "firstTimestamp": "2026-10-03T09:35:08Z",
+      "lastTimestamp": "2026-10-03T09:35:09Z",
+      "count": 2,
+      "object": "gateway-conformance-infra/Pod/gateway-with-listenerset-protocol-conflict-5c464b5d89-bc69h"
+    }
+  ],
+  "warning_reason_counts": {
+    "Unhealthy": 8,
+    "FailedToCreateEndpoint": 2,
+    "FailedMount": 39,
+    "AgentGatewayNackError": 1,
+    "FailedCreate": 6
+  },
+  "cleanup_complete": true,
+  "job_finished": true,
+  "review_note": "Events can precede the run; assess timestamps and product behavior before classifying infrastructure validity."
+}

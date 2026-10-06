@@ -1,0 +1,47 @@
+{
+  "scope": "First accepted Kubernetes pass, first HTTP execution through setup-block classification",
+  "profiles": {
+    "kclient": {
+      "samples": 0,
+      "distinct_pids": 0,
+      "unexpected": []
+    },
+    "kgateway": {
+      "samples": 578,
+      "distinct_pids": 11,
+      "unexpected": []
+    },
+    "kbackend": {
+      "samples": 722,
+      "distinct_pids": 1,
+      "unexpected": []
+    },
+    "kcontroller": {
+      "samples": 1246,
+      "distinct_pids": 11,
+      "unexpected": []
+    },
+    "kcontrol": {
+      "samples": 0,
+      "distinct_pids": 0,
+      "unexpected": []
+    }
+  },
+  "collector_lifecycle_errors": [
+    {
+      "role": "kgateway",
+      "utc": "2026-10-05T20:58:45.245274+00:00",
+      "error": "Command '['nsenter', '-t', '121118', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1."
+    },
+    {
+      "role": "kgateway",
+      "utc": "2026-10-05T20:58:50.526683+00:00",
+      "error": "Command '['nsenter', '-t', '122061', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1."
+    },
+    {
+      "role": "kgateway",
+      "utc": "2026-10-05T21:09:20.472393+00:00",
+      "error": "Command '['nsenter', '-t', '131348', '-n', 'sysctl', 'net.ipv4.ip_local_port_range', 'net.ipv4.tcp_tw_reuse', 'net.ipv4.tcp_tw_reuse_delay', 'net.ipv4.tcp_timestamps']' returned non-zero exit status 1."
+    }
+  ]
+}

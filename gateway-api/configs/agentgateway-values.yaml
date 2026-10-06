@@ -1,0 +1,12 @@
+controller:
+  replicaCount: 2
+resources:
+  requests: {cpu: 100m, memory: 128Mi}
+  limits: {cpu: "2", memory: 2Gi}
+proxy:
+  image:
+    tag: v1.5.0
+gatewayClassParametersRefs:
+  agentgateway:
+    name: benchmark-resources
+    namespace: agentgateway-system

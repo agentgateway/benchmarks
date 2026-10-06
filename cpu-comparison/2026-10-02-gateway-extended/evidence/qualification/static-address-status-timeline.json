@@ -1,0 +1,568 @@
+[
+  {
+    "received_at": "2026-10-03T03:07:29.285881+00:00",
+    "kind": "gateways",
+    "event": "ADDED",
+    "resourceVersion": "42779",
+    "generation": 1,
+    "spec_addresses": [
+      {
+        "type": "test/fake-invalid-type",
+        "value": "fake address teehee!"
+      },
+      {
+        "type": "Hostname",
+        "value": "bogus.example.com"
+      },
+      {
+        "type": "IPAddress",
+        "value": "198.18.1.254"
+      }
+    ],
+    "loadBalancerIP": null,
+    "status": {
+      "conditions": [
+        {
+          "lastTransitionTime": "1970-01-01T00:00:00Z",
+          "message": "Waiting for controller",
+          "reason": "Pending",
+          "status": "Unknown",
+          "type": "Accepted"
+        },
+        {
+          "lastTransitionTime": "1970-01-01T00:00:00Z",
+          "message": "Waiting for controller",
+          "reason": "Pending",
+          "status": "Unknown",
+          "type": "Programmed"
+        }
+      ]
+    }
+  },
+  {
+    "received_at": "2026-10-03T03:07:29.292280+00:00",
+    "kind": "gateways",
+    "event": "MODIFIED",
+    "resourceVersion": "42783",
+    "generation": 1,
+    "spec_addresses": [
+      {
+        "type": "test/fake-invalid-type",
+        "value": "fake address teehee!"
+      },
+      {
+        "type": "Hostname",
+        "value": "bogus.example.com"
+      },
+      {
+        "type": "IPAddress",
+        "value": "198.18.1.254"
+      }
+    ],
+    "loadBalancerIP": null,
+    "status": {
+      "attachedListenerSets": 0,
+      "conditions": [
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "Unknown address kind",
+          "observedGeneration": 1,
+          "reason": "UnsupportedAddress",
+          "status": "False",
+          "type": "Accepted"
+        },
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "Hostname addresses may not be used",
+          "observedGeneration": 1,
+          "reason": "AddressNotUsable",
+          "status": "False",
+          "type": "Programmed"
+        }
+      ],
+      "listeners": [
+        {
+          "attachedRoutes": 0,
+          "conditions": [
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 1,
+              "reason": "Accepted",
+              "status": "True",
+              "type": "Accepted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 1,
+              "reason": "NoConflicts",
+              "status": "False",
+              "type": "Conflicted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 1,
+              "reason": "Programmed",
+              "status": "True",
+              "type": "Programmed"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 1,
+              "reason": "ResolvedRefs",
+              "status": "True",
+              "type": "ResolvedRefs"
+            }
+          ],
+          "name": "http",
+          "supportedKinds": [
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "HTTPRoute"
+            },
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "GRPCRoute"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "received_at": "2026-10-03T03:07:29.401088+00:00",
+    "kind": "gateways",
+    "event": "MODIFIED",
+    "resourceVersion": "42796",
+    "generation": 2,
+    "spec_addresses": [
+      {
+        "type": "Hostname",
+        "value": "bogus.example.com"
+      },
+      {
+        "type": "IPAddress",
+        "value": "198.18.1.254"
+      }
+    ],
+    "loadBalancerIP": null,
+    "status": {
+      "attachedListenerSets": 0,
+      "conditions": [
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "Unknown address kind",
+          "observedGeneration": 1,
+          "reason": "UnsupportedAddress",
+          "status": "False",
+          "type": "Accepted"
+        },
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "Hostname addresses may not be used",
+          "observedGeneration": 1,
+          "reason": "AddressNotUsable",
+          "status": "False",
+          "type": "Programmed"
+        }
+      ],
+      "listeners": [
+        {
+          "attachedRoutes": 0,
+          "conditions": [
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 1,
+              "reason": "Accepted",
+              "status": "True",
+              "type": "Accepted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 1,
+              "reason": "NoConflicts",
+              "status": "False",
+              "type": "Conflicted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 1,
+              "reason": "Programmed",
+              "status": "True",
+              "type": "Programmed"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 1,
+              "reason": "ResolvedRefs",
+              "status": "True",
+              "type": "ResolvedRefs"
+            }
+          ],
+          "name": "http",
+          "supportedKinds": [
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "HTTPRoute"
+            },
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "GRPCRoute"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "received_at": "2026-10-03T03:07:29.406099+00:00",
+    "kind": "gateways",
+    "event": "MODIFIED",
+    "resourceVersion": "42797",
+    "generation": 2,
+    "spec_addresses": [
+      {
+        "type": "Hostname",
+        "value": "bogus.example.com"
+      },
+      {
+        "type": "IPAddress",
+        "value": "198.18.1.254"
+      }
+    ],
+    "loadBalancerIP": null,
+    "status": {
+      "attachedListenerSets": 0,
+      "conditions": [
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "",
+          "observedGeneration": 2,
+          "reason": "Accepted",
+          "status": "True",
+          "type": "Accepted"
+        },
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "Hostname addresses may not be used",
+          "observedGeneration": 2,
+          "reason": "AddressNotUsable",
+          "status": "False",
+          "type": "Programmed"
+        }
+      ],
+      "listeners": [
+        {
+          "attachedRoutes": 0,
+          "conditions": [
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 2,
+              "reason": "Accepted",
+              "status": "True",
+              "type": "Accepted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 2,
+              "reason": "NoConflicts",
+              "status": "False",
+              "type": "Conflicted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 2,
+              "reason": "Programmed",
+              "status": "True",
+              "type": "Programmed"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 2,
+              "reason": "ResolvedRefs",
+              "status": "True",
+              "type": "ResolvedRefs"
+            }
+          ],
+          "name": "http",
+          "supportedKinds": [
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "HTTPRoute"
+            },
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "GRPCRoute"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "received_at": "2026-10-03T03:07:29.515921+00:00",
+    "kind": "gateways",
+    "event": "MODIFIED",
+    "resourceVersion": "42802",
+    "generation": 3,
+    "spec_addresses": [
+      {
+        "type": "IPAddress",
+        "value": "198.18.1.254"
+      }
+    ],
+    "loadBalancerIP": null,
+    "status": {
+      "attachedListenerSets": 0,
+      "conditions": [
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "",
+          "observedGeneration": 2,
+          "reason": "Accepted",
+          "status": "True",
+          "type": "Accepted"
+        },
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "Hostname addresses may not be used",
+          "observedGeneration": 2,
+          "reason": "AddressNotUsable",
+          "status": "False",
+          "type": "Programmed"
+        }
+      ],
+      "listeners": [
+        {
+          "attachedRoutes": 0,
+          "conditions": [
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 2,
+              "reason": "Accepted",
+              "status": "True",
+              "type": "Accepted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 2,
+              "reason": "NoConflicts",
+              "status": "False",
+              "type": "Conflicted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 2,
+              "reason": "Programmed",
+              "status": "True",
+              "type": "Programmed"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 2,
+              "reason": "ResolvedRefs",
+              "status": "True",
+              "type": "ResolvedRefs"
+            }
+          ],
+          "name": "http",
+          "supportedKinds": [
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "HTTPRoute"
+            },
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "GRPCRoute"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "received_at": "2026-10-03T03:07:29.520651+00:00",
+    "kind": "gateways",
+    "event": "MODIFIED",
+    "resourceVersion": "42803",
+    "generation": 3,
+    "spec_addresses": [
+      {
+        "type": "IPAddress",
+        "value": "198.18.1.254"
+      }
+    ],
+    "loadBalancerIP": null,
+    "status": {
+      "attachedListenerSets": 0,
+      "conditions": [
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "",
+          "observedGeneration": 3,
+          "reason": "Accepted",
+          "status": "True",
+          "type": "Accepted"
+        },
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "Successfully programmed Gateway",
+          "observedGeneration": 3,
+          "reason": "Programmed",
+          "status": "True",
+          "type": "Programmed"
+        }
+      ],
+      "listeners": [
+        {
+          "attachedRoutes": 0,
+          "conditions": [
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 3,
+              "reason": "Accepted",
+              "status": "True",
+              "type": "Accepted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 3,
+              "reason": "NoConflicts",
+              "status": "False",
+              "type": "Conflicted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 3,
+              "reason": "Programmed",
+              "status": "True",
+              "type": "Programmed"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 3,
+              "reason": "ResolvedRefs",
+              "status": "True",
+              "type": "ResolvedRefs"
+            }
+          ],
+          "name": "http",
+          "supportedKinds": [
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "HTTPRoute"
+            },
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "GRPCRoute"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "received_at": "2026-10-03T03:07:29.631989+00:00",
+    "kind": "gateways",
+    "event": "DELETED",
+    "resourceVersion": "42804",
+    "generation": 3,
+    "spec_addresses": [
+      {
+        "type": "IPAddress",
+        "value": "198.18.1.254"
+      }
+    ],
+    "loadBalancerIP": null,
+    "status": {
+      "attachedListenerSets": 0,
+      "conditions": [
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "",
+          "observedGeneration": 3,
+          "reason": "Accepted",
+          "status": "True",
+          "type": "Accepted"
+        },
+        {
+          "lastTransitionTime": "2026-10-03T03:07:29Z",
+          "message": "Successfully programmed Gateway",
+          "observedGeneration": 3,
+          "reason": "Programmed",
+          "status": "True",
+          "type": "Programmed"
+        }
+      ],
+      "listeners": [
+        {
+          "attachedRoutes": 0,
+          "conditions": [
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 3,
+              "reason": "Accepted",
+              "status": "True",
+              "type": "Accepted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 3,
+              "reason": "NoConflicts",
+              "status": "False",
+              "type": "Conflicted"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 3,
+              "reason": "Programmed",
+              "status": "True",
+              "type": "Programmed"
+            },
+            {
+              "lastTransitionTime": "2026-10-03T03:07:29Z",
+              "message": "No errors found",
+              "observedGeneration": 3,
+              "reason": "ResolvedRefs",
+              "status": "True",
+              "type": "ResolvedRefs"
+            }
+          ],
+          "name": "http",
+          "supportedKinds": [
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "HTTPRoute"
+            },
+            {
+              "group": "gateway.networking.k8s.io",
+              "kind": "GRPCRoute"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

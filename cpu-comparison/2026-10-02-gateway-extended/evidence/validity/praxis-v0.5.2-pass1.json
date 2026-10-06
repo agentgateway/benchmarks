@@ -1,0 +1,39 @@
+{
+  "campaign": "praxis-v0.5.2",
+  "repetition": "pass1",
+  "reviewed_at": "2026-10-03T03:09:35.687228+00:00",
+  "infrastructure_valid": true,
+  "scored_cases": {
+    "agentgateway": {
+      "pass": 106,
+      "fail": 1
+    },
+    "praxis": {
+      "pass": 52,
+      "fail": 55
+    }
+  },
+  "checks": {
+    "all_107_selected_cases_scored_for_each_product": true,
+    "both_upstream_reports_present": true,
+    "both_jobs_finished_and_namespaces_cleaned": true,
+    "outer_timeouts_not_reached": true,
+    "client_open_file_soft_and_hard_limits": 1048576,
+    "client_tcp_syn_retries": 2,
+    "node_pressure_or_readiness_issues_observed": false,
+    "runtime_collection_errors": 0,
+    "praxis_runtime_snapshots": 328,
+    "agentgateway_runtime_snapshots": 8,
+    "maximum_praxis_snapshot_gap_seconds": 34.272347,
+    "image_identities_match_pins": true
+  },
+  "classified_observations": [
+    "Praxis operator restarted once at startup after logging LeadershipLost; recovered before feature tests. This is a product leader-election event, not host pressure or an API outage.",
+    "Three observed data-plane exit-137 terminations occurred on pods already marked for deletion; restartCount was zero, reason was Error rather than OOMKilled, and no node pressure was observed. Retained as rollout/cleanup observations.",
+    "Warning events include historical boot events and transient readiness, mount and endpoint conflicts during pod/resource creation and deletion; none prevented fixture readiness or caused a recorded infrastructure failure.",
+    "Unready Gateways during TLSRoute and ListenerSet tests were rejected or left unimplemented by the product, while nodes and echo fixtures remained available. These are selected feature-test failures.",
+    "Agentgateway static-address failure reproduced in an excluded passive watch diagnostic: resourceVersion 42803 had latest-generation Programmed=True and no status.addresses. Its deletion event retained that state. The static IP allocator was independently qualified. This is retained as a product status-ordering finding, not removed as an infrastructure or stale-snapshot artifact."
+  ],
+  "exclusions": "Initial agentgateway attempt under the old TCP client profile and focused diagnostics are excluded; see evidence/exclusions.json.",
+  "decision": "Proceed with repetitions two and three using the unchanged measured profile, pinned products and upstream test binary."
+}

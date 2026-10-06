@@ -1,0 +1,253 @@
+{
+  "profile": "common",
+  "phase": "pass3",
+  "treatments": {
+    "agentgateway": {
+      "complete": true,
+      "load_cases": 32,
+      "nonzero_processes": [],
+      "fortio_status_counts": {
+        "200": 6069019
+      },
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 0,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 4,
+      "protocol_passed": 12,
+      "protocol_total": 12,
+      "cancellation_passed": 2,
+      "cancellation_total": 2
+    },
+    "direct": {
+      "complete": true,
+      "load_cases": 32,
+      "nonzero_processes": [],
+      "fortio_status_counts": {
+        "200": 16368806
+      },
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 0,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 4,
+      "protocol_passed": 12,
+      "protocol_total": 12,
+      "cancellation_passed": 2,
+      "cancellation_total": 2
+    },
+    "praxis-nightly": {
+      "complete": true,
+      "load_cases": 32,
+      "nonzero_processes": [],
+      "fortio_status_counts": {
+        "200": 5969358
+      },
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 1,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 4,
+      "protocol_passed": 12,
+      "protocol_total": 12,
+      "cancellation_passed": 2,
+      "cancellation_total": 2
+    },
+    "praxis-release": {
+      "complete": true,
+      "load_cases": 32,
+      "nonzero_processes": [],
+      "fortio_status_counts": {
+        "200": 7435847
+      },
+      "nighthawk_non_2xx": 0,
+      "nighthawk_resets": 0,
+      "nighthawk_cutoff_inflight": 0,
+      "aiperf_errors": 0,
+      "aiperf_completed_cases": 4,
+      "protocol_passed": 12,
+      "protocol_total": 12,
+      "cancellation_passed": 2,
+      "cancellation_total": 2
+    }
+  },
+  "issues": [],
+  "generated_message_corpora": [
+    {
+      "treatment": "agentgateway",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 16
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "agentgateway/ai/14-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "agentgateway",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 128
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "agentgateway/ai/15-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "agentgateway",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 16
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "agentgateway/ai/16-aiperf-anthropic/result/inputs.json"
+    },
+    {
+      "treatment": "agentgateway",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 128
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "agentgateway/ai/17-aiperf-anthropic/result/inputs.json"
+    },
+    {
+      "treatment": "direct",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 16
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "direct/ai/14-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "direct",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 128
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "direct/ai/15-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "direct",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 16
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "direct/ai/16-aiperf-anthropic/result/inputs.json"
+    },
+    {
+      "treatment": "direct",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 128
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "direct/ai/17-aiperf-anthropic/result/inputs.json"
+    },
+    {
+      "treatment": "praxis-nightly",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 16
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "praxis-nightly/ai/14-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "praxis-nightly",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 128
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "praxis-nightly/ai/15-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "praxis-nightly",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 16
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "praxis-nightly/ai/16-aiperf-anthropic/result/inputs.json"
+    },
+    {
+      "treatment": "praxis-nightly",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 128
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "praxis-nightly/ai/17-aiperf-anthropic/result/inputs.json"
+    },
+    {
+      "treatment": "praxis-release",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 16
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "praxis-release/ai/14-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "praxis-release",
+      "case": {
+        "tool": "aiperf",
+        "api": "openai",
+        "concurrency": 128
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "praxis-release/ai/15-aiperf-openai/result/inputs.json"
+    },
+    {
+      "treatment": "praxis-release",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 16
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "praxis-release/ai/16-aiperf-anthropic/result/inputs.json"
+    },
+    {
+      "treatment": "praxis-release",
+      "case": {
+        "tool": "aiperf",
+        "api": "anthropic",
+        "concurrency": 128
+      },
+      "messages": 100,
+      "sha256": "6ff884fe286410bfa618d421868c701674eedf08427e297779c69e3b45dd9d63",
+      "artifact": "praxis-release/ai/17-aiperf-anthropic/result/inputs.json"
+    }
+  ]
+}

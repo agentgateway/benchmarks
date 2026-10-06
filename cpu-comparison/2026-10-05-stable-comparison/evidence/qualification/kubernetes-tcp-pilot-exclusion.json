@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-05T19:33:19.574095+00:00",
+  "excluded": "entire incomplete Kubernetes pass1, all treatments",
+  "reason": "Intended expanded TCP range and TIME_WAIT reuse settings were absent on Kubernetes hosts and pods. Praxis core v0.5.2 512-concurrency unlimited load returned 502 with outbound BindError errno99. Correct environment consistently before requalification. Do not rank gateways with this pilot.",
+  "evidence": [
+    "../diagnostics/pass1-praxis-release-http-live.log.gz",
+    "../diagnostics/pass1-kubernetes-pod-network.txt"
+  ],
+  "cpu_campaign": "unaffected; host-network containers already use intended settings",
+  "log_uncompressed_sha256": "9cac93c2f47221a7b8c2dacff12a84072315bd510a41b4117fbfea2dba6d93dd"
+}

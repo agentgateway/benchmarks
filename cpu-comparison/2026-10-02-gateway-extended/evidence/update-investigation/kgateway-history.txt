@@ -1,0 +1,78 @@
+Oct 02 23:16:47 gwext-1002-kgateway systemd[1]: Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+Oct 02 23:18:25 gwext-1002-kgateway.c.solo-oss.internal systemd[1]: Starting k3s.service - Temporary native GCE benchmark Kubernetes...
+Oct 02 23:18:33 gwext-1002-kgateway.c.solo-oss.internal systemd[1]: Started k3s.service - Temporary native GCE benchmark Kubernetes.
+Oct 02 23:19:17 gwext-1002-kgateway.c.solo-oss.internal systemd[1]: Started benchmark-collector.service - /usr/bin/python3 /opt/gateway-benchmark/collect-host.py --runtime cri.
+Start-Date: 2026-09-18  09:04:20
+Commandline: apt-get install -qqy grub-pc shim-signed
+Install: mokutil:amd64 (0.6.0-2build3, automatic), grub-efi-amd64-signed:amd64 (1.202.5+2.12-1ubuntu7.3, automatic), grub-efi-amd64-bin:amd64 (2.12-1ubuntu7.3, automatic), efibootmgr:amd64 (18-1build2, automatic), shim-signed:amd64 (1.58+15.8-0ubuntu1)
+End-Date: 2026-09-18  09:04:22
+
+Start-Date: 2026-09-18  09:07:56
+Commandline: apt-get -y install chrony google-compute-engine google-compute-engine-oslogin google-guest-agent google-osconfig-agent
+Install: chrony:amd64 (4.5-1ubuntu4.2), google-guest-agent:amd64 (20250116.00-0ubuntu1~24.04.4), google-osconfig-agent:amd64 (20251028.00-0ubuntu2~24.04.0), nvme-cli:amd64 (2.8-1ubuntu0.1, automatic), tzdata-legacy:amd64 (2026c-0ubuntu0.24.04.1, automatic), google-compute-engine:amd64 (20260819.00-0ubuntu1~24.04.0), google-compute-engine-oslogin:amd64 (20260814.00-0ubuntu1~24.04.0)
+Remove: systemd-timesyncd:amd64 (255.4-1ubuntu8.17)
+End-Date: 2026-09-18  09:08:01
+
+Start-Date: 2026-09-18  09:08:05
+Commandline: apt-get -y purge fwupd fwupd-signed bolt libarchive13 libfwupd2 libgcab-1.0-0 libgpgme11 libgudev-1.0-0 libgusb2 libjson-glib-1.0-0 libjson-glib-1.0-common libsmbios-c2 tpm-udev
+Purge: libtss2-esys-3.0.2-0t64:amd64 (4.0.1-7.1ubuntu5.1), libtss2-tcti-cmd0t64:amd64 (4.0.1-7.1ubuntu5.1), modemmanager:amd64 (1.23.4-0ubuntu2), libtss2-sys1t64:amd64 (4.0.1-7.1ubuntu5.1), libfwupd3:amd64 (2.0.20-1ubuntu2~24.04.2), udisks2:amd64 (2.10.1-6ubuntu1.5), libgudev-1.0-0:amd64 (1:238-5ubuntu1), libjson-glib-1.0-common:amd64 (1.8.0-2build2), fwupd-signed:amd64 (1.52+1.4-1), libqmi-utils:amd64 (1.35.2-0ubuntu2), bolt:amd64 (0.9.7-1), libtss2-tcti-mssim0t64:amd64 (4.0.1-7.1ubuntu5.1), libjson-glib-1.0-0:amd64 (1.8.0-2build2), tpm-udev:amd64 (0.6ubuntu1), libtss2-tcti-device0t64:amd64 (4.0.1-7.1ubuntu5.1), libjcat1:amd64 (0.2.3-1~ubuntu0.24.04.1), libtss2-mu-4.0.1-0t64:amd64 (4.0.1-7.1ubuntu5.1), libtss2-tcti-swtpm0t64:amd64 (4.0.1-7.1ubuntu5.1), fwupd:amd64 (2.0.20-1ubuntu2~24.04.2)
+End-Date: 2026-09-18  09:08:08
+
+Start-Date: 2026-09-18  09:08:10
+Commandline: apt-get --assume-yes autoremove --purge
+Purge: libmm-glib0:amd64 (1.23.4-0ubuntu2), libqrtr-glib0:amd64 (1.2.2-1ubuntu4), libmbim-utils:amd64 (1.31.2-0ubuntu3.1), libqmi-proxy:amd64 (1.35.2-0ubuntu2), libblockdev-part3:amd64 (3.1.1-1ubuntu0.1), libblockdev-swap3:amd64 (3.1.1-1ubuntu0.1), libmbim-glib4:amd64 (1.31.2-0ubuntu3.1), usb-modeswitch-data:amd64 (20191128-6), libbytesize1:amd64 (2.10-1ubuntu2), tcl:amd64 (8.6.14build1), libblockdev-fs3:amd64 (3.1.1-1ubuntu0.1), libtcl8.6:amd64 (8.6.14+dfsg-1build1), libatasmart4:amd64 (0.19-5build3), libbytesize-common:amd64 (2.10-1ubuntu2), libvolume-key1:amd64 (0.3.12-7build2), libarchive13t64:amd64 (3.7.2-2ubuntu0.8), libudisks2-0:amd64 (2.10.1-6ubuntu1.5), libprotobuf-c1:amd64 (1.4.1-1ubuntu4), libblockdev-loop3:amd64 (3.1.1-1ubuntu0.1), libblockdev3:amd64 (3.1.1-1ubuntu0.1), usb-modeswitch:amd64 (2.6.1-3ubuntu3), libmbim-proxy:amd64 (1.31.2-0ubuntu3.1), libnss3:amd64 (2:3.98-1ubuntu0.2), libblockdev-utils3:amd64 (3.1.1-1ubuntu0.1), tcl8.6:amd64 (8.6.14+dfsg-1build1), libblockdev-mdraid3:amd64 (3.1.1-1ubuntu0.1), libftdi1-2:amd64 (1.5-6build5), libqmi-glib5:amd64 (1.35.2-0ubuntu2), libgpgme11t64:amd64 (1.18.0-4.1ubuntu4), libdrm-amdgpu1:amd64 (2.4.125-1ubuntu0.1~24.04.2), libflashrom1:amd64 (1.3.0-2.1ubuntu2), libblockdev-nvme3:amd64 (3.1.1-1ubuntu0.1), libblockdev-crypto3:amd64 (3.1.1-1ubuntu0.1), libnspr4:amd64 (2:4.35-1.1build1)
+End-Date: 2026-09-18  09:08:12
+
+Start-Date: 2026-09-18  09:08:15
+Commandline: apt-get --reinstall install pollinate
+Reinstall: pollinate:amd64 (4.33-3.1ubuntu1.3)
+End-Date: 2026-09-18  09:08:15
+
+Start-Date: 2026-09-18  09:08:19
+Commandline: apt-get remove --purge --assume-yes ^linux-.* linux-base+
+Purge: linux-tools-common:amd64 (6.8.0-139.139), linux-headers-6.8.0-139-generic:amd64 (6.8.0-139.139), linux-virtual:amd64 (6.8.0-139.139), linux-headers-generic:amd64 (6.8.0-139.139), linux-modules-6.8.0-139-generic:amd64 (6.8.0-139.139), linux-image-virtual:amd64 (6.8.0-139.139), linux-tools-6.8.0-139:amd64 (6.8.0-139.139), linux-headers-6.8.0-139:amd64 (6.8.0-139.139), linux-image-6.8.0-139-generic:amd64 (6.8.0-139.139), linux-headers-virtual:amd64 (6.8.0-139.139), libc6-dev:amd64 (2.39-0ubuntu8.9), linux-tools-6.8.0-139-generic:amd64 (6.8.0-139.139), linux-libc-dev:amd64 (6.8.0-139.139)
+End-Date: 2026-09-18  09:08:23
+
+Start-Date: 2026-09-18  09:08:35
+Commandline: apt-get install --assume-yes linux-gcp
+Install: linux-tools-common:amd64 (6.8.0-139.139, automatic), linux-image-gcp:amd64 (7.0.0-1011.11~24.04.1, automatic), linux-headers-7.0.0-1011-gcp:amd64 (7.0.0-1011.11~24.04.1, automatic), libdebuginfod1t64:amd64 (0.190-1.1ubuntu0.1, automatic), libdebuginfod-common:amd64 (0.190-1.1ubuntu0.1, automatic), linux-headers-gcp:amd64 (7.0.0-1011.11~24.04.1, automatic), linux-gcp-7.0-tools-7.0.0-1011:amd64 (7.0.0-1011.11~24.04.1, automatic), libllvm19:amd64 (1:19.1.1-1ubuntu1~24.04.2, automatic), linux-gcp-7.0-headers-7.0.0-1011:amd64 (7.0.0-1011.11~24.04.1, automatic), linux-image-7.0.0-1011-gcp:amd64 (7.0.0-1011.11~24.04.1, automatic), linux-tools-7.0.0-1011-gcp:amd64 (7.0.0-1011.11~24.04.1, automatic), linux-gcp:amd64 (7.0.0-1011.11~24.04.1), linux-modules-7.0.0-1011-gcp:amd64 (7.0.0-1011.11~24.04.1, automatic)
+End-Date: 2026-09-18  09:09:01
+
+Start-Date: 2026-09-18  09:09:04
+Commandline: apt-get autoremove --purge --assume-yes
+Purge: manpages-dev:amd64 (6.7-2), libsharpyuv0:amd64 (1.3.2-0.4build3), libaom3:amd64 (3.8.2-2ubuntu0.2), libjpeg-turbo8:amd64 (2.1.5-2ubuntu2), libheif1:amd64 (1.17.6-1ubuntu4.8), libdeflate0:amd64 (1.19-1build1.1), libjpeg8:amd64 (8c-2ubuntu11), libtiff6:amd64 (4.5.1+git230720-4ubuntu2.5), liblerc4:amd64 (4.0.0+ds-4ubuntu2), libxpm4:amd64 (1:3.5.17-1ubuntu0.24.04.1), libfontconfig1:amd64 (2.15.0-1.1ubuntu2), libheif-plugin-aomdec:amd64 (1.17.6-1ubuntu4.8), libheif-plugin-aomenc:amd64 (1.17.6-1ubuntu4.8), fontconfig-config:amd64 (2.15.0-1.1ubuntu2), rpcsvc-proto:amd64 (1.4.2-0ubuntu7), libwebp7:amd64 (1.3.2-0.4build3), fonts-dejavu-mono:amd64 (2.37-8), libcrypt-dev:amd64 (1:4.4.36-4build1), libjbig0:amd64 (2.1-6.1ubuntu2), libc-dev-bin:amd64 (2.39-0ubuntu8.9), libc-devtools:amd64 (2.39-0ubuntu8.9), fonts-dejavu-core:amd64 (2.37-8), libgd3:amd64 (2.3.3-9ubuntu5)
+End-Date: 2026-09-18  09:09:07
+
+Start-Date: 2026-09-18  09:09:14
+Commandline: apt-get purge --assume-yes ?config-files
+Purge: systemd-timesyncd:amd64 ()
+End-Date: 2026-09-18  09:09:14
+
+Start-Date: 2026-10-02  23:17:13
+Commandline: apt-get install -y -qq curl ca-certificates jq python3-venv git sysstat
+Install: python3-setuptools-whl:amd64 (68.1.2-2ubuntu1.2, automatic), python3-venv:amd64 (3.12.3-0ubuntu2.1), python3-pip-whl:amd64 (24.0+dfsg-1ubuntu1.3, automatic), python3.12-venv:amd64 (3.12.3-1ubuntu0.17, automatic)
+Upgrade: libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.13, 8.5.0-2ubuntu10.15), libcurl4t64:amd64 (8.5.0-2ubuntu10.13, 8.5.0-2ubuntu10.15), curl:amd64 (8.5.0-2ubuntu10.13, 8.5.0-2ubuntu10.15)
+End-Date: 2026-10-02  23:17:14
+NEXT                             LEFT LAST                             PASSED UNIT                            ACTIVATES
+Sat 2026-10-03 06:27:35 UTC  1min 49s Sat 2026-10-03 06:17:35 UTC    8min ago gce-workload-cert-refresh.timer gce-workload-cert-refresh.service
+Sat 2026-10-03 06:30:00 UTC  4min 13s Sat 2026-10-03 06:20:09 UTC    5min ago sysstat-collect.timer           sysstat-collect.service
+Sat 2026-10-03 06:55:11 UTC     29min -                                     - apt-daily-upgrade.timer         apt-daily-upgrade.service
+Sat 2026-10-03 10:14:28 UTC  3h 48min -                                     - man-db.timer                    man-db.service
+Sat 2026-10-03 11:16:48 UTC  4h 51min Sat 2026-10-03 05:16:48 UTC 1h 8min ago google-oslogin-cache.timer      google-oslogin-cache.service
+Sat 2026-10-03 13:07:22 UTC        6h -                                     - apt-daily.timer                 apt-daily.service
+Sat 2026-10-03 19:33:33 UTC       13h Sat 2026-10-03 05:58:35 UTC   27min ago motd-news.timer                 motd-news.service
+Sat 2026-10-03 23:21:46 UTC       16h Fri 2026-10-02 23:21:46 UTC      7h ago update-notifier-download.timer  update-notifier-download.service
+Sat 2026-10-03 23:31:46 UTC       17h Fri 2026-10-02 23:31:46 UTC      6h ago systemd-tmpfiles-clean.timer    systemd-tmpfiles-clean.service
+Sun 2026-10-04 00:00:00 UTC       17h Sat 2026-10-03 00:00:09 UTC      6h ago dpkg-db-backup.timer            dpkg-db-backup.service
+Sun 2026-10-04 00:00:00 UTC       17h Sat 2026-10-03 00:00:09 UTC      6h ago logrotate.timer                 logrotate.service
+Sun 2026-10-04 00:07:00 UTC       17h Sat 2026-10-03 00:07:00 UTC      6h ago sysstat-summary.timer           sysstat-summary.service
+Sun 2026-10-04 03:10:30 UTC       20h -                                     - e2scrub_all.timer               e2scrub_all.service
+Mon 2026-10-05 00:49:38 UTC 1 day 18h -                                     - fstrim.timer                    fstrim.service
+Mon 2026-10-05 16:14:07 UTC    2 days -                                     - update-notifier-motd.timer      update-notifier-motd.service
+-                                   - -                                     - apport-autoreport.timer         apport-autoreport.service
+-                                   - -                                     - snapd.snap-repair.timer         snapd.snap-repair.service
+-                                   - -                                     - ua-timer.timer                  ua-timer.service
+
+18 timers listed.
+Linux gwext-1002-kgateway.c.solo-oss.internal 7.0.0-1011-gcp #11~24.04.1-Ubuntu SMP PREEMPT Tue Aug 11 20:14:48 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+

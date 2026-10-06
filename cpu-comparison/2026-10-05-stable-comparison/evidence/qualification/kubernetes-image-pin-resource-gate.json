@@ -1,0 +1,87 @@
+{
+  "phase": "qualification-image-pin",
+  "profile": null,
+  "input": "evidence/qualification/kubernetes-image-pin-host-review.json",
+  "windows": 45,
+  "roles": {
+    "kbackend": {
+      "windows": 9,
+      "minimum_samples": 7,
+      "maximum_fd_count": 519,
+      "minimum_soft_nofile": 1048576,
+      "peak_mean_host_busy_percent": 77.10148283377423,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.008198244273200744,
+      "peak_mean_quota_busy_percent": 94.92391591616713,
+      "through_gateways_peak_mean_host_busy_percent": 55.75268773944059,
+      "through_gateways_peak_mean_quota_busy_percent": 65.83455171087756
+    },
+    "kclient": {
+      "windows": 9,
+      "minimum_samples": 7,
+      "maximum_fd_count": 518,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 92.06362930921489,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.02869337541695061,
+      "peak_mean_quota_busy_percent": null,
+      "through_gateways_peak_mean_host_busy_percent": 40.089168633860375,
+      "through_gateways_peak_mean_quota_busy_percent": null
+    },
+    "kcontrol": {
+      "windows": 9,
+      "minimum_samples": 7,
+      "maximum_fd_count": null,
+      "minimum_soft_nofile": null,
+      "peak_mean_host_busy_percent": 1.3095481864466525,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.012317301614719901,
+      "peak_mean_quota_busy_percent": null,
+      "through_gateways_peak_mean_host_busy_percent": 1.2316716094345057,
+      "through_gateways_peak_mean_quota_busy_percent": null
+    },
+    "kcontroller": {
+      "windows": 9,
+      "minimum_samples": 7,
+      "maximum_fd_count": 24,
+      "minimum_soft_nofile": 1048576,
+      "peak_mean_host_busy_percent": 1.144558774904231,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.008210181122055526,
+      "peak_mean_quota_busy_percent": 0.05918034169100186,
+      "through_gateways_peak_mean_host_busy_percent": 1.144558774904231,
+      "through_gateways_peak_mean_quota_busy_percent": 0.05918034169100186
+    },
+    "kgateway": {
+      "windows": 9,
+      "minimum_samples": 6,
+      "maximum_fd_count": 931,
+      "minimum_soft_nofile": 1048576,
+      "peak_mean_host_busy_percent": 33.077513694031396,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.012589182006375614,
+      "peak_mean_quota_busy_percent": 99.67162238924335,
+      "through_gateways_peak_mean_host_busy_percent": 33.077513694031396,
+      "through_gateways_peak_mean_quota_busy_percent": 99.67162238924335
+    }
+  },
+  "events_to_review": [
+    {
+      "role": "kcontroller",
+      "workload": "results/kubernetes/qualification-image-pin/praxis-release/http/00-fortio/execution.json",
+      "max_restart_count": 1
+    },
+    {
+      "role": "kcontroller",
+      "workload": "results/kubernetes/qualification-image-pin/praxis-release/http/01-fortio/execution.json",
+      "max_restart_count": 1
+    },
+    {
+      "role": "kcontroller",
+      "workload": "results/kubernetes/qualification-image-pin/praxis-release/http/02-nighthawk/execution.json",
+      "max_restart_count": 1
+    }
+  ],
+  "approved": false,
+  "note": "Restart/OOM counters may predate a window. Attribute using raw timestamps/lifecycle evidence; intended product capacity/recovery constraints are not automatically infrastructure failures. Short qualification cases can contain few samples. This summary does not approve a pass."
+}

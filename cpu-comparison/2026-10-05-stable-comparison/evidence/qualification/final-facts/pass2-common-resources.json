@@ -1,0 +1,60 @@
+{
+  "phase": "pass2",
+  "profile": "common",
+  "input": "/private/tmp/gateway-comparison-benchmarks/campaigns/2026-10-05-stable-comparison/evidence/qualification/final-facts/cpu-hosts.json",
+  "windows": 384,
+  "roles": {
+    "backend": {
+      "windows": 128,
+      "minimum_samples": 6,
+      "maximum_fd_count": 624,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 75.5466876391831,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.007160759040458288,
+      "peak_mean_quota_busy_percent": 96.95807718025287,
+      "through_gateways_peak_mean_host_busy_percent": 68.21154143287583,
+      "through_gateways_peak_mean_quota_busy_percent": 88.15840634916633
+    },
+    "client": {
+      "windows": 128,
+      "minimum_samples": 6,
+      "maximum_fd_count": 518,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 97.56589912362497,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.055547373715771016,
+      "peak_mean_quota_busy_percent": 11.06450797812193,
+      "through_gateways_peak_mean_host_busy_percent": 58.65230948835233,
+      "through_gateways_peak_mean_quota_busy_percent": 9.785704043215365
+    },
+    "gateway": {
+      "windows": 128,
+      "minimum_samples": 6,
+      "maximum_fd_count": 1149,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 32.802389534777234,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.01245640259093174,
+      "peak_mean_quota_busy_percent": 99.76336191634562,
+      "through_gateways_peak_mean_host_busy_percent": 32.802389534777234,
+      "through_gateways_peak_mean_quota_busy_percent": 99.76336191634562
+    }
+  },
+  "events_to_review": [
+    {
+      "role": "client",
+      "workload": "results/common/pass2/praxis-release/http/12-nighthawk/execution.json",
+      "transient_container_read_errors": [
+        {
+          "name": "/elegant_mirzakhani",
+          "pid": 0,
+          "error": "[Errno 2] No such file or directory: '/proc/0/fd'",
+          "cgroup_error": "[Errno 2] No such file or directory: '/proc/0/cgroup'"
+        }
+      ]
+    }
+  ],
+  "approved": false,
+  "note": "Restart/OOM counters may predate a window. Attribute using raw timestamps/lifecycle evidence; intended product capacity/recovery constraints are not automatically infrastructure failures. Short qualification cases can contain few samples. This summary does not approve a pass."
+}

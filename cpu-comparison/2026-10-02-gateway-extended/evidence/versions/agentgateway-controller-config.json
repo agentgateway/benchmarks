@@ -1,0 +1,68 @@
+{
+  "architecture": "amd64",
+  "author": "github.com/chainguard-dev/apko",
+  "config": {
+    "User": "10101",
+    "Env": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin",
+      "SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt"
+    ],
+    "Entrypoint": [
+      "/usr/local/bin/agentgateway"
+    ],
+    "Labels": {
+      "dev.chainguard.image.title": "static",
+      "dev.chainguard.package.main": "",
+      "org.opencontainers.image.authors": "Chainguard Team https://www.chainguard.dev/",
+      "org.opencontainers.image.created": "2026-10-02T15:37:57.792Z",
+      "org.opencontainers.image.description": "Next Generation Agentic Proxy for AI Agents and MCP servers",
+      "org.opencontainers.image.licenses": "Apache-2.0",
+      "org.opencontainers.image.revision": "ea5608642b9d5c94c5baf5fd9f2f9849b808e963",
+      "org.opencontainers.image.source": "https://github.com/agentgateway/agentgateway",
+      "org.opencontainers.image.title": "agentgateway",
+      "org.opencontainers.image.url": "https://github.com/agentgateway/agentgateway",
+      "org.opencontainers.image.vendor": "Chainguard",
+      "org.opencontainers.image.version": "v1.6.0"
+    }
+  },
+  "created": "2026-10-02T15:38:01.776084444Z",
+  "history": [
+    {
+      "created": "2026-10-01T15:12:42Z",
+      "created_by": "apko",
+      "author": "apko",
+      "comment": "static by Chainguard"
+    },
+    {
+      "created": "2026-10-02T15:38:01.776084444Z",
+      "created_by": "ARG GOARCH=amd64",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-10-02T15:38:01.776084444Z",
+      "created_by": "COPY agentgateway-linux-amd64 /usr/local/bin/agentgateway # buildkit",
+      "comment": "buildkit.dockerfile.v0"
+    },
+    {
+      "created": "2026-10-02T15:38:01.776084444Z",
+      "created_by": "USER 10101",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    },
+    {
+      "created": "2026-10-02T15:38:01.776084444Z",
+      "created_by": "ENTRYPOINT [\"/usr/local/bin/agentgateway\"]",
+      "comment": "buildkit.dockerfile.v0",
+      "empty_layer": true
+    }
+  ],
+  "os": "linux",
+  "rootfs": {
+    "type": "layers",
+    "diff_ids": [
+      "sha256:f4aefcbfe66901de891d856560ebd7a26c215503574a77003abf067afd54321a",
+      "sha256:c6936c92c1aa26ac0bb604494dc1f37f10ce47d4215a56c5ef040ec98bc8ffcb"
+    ]
+  }
+}

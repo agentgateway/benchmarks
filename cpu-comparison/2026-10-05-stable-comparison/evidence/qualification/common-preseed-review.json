@@ -1,0 +1,27 @@
+{
+  "reviewed_at": "2026-10-05T18:57:36.849503+00:00",
+  "infrastructure_valid": true,
+  "scope": "Approval to run common profile pass1 only; repetitions require separate review",
+  "qualification_label": "qualification-v3",
+  "protocol_checks": {
+    "passed": 48,
+    "total": 48
+  },
+  "cancellation_checks": {
+    "passed": 8,
+    "total": 8
+  },
+  "load_cases": 20,
+  "all_load_processes_exit_zero": true,
+  "measured_fortio_non_200_responses": 0,
+  "aiperf_request_errors": 0,
+  "nighthawk": "No non-2xx or resets; nightly has one request in flight at measurement cutoff",
+  "resources": "No collector errors, OOM, network error/drop increments or CPU steal in sampled qualification intervals; client/backend headroom. All observed nofile limits 65536. Two distinct guest cores 2 and 3. Short request-count qualification is not a capacity result.",
+  "excluded_attempts": [
+    "qualification: duplicate image entrypoint config argument",
+    "qualification-v2: draft filter-chain YAML schema"
+  ],
+  "config_identity": "qualified-gateway-inspect.json",
+  "host_review": "common-host-review.json",
+  "archive_manifest_sha256": "9976ca79fe9ffb0b8a716b42e9adfa193b1e9a3e4b19033306b7d55c1159c329"
+}

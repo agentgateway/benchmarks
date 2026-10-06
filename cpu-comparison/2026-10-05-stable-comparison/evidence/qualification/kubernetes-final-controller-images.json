@@ -1,0 +1,134 @@
+[
+  {
+    "pass": "pass1",
+    "treatment": "agentgateway",
+    "pod": "agentgateway-7969f44fd9-2sck4",
+    "requested_images": [
+      "ghcr.io/agentgateway/controller:v1.6.0@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ],
+    "actual_images": [
+      "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ]
+  },
+  {
+    "pass": "pass1",
+    "treatment": "agentgateway",
+    "pod": "agentgateway-7969f44fd9-g7ppf",
+    "requested_images": [
+      "ghcr.io/agentgateway/controller:v1.6.0@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ],
+    "actual_images": [
+      "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ]
+  },
+  {
+    "pass": "pass1",
+    "treatment": "praxis-release",
+    "pod": "praxis-operator-754557dfd6-2r6qq",
+    "requested_images": [
+      "praxis-operator:fb8beaa"
+    ],
+    "actual_images": [
+      "sha256:e3bc32ff8ab83905b6ffee88e8744130f392c50780962c14d523e89f6eeb211a"
+    ]
+  },
+  {
+    "pass": "pass1",
+    "treatment": "praxis-release",
+    "pod": "praxis-operator-754557dfd6-z6rl7",
+    "requested_images": [
+      "praxis-operator:fb8beaa"
+    ],
+    "actual_images": [
+      "sha256:e3bc32ff8ab83905b6ffee88e8744130f392c50780962c14d523e89f6eeb211a"
+    ]
+  },
+  {
+    "pass": "pass2",
+    "treatment": "agentgateway",
+    "pod": "agentgateway-5987b46f64-smcgq",
+    "requested_images": [
+      "ghcr.io/agentgateway/controller:v1.6.0@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ],
+    "actual_images": [
+      "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ]
+  },
+  {
+    "pass": "pass2",
+    "treatment": "agentgateway",
+    "pod": "agentgateway-5987b46f64-wbfdh",
+    "requested_images": [
+      "ghcr.io/agentgateway/controller:v1.6.0@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ],
+    "actual_images": [
+      "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ]
+  },
+  {
+    "pass": "pass2",
+    "treatment": "praxis-release",
+    "pod": "praxis-operator-7c54b6bb97-clsd7",
+    "requested_images": [
+      "praxis-operator:fb8beaa"
+    ],
+    "actual_images": [
+      "sha256:e3bc32ff8ab83905b6ffee88e8744130f392c50780962c14d523e89f6eeb211a"
+    ]
+  },
+  {
+    "pass": "pass2",
+    "treatment": "praxis-release",
+    "pod": "praxis-operator-7c54b6bb97-vsc8q",
+    "requested_images": [
+      "praxis-operator:fb8beaa"
+    ],
+    "actual_images": [
+      "sha256:e3bc32ff8ab83905b6ffee88e8744130f392c50780962c14d523e89f6eeb211a"
+    ]
+  },
+  {
+    "pass": "pass3",
+    "treatment": "agentgateway",
+    "pod": "agentgateway-6688f68db6-kgdkg",
+    "requested_images": [
+      "ghcr.io/agentgateway/controller:v1.6.0@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ],
+    "actual_images": [
+      "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ]
+  },
+  {
+    "pass": "pass3",
+    "treatment": "agentgateway",
+    "pod": "agentgateway-6688f68db6-pgz8g",
+    "requested_images": [
+      "ghcr.io/agentgateway/controller:v1.6.0@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ],
+    "actual_images": [
+      "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b"
+    ]
+  },
+  {
+    "pass": "pass3",
+    "treatment": "praxis-release",
+    "pod": "praxis-operator-6798bd6b95-hhttw",
+    "requested_images": [
+      "praxis-operator:fb8beaa"
+    ],
+    "actual_images": [
+      "sha256:e3bc32ff8ab83905b6ffee88e8744130f392c50780962c14d523e89f6eeb211a"
+    ]
+  },
+  {
+    "pass": "pass3",
+    "treatment": "praxis-release",
+    "pod": "praxis-operator-6798bd6b95-t6kmq",
+    "requested_images": [
+      "praxis-operator:fb8beaa"
+    ],
+    "actual_images": [
+      "sha256:e3bc32ff8ab83905b6ffee88e8744130f392c50780962c14d523e89f6eeb211a"
+    ]
+  }
+]

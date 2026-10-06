@@ -1,0 +1,24 @@
+{
+  "case": "results/praxis-v0.5.2/pass3/agentgateway",
+  "infrastructure_valid": true,
+  "reviewed_at": "2026-10-03T06:36:56.151601+00:00",
+  "counts": {
+    "pass": 106,
+    "fail": 1
+  },
+  "outcomes_identical_to_pass1": true,
+  "all_selected_cases_scored": true,
+  "cleanup_complete": true,
+  "runtime_review": "agentgateway-pass3-runtime.json",
+  "checks": {
+    "node_issues": {},
+    "collection_errors": [],
+    "restarts": {},
+    "outer_timeout_reached": false
+  },
+  "notes": [
+    "GatewayStaticAddresses remains a recorded product failure; all other selected outcomes match pass1.",
+    "Warning events include missing service accounts/secrets during short-lived resource creation/deletion, plus expected invalid-TLS-configuration NACKs. They are retained; no additional selected case failed.",
+    "Replacement third half-pair after freezing automatic maintenance. One observed terminating container exited 0/Completed; no container restarted. See maintenance-interruption.md for package changes and excluded originals."
+  ]
+}

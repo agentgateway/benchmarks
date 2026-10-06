@@ -1,0 +1,39 @@
+{
+  "selected_at": "2026-10-02T23:20:27.230382+00:00",
+  "gateway_api": {
+    "version": "v1.5.1",
+    "commit": "e7677b70ae75d14a4448fba94870e7deea6cf0ad",
+    "channel": "experimental",
+    "binary_sha256": "0c0a81ca7822c724bf4f8c3cf8eb0f5c444ed8f94f954ea4a526451d141ce86a"
+  },
+  "agentgateway": {
+    "version": "v1.6.0",
+    "image": "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+    "controller": "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b",
+    "revision": "ea5608642b9d5c94c5baf5fd9f2f9849b808e963"
+  },
+  "praxis_operator": {
+    "date": "2026-09-29T17:23:24Z",
+    "sha": "fb8beaa14cf714dacf0e6964cc8be94d1b5c1d7c",
+    "url": "https://github.com/praxis-proxy/operator/commit/fb8beaa14cf714dacf0e6964cc8be94d1b5c1d7c"
+  },
+  "praxis_release": {
+    "version": "v0.5.2",
+    "published_at": "2026-08-10T20:11:42Z",
+    "image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+    "revision": "af54edcd24de01e4dac7da59a809bf88bd246fe5"
+  },
+  "praxis_nightly": {
+    "image": "ghcr.io/praxis-proxy/praxis@sha256:be62d256d5ec92aacb1216baba506aac763e2100f9eb361820a5c27c54e17be8",
+    "labels": {
+      "org.opencontainers.image.created": "2026-10-02T03:07:42.663Z",
+      "org.opencontainers.image.description": "AI and cloud-native proxy server and framework",
+      "org.opencontainers.image.licenses": "Apache-2.0",
+      "org.opencontainers.image.revision": "31ac6dc86fba30ff510b17f9139021de60d8ba79",
+      "org.opencontainers.image.source": "https://github.com/praxis-proxy/praxis",
+      "org.opencontainers.image.title": "praxis",
+      "org.opencontainers.image.url": "https://github.com/praxis-proxy/praxis",
+      "org.opencontainers.image.version": "nightly-20261002"
+    }
+  }
+}

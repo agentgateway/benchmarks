@@ -1,0 +1,30 @@
+{
+  "selection": "Keep service-manager and apt logs, complete apt history and timer/package inventory; omit unrelated K3s application logs from this focused evidence export.",
+  "files": [
+    {
+      "file": "kcontrol-history.txt",
+      "original_sha256": "23b0c3f81bc4aa17632714aab17e6f8e6b597c194222e8ef68bce8e78f3e7327",
+      "focused_sha256": "a94e9b1df18dc8093790fb161af2e7ea19f1a559dae10d0ac1df62bbfd8a8748"
+    },
+    {
+      "file": "kcontroller-history.txt",
+      "original_sha256": "eb5b31658d68dbe9cba7cdd741aa7364ecbd4325d7d68c616e27b5807da6b8df",
+      "focused_sha256": "18527a65aec4aac4c1bd0446ea7ab8bab923930c2dcab83c46a770cd05bf2f20"
+    },
+    {
+      "file": "kbackend-history.txt",
+      "original_sha256": "752192ef22728101c6c87ed1cc921de0c64d71f368c31ff1fb30a2624b11821e",
+      "focused_sha256": "19a353b79b69024fe4500366db66da8e9f7b254ce56b73c7cf44dd8b419d39fc"
+    },
+    {
+      "file": "kclient-history.txt",
+      "original_sha256": "c27f1d00ae7fbf79edb7c9e69a07318d5ce80e6e7cd679feffcda687e446b6e4",
+      "focused_sha256": "ce8e6179da32eb09b89f331e4d940f3b5141d099325447a6d515ba7f94ec2425"
+    },
+    {
+      "file": "kgateway-history.txt",
+      "original_sha256": "6156f5d1fc8c292dbce4263e38f2fe074930a576b2d53c9e993afb3fb57597f5",
+      "focused_sha256": "aff5f2de79ec1a0f6265efe2126ea10cc84bd1a08f52432d11b693a1f69beabc"
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "treatment": "agentgateway",
+    "count": 1000,
+    "marker": "created",
+    "passes": [
+      1,
+      2,
+      3
+    ],
+    "three_complete_passes": true,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          10.11173307199897,
+          10.104058259999874,
+          10.09880339099982
+        ],
+        "arithmetic_mean": 10.10486490766622,
+        "min": 10.09880339099982,
+        "max": 10.11173307199897,
+        "sample_stddev": 0.006502474377355373
+      },
+      "status_convergence_seconds": {
+        "per_pass": [
+          11.35575173899997,
+          10.754236394001055,
+          11.282034823998401
+        ],
+        "arithmetic_mean": 11.130674318999809,
+        "min": 10.754236394001055,
+        "max": 11.35575173899997,
+        "sample_stddev": 0.32808181818315213
+      },
+      "all_route_traffic_verified_seconds": {
+        "per_pass": [
+          12.324077158998989,
+          11.654819168001268,
+          12.1768908189988
+        ],
+        "arithmetic_mean": 12.051929048666352,
+        "min": 11.654819168001268,
+        "max": 12.324077158998989,
+        "sample_stddev": 0.35169325791382605
+      }
+    },
+    "converged_passes": 3
+  },
+  {
+    "treatment": "agentgateway",
+    "count": 1000,
+    "marker": "updated",
+    "passes": [
+      1,
+      2,
+      3
+    ],
+    "three_complete_passes": true,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          10.107101342999158,
+          10.103802965000796,
+          10.112375164997502
+        ],
+        "arithmetic_mean": 10.107759824332485,
+        "min": 10.103802965000796,
+        "max": 10.112375164997502,
+        "sample_stddev": 0.004323869961693836
+      },
+      "status_convergence_seconds": {
+        "per_pass": [
+          10.740143020999312,
+          10.716240541001753,
+          10.72192486199856
+        ],
+        "arithmetic_mean": 10.726102807999874,
+        "min": 10.716240541001753,
+        "max": 10.740143020999312,
+        "sample_stddev": 0.012486935656952233
+      },
+      "all_route_traffic_verified_seconds": {
+        "per_pass": [
+          11.726178274999256,
+          11.668044199002907,
+          11.611480931998813
+        ],
+        "arithmetic_mean": 11.668567802000325,
+        "min": 11.611480931998813,
+        "max": 11.726178274999256,
+        "sample_stddev": 0.05735046419092468
+      }
+    },
+    "converged_passes": 3
+  },
+  {
+    "treatment": "agentgateway",
+    "count": 5000,
+    "marker": "created",
+    "passes": [
+      1,
+      2,
+      3
+    ],
+    "three_complete_passes": true,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          50.11046414899829,
+          50.105698544000916,
+          50.1016750259987
+        ],
+        "arithmetic_mean": 50.105945906332636,
+        "min": 50.1016750259987,
+        "max": 50.11046414899829,
+        "sample_stddev": 0.004399779752196155
+      },
+      "status_convergence_seconds": {
+        "per_pass": [
+          53.363317138999264,
+          53.246869539001636,
+          52.81953659899955
+        ],
+        "arithmetic_mean": 53.14324109233348,
+        "min": 52.81953659899955,
+        "max": 53.363317138999264,
+        "sample_stddev": 0.2863188085678907
+      },
+      "all_route_traffic_verified_seconds": {
+        "per_pass": [
+          57.921122441999614,
+          57.719015340000624,
+          57.08341169999767
+        ],
+        "arithmetic_mean": 57.574516493999305,
+        "min": 57.08341169999767,
+        "max": 57.921122441999614,
+        "sample_stddev": 0.43714958445382035
+      }
+    },
+    "converged_passes": 3
+  },
+  {
+    "treatment": "agentgateway",
+    "count": 5000,
+    "marker": "updated",
+    "passes": [
+      1,
+      2,
+      3
+    ],
+    "three_complete_passes": true,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          50.114869824999914,
+          50.10970591699879,
+          50.1032069440007
+        ],
+        "arithmetic_mean": 50.109260895333136,
+        "min": 50.1032069440007,
+        "max": 50.114869824999914,
+        "sample_stddev": 0.005844162173709302
+      },
+      "status_convergence_seconds": {
+        "per_pass": [
+          52.67934173700087,
+          52.590881004998664,
+          53.04403145500328
+        ],
+        "arithmetic_mean": 52.7714180656676,
+        "min": 52.590881004998664,
+        "max": 53.04403145500328,
+        "sample_stddev": 0.24019756516335572
+      },
+      "all_route_traffic_verified_seconds": {
+        "per_pass": [
+          57.09470595499988,
+          56.94293020199984,
+          57.41327514300065
+        ],
+        "arithmetic_mean": 57.15030376666679,
+        "min": 56.94293020199984,
+        "max": 57.41327514300065,
+        "sample_stddev": 0.24005088705912778
+      }
+    },
+    "converged_passes": 3
+  },
+  {
+    "treatment": "praxis-release",
+    "count": 1000,
+    "marker": "created",
+    "passes": [
+      1,
+      2,
+      3
+    ],
+    "three_complete_passes": true,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          10.106724257999304,
+          10.105250955999509,
+          10.100500209999154
+        ],
+        "arithmetic_mean": 10.104158474665988,
+        "min": 10.100500209999154,
+        "max": 10.106724257999304,
+        "sample_stddev": 0.003252665057319509
+      }
+    },
+    "converged_passes": 0
+  },
+  {
+    "treatment": "praxis-release",
+    "count": 1000,
+    "marker": "updated",
+    "passes": [
+      1,
+      2,
+      3
+    ],
+    "three_complete_passes": true,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          10.105823403999239,
+          10.109536728999956,
+          10.105076326999551
+        ],
+        "arithmetic_mean": 10.106812153332916,
+        "min": 10.105076326999551,
+        "max": 10.109536728999956,
+        "sample_stddev": 0.0023889360466403417
+      }
+    },
+    "converged_passes": 0
+  },
+  {
+    "treatment": "praxis-release",
+    "count": 5000,
+    "marker": "created",
+    "passes": [
+      1,
+      2,
+      3
+    ],
+    "three_complete_passes": true,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          50.10321846700026,
+          50.10147985599906,
+          50.10743094600184
+        ],
+        "arithmetic_mean": 50.10404308966705,
+        "min": 50.10147985599906,
+        "max": 50.10743094600184,
+        "sample_stddev": 0.0030600441111598097
+      }
+    },
+    "converged_passes": 0
+  },
+  {
+    "treatment": "praxis-release",
+    "count": 5000,
+    "marker": "updated",
+    "passes": [
+      1,
+      2,
+      3
+    ],
+    "three_complete_passes": true,
+    "metrics": {
+      "post_submission_observer_started_seconds": {
+        "per_pass": [
+          50.10981836599967,
+          50.105632430000696,
+          50.10801829400225
+        ],
+        "arithmetic_mean": 50.10782303000087,
+        "min": 50.105632430000696,
+        "max": 50.10981836599967,
+        "sample_stddev": 0.0020997883392274578
+      }
+    },
+    "converged_passes": 0
+  }
+]

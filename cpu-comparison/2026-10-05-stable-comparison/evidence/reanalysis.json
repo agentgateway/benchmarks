@@ -1,0 +1,216 @@
+{
+  "reviewed_at": "2026-10-06T04:50:41.868704+00:00",
+  "archive_sha256": "bdf54c5e9c3b3618d569c0e1d249edb0cb059afc36277b517ae2b02f46f2a296",
+  "source": "Exact sanitized public accepted-results.tar.gz",
+  "commands": [
+    [
+      "summarize-load.py",
+      "/private/tmp/gateway-comparison-benchmarks/campaigns/2026-10-05-stable-comparison/.work/public-evidence/replay/raw",
+      "--output",
+      "reports/data"
+    ],
+    [
+      "summarize-control.py",
+      "/private/tmp/gateway-comparison-benchmarks/campaigns/2026-10-05-stable-comparison/.work/public-evidence/replay/raw/kclient",
+      "--output",
+      "reports/data"
+    ],
+    [
+      "summarize-hosts.py",
+      "/private/tmp/gateway-comparison-benchmarks/campaigns/2026-10-05-stable-comparison/.work/public-evidence/replay/raw",
+      "--output",
+      ".work/cpu-hosts.json"
+    ],
+    [
+      "summarize-hosts.py",
+      "/private/tmp/gateway-comparison-benchmarks/campaigns/2026-10-05-stable-comparison/.work/public-evidence/replay/raw",
+      "--suite",
+      "gateway",
+      "--output",
+      ".work/kubernetes-hosts.json"
+    ],
+    [
+      "review-kubernetes-attribution.py",
+      "/private/tmp/gateway-comparison-benchmarks/campaigns/2026-10-05-stable-comparison/.work/public-evidence/replay/raw",
+      "--output",
+      "evidence/qualification/final-facts/kubernetes-attribution.json"
+    ],
+    [
+      "audit-recovery-overlap.py",
+      "/private/tmp/gateway-comparison-benchmarks/campaigns/2026-10-05-stable-comparison/.work/public-evidence/replay/raw",
+      "--output",
+      "evidence/qualification/final-facts/recovery-overlap.json"
+    ],
+    [
+      "render-load-reports.py",
+      "reports/data",
+      "--output",
+      "reports",
+      "--review",
+      "evidence/qualification/final-review.json"
+    ],
+    [
+      "render-control-report.py",
+      "reports/data",
+      "--output",
+      "reports/03-gateway-api.md",
+      "--review",
+      "evidence/qualification/final-review.json"
+    ],
+    [
+      "render-resource-report.py",
+      "reports/data",
+      "--cpu-hosts",
+      ".work/cpu-hosts.json",
+      "--kubernetes-hosts",
+      ".work/kubernetes-hosts.json",
+      "--output",
+      "reports",
+      "--review",
+      "evidence/qualification/final-review.json"
+    ],
+    [
+      "summarize-claims.py",
+      "reports/data",
+      "--review",
+      "evidence/qualification/final-review.json"
+    ]
+  ],
+  "checks": [
+    {
+      "file": "reports/data/article-calculations.json",
+      "byte_identical": true,
+      "sha256": "44706bb19bc80f347979a2c19c504f824a54ec4775532fed912fdc23c2009348"
+    },
+    {
+      "file": "reports/data/load-comparisons.json",
+      "byte_identical": true,
+      "sha256": "595ed81617d044e0b7fe9c3a63ec819625dfdaf1a06ff861cd31be52a2f12660"
+    },
+    {
+      "file": "reports/data/load-rows.json",
+      "byte_identical": true,
+      "sha256": "c3e83e997178dd2fc8f7f6082d1bdd0156d219a24647a2e084ace6e4b4acdced"
+    },
+    {
+      "file": "reports/data/load-summary.json",
+      "byte_identical": true,
+      "sha256": "3c477081e23b2f17ea02ff5b2ba23c392296f4cfcb49860dfcfc9a8e6b3683e2"
+    },
+    {
+      "file": "reports/data/recovery-rows.json",
+      "byte_identical": true,
+      "sha256": "b2c8ee39881c261bcacbd6e6a517e88f29db56bd77733723b1c39617e4d819d0"
+    },
+    {
+      "file": "reports/data/recovery-summary.json",
+      "byte_identical": true,
+      "sha256": "6b353f5b87df476940bdde4656ad5c6539bc03e94b73cfb8f87d6f0cb6d91ee0"
+    },
+    {
+      "file": "reports/data/resource-rows.json",
+      "byte_identical": true,
+      "sha256": "91ca6612091109fd1c3b27dcde1398532fd5299ddcafd032f6325e3ccc5b5513"
+    },
+    {
+      "file": "reports/data/resource-summary.json",
+      "byte_identical": true,
+      "sha256": "dcc6b697685f813fa00a8acf1ffa368917f0b2c1bd99b7a423bca7268f14cf34"
+    },
+    {
+      "file": "reports/data/scale-rows.json",
+      "byte_identical": true,
+      "sha256": "84dce105951ae5fd2fddfe666f1f240773d5ab622293e856392d9ef6b8e127ea"
+    },
+    {
+      "file": "reports/data/scale-summary.json",
+      "byte_identical": true,
+      "sha256": "7f6f34dfc52dead1914ca76fd01acb325dc1e6b7aa74c65a2fb854cd2a9e9912"
+    },
+    {
+      "file": "reports/data/setup-blocks.json",
+      "byte_identical": true,
+      "sha256": "7789605406ebe23fb59177fcc14f7d89d2b3fef7da29c7c02e75c6ee8f46e2de"
+    },
+    {
+      "file": "reports/data/static-address-rows.json",
+      "byte_identical": true,
+      "sha256": "c8d96bab5e7eb26ab874cf5abe342dac4ca4ac27ddbb716a58da315e9add0411"
+    },
+    {
+      "file": "reports/01-agentgateway-vs-direct.md",
+      "byte_identical": true,
+      "sha256": "df946ed067807bd7442ea160a96b5877549340ce393321024d771f85aea93f0e"
+    },
+    {
+      "file": "reports/02-praxis-vs-agentgateway.md",
+      "byte_identical": true,
+      "sha256": "a78c54a85bd09ecde8a2b458fbc057357f33a5e2e3d64ecf2dcafee0781b5954"
+    },
+    {
+      "file": "reports/03-gateway-api.md",
+      "byte_identical": true,
+      "sha256": "4a1c5993b18562a3965524cd5b13524f1b4c76cd986a89380b018c7543800a1e"
+    },
+    {
+      "file": "reports/08-resource-usage.md",
+      "byte_identical": true,
+      "sha256": "455824d2fc63702c4726a9617ec459217abfeae04a0cb834e2ffad5ef0142fd9"
+    },
+    {
+      "file": "reports/matrices/common-ai-resources.md",
+      "byte_identical": true,
+      "sha256": "c189e6774a08eb11be6b61e4b8afb2ba6ab6f2d71a899346cae1bc35b8094539"
+    },
+    {
+      "file": "reports/matrices/common-ai.md",
+      "byte_identical": true,
+      "sha256": "55e4fe7fdef9a8174812d0e5a0d55525c19a09061436af57d8135350b33bce06"
+    },
+    {
+      "file": "reports/matrices/common-http-resources.md",
+      "byte_identical": true,
+      "sha256": "6d26808117395aaf1c6ffdf794fc325185a93aa70fbb03cf4e92c4ea8553377d"
+    },
+    {
+      "file": "reports/matrices/common-http.md",
+      "byte_identical": true,
+      "sha256": "329d727c62adc379d95b0af37470e24fca2788ef9f72885dcf676df6980249c5"
+    },
+    {
+      "file": "reports/matrices/kubernetes-http-resources.md",
+      "byte_identical": true,
+      "sha256": "947d0fe6e909fc5ad4d305cac2e4465437f1774b8f2cdf5cdd6102b45bfab829"
+    },
+    {
+      "file": "reports/matrices/kubernetes-http.md",
+      "byte_identical": true,
+      "sha256": "d75b82a64e6c8eceb56608c783f70661e82c92fe777c57bd6be55ceab8edf3e0"
+    },
+    {
+      "file": "reports/matrices/native-ai-resources.md",
+      "byte_identical": true,
+      "sha256": "ca108d73683325a88bfca47a32eda2e8e12cff071a658192017b93624ea0282e"
+    },
+    {
+      "file": "reports/matrices/native-ai.md",
+      "byte_identical": true,
+      "sha256": "f71db9cef7df81fb29f368c22ff8daf84fecb8b28346bff6e627ee428f7b81db"
+    }
+  ],
+  "host_semantic_checks": [
+    {
+      "file": "cpu-hosts.json",
+      "json_values_identical": true,
+      "windows": 2088,
+      "note": "Dictionary key ordering is immaterial to the comparison."
+    },
+    {
+      "file": "kubernetes-hosts.json",
+      "json_values_identical": true,
+      "windows": 630,
+      "note": "Dictionary key ordering is immaterial to the comparison."
+    }
+  ],
+  "scope": "Offline reanalysis only. No cloud provisioning or new benchmark measurements."
+}

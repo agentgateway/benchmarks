@@ -1,0 +1,49 @@
+[
+    {
+        "Architecture": "amd64",
+        "Config": {
+            "Entrypoint": [
+                "praxis-operator"
+            ],
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Labels": {
+                "org.opencontainers.image.description": "Praxis Gateway API operator",
+                "org.opencontainers.image.licenses": "MIT",
+                "org.opencontainers.image.revision": "fb8beaa14cf714dacf0e6964cc8be94d1b5c1d7c",
+                "org.opencontainers.image.source": "https://github.com/praxis-proxy/operator"
+            },
+            "User": "operator:operator",
+            "WorkingDir": "/"
+        },
+        "Created": "2026-10-05T18:37:16.646430204Z",
+        "Descriptor": {
+            "digest": "sha256:eb6e618c9fa388ff71e170fc249196280ad3b9d30216cf2c4f873061ee8b5e74",
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "size": 1190
+        },
+        "Id": "sha256:eb6e618c9fa388ff71e170fc249196280ad3b9d30216cf2c4f873061ee8b5e74",
+        "Metadata": {
+            "LastTagTime": "2026-10-05T18:37:16.705804923Z"
+        },
+        "Os": "linux",
+        "Parent": "sha256:534bdc8e73676644802b64209746aa19c02b3f8ce3d44008d032de99edd8440e",
+        "RepoDigests": [
+            "praxis-operator@sha256:eb6e618c9fa388ff71e170fc249196280ad3b9d30216cf2c4f873061ee8b5e74"
+        ],
+        "RepoTags": [
+            "praxis-operator:fb8beaa"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:e63b02c2b5c761df2cb95e657d744f27d95da4e051235a13c80b88cd68eab188",
+                "sha256:1b22b3bd06fd696a1e102224a78326a651e68e8e8a8d059772c1157963539077",
+                "sha256:a694ac76261725a649be46f90cbcf3f7838b2739005568f7bbcf267819d985d9",
+                "sha256:588bdb67beb47afd20a819d5ac757598800377a6395649ef303483b65a648ce4"
+            ],
+            "Type": "layers"
+        },
+        "Size": 12914837
+    }
+]

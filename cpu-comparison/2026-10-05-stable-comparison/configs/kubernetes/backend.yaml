@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gateway-backend
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: gateway-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: benchmark-backend}
+  template:
+    metadata:
+      labels: {app: benchmark-backend}
+    spec:
+      nodeSelector: {benchmark-role: kbackend}
+      tolerations:
+      - key: benchmark-role
+        operator: Equal
+        value: kbackend
+        effect: NoSchedule
+      containers:
+      - name: backend
+        image: alpine@sha256:5291449c3df73caf6ed85e649dec1b9e818b39a5d8c871e97afc13e9cd5e8fa8
+        command: [/benchmark/mock-server]
+        env:
+        - {name: LISTEN_ADDR, value: "0.0.0.0:8081"}
+        resources:
+          requests: {cpu: "6", memory: 4Gi}
+          limits: {cpu: "6", memory: 4Gi}
+        ports:
+        - {containerPort: 8081}
+        readinessProbe:
+          httpGet: {path: /healthz, port: 8081}
+        volumeMounts:
+        - {name: fixture, mountPath: /benchmark, readOnly: true}
+      volumes:
+      - name: fixture
+        hostPath: {path: /opt/gateway-benchmark/fixture, type: Directory}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: gateway-backend
+spec:
+  type: NodePort
+  externalTrafficPolicy: Cluster
+  selector: {app: benchmark-backend}
+  ports:
+  - {port: 8081, targetPort: 8081, nodePort: 30081}
+---
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: ReferenceGrant
+metadata:
+  name: benchmark-routes
+  namespace: gateway-backend
+spec:
+  from:
+  - {group: gateway.networking.k8s.io, kind: HTTPRoute, namespace: gateway-benchmark}
+  - {group: gateway.networking.k8s.io, kind: HTTPRoute, namespace: gateway-scale}
+  to:
+  - {group: "", kind: Service, name: backend}

@@ -1,0 +1,5 @@
+# Gateway scale scenario
+
+This scenario uses ClusterLoader2's object reconciliation engine to create and update HTTPRoutes at 100 API operations/sec. It deliberately does not reuse the stock large-cluster workload. Routes use a dedicated namespace and reference the common gateway-backend Service through an explicit ReferenceGrant. Before measurement, qualify 10 routes and the custom observer; then freeze 1,000 and 5,000-route scenarios, recovery checks, timeouts and placements. `harness/observe-routes.py` passed ten-route create/update qualification for both implementations. Raw qualification reports are included in the client archive.
+
+ResponseHeaderModifier makes actual traffic configuration visible through `x-benchmark-generation`; matching stale route status alone cannot satisfy the test. Status must match each resource's current generation and selected parent/controller. Real requests must independently verify the expected header. Report the time from mutation start as well as post-submission convergence, and preserve rejected/unprogrammed routes.

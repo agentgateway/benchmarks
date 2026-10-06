@@ -1,0 +1,2036 @@
+{
+  "source": "load-summary.json",
+  "source_sha256": "3c477081e23b2f17ea02ff5b2ba23c392296f4cfcb49860dfcfc9a8e6b3683e2",
+  "method": "All three accepted runs; ratios of arithmetic mean successful RPS. No best-run selection or pooled latency percentile.",
+  "native_large_payload_ratio_ranges": {
+    "native_protocols": {
+      "minimum_ratio": 2.6076545576679027,
+      "maximum_ratio": 2.7686272329580235,
+      "scope": "Native profile, 16 KiB content, 32 connections, unlimited offered rate; both Praxis AI builds",
+      "cases": [
+        {
+          "profile": "native",
+          "workload": "ai",
+          "tool": "fortio",
+          "api": "openai",
+          "size": 16384,
+          "rate": 0,
+          "concurrency": 32,
+          "connections": null,
+          "praxis_treatment": "praxis"
+        },
+        {
+          "profile": "native",
+          "workload": "ai",
+          "tool": "fortio",
+          "api": "anthropic",
+          "size": 16384,
+          "rate": 0,
+          "concurrency": 32,
+          "connections": null,
+          "praxis_treatment": "praxis"
+        },
+        {
+          "profile": "native",
+          "workload": "ai",
+          "tool": "fortio",
+          "api": "openai",
+          "size": 16384,
+          "rate": 0,
+          "concurrency": 32,
+          "connections": null,
+          "praxis_treatment": "praxis-ai-nightly"
+        },
+        {
+          "profile": "native",
+          "workload": "ai",
+          "tool": "fortio",
+          "api": "anthropic",
+          "size": 16384,
+          "rate": 0,
+          "concurrency": 32,
+          "connections": null,
+          "praxis_treatment": "praxis-ai-nightly"
+        }
+      ]
+    },
+    "translation": {
+      "minimum_ratio": 4.7579218637454,
+      "maximum_ratio": 4.911837566030615,
+      "scope": "Native profile, 16 KiB content, 32 connections, unlimited offered rate; both Praxis AI builds",
+      "cases": [
+        {
+          "profile": "native",
+          "workload": "ai",
+          "tool": "fortio",
+          "api": "translation",
+          "size": 16384,
+          "rate": 0,
+          "concurrency": 32,
+          "connections": null,
+          "praxis_treatment": "praxis"
+        },
+        {
+          "profile": "native",
+          "workload": "ai",
+          "tool": "fortio",
+          "api": "translation",
+          "size": 16384,
+          "rate": 0,
+          "concurrency": 32,
+          "connections": null,
+          "praxis_treatment": "praxis-ai-nightly"
+        }
+      ]
+    }
+  },
+  "common_http_unlimited_praxis_leads": {
+    "praxis-release": {
+      "higher_mean_than_agentgateway": 6,
+      "cases": 6,
+      "interpretation": "Descriptive count in this matrix, not an overall score"
+    },
+    "praxis-nightly": {
+      "higher_mean_than_agentgateway": 4,
+      "cases": 6,
+      "interpretation": "Descriptive count in this matrix, not an overall score"
+    }
+  },
+  "unlimited_fortio_comparisons": [
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          22423.032271249896,
+          22518.612142720387,
+          22997.596949346927
+        ],
+        "arithmetic_mean": 22646.413787772402,
+        "min": 22423.032271249896,
+        "max": 22997.596949346927,
+        "sample_stddev": 307.8653726674818
+      },
+      "praxis_rps": {
+        "per_pass": [
+          21181.74354801917,
+          20487.251425917904,
+          20671.11462921239
+        ],
+        "arithmetic_mean": 20780.036534383155,
+        "min": 20487.251425917904,
+        "max": 21181.74354801917,
+        "sample_stddev": 359.83025579389806
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0898158793080606,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/common/pass1/praxis-nightly/ai/02-fortio-openai/execution.json",
+        "client/results/common/pass2/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/common/pass2/praxis-nightly/ai/02-fortio-openai/execution.json",
+        "client/results/common/pass3/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/common/pass3/praxis-nightly/ai/02-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          10508.113745491253,
+          10201.988071189193,
+          9910.379805809971
+        ],
+        "arithmetic_mean": 10206.827207496806,
+        "min": 9910.379805809971,
+        "max": 10508.113745491253,
+        "sample_stddev": 298.8963509176374
+      },
+      "praxis_rps": {
+        "per_pass": [
+          9409.03925721851,
+          9461.875692387508,
+          9418.057102744568
+        ],
+        "arithmetic_mean": 9429.65735078353,
+        "min": 9409.03925721851,
+        "max": 9461.875692387508,
+        "sample_stddev": 28.263873341529
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0824176136844146,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/common/pass1/praxis-nightly/ai/05-fortio-openai/execution.json",
+        "client/results/common/pass2/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/common/pass2/praxis-nightly/ai/05-fortio-openai/execution.json",
+        "client/results/common/pass3/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/common/pass3/praxis-nightly/ai/05-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "anthropic",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          21949.217338368904,
+          22361.93399485246,
+          23208.188953510547
+        ],
+        "arithmetic_mean": 22506.44676224397,
+        "min": 21949.217338368904,
+        "max": 23208.188953510547,
+        "sample_stddev": 641.8063079212092
+      },
+      "praxis_rps": {
+        "per_pass": [
+          22284.08472670061,
+          21602.78391377871,
+          21957.38393272483
+        ],
+        "arithmetic_mean": 21948.08419106805,
+        "min": 21602.78391377871,
+        "max": 22284.08472670061,
+        "sample_stddev": 340.7455991178362
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0254401507810487,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/common/pass1/praxis-nightly/ai/08-fortio-anthropic/execution.json",
+        "client/results/common/pass2/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/common/pass2/praxis-nightly/ai/08-fortio-anthropic/execution.json",
+        "client/results/common/pass3/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/common/pass3/praxis-nightly/ai/08-fortio-anthropic/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "anthropic",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          10698.235503431051,
+          10373.229663564498,
+          10169.708529811342
+        ],
+        "arithmetic_mean": 10413.724565602297,
+        "min": 10169.708529811342,
+        "max": 10698.235503431051,
+        "sample_stddev": 266.58032237806026
+      },
+      "praxis_rps": {
+        "per_pass": [
+          9641.47261516074,
+          9715.266497214277,
+          9564.782903427957
+        ],
+        "arithmetic_mean": 9640.507338600992,
+        "min": 9564.782903427957,
+        "max": 9715.266497214277,
+        "sample_stddev": 75.24644057255603
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0802050348434789,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/common/pass1/praxis-nightly/ai/11-fortio-anthropic/execution.json",
+        "client/results/common/pass2/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/common/pass2/praxis-nightly/ai/11-fortio-anthropic/execution.json",
+        "client/results/common/pass3/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/common/pass3/praxis-nightly/ai/11-fortio-anthropic/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          18758.145515528562,
+          19412.702400665854,
+          19700.9684306129
+        ],
+        "arithmetic_mean": 19290.60544893577,
+        "min": 18758.145515528562,
+        "max": 19700.9684306129,
+        "sample_stddev": 483.12473701764117
+      },
+      "praxis_rps": {
+        "per_pass": [
+          16674.040179263888,
+          17658.646722173595,
+          17683.865459697117
+        ],
+        "arithmetic_mean": 17338.850787044867,
+        "min": 16674.040179263888,
+        "max": 17683.865459697117,
+        "sample_stddev": 575.880937646104
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.1125653992794726,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/12-fortio-openai/execution.json",
+        "client/results/common/pass1/praxis-nightly/ai/12-fortio-openai/execution.json",
+        "client/results/common/pass2/agentgateway/ai/12-fortio-openai/execution.json",
+        "client/results/common/pass2/praxis-nightly/ai/12-fortio-openai/execution.json",
+        "client/results/common/pass3/agentgateway/ai/12-fortio-openai/execution.json",
+        "client/results/common/pass3/praxis-nightly/ai/12-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          11487.748555368913,
+          11541.5603031341,
+          11933.990762433687
+        ],
+        "arithmetic_mean": 11654.4332069789,
+        "min": 11487.748555368913,
+        "max": 11933.990762433687,
+        "sample_stddev": 243.59442965363178
+      },
+      "praxis_rps": {
+        "per_pass": [
+          10174.365431372371,
+          10581.567321093675,
+          10542.583842952354
+        ],
+        "arithmetic_mean": 10432.838865139467,
+        "min": 10174.365431372371,
+        "max": 10581.567321093675,
+        "sample_stddev": 224.69159945247966
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.117091268985405,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/13-fortio-openai/execution.json",
+        "client/results/common/pass1/praxis-nightly/ai/13-fortio-openai/execution.json",
+        "client/results/common/pass2/agentgateway/ai/13-fortio-openai/execution.json",
+        "client/results/common/pass2/praxis-nightly/ai/13-fortio-openai/execution.json",
+        "client/results/common/pass3/agentgateway/ai/13-fortio-openai/execution.json",
+        "client/results/common/pass3/praxis-nightly/ai/13-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 0,
+      "rate": 0,
+      "concurrency": 1,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          2910.0310570046263,
+          2838.5716743663565,
+          2596.114461052333
+        ],
+        "arithmetic_mean": 2781.5723974744387,
+        "min": 2596.114461052333,
+        "max": 2910.0310570046263,
+        "sample_stddev": 164.53751997103885
+      },
+      "praxis_rps": {
+        "per_pass": [
+          2773.503852928829,
+          2969.746867661275,
+          3144.721908663463
+        ],
+        "arithmetic_mean": 2962.6575430845223,
+        "min": 2773.503852928829,
+        "max": 3144.721908663463,
+        "sample_stddev": 185.7105412141874
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.9388774628938215,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/01-fortio/execution.json",
+        "client/results/common/pass1/praxis-nightly/http/01-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/01-fortio/execution.json",
+        "client/results/common/pass2/praxis-nightly/http/01-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/01-fortio/execution.json",
+        "client/results/common/pass3/praxis-nightly/http/01-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 0,
+      "rate": 0,
+      "concurrency": 16,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          23381.091814776988,
+          25350.93854293813,
+          22719.672278904865
+        ],
+        "arithmetic_mean": 23817.234212206662,
+        "min": 22719.672278904865,
+        "max": 25350.93854293813,
+        "sample_stddev": 1368.7789014982184
+      },
+      "praxis_rps": {
+        "per_pass": [
+          27663.159831325447,
+          27554.92753650799,
+          27251.56602776871
+        ],
+        "arithmetic_mean": 27489.884465200714,
+        "min": 27251.56602776871,
+        "max": 27663.159831325447,
+        "sample_stddev": 213.36662256638905
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.8663999385794714,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/03-fortio/execution.json",
+        "client/results/common/pass1/praxis-nightly/http/03-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/03-fortio/execution.json",
+        "client/results/common/pass2/praxis-nightly/http/03-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/03-fortio/execution.json",
+        "client/results/common/pass3/praxis-nightly/http/03-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 0,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          21204.587476161178,
+          22135.42624060866,
+          22052.899222065622
+        ],
+        "arithmetic_mean": 21797.637646278486,
+        "min": 21204.587476161178,
+        "max": 22135.42624060866,
+        "sample_stddev": 515.2514487165732
+      },
+      "praxis_rps": {
+        "per_pass": [
+          22356.17800046704,
+          23113.147838955447,
+          23025.42730111816
+        ],
+        "arithmetic_mean": 22831.584380180215,
+        "min": 22356.17800046704,
+        "max": 23113.147838955447,
+        "sample_stddev": 414.0436481744492
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.9547141925551481,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/05-fortio/execution.json",
+        "client/results/common/pass1/praxis-nightly/http/05-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/05-fortio/execution.json",
+        "client/results/common/pass2/praxis-nightly/http/05-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/05-fortio/execution.json",
+        "client/results/common/pass3/praxis-nightly/http/05-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 1,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          1894.1205242801507,
+          2052.527707765392,
+          1832.1501668108376
+        ],
+        "arithmetic_mean": 1926.2661329521268,
+        "min": 1832.1501668108376,
+        "max": 2052.527707765392,
+        "sample_stddev": 113.6510899946099
+      },
+      "praxis_rps": {
+        "per_pass": [
+          1915.4810073673184,
+          1999.9544959435816,
+          2047.077049195663
+        ],
+        "arithmetic_mean": 1987.5041841688544,
+        "min": 1915.4810073673184,
+        "max": 2047.077049195663,
+        "sample_stddev": 66.67561213583112
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.969188466769273,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/07-fortio/execution.json",
+        "client/results/common/pass1/praxis-nightly/http/07-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/07-fortio/execution.json",
+        "client/results/common/pass2/praxis-nightly/http/07-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/07-fortio/execution.json",
+        "client/results/common/pass3/praxis-nightly/http/07-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 16,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          16479.967945378205,
+          16436.668798384268,
+          18125.640736007714
+        ],
+        "arithmetic_mean": 17014.09249325673,
+        "min": 16436.668798384268,
+        "max": 18125.640736007714,
+        "sample_stddev": 962.8724349594305
+      },
+      "praxis_rps": {
+        "per_pass": [
+          16529.178099340686,
+          16684.341975953485,
+          16597.556161984416
+        ],
+        "arithmetic_mean": 16603.692079092863,
+        "min": 16529.178099340686,
+        "max": 16684.341975953485,
+        "sample_stddev": 77.76370786201748
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.024717419005899,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/09-fortio/execution.json",
+        "client/results/common/pass1/praxis-nightly/http/09-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/09-fortio/execution.json",
+        "client/results/common/pass2/praxis-nightly/http/09-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/09-fortio/execution.json",
+        "client/results/common/pass3/praxis-nightly/http/09-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          15263.216025827387,
+          15837.09703443073,
+          15820.846752539395
+        ],
+        "arithmetic_mean": 15640.386604265837,
+        "min": 15263.216025827387,
+        "max": 15837.09703443073,
+        "sample_stddev": 326.7403431550554
+      },
+      "praxis_rps": {
+        "per_pass": [
+          14957.114616029568,
+          15372.568651228623,
+          15806.037121334088
+        ],
+        "arithmetic_mean": 15378.573462864093,
+        "min": 14957.114616029568,
+        "max": 15806.037121334088,
+        "sample_stddev": 424.49310751201665
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0170245401521778,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/11-fortio/execution.json",
+        "client/results/common/pass1/praxis-nightly/http/11-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/11-fortio/execution.json",
+        "client/results/common/pass2/praxis-nightly/http/11-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/11-fortio/execution.json",
+        "client/results/common/pass3/praxis-nightly/http/11-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          22423.032271249896,
+          22518.612142720387,
+          22997.596949346927
+        ],
+        "arithmetic_mean": 22646.413787772402,
+        "min": 22423.032271249896,
+        "max": 22997.596949346927,
+        "sample_stddev": 307.8653726674818
+      },
+      "praxis_rps": {
+        "per_pass": [
+          27151.206293716885,
+          27667.15854856244,
+          27533.07859677146
+        ],
+        "arithmetic_mean": 27450.48114635026,
+        "min": 27151.206293716885,
+        "max": 27667.15854856244,
+        "sample_stddev": 267.7096121399349
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.8249915062338865,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/common/pass1/praxis-release/ai/02-fortio-openai/execution.json",
+        "client/results/common/pass2/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/common/pass2/praxis-release/ai/02-fortio-openai/execution.json",
+        "client/results/common/pass3/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/common/pass3/praxis-release/ai/02-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          10508.113745491253,
+          10201.988071189193,
+          9910.379805809971
+        ],
+        "arithmetic_mean": 10206.827207496806,
+        "min": 9910.379805809971,
+        "max": 10508.113745491253,
+        "sample_stddev": 298.8963509176374
+      },
+      "praxis_rps": {
+        "per_pass": [
+          9335.502209130824,
+          9456.53079447702,
+          9440.41882705965
+        ],
+        "arithmetic_mean": 9410.817276889164,
+        "min": 9335.502209130824,
+        "max": 9456.53079447702,
+        "sample_stddev": 65.72038075891798
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0845845697761514,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/common/pass1/praxis-release/ai/05-fortio-openai/execution.json",
+        "client/results/common/pass2/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/common/pass2/praxis-release/ai/05-fortio-openai/execution.json",
+        "client/results/common/pass3/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/common/pass3/praxis-release/ai/05-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "anthropic",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          21949.217338368904,
+          22361.93399485246,
+          23208.188953510547
+        ],
+        "arithmetic_mean": 22506.44676224397,
+        "min": 21949.217338368904,
+        "max": 23208.188953510547,
+        "sample_stddev": 641.8063079212092
+      },
+      "praxis_rps": {
+        "per_pass": [
+          28509.385504592476,
+          29823.419800402422,
+          28311.334553565397
+        ],
+        "arithmetic_mean": 28881.379952853433,
+        "min": 28311.334553565397,
+        "max": 29823.419800402422,
+        "sample_stddev": 821.8183196901103
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.7792718630129157,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/common/pass1/praxis-release/ai/08-fortio-anthropic/execution.json",
+        "client/results/common/pass2/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/common/pass2/praxis-release/ai/08-fortio-anthropic/execution.json",
+        "client/results/common/pass3/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/common/pass3/praxis-release/ai/08-fortio-anthropic/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "anthropic",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          10698.235503431051,
+          10373.229663564498,
+          10169.708529811342
+        ],
+        "arithmetic_mean": 10413.724565602297,
+        "min": 10169.708529811342,
+        "max": 10698.235503431051,
+        "sample_stddev": 266.58032237806026
+      },
+      "praxis_rps": {
+        "per_pass": [
+          9442.299001389536,
+          9683.344088359274,
+          9605.55747049146
+        ],
+        "arithmetic_mean": 9577.066853413424,
+        "min": 9442.299001389536,
+        "max": 9683.344088359274,
+        "sample_stddev": 123.02223349532233
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0873605379386775,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/common/pass1/praxis-release/ai/11-fortio-anthropic/execution.json",
+        "client/results/common/pass2/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/common/pass2/praxis-release/ai/11-fortio-anthropic/execution.json",
+        "client/results/common/pass3/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/common/pass3/praxis-release/ai/11-fortio-anthropic/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          18758.145515528562,
+          19412.702400665854,
+          19700.9684306129
+        ],
+        "arithmetic_mean": 19290.60544893577,
+        "min": 18758.145515528562,
+        "max": 19700.9684306129,
+        "sample_stddev": 483.12473701764117
+      },
+      "praxis_rps": {
+        "per_pass": [
+          21916.379169329135,
+          22503.13446013878,
+          22369.494000664195
+        ],
+        "arithmetic_mean": 22263.00254337737,
+        "min": 21916.379169329135,
+        "max": 22503.13446013878,
+        "sample_stddev": 307.5317311751445
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.8664871421251396,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/12-fortio-openai/execution.json",
+        "client/results/common/pass1/praxis-release/ai/12-fortio-openai/execution.json",
+        "client/results/common/pass2/agentgateway/ai/12-fortio-openai/execution.json",
+        "client/results/common/pass2/praxis-release/ai/12-fortio-openai/execution.json",
+        "client/results/common/pass3/agentgateway/ai/12-fortio-openai/execution.json",
+        "client/results/common/pass3/praxis-release/ai/12-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          11487.748555368913,
+          11541.5603031341,
+          11933.990762433687
+        ],
+        "arithmetic_mean": 11654.4332069789,
+        "min": 11487.748555368913,
+        "max": 11933.990762433687,
+        "sample_stddev": 243.59442965363178
+      },
+      "praxis_rps": {
+        "per_pass": [
+          8720.299376831113,
+          8921.183596070636,
+          8930.900746288728
+        ],
+        "arithmetic_mean": 8857.461239730159,
+        "min": 8720.299376831113,
+        "max": 8930.900746288728,
+        "sample_stddev": 118.88497898196663
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.3157758065824683,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/ai/13-fortio-openai/execution.json",
+        "client/results/common/pass1/praxis-release/ai/13-fortio-openai/execution.json",
+        "client/results/common/pass2/agentgateway/ai/13-fortio-openai/execution.json",
+        "client/results/common/pass2/praxis-release/ai/13-fortio-openai/execution.json",
+        "client/results/common/pass3/agentgateway/ai/13-fortio-openai/execution.json",
+        "client/results/common/pass3/praxis-release/ai/13-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 0,
+      "rate": 0,
+      "concurrency": 1,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          2910.0310570046263,
+          2838.5716743663565,
+          2596.114461052333
+        ],
+        "arithmetic_mean": 2781.5723974744387,
+        "min": 2596.114461052333,
+        "max": 2910.0310570046263,
+        "sample_stddev": 164.53751997103885
+      },
+      "praxis_rps": {
+        "per_pass": [
+          3396.484511351331,
+          3484.1341174211902,
+          3121.6020692399693
+        ],
+        "arithmetic_mean": 3334.0735660041637,
+        "min": 3121.6020692399693,
+        "max": 3484.1341174211902,
+        "sample_stddev": 189.15262637342133
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.8342864494163249,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/01-fortio/execution.json",
+        "client/results/common/pass1/praxis-release/http/01-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/01-fortio/execution.json",
+        "client/results/common/pass2/praxis-release/http/01-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/01-fortio/execution.json",
+        "client/results/common/pass3/praxis-release/http/01-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 0,
+      "rate": 0,
+      "concurrency": 16,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          23381.091814776988,
+          25350.93854293813,
+          22719.672278904865
+        ],
+        "arithmetic_mean": 23817.234212206662,
+        "min": 22719.672278904865,
+        "max": 25350.93854293813,
+        "sample_stddev": 1368.7789014982184
+      },
+      "praxis_rps": {
+        "per_pass": [
+          36727.93944821951,
+          39142.488634625195,
+          37467.63786866023
+        ],
+        "arithmetic_mean": 37779.355317168316,
+        "min": 36727.93944821951,
+        "max": 39142.488634625195,
+        "sample_stddev": 1237.0884241522012
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.6304298739947858,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/03-fortio/execution.json",
+        "client/results/common/pass1/praxis-release/http/03-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/03-fortio/execution.json",
+        "client/results/common/pass2/praxis-release/http/03-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/03-fortio/execution.json",
+        "client/results/common/pass3/praxis-release/http/03-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 0,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          21204.587476161178,
+          22135.42624060866,
+          22052.899222065622
+        ],
+        "arithmetic_mean": 21797.637646278486,
+        "min": 21204.587476161178,
+        "max": 22135.42624060866,
+        "sample_stddev": 515.2514487165732
+      },
+      "praxis_rps": {
+        "per_pass": [
+          32122.937973377604,
+          34360.101061749585,
+          34563.25715633337
+        ],
+        "arithmetic_mean": 33682.098730486854,
+        "min": 32122.937973377604,
+        "max": 34563.25715633337,
+        "sample_stddev": 1354.0881801322055
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.6471579405041253,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/05-fortio/execution.json",
+        "client/results/common/pass1/praxis-release/http/05-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/05-fortio/execution.json",
+        "client/results/common/pass2/praxis-release/http/05-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/05-fortio/execution.json",
+        "client/results/common/pass3/praxis-release/http/05-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 1,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          1894.1205242801507,
+          2052.527707765392,
+          1832.1501668108376
+        ],
+        "arithmetic_mean": 1926.2661329521268,
+        "min": 1832.1501668108376,
+        "max": 2052.527707765392,
+        "sample_stddev": 113.6510899946099
+      },
+      "praxis_rps": {
+        "per_pass": [
+          2050.785418027004,
+          2121.755679847932,
+          2096.8761655075855
+        ],
+        "arithmetic_mean": 2089.8057544608405,
+        "min": 2050.785418027004,
+        "max": 2121.755679847932,
+        "sample_stddev": 36.0095480395159
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.921744104130431,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/07-fortio/execution.json",
+        "client/results/common/pass1/praxis-release/http/07-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/07-fortio/execution.json",
+        "client/results/common/pass2/praxis-release/http/07-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/07-fortio/execution.json",
+        "client/results/common/pass3/praxis-release/http/07-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 16,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          16479.967945378205,
+          16436.668798384268,
+          18125.640736007714
+        ],
+        "arithmetic_mean": 17014.09249325673,
+        "min": 16436.668798384268,
+        "max": 18125.640736007714,
+        "sample_stddev": 962.8724349594305
+      },
+      "praxis_rps": {
+        "per_pass": [
+          22019.396414234478,
+          19856.42668329321,
+          22131.93571650061
+        ],
+        "arithmetic_mean": 21335.9196046761,
+        "min": 19856.42668329321,
+        "max": 22131.93571650061,
+        "sample_stddev": 1282.5134509841184
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.797438910930646,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/09-fortio/execution.json",
+        "client/results/common/pass1/praxis-release/http/09-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/09-fortio/execution.json",
+        "client/results/common/pass2/praxis-release/http/09-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/09-fortio/execution.json",
+        "client/results/common/pass3/praxis-release/http/09-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "common",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          15263.216025827387,
+          15837.09703443073,
+          15820.846752539395
+        ],
+        "arithmetic_mean": 15640.386604265837,
+        "min": 15263.216025827387,
+        "max": 15837.09703443073,
+        "sample_stddev": 326.7403431550554
+      },
+      "praxis_rps": {
+        "per_pass": [
+          20270.73356668412,
+          20668.316524876223,
+          20973.350782332298
+        ],
+        "arithmetic_mean": 20637.466957964214,
+        "min": 20270.73356668412,
+        "max": 20973.350782332298,
+        "sample_stddev": 352.323019068146
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.7578636775590354,
+      "raw_execution_artifacts": [
+        "client/results/common/pass1/agentgateway/http/11-fortio/execution.json",
+        "client/results/common/pass1/praxis-release/http/11-fortio/execution.json",
+        "client/results/common/pass2/agentgateway/http/11-fortio/execution.json",
+        "client/results/common/pass2/praxis-release/http/11-fortio/execution.json",
+        "client/results/common/pass3/agentgateway/http/11-fortio/execution.json",
+        "client/results/common/pass3/praxis-release/http/11-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis",
+      "agentgateway_rps": {
+        "per_pass": [
+          14042.068151399735,
+          13871.47703029107,
+          14210.527158585744
+        ],
+        "arithmetic_mean": 14041.35744675885,
+        "min": 13871.47703029107,
+        "max": 14210.527158585744,
+        "sample_stddev": 169.52618145871708
+      },
+      "praxis_rps": {
+        "per_pass": [
+          13967.009905071794,
+          13074.00263168872,
+          13151.51534052466
+        ],
+        "arithmetic_mean": 13397.50929242839,
+        "min": 13074.00263168872,
+        "max": 13967.009905071794,
+        "sample_stddev": 494.72241293343467
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0480573023147168,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/native/pass1/praxis/ai/02-fortio-openai/execution.json",
+        "client/results/native/pass2/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/native/pass2/praxis/ai/02-fortio-openai/execution.json",
+        "client/results/native/pass3/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/native/pass3/praxis/ai/02-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis",
+      "agentgateway_rps": {
+        "per_pass": [
+          7488.113521206459,
+          7388.266951732807,
+          7321.375168727454
+        ],
+        "arithmetic_mean": 7399.251880555574,
+        "min": 7321.375168727454,
+        "max": 7488.113521206459,
+        "sample_stddev": 83.9101962980909
+      },
+      "praxis_rps": {
+        "per_pass": [
+          2810.7371386141244,
+          2842.3059471708943,
+          2859.493813089649
+        ],
+        "arithmetic_mean": 2837.5122996248892,
+        "min": 2810.7371386141244,
+        "max": 2859.493813089649,
+        "sample_stddev": 24.729286667321325
+      },
+      "ratio_of_means_agentgateway_over_praxis": 2.6076545576679027,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/native/pass1/praxis/ai/05-fortio-openai/execution.json",
+        "client/results/native/pass2/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/native/pass2/praxis/ai/05-fortio-openai/execution.json",
+        "client/results/native/pass3/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/native/pass3/praxis/ai/05-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "anthropic",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis",
+      "agentgateway_rps": {
+        "per_pass": [
+          14467.016815626717,
+          14226.682403851037,
+          13781.302650963664
+        ],
+        "arithmetic_mean": 14158.333956813805,
+        "min": 13781.302650963664,
+        "max": 14467.016815626717,
+        "sample_stddev": 347.9290323675047
+      },
+      "praxis_rps": {
+        "per_pass": [
+          11978.958903789347,
+          12219.79500156114,
+          12025.125900157029
+        ],
+        "arithmetic_mean": 12074.626601835838,
+        "min": 11978.958903789347,
+        "max": 12219.79500156114,
+        "sample_stddev": 127.82114886632444
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.1725690925018881,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/native/pass1/praxis/ai/08-fortio-anthropic/execution.json",
+        "client/results/native/pass2/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/native/pass2/praxis/ai/08-fortio-anthropic/execution.json",
+        "client/results/native/pass3/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/native/pass3/praxis/ai/08-fortio-anthropic/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "anthropic",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis",
+      "agentgateway_rps": {
+        "per_pass": [
+          7437.629203059841,
+          7214.126300898034,
+          7390.299284458067
+        ],
+        "arithmetic_mean": 7347.351596138647,
+        "min": 7214.126300898034,
+        "max": 7437.629203059841,
+        "sample_stddev": 117.77845629687131
+      },
+      "praxis_rps": {
+        "per_pass": [
+          2640.091138170685,
+          2706.1297484919223,
+          2755.2305838720317
+        ],
+        "arithmetic_mean": 2700.4838235115462,
+        "min": 2640.091138170685,
+        "max": 2755.2305838720317,
+        "sample_stddev": 57.7769879862767
+      },
+      "ratio_of_means_agentgateway_over_praxis": 2.7207537894393288,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/native/pass1/praxis/ai/11-fortio-anthropic/execution.json",
+        "client/results/native/pass2/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/native/pass2/praxis/ai/11-fortio-anthropic/execution.json",
+        "client/results/native/pass3/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/native/pass3/praxis/ai/11-fortio-anthropic/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "translation",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis",
+      "agentgateway_rps": {
+        "per_pass": [
+          13295.188466694137,
+          12667.754390679976,
+          12503.367463504988
+        ],
+        "arithmetic_mean": 12822.103440293035,
+        "min": 12503.367463504988,
+        "max": 13295.188466694137,
+        "sample_stddev": 417.8670208453976
+      },
+      "praxis_rps": {
+        "per_pass": [
+          7062.657876156659,
+          7217.718652587672,
+          7072.827170480587
+        ],
+        "arithmetic_mean": 7117.734566408306,
+        "min": 7062.657876156659,
+        "max": 7217.718652587672,
+        "sample_stddev": 86.737919928967
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.8014304018593408,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/14-fortio-translation/execution.json",
+        "client/results/native/pass1/praxis/ai/14-fortio-translation/execution.json",
+        "client/results/native/pass2/agentgateway/ai/14-fortio-translation/execution.json",
+        "client/results/native/pass2/praxis/ai/14-fortio-translation/execution.json",
+        "client/results/native/pass3/agentgateway/ai/14-fortio-translation/execution.json",
+        "client/results/native/pass3/praxis/ai/14-fortio-translation/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "translation",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis",
+      "agentgateway_rps": {
+        "per_pass": [
+          7226.076711960515,
+          7116.269347972391,
+          7174.419348751142
+        ],
+        "arithmetic_mean": 7172.255136228016,
+        "min": 7116.269347972391,
+        "max": 7226.076711960515,
+        "sample_stddev": 54.93566381130778
+      },
+      "praxis_rps": {
+        "per_pass": [
+          1497.0311878833866,
+          1518.9756165741921,
+          1506.296424739677
+        ],
+        "arithmetic_mean": 1507.4344097324185,
+        "min": 1497.0311878833866,
+        "max": 1518.9756165741921,
+        "sample_stddev": 11.016385297557527
+      },
+      "ratio_of_means_agentgateway_over_praxis": 4.7579218637454,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/17-fortio-translation/execution.json",
+        "client/results/native/pass1/praxis/ai/17-fortio-translation/execution.json",
+        "client/results/native/pass2/agentgateway/ai/17-fortio-translation/execution.json",
+        "client/results/native/pass2/praxis/ai/17-fortio-translation/execution.json",
+        "client/results/native/pass3/agentgateway/ai/17-fortio-translation/execution.json",
+        "client/results/native/pass3/praxis/ai/17-fortio-translation/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis",
+      "agentgateway_rps": {
+        "per_pass": [
+          12013.707329556617,
+          12361.260339402153,
+          12240.154138897413
+        ],
+        "arithmetic_mean": 12205.040602618728,
+        "min": 12013.707329556617,
+        "max": 12361.260339402153,
+        "sample_stddev": 176.4171023049319
+      },
+      "praxis_rps": {
+        "per_pass": [
+          11075.111752706645,
+          11094.51258951578,
+          11149.524773329655
+        ],
+        "arithmetic_mean": 11106.38303851736,
+        "min": 11075.111752706645,
+        "max": 11149.524773329655,
+        "sample_stddev": 38.60058392284289
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0989212743961,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/18-fortio-openai/execution.json",
+        "client/results/native/pass1/praxis/ai/18-fortio-openai/execution.json",
+        "client/results/native/pass2/agentgateway/ai/18-fortio-openai/execution.json",
+        "client/results/native/pass2/praxis/ai/18-fortio-openai/execution.json",
+        "client/results/native/pass3/agentgateway/ai/18-fortio-openai/execution.json",
+        "client/results/native/pass3/praxis/ai/18-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis",
+      "agentgateway_rps": {
+        "per_pass": [
+          6717.755006233962,
+          6838.999367896235,
+          6871.967627721399
+        ],
+        "arithmetic_mean": 6809.574000617199,
+        "min": 6717.755006233962,
+        "max": 6871.967627721399,
+        "sample_stddev": 81.2082036258437
+      },
+      "praxis_rps": {
+        "per_pass": [
+          2681.941082129708,
+          2696.498262923787,
+          2701.3408233640826
+        ],
+        "arithmetic_mean": 2693.2600561391923,
+        "min": 2681.941082129708,
+        "max": 2701.3408233640826,
+        "sample_stddev": 10.097127184254933
+      },
+      "ratio_of_means_agentgateway_over_praxis": 2.528375967666031,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/19-fortio-openai/execution.json",
+        "client/results/native/pass1/praxis/ai/19-fortio-openai/execution.json",
+        "client/results/native/pass2/agentgateway/ai/19-fortio-openai/execution.json",
+        "client/results/native/pass2/praxis/ai/19-fortio-openai/execution.json",
+        "client/results/native/pass3/agentgateway/ai/19-fortio-openai/execution.json",
+        "client/results/native/pass3/praxis/ai/19-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-ai-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          14042.068151399735,
+          13871.47703029107,
+          14210.527158585744
+        ],
+        "arithmetic_mean": 14041.35744675885,
+        "min": 13871.47703029107,
+        "max": 14210.527158585744,
+        "sample_stddev": 169.52618145871708
+      },
+      "praxis_rps": {
+        "per_pass": [
+          13115.213913280855,
+          12941.52229545906,
+          12897.233591348597
+        ],
+        "arithmetic_mean": 12984.656600029504,
+        "min": 12897.233591348597,
+        "max": 13115.213913280855,
+        "sample_stddev": 115.21406754604487
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0813807310643044,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/native/pass1/praxis-ai-nightly/ai/02-fortio-openai/execution.json",
+        "client/results/native/pass2/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/native/pass2/praxis-ai-nightly/ai/02-fortio-openai/execution.json",
+        "client/results/native/pass3/agentgateway/ai/02-fortio-openai/execution.json",
+        "client/results/native/pass3/praxis-ai-nightly/ai/02-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-ai-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          7488.113521206459,
+          7388.266951732807,
+          7321.375168727454
+        ],
+        "arithmetic_mean": 7399.251880555574,
+        "min": 7321.375168727454,
+        "max": 7488.113521206459,
+        "sample_stddev": 83.9101962980909
+      },
+      "praxis_rps": {
+        "per_pass": [
+          2681.554671263584,
+          2730.6675424956165,
+          2730.452686733205
+        ],
+        "arithmetic_mean": 2714.224966830802,
+        "min": 2681.554671263584,
+        "max": 2730.6675424956165,
+        "sample_stddev": 28.29350985803437
+      },
+      "ratio_of_means_agentgateway_over_praxis": 2.7261011784130513,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/native/pass1/praxis-ai-nightly/ai/05-fortio-openai/execution.json",
+        "client/results/native/pass2/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/native/pass2/praxis-ai-nightly/ai/05-fortio-openai/execution.json",
+        "client/results/native/pass3/agentgateway/ai/05-fortio-openai/execution.json",
+        "client/results/native/pass3/praxis-ai-nightly/ai/05-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "anthropic",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-ai-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          14467.016815626717,
+          14226.682403851037,
+          13781.302650963664
+        ],
+        "arithmetic_mean": 14158.333956813805,
+        "min": 13781.302650963664,
+        "max": 14467.016815626717,
+        "sample_stddev": 347.9290323675047
+      },
+      "praxis_rps": {
+        "per_pass": [
+          12278.389046857446,
+          11705.05137425493,
+          12340.251557830059
+        ],
+        "arithmetic_mean": 12107.897326314145,
+        "min": 11705.05137425493,
+        "max": 12340.251557830059,
+        "sample_stddev": 350.2433273937288
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.1693470447625482,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/native/pass1/praxis-ai-nightly/ai/08-fortio-anthropic/execution.json",
+        "client/results/native/pass2/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/native/pass2/praxis-ai-nightly/ai/08-fortio-anthropic/execution.json",
+        "client/results/native/pass3/agentgateway/ai/08-fortio-anthropic/execution.json",
+        "client/results/native/pass3/praxis-ai-nightly/ai/08-fortio-anthropic/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "anthropic",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-ai-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          7437.629203059841,
+          7214.126300898034,
+          7390.299284458067
+        ],
+        "arithmetic_mean": 7347.351596138647,
+        "min": 7214.126300898034,
+        "max": 7437.629203059841,
+        "sample_stddev": 117.77845629687131
+      },
+      "praxis_rps": {
+        "per_pass": [
+          2656.4704500738358,
+          2627.789094783111,
+          2677.1064801626203
+        ],
+        "arithmetic_mean": 2653.788675006522,
+        "min": 2627.789094783111,
+        "max": 2677.1064801626203,
+        "sample_stddev": 24.767823144182564
+      },
+      "ratio_of_means_agentgateway_over_praxis": 2.7686272329580235,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/native/pass1/praxis-ai-nightly/ai/11-fortio-anthropic/execution.json",
+        "client/results/native/pass2/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/native/pass2/praxis-ai-nightly/ai/11-fortio-anthropic/execution.json",
+        "client/results/native/pass3/agentgateway/ai/11-fortio-anthropic/execution.json",
+        "client/results/native/pass3/praxis-ai-nightly/ai/11-fortio-anthropic/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "translation",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-ai-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          13295.188466694137,
+          12667.754390679976,
+          12503.367463504988
+        ],
+        "arithmetic_mean": 12822.103440293035,
+        "min": 12503.367463504988,
+        "max": 13295.188466694137,
+        "sample_stddev": 417.8670208453976
+      },
+      "praxis_rps": {
+        "per_pass": [
+          7029.145115181113,
+          6935.941493329861,
+          7111.151791677205
+        ],
+        "arithmetic_mean": 7025.412800062727,
+        "min": 6935.941493329861,
+        "max": 7111.151791677205,
+        "sample_stddev": 87.6647579923001
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.8251032081956169,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/14-fortio-translation/execution.json",
+        "client/results/native/pass1/praxis-ai-nightly/ai/14-fortio-translation/execution.json",
+        "client/results/native/pass2/agentgateway/ai/14-fortio-translation/execution.json",
+        "client/results/native/pass2/praxis-ai-nightly/ai/14-fortio-translation/execution.json",
+        "client/results/native/pass3/agentgateway/ai/14-fortio-translation/execution.json",
+        "client/results/native/pass3/praxis-ai-nightly/ai/14-fortio-translation/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "translation",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 32,
+      "connections": null,
+      "praxis_treatment": "praxis-ai-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          7226.076711960515,
+          7116.269347972391,
+          7174.419348751142
+        ],
+        "arithmetic_mean": 7172.255136228016,
+        "min": 7116.269347972391,
+        "max": 7226.076711960515,
+        "sample_stddev": 54.93566381130778
+      },
+      "praxis_rps": {
+        "per_pass": [
+          1455.7051448866482,
+          1457.0359203772666,
+          1467.8527795916496
+        ],
+        "arithmetic_mean": 1460.1979482851882,
+        "min": 1455.7051448866482,
+        "max": 1467.8527795916496,
+        "sample_stddev": 6.662587530336399
+      },
+      "ratio_of_means_agentgateway_over_praxis": 4.911837566030615,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/17-fortio-translation/execution.json",
+        "client/results/native/pass1/praxis-ai-nightly/ai/17-fortio-translation/execution.json",
+        "client/results/native/pass2/agentgateway/ai/17-fortio-translation/execution.json",
+        "client/results/native/pass2/praxis-ai-nightly/ai/17-fortio-translation/execution.json",
+        "client/results/native/pass3/agentgateway/ai/17-fortio-translation/execution.json",
+        "client/results/native/pass3/praxis-ai-nightly/ai/17-fortio-translation/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 1024,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-ai-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          12013.707329556617,
+          12361.260339402153,
+          12240.154138897413
+        ],
+        "arithmetic_mean": 12205.040602618728,
+        "min": 12013.707329556617,
+        "max": 12361.260339402153,
+        "sample_stddev": 176.4171023049319
+      },
+      "praxis_rps": {
+        "per_pass": [
+          11151.979691034281,
+          10969.177146846056,
+          11257.992050274575
+        ],
+        "arithmetic_mean": 11126.382962718304,
+        "min": 10969.177146846056,
+        "max": 11257.992050274575,
+        "sample_stddev": 146.0989612761424
+      },
+      "ratio_of_means_agentgateway_over_praxis": 1.0969459386320544,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/18-fortio-openai/execution.json",
+        "client/results/native/pass1/praxis-ai-nightly/ai/18-fortio-openai/execution.json",
+        "client/results/native/pass2/agentgateway/ai/18-fortio-openai/execution.json",
+        "client/results/native/pass2/praxis-ai-nightly/ai/18-fortio-openai/execution.json",
+        "client/results/native/pass3/agentgateway/ai/18-fortio-openai/execution.json",
+        "client/results/native/pass3/praxis-ai-nightly/ai/18-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "native",
+      "workload": "ai",
+      "tool": "fortio",
+      "api": "openai",
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-ai-nightly",
+      "agentgateway_rps": {
+        "per_pass": [
+          6717.755006233962,
+          6838.999367896235,
+          6871.967627721399
+        ],
+        "arithmetic_mean": 6809.574000617199,
+        "min": 6717.755006233962,
+        "max": 6871.967627721399,
+        "sample_stddev": 81.2082036258437
+      },
+      "praxis_rps": {
+        "per_pass": [
+          2613.084401554416,
+          2628.195497828837,
+          2636.5606146258715
+        ],
+        "arithmetic_mean": 2625.9468380030416,
+        "min": 2613.084401554416,
+        "max": 2636.5606146258715,
+        "sample_stddev": 11.898550260565408
+      },
+      "ratio_of_means_agentgateway_over_praxis": 2.593188065374426,
+      "raw_execution_artifacts": [
+        "client/results/native/pass1/agentgateway/ai/19-fortio-openai/execution.json",
+        "client/results/native/pass1/praxis-ai-nightly/ai/19-fortio-openai/execution.json",
+        "client/results/native/pass2/agentgateway/ai/19-fortio-openai/execution.json",
+        "client/results/native/pass2/praxis-ai-nightly/ai/19-fortio-openai/execution.json",
+        "client/results/native/pass3/agentgateway/ai/19-fortio-openai/execution.json",
+        "client/results/native/pass3/praxis-ai-nightly/ai/19-fortio-openai/execution.json"
+      ]
+    },
+    {
+      "profile": "kubernetes",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 0,
+      "rate": 0,
+      "concurrency": 1,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          551.2508783453851,
+          606.0713643603791,
+          561.2978281703134
+        ],
+        "arithmetic_mean": 572.8733569586925,
+        "min": 551.2508783453851,
+        "max": 606.0713643603791,
+        "sample_stddev": 29.18588823006734
+      },
+      "praxis_rps": {
+        "per_pass": [
+          571.0200133207886,
+          639.6446343630939,
+          607.1847219573076
+        ],
+        "arithmetic_mean": 605.9497898803967,
+        "min": 571.0200133207886,
+        "max": 639.6446343630939,
+        "sample_stddev": 34.328973859204424
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.9454139047919583,
+      "raw_execution_artifacts": [
+        "kclient/results/kubernetes/pass1/agentgateway/http/01-fortio/execution.json",
+        "kclient/results/kubernetes/pass1/praxis-release/http/01-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/agentgateway/http/01-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/praxis-release/http/01-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/agentgateway/http/01-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/praxis-release/http/01-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "kubernetes",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 0,
+      "rate": 0,
+      "concurrency": 16,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          9177.156989634828,
+          9653.696372064298,
+          9597.56456585378
+        ],
+        "arithmetic_mean": 9476.139309184302,
+        "min": 9177.156989634828,
+        "max": 9653.696372064298,
+        "sample_stddev": 260.4429217112677
+      },
+      "praxis_rps": {
+        "per_pass": [
+          9293.50697759821,
+          10015.663403952065,
+          9893.362826718434
+        ],
+        "arithmetic_mean": 9734.17773608957,
+        "min": 9293.50697759821,
+        "max": 10015.663403952065,
+        "sample_stddev": 386.50018866739566
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.9734915024256658,
+      "raw_execution_artifacts": [
+        "kclient/results/kubernetes/pass1/agentgateway/http/03-fortio/execution.json",
+        "kclient/results/kubernetes/pass1/praxis-release/http/03-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/agentgateway/http/03-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/praxis-release/http/03-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/agentgateway/http/03-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/praxis-release/http/03-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "kubernetes",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 0,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          24689.385881099435,
+          25158.8235668621,
+          24826.32885663419
+        ],
+        "arithmetic_mean": 24891.512768198576,
+        "min": 24689.385881099435,
+        "max": 25158.8235668621,
+        "sample_stddev": 241.41176845521898
+      },
+      "praxis_rps": {
+        "per_pass": [
+          31977.481601207648,
+          32076.624270069602,
+          31968.966732621597
+        ],
+        "arithmetic_mean": 32007.69086796628,
+        "min": 31968.966732621597,
+        "max": 32076.624270069602,
+        "sample_stddev": 59.8496966651704
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.7776728684014607,
+      "raw_execution_artifacts": [
+        "kclient/results/kubernetes/pass1/agentgateway/http/05-fortio/execution.json",
+        "kclient/results/kubernetes/pass1/praxis-release/http/05-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/agentgateway/http/05-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/praxis-release/http/05-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/agentgateway/http/05-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/praxis-release/http/05-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "kubernetes",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 1,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          502.6220267838246,
+          526.4585134738629,
+          575.2774862662881
+        ],
+        "arithmetic_mean": 534.7860088413252,
+        "min": 502.6220267838246,
+        "max": 575.2774862662881,
+        "sample_stddev": 37.03666200500933
+      },
+      "praxis_rps": {
+        "per_pass": [
+          537.1594949786279,
+          535.8909854740618,
+          572.1822879256226
+        ],
+        "arithmetic_mean": 548.4109227927707,
+        "min": 535.8909854740618,
+        "max": 572.1822879256226,
+        "sample_stddev": 20.59637417848872
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.9751556481004043,
+      "raw_execution_artifacts": [
+        "kclient/results/kubernetes/pass1/agentgateway/http/07-fortio/execution.json",
+        "kclient/results/kubernetes/pass1/praxis-release/http/07-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/agentgateway/http/07-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/praxis-release/http/07-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/agentgateway/http/07-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/praxis-release/http/07-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "kubernetes",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 16,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          8344.42433081953,
+          8554.664394173213,
+          8643.501396987176
+        ],
+        "arithmetic_mean": 8514.196707326639,
+        "min": 8344.42433081953,
+        "max": 8643.501396987176,
+        "sample_stddev": 153.59035821266914
+      },
+      "praxis_rps": {
+        "per_pass": [
+          8670.567349876173,
+          8699.136801141409,
+          8695.33666734674
+        ],
+        "arithmetic_mean": 8688.346939454774,
+        "min": 8670.567349876173,
+        "max": 8699.136801141409,
+        "sample_stddev": 15.514367805423603
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.9799558842042438,
+      "raw_execution_artifacts": [
+        "kclient/results/kubernetes/pass1/agentgateway/http/09-fortio/execution.json",
+        "kclient/results/kubernetes/pass1/praxis-release/http/09-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/agentgateway/http/09-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/praxis-release/http/09-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/agentgateway/http/09-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/praxis-release/http/09-fortio/execution.json"
+      ]
+    },
+    {
+      "profile": "kubernetes",
+      "workload": "http",
+      "tool": "fortio",
+      "api": null,
+      "size": 16384,
+      "rate": 0,
+      "concurrency": 512,
+      "connections": null,
+      "praxis_treatment": "praxis-release",
+      "agentgateway_rps": {
+        "per_pass": [
+          16335.06984240953,
+          16158.081399825229,
+          16093.51125352267
+        ],
+        "arithmetic_mean": 16195.554165252477,
+        "min": 16093.51125352267,
+        "max": 16335.06984240953,
+        "sample_stddev": 125.06316035438572
+      },
+      "praxis_rps": {
+        "per_pass": [
+          18357.17352997491,
+          18283.590233627703,
+          18431.568683705176
+        ],
+        "arithmetic_mean": 18357.444149102597,
+        "min": 18283.590233627703,
+        "max": 18431.568683705176,
+        "sample_stddev": 73.98959621370427
+      },
+      "ratio_of_means_agentgateway_over_praxis": 0.8822336069067761,
+      "raw_execution_artifacts": [
+        "kclient/results/kubernetes/pass1/agentgateway/http/11-fortio/execution.json",
+        "kclient/results/kubernetes/pass1/praxis-release/http/11-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/agentgateway/http/11-fortio/execution.json",
+        "kclient/results/kubernetes/pass2/praxis-release/http/11-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/agentgateway/http/11-fortio/execution.json",
+        "kclient/results/kubernetes/pass3/praxis-release/http/11-fortio/execution.json"
+      ]
+    }
+  ],
+  "load_cases": 822,
+  "confirmed_errors_or_resets": 0,
+  "nighthawk_inflight_at_cutoff": 26
+}

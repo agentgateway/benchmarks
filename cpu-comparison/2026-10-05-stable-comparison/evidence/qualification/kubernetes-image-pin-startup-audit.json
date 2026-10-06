@@ -1,0 +1,200 @@
+{
+  "phase": "qualification-image-pin",
+  "checks": [
+    {
+      "treatment": "agentgateway",
+      "stage": "switch",
+      "barrier": {
+        "single_pod_barrier": true,
+        "expected_image": "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+        "stable_seconds": 11.339615990000311,
+        "wait_seconds": 12.080715523001345,
+        "pod": "benchmark-59f4fd6b47-lcxjg",
+        "pod_uid": "c12a7082-5b69-4c34-8e99-68179e547215",
+        "image_ids": [
+          "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c"
+        ],
+        "endpoints": [
+          {
+            "addresses": [
+              "10.42.1.244"
+            ],
+            "conditions": {
+              "ready": true,
+              "serving": true,
+              "terminating": false
+            },
+            "nodeName": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "benchmark-59f4fd6b47-lcxjg",
+              "namespace": "gateway-benchmark",
+              "uid": "c12a7082-5b69-4c34-8e99-68179e547215"
+            }
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "recovery-switch",
+      "barrier": {
+        "single_pod_barrier": true,
+        "expected_image": "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+        "stable_seconds": 11.164280942000914,
+        "wait_seconds": 11.882056483998895,
+        "pod": "benchmark-5bc7c858b4-c7fxj",
+        "pod_uid": "07c2bb56-cce7-4ad1-8483-c6f6103c6e06",
+        "image_ids": [
+          "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c"
+        ],
+        "endpoints": [
+          {
+            "addresses": [
+              "10.42.1.248"
+            ],
+            "conditions": {
+              "ready": true,
+              "serving": true,
+              "terminating": false
+            },
+            "nodeName": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "benchmark-5bc7c858b4-c7fxj",
+              "namespace": "gateway-benchmark",
+              "uid": "07c2bb56-cce7-4ad1-8483-c6f6103c6e06"
+            }
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/00-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        163864
+      ],
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/01-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        163864
+      ],
+      "passed": true
+    },
+    {
+      "treatment": "agentgateway",
+      "stage": "http/02-nighthawk/execution.json",
+      "samples": 7,
+      "pids": [
+        163864
+      ],
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "switch",
+      "barrier": {
+        "single_pod_barrier": true,
+        "expected_image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+        "stable_seconds": 10.160308332000568,
+        "wait_seconds": 11.028745876001267,
+        "pod": "praxis-benchmark-689685876b-z8jst",
+        "pod_uid": "516c629c-f546-4a74-8806-e1f759b3899c",
+        "image_ids": [
+          "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8"
+        ],
+        "endpoints": [
+          {
+            "addresses": [
+              "10.42.1.250"
+            ],
+            "conditions": {
+              "ready": true,
+              "serving": true,
+              "terminating": false
+            },
+            "nodeName": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "praxis-benchmark-689685876b-z8jst",
+              "namespace": "gateway-benchmark",
+              "uid": "516c629c-f546-4a74-8806-e1f759b3899c"
+            }
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "recovery-switch",
+      "barrier": {
+        "single_pod_barrier": true,
+        "expected_image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+        "stable_seconds": 10.561480295000365,
+        "wait_seconds": 11.436069215000316,
+        "pod": "praxis-benchmark-689685876b-mwfnn",
+        "pod_uid": "20d065be-b7e5-4da8-a40f-a8c3e4822bbe",
+        "image_ids": [
+          "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8"
+        ],
+        "endpoints": [
+          {
+            "addresses": [
+              "10.42.1.6"
+            ],
+            "conditions": {
+              "ready": true,
+              "serving": true,
+              "terminating": false
+            },
+            "nodeName": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "praxis-benchmark-689685876b-mwfnn",
+              "namespace": "gateway-benchmark",
+              "uid": "20d065be-b7e5-4da8-a40f-a8c3e4822bbe"
+            }
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/00-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        167663
+      ],
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/01-fortio/execution.json",
+      "samples": 7,
+      "pids": [
+        167663
+      ],
+      "passed": true
+    },
+    {
+      "treatment": "praxis-release",
+      "stage": "http/02-nighthawk/execution.json",
+      "samples": 8,
+      "pids": [
+        167663
+      ],
+      "passed": true
+    }
+  ],
+  "issues": []
+}

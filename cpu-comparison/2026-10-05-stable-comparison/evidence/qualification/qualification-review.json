@@ -1,0 +1,18 @@
+{
+  "reviewed_at": "2026-10-05T20:24:16.562087+00:00",
+  "infrastructure_valid": true,
+  "scope": "Approval for pass1 only; repeats require the complete common/native/Kubernetes first-pass review",
+  "qualification_label": "qualification-nohealth",
+  "aiperf_random_seed": 42,
+  "protocol_checks": 48,
+  "cancellation_checks": 8,
+  "load_cases": 20,
+  "request_or_process_errors": 0,
+  "audit": "common-final-audit.json",
+  "host_review": "common-final-host-review.json",
+  "resource_review": "common-final-resource-gate.json",
+  "resource_interpretation": "Short request-count qualification has 0-4 samples per tool window, so it establishes readiness/protocol correctness, not sustained capacity. Sampled intervals show no OOM, steal, collector failure or network drops. Client/backend headroom; native Praxis CPU quota saturation is the tested product constraint. Full duration pass1 requires independent review.",
+  "corpus_review": "All generated AIPerf messages match across treatments within API/concurrency groups, seed42, lengths128/64, completed with zero errors.",
+  "healthchecks": "Praxis inherited probes disabled; agentgateway/direct already had none. Common direct/agentgateway pass1 completed before correction without any active Praxis container; retained unchanged.",
+  "archive_manifest_sha256": "194571c0a5ad4bd9ac512695ca3a193558f2c93345f11e34baebd2ee1666f5f3"
+}

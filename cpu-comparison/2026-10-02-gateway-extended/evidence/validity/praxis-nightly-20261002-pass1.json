@@ -1,0 +1,35 @@
+{
+  "campaign": "praxis-nightly-20261002",
+  "repetition": "pass1",
+  "reviewed_at": "2026-10-03T09:45:49.084298+00:00",
+  "infrastructure_valid": true,
+  "scored_cases": {
+    "agentgateway": {
+      "pass": 106,
+      "fail": 1
+    },
+    "praxis": {
+      "not-executed": 107
+    }
+  },
+  "checks": {
+    "both_jobs_finished_and_namespaces_cleaned": true,
+    "node_issues": {},
+    "collection_errors": [],
+    "nightly_fixture_pods_ready": true,
+    "four_nightly_data_planes_rejected_empty_router": true,
+    "core_image_matches_pin": true,
+    "outer_timeouts_not_reached": true
+  },
+  "runtime_reviews": [
+    "nightly-agentgateway-pass1-runtime.json",
+    "nightly-praxis-pass1-runtime.json"
+  ],
+  "setup_review": "nightly-praxis-pass1-setup.json",
+  "classified_observations": [
+    "Praxis nightly exits code1 with its own empty-router validation error in all four base Gateways; generated routes lists are empty. This is the tested operator/image pairing incompatibility, not an infrastructure failure.",
+    "One Praxis operator startup exit logged LeadershipLost; retained separately from four data-plane crash loops. No OOMKilled state recorded.",
+    "Agentgateway completed all107 selected cases; its sole failure remains GatewayStaticAddresses."
+  ],
+  "decision": "Repeat both sides twice more using unchanged versions and configuration. Nightly individual feature coverage remains not evaluated; do not assign a zero passing score."
+}

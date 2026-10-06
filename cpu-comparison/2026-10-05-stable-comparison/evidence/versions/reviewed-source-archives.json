@@ -1,0 +1,37 @@
+[
+  {
+    "name": "agentgateway",
+    "repository": "agentgateway/agentgateway",
+    "revision": "ea5608642b9d5c94c5baf5fd9f2f9849b808e963",
+    "archive_url": "https://github.com/agentgateway/agentgateway/archive/ea5608642b9d5c94c5baf5fd9f2f9849b808e963.tar.gz",
+    "archive_sha256": "c3d5eb5eaca6c0de1f5e6029e66ee8059d817afc3dd21373af60de8c3c7fa559"
+  },
+  {
+    "name": "praxis-release",
+    "repository": "praxis-proxy/praxis",
+    "revision": "af54edcd24de01e4dac7da59a809bf88bd246fe5",
+    "archive_url": "https://github.com/praxis-proxy/praxis/archive/af54edcd24de01e4dac7da59a809bf88bd246fe5.tar.gz",
+    "archive_sha256": "4c2fc63490f6c2d8ed936ef71f2961e4f119040d87f8ea2d6850c6eb2b25ef66"
+  },
+  {
+    "name": "praxis-nightly",
+    "repository": "praxis-proxy/praxis",
+    "revision": "31ac6dc86fba30ff510b17f9139021de60d8ba79",
+    "archive_url": "https://github.com/praxis-proxy/praxis/archive/31ac6dc86fba30ff510b17f9139021de60d8ba79.tar.gz",
+    "archive_sha256": "7de5aed395afaf0c6abde813235e79827f4fc6b42cebbb7e35c6b8ac8cac0949"
+  },
+  {
+    "name": "praxis-ai",
+    "repository": "praxis-proxy/ai",
+    "revision": "2f8732c1389b889660bcb3495af4d4d28dd4e682",
+    "archive_url": "https://github.com/praxis-proxy/ai/archive/2f8732c1389b889660bcb3495af4d4d28dd4e682.tar.gz",
+    "archive_sha256": "6d3e9bf8cf29e2e7409c21fe446035c520d4ba238edcc18d5cd9addda3190fa6"
+  },
+  {
+    "name": "praxis-ai-nightly",
+    "repository": "praxis-proxy/ai",
+    "revision": "f5f51a751d6f25acde96fb840665b24f2696ce46",
+    "archive_url": "https://api.github.com/repos/praxis-proxy/ai/tarball/f5f51a751d6f25acde96fb840665b24f2696ce46",
+    "archive_sha256": "7706eae166ddc0e1c00d960d7cf5aeea726e86367e55549de5de7b4788e07134"
+  }
+]

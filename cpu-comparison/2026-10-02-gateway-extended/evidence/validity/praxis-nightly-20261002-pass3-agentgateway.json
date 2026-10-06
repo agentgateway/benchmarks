@@ -1,0 +1,13 @@
+{
+  "case": "results/praxis-nightly-20261002/pass3/agentgateway",
+  "reviewed_at": "2026-10-03T10:12:19.352085+00:00",
+  "infrastructure_valid": true,
+  "counts": {
+    "pass": 106,
+    "fail": 1
+  },
+  "runtime_review": "nightly-agentgateway-pass3-runtime.json",
+  "notes": [
+    "All individual outcomes identical across all three reference runs. Eight runtime snapshots, no node/API collection errors, container restarts or terminations. Fixture lifecycle warnings do not invalidate completed assertions. Cleanup and job finished."
+  ]
+}

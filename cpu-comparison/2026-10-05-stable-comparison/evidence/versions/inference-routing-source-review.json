@@ -1,0 +1,53 @@
+{
+  "scope": "Source capability and build profile only; no EPP or GPU benchmark executed.",
+  "files": [
+    {
+      "path": "server/Cargo.toml",
+      "hashes": {
+        "praxis-ai": "da68d65d33ed4e5d4d4effda738ee6dfb55a89d8beba3c4a2b47bfda59f66ce2",
+        "praxis-ai-nightly": "da68d65d33ed4e5d4d4effda738ee6dfb55a89d8beba3c4a2b47bfda59f66ce2"
+      },
+      "identical": true
+    },
+    {
+      "path": "Containerfile",
+      "hashes": {
+        "praxis-ai": "13370e5ed5298ee56960048cbf84036be097213e1e4126ee7e0ccdc4f96c29c7",
+        "praxis-ai-nightly": "13370e5ed5298ee56960048cbf84036be097213e1e4126ee7e0ccdc4f96c29c7"
+      },
+      "identical": true
+    },
+    {
+      "path": ".github/workflows/publish.yaml",
+      "hashes": {
+        "praxis-ai": "e7e664ece37965daee50dbb13364b163a9f8b0768a5e731c8ec291212a6f283d",
+        "praxis-ai-nightly": "e7e664ece37965daee50dbb13364b163a9f8b0768a5e731c8ec291212a6f283d"
+      },
+      "identical": true
+    },
+    {
+      "path": "integrations/llmd/ext-proc/src/lib.rs",
+      "hashes": {
+        "praxis-ai": "e6f5b3c05c5a3cadc2214f612743bb214f0a1b097f91f6d4d07ab6355ac1a12b",
+        "praxis-ai-nightly": "e6f5b3c05c5a3cadc2214f612743bb214f0a1b097f91f6d4d07ab6355ac1a12b"
+      },
+      "identical": true
+    },
+    {
+      "path": "docs/developing/llmd-integration-testing.md",
+      "hashes": {
+        "praxis-ai": "f9a80838b91cc23c2436a361dd615016cfef9c25518415491c5be3b896334d99",
+        "praxis-ai-nightly": "f9a80838b91cc23c2436a361dd615016cfef9c25518415491c5be3b896334d99"
+      },
+      "identical": true
+    },
+    {
+      "path": "examples/configs/llmd-ext-proc-routing.yaml",
+      "hashes": {
+        "praxis-ai": "4459643a598b92f5ed37f7d16fc6e5c655a4947abc1a23836ab2da622a610d6f",
+        "praxis-ai-nightly": "4459643a598b92f5ed37f7d16fc6e5c655a4947abc1a23836ab2da622a610d6f"
+      },
+      "identical": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "excluded_attempts": [
+    {
+      "path": "rejected-infrastructure/pre-tcp-client-fix/praxis-v0.5.2/pass1/agentgateway",
+      "original_top_level_outcomes": {
+        "pass": 101,
+        "fail": 6,
+        "out_of_scope_skip": 23
+      },
+      "reason": "A TCP attempt initiated during Service/VIP startup remained in SYN-SENT for the entire 30-second consistency window. Twenty-four fresh TLS connections succeeded while the upstream socket remained stuck. The unchanged focused test passed without probe traffic after bounding client tcp_syn_retries to 2.",
+      "scope": "Entire initial agentgateway pass excluded; all raw evidence retained. Static-address assertion failure is separately retained for product investigation, not explained away by this transport issue.",
+      "repair": "Client-only net.ipv4.tcp_syn_retries=2, applied equally to both gateways and both campaigns. Upstream binary, assertions, per-test timeouts, products and CRDs unchanged."
+    },
+    {
+      "path": "rejected-infrastructure/maintenance-interrupted/praxis-v0.5.2/pass3",
+      "reason": "Unattended updates on kcontrol and kclient overlapped the third Praxis attempt and restarted the active test service at 06:23:57 UTC. The incomplete Praxis attempt is infrastructure-invalid.",
+      "scope": "Repeat the entire third pair; retain the already-completed 106/107 agentgateway half as superseded, not a product failure. Neither half enters the final three-repetition aggregate.",
+      "repair": "Freeze apt timers and periodic upgrades on all five disposable hosts after active maintenance completes. Preserve package changes and service histories; kernels, K3s processes, upstream binary and product container pins remain unchanged."
+    }
+  ]
+}

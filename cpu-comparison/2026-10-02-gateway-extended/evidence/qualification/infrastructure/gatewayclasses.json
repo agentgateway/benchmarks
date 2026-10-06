@@ -1,0 +1,270 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "gateway.networking.k8s.io/v1",
+            "kind": "GatewayClass",
+            "metadata": {
+                "creationTimestamp": "2026-10-02T23:32:52Z",
+                "generation": 1,
+                "name": "agentgateway",
+                "resourceVersion": "1374",
+                "uid": "09cc5c4b-9dcf-4473-b036-ac0f3b50c16b"
+            },
+            "spec": {
+                "controllerName": "agentgateway.dev/agentgateway",
+                "description": "Specialized class for agentgateway.",
+                "parametersRef": {
+                    "group": "agentgateway.dev",
+                    "kind": "AgentgatewayParameters",
+                    "name": "benchmark-resources",
+                    "namespace": "agentgateway-system"
+                }
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-10-02T23:32:53Z",
+                        "message": "GatewayClass accepted by agentgateway controller",
+                        "observedGeneration": 1,
+                        "reason": "Accepted",
+                        "status": "True",
+                        "type": "Accepted"
+                    }
+                ],
+                "supportedFeatures": [
+                    {
+                        "name": "BackendTLSPolicy"
+                    },
+                    {
+                        "name": "BackendTLSPolicySANValidation"
+                    },
+                    {
+                        "name": "GRPCRoute"
+                    },
+                    {
+                        "name": "GRPCRouteNamedRouteRule"
+                    },
+                    {
+                        "name": "Gateway"
+                    },
+                    {
+                        "name": "GatewayAddressEmpty"
+                    },
+                    {
+                        "name": "GatewayBackendClientCertificate"
+                    },
+                    {
+                        "name": "GatewayFrontendClientCertificateValidation"
+                    },
+                    {
+                        "name": "GatewayFrontendClientCertificateValidationInsecureFallback"
+                    },
+                    {
+                        "name": "GatewayHTTPListenerIsolation"
+                    },
+                    {
+                        "name": "GatewayHTTPSListenerDetectMisdirectedRequests"
+                    },
+                    {
+                        "name": "GatewayInfrastructurePropagation"
+                    },
+                    {
+                        "name": "GatewayPort8080"
+                    },
+                    {
+                        "name": "GatewayStaticAddresses"
+                    },
+                    {
+                        "name": "HTTPRoute"
+                    },
+                    {
+                        "name": "HTTPRoute303RedirectStatusCode"
+                    },
+                    {
+                        "name": "HTTPRoute307RedirectStatusCode"
+                    },
+                    {
+                        "name": "HTTPRoute308RedirectStatusCode"
+                    },
+                    {
+                        "name": "HTTPRouteBackendProtocolH2C"
+                    },
+                    {
+                        "name": "HTTPRouteBackendProtocolWebSocket"
+                    },
+                    {
+                        "name": "HTTPRouteBackendRequestHeaderModification"
+                    },
+                    {
+                        "name": "HTTPRouteBackendTimeout"
+                    },
+                    {
+                        "name": "HTTPRouteCORS"
+                    },
+                    {
+                        "name": "HTTPRouteDestinationPortMatching"
+                    },
+                    {
+                        "name": "HTTPRouteHostRewrite"
+                    },
+                    {
+                        "name": "HTTPRouteMethodMatching"
+                    },
+                    {
+                        "name": "HTTPRouteNamedRouteRule"
+                    },
+                    {
+                        "name": "HTTPRouteParentRefPort"
+                    },
+                    {
+                        "name": "HTTPRoutePathRedirect"
+                    },
+                    {
+                        "name": "HTTPRoutePathRewrite"
+                    },
+                    {
+                        "name": "HTTPRoutePortRedirect"
+                    },
+                    {
+                        "name": "HTTPRouteQueryParamMatching"
+                    },
+                    {
+                        "name": "HTTPRouteRequestMirror"
+                    },
+                    {
+                        "name": "HTTPRouteRequestMultipleMirrors"
+                    },
+                    {
+                        "name": "HTTPRouteRequestPercentageMirror"
+                    },
+                    {
+                        "name": "HTTPRouteRequestTimeout"
+                    },
+                    {
+                        "name": "HTTPRouteResponseHeaderModification"
+                    },
+                    {
+                        "name": "HTTPRouteRetry"
+                    },
+                    {
+                        "name": "HTTPRouteRetryBackendTimeout"
+                    },
+                    {
+                        "name": "HTTPRouteRetryConnectionError"
+                    },
+                    {
+                        "name": "HTTPRouteSchemeRedirect"
+                    },
+                    {
+                        "name": "ListenerSet"
+                    },
+                    {
+                        "name": "ReferenceGrant"
+                    },
+                    {
+                        "name": "TCPRoute"
+                    },
+                    {
+                        "name": "TLSRoute"
+                    },
+                    {
+                        "name": "TLSRouteModeMixed"
+                    },
+                    {
+                        "name": "TLSRouteModeTerminate"
+                    }
+                ]
+            }
+        },
+        {
+            "apiVersion": "gateway.networking.k8s.io/v1",
+            "kind": "GatewayClass",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"gateway.networking.k8s.io/v1\",\"kind\":\"GatewayClass\",\"metadata\":{\"annotations\":{},\"name\":\"praxis\"},\"spec\":{\"controllerName\":\"praxis.sh/gateway-controller\"}}\n"
+                },
+                "creationTimestamp": "2026-10-02T23:32:55Z",
+                "generation": 1,
+                "name": "praxis",
+                "resourceVersion": "1457",
+                "uid": "6a2a7385-3029-47b4-b9b0-a4ba98f7c308"
+            },
+            "spec": {
+                "controllerName": "praxis.sh/gateway-controller"
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-10-02T23:32:56Z",
+                        "message": "GatewayClass accepted",
+                        "observedGeneration": 1,
+                        "reason": "Accepted",
+                        "status": "True",
+                        "type": "Accepted"
+                    }
+                ],
+                "supportedFeatures": [
+                    {
+                        "name": "Gateway"
+                    },
+                    {
+                        "name": "GatewayAddressEmpty"
+                    },
+                    {
+                        "name": "GatewayInfrastructurePropagation"
+                    },
+                    {
+                        "name": "GatewayPort8080"
+                    },
+                    {
+                        "name": "HTTPRoute"
+                    },
+                    {
+                        "name": "HTTPRoute307RedirectStatusCode"
+                    },
+                    {
+                        "name": "HTTPRoute308RedirectStatusCode"
+                    },
+                    {
+                        "name": "HTTPRouteBackendTimeout"
+                    },
+                    {
+                        "name": "HTTPRouteDestinationPortMatching"
+                    },
+                    {
+                        "name": "HTTPRouteHostRewrite"
+                    },
+                    {
+                        "name": "HTTPRouteNamedRouteRule"
+                    },
+                    {
+                        "name": "HTTPRouteParentRefPort"
+                    },
+                    {
+                        "name": "HTTPRoutePathRewrite"
+                    },
+                    {
+                        "name": "HTTPRouteRequestHeaderModification"
+                    },
+                    {
+                        "name": "HTTPRouteRequestTimeout"
+                    },
+                    {
+                        "name": "HTTPRouteResponseHeaderModification"
+                    },
+                    {
+                        "name": "HTTPRouteSchemeRedirect"
+                    },
+                    {
+                        "name": "ReferenceGrant"
+                    }
+                ]
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

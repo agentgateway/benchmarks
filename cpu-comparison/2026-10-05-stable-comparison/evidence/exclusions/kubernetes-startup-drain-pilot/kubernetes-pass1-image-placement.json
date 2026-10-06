@@ -1,0 +1,259 @@
+{
+  "agentgateway": [
+    {
+      "namespace": "agentgateway-system",
+      "pod": "agentgateway-54f88c78fc-26xzh",
+      "node": "gwcmp160-1005-kcontroller.c.solo-oss.internal",
+      "containers": [
+        {
+          "name": "controller",
+          "image": "ghcr.io/agentgateway/controller:v1.6.0@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b",
+          "resources": {
+            "limits": {
+              "cpu": "2",
+              "memory": "2Gi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "128Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "controller",
+          "imageID": "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-10-05T20:23:24Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "agentgateway-system",
+      "pod": "agentgateway-54f88c78fc-8dghn",
+      "node": "gwcmp160-1005-kcontroller.c.solo-oss.internal",
+      "containers": [
+        {
+          "name": "controller",
+          "image": "ghcr.io/agentgateway/controller:v1.6.0@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b",
+          "resources": {
+            "limits": {
+              "cpu": "2",
+              "memory": "2Gi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "128Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "controller",
+          "imageID": "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-10-05T20:23:24Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "gateway-benchmark",
+      "pod": "benchmark-6b496d57d6-nnkcv",
+      "node": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+      "containers": [
+        {
+          "name": "agentgateway",
+          "image": "ghcr.io/agentgateway/agentgateway:v1.6.0@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+          "resources": {
+            "limits": {
+              "cpu": "2",
+              "memory": "256Mi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "64Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "agentgateway",
+          "imageID": "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-10-05T20:23:41Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    }
+  ],
+  "praxis-release": [
+    {
+      "namespace": "gateway-benchmark",
+      "pod": "praxis-benchmark-5678d964fd-m94bg",
+      "node": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+      "containers": [
+        {
+          "name": "praxis",
+          "image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+          "resources": {
+            "limits": {
+              "cpu": "2",
+              "memory": "256Mi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "64Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "praxis",
+          "imageID": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-10-05T20:37:47Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "gateway-benchmark",
+      "pod": "praxis-benchmark-689685876b-2zwd4",
+      "node": "gwcmp160-1005-kgateway.c.solo-oss.internal",
+      "containers": [
+        {
+          "name": "praxis",
+          "image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+          "resources": {
+            "limits": {
+              "cpu": "2",
+              "memory": "256Mi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "64Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "praxis",
+          "imageID": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-10-05T20:37:47Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "praxis-system",
+      "pod": "praxis-operator-589f5cb84b-bbrjh",
+      "node": "gwcmp160-1005-kcontroller.c.solo-oss.internal",
+      "containers": [
+        {
+          "name": "operator",
+          "image": "praxis-operator:fb8beaa",
+          "resources": {
+            "limits": {
+              "cpu": "2",
+              "memory": "2Gi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "128Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "operator",
+          "imageID": "sha256:e3bc32ff8ab83905b6ffee88e8744130f392c50780962c14d523e89f6eeb211a",
+          "ready": true,
+          "restartCount": 1,
+          "state": {
+            "running": {
+              "startedAt": "2026-10-05T20:37:51Z"
+            }
+          },
+          "lastState": {
+            "terminated": {
+              "containerID": "containerd://36b344e96beb7a316b00d2ee5de44f3a101ab8ac5f38d23fe601c4589631234a",
+              "exitCode": 1,
+              "finishedAt": "2026-10-05T20:37:50Z",
+              "reason": "Error",
+              "startedAt": "2026-10-05T20:37:45Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "namespace": "praxis-system",
+      "pod": "praxis-operator-589f5cb84b-fbd4k",
+      "node": "gwcmp160-1005-kcontroller.c.solo-oss.internal",
+      "containers": [
+        {
+          "name": "operator",
+          "image": "praxis-operator:fb8beaa",
+          "resources": {
+            "limits": {
+              "cpu": "2",
+              "memory": "2Gi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "128Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "operator",
+          "imageID": "sha256:e3bc32ff8ab83905b6ffee88e8744130f392c50780962c14d523e89f6eeb211a",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-10-05T20:37:45Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    }
+  ]
+}

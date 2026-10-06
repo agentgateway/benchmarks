@@ -1,0 +1,22 @@
+config:
+  workerThreads: 2
+  adminAddr: 10.128.0.63:23500
+  statsAddr: 10.128.0.63:23501
+  readinessAddr: 10.128.0.63:23502
+  logging:
+    filter: "false"
+llm:
+  port: 8080
+  models:
+  - name: bench-openai
+    provider: openAI
+    params:
+      baseUrl: http://10.128.15.192:8081/v1
+      model: bench-openai
+      apiKey: dummy
+  - name: bench-anthropic
+    provider: anthropic
+    params:
+      baseUrl: http://10.128.15.192:8081/v1
+      model: bench-anthropic
+      apiKey: dummy

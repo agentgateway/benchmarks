@@ -1,0 +1,81 @@
+{
+  "campaign": "native-cpu-20261001-gateway",
+  "repetitions": 1,
+  "gpu": false,
+  "host": "GCP n2-standard-16, Cascade Lake, 16 vCPU, 64 GiB",
+  "suite_base": "141add64d25455a6acb7ea7c69e1e813bb05e339",
+  "suite_patches": [
+    "ade5ca160a546d18695a4456225185872d86a6b8",
+    "25d513948a41463199fadded4828315527736e15"
+  ],
+  "gateway_api": "v1.5.1",
+  "agentgateway": "v1.5.0",
+  "praxis_operator": "fb8beaa14cf714dacf0e6964cc8be94d1b5c1d7c",
+  "praxis_core": "0.5.2 documented operator default; 0.7.2 incompatible empty-Gateway qualification retained separately",
+  "traffic_attempts": 15,
+  "lifecycle_attempts": 10,
+  "images_at_lifecycle_start": [
+    {
+      "namespace": "agentgateway-system",
+      "pod": "agentgateway-5f8d86b57d-j92h2",
+      "container": "controller",
+      "image": "cr.agentgateway.dev/controller:v1.5.0",
+      "imageID": "cr.agentgateway.dev/controller@sha256:319489cb86b7f901a52a3fc532ad07f136c92756f88cf02a4040909e20001120"
+    },
+    {
+      "namespace": "agentgateway-system",
+      "pod": "agentgateway-5f8d86b57d-vhnrn",
+      "container": "controller",
+      "image": "cr.agentgateway.dev/controller:v1.5.0",
+      "imageID": "cr.agentgateway.dev/controller@sha256:319489cb86b7f901a52a3fc532ad07f136c92756f88cf02a4040909e20001120"
+    },
+    {
+      "namespace": "agentgateway",
+      "pod": "agentgateway-8467d97968-8xr69",
+      "container": "agentgateway",
+      "image": "ghcr.io/agentgateway/agentgateway:v1.5.0",
+      "imageID": "ghcr.io/agentgateway/agentgateway@sha256:bf2f339ef326d32def2aaeb44b1b4549801293c19b89e764a4228667d97d9896"
+    },
+    {
+      "namespace": "praxis-system",
+      "pod": "praxis-operator-d4b5dc87b-h7pgz",
+      "container": "operator",
+      "image": "docker.io/library/praxis-operator:fb8beaa",
+      "imageID": "docker.io/library/import-2026-10-02@sha256:27341c1bd71c873acf66f053cfe8665e5b596dbce3c11fcbfe308c549737e7b6"
+    },
+    {
+      "namespace": "praxis-system",
+      "pod": "praxis-operator-d4b5dc87b-zshpz",
+      "container": "operator",
+      "image": "docker.io/library/praxis-operator:fb8beaa",
+      "imageID": "docker.io/library/import-2026-10-02@sha256:27341c1bd71c873acf66f053cfe8665e5b596dbce3c11fcbfe308c549737e7b6"
+    },
+    {
+      "namespace": "praxis",
+      "pod": "praxis-praxis-58d7cff96b-qjhnz",
+      "container": "praxis",
+      "image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+      "imageID": ""
+    },
+    {
+      "namespace": "praxis",
+      "pod": "praxis-praxis-78954b548b-fh6ph",
+      "container": "praxis",
+      "image": "sha256:e5003e0b34930d91e0d987e920cebfa3ebf4404926cf539636c0e955971350be",
+      "imageID": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8"
+    }
+  ],
+  "conformance_core": {
+    "agentgateway": {
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0
+    },
+    "praxis": {
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "raw_sha256": "0c4c90b9ea4a3263f998520fb0fe44fc32ae6b6c3517c75acd6738bfab27bd8c"
+}

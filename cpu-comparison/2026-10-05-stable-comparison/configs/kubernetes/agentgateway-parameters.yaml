@@ -1,0 +1,23 @@
+apiVersion: agentgateway.dev/v1alpha1
+kind: AgentgatewayParameters
+metadata:
+  name: benchmark-resources
+  namespace: agentgateway-system
+spec:
+  image:
+    registry: ghcr.io
+    repository: agentgateway/agentgateway
+    tag: v1.6.0@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c
+  env:
+  - name: WORKER_THREADS
+    value: "2"
+  rawConfig:
+    config:
+      logging:
+        filter: "false"
+  resources:
+    requests: {cpu: 100m, memory: 64Mi}
+    limits: {cpu: "2", memory: 256Mi}
+  deployment:
+    spec:
+      replicas: 1

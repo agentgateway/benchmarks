@@ -1,0 +1,1108 @@
+{
+  "files": [
+    {
+      "role": "client",
+      "file": "check-cancellation-native.py",
+      "first_sha256": "5e1340769396fcbc321992ea8d33d325b652ab9d24dbbbbde6924620f62b5439",
+      "final_sha256": "5e1340769396fcbc321992ea8d33d325b652ab9d24dbbbbde6924620f62b5439",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "check-cancellation.py",
+      "first_sha256": "52d25394e75a3cf8aa22f4f0e9cdd997670c04a769474a14b301cebee0458ccc",
+      "final_sha256": "52d25394e75a3cf8aa22f4f0e9cdd997670c04a769474a14b301cebee0458ccc",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "collect-host.py",
+      "first_sha256": "9efa050bc35e02a1fc70d274dbd74296c752c935565d98cdc4b8b3b674ebb98e",
+      "final_sha256": "9efa050bc35e02a1fc70d274dbd74296c752c935565d98cdc4b8b3b674ebb98e",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "qualify-ai-native.py",
+      "first_sha256": "bbfe2dab4790cda263b8fba244ceca775cf5332eeb343e286ba7bc12861284c9",
+      "final_sha256": "bbfe2dab4790cda263b8fba244ceca775cf5332eeb343e286ba7bc12861284c9",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "qualify-ai.py",
+      "first_sha256": "f63e6e7ddce7a4cf4f637a95829bed4ff3894bde542ef37d6b9eade883c822ef",
+      "final_sha256": "f63e6e7ddce7a4cf4f637a95829bed4ff3894bde542ef37d6b9eade883c822ef",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "run-ai-native.py",
+      "first_sha256": "3dea07850a71d53f796aae803b19afe2cf107cd547711d544ed6dee4ea7d2422",
+      "final_sha256": "3dea07850a71d53f796aae803b19afe2cf107cd547711d544ed6dee4ea7d2422",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "run-ai.py",
+      "first_sha256": "c7772a09c931972a733e5bd9c38cad8cdc283b54ba4bfc858087f9e55968f045",
+      "final_sha256": "c7772a09c931972a733e5bd9c38cad8cdc283b54ba4bfc858087f9e55968f045",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "run-common.py",
+      "first_sha256": "ad08fe8896723a7c1ee9ec0f659f26ec39414dba706e9075bfea9b175f270c94",
+      "final_sha256": "ad08fe8896723a7c1ee9ec0f659f26ec39414dba706e9075bfea9b175f270c94",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "run-http.py",
+      "first_sha256": "4215cf75ea673fb0846dbaf853128bbb3bba73b3245b06acbf70255464910e5d",
+      "final_sha256": "4215cf75ea673fb0846dbaf853128bbb3bba73b3245b06acbf70255464910e5d",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "run-native.py",
+      "first_sha256": "cdf5eac4b4bc9510c457ea8a80b399124c98fe39257b4d88ece5b5458eb4e0a3",
+      "final_sha256": "cdf5eac4b4bc9510c457ea8a80b399124c98fe39257b4d88ece5b5458eb4e0a3",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "runtime-inventory/host-tcp-profile.txt",
+      "first_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "final_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "runtime-inventory/kernel.txt",
+      "first_sha256": "8471d278877509f2be7e2df057ae49c13e88100995a030b2b32e2e8f0016f761",
+      "final_sha256": "8471d278877509f2be7e2df057ae49c13e88100995a030b2b32e2e8f0016f761",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "runtime-inventory/maintenance-timers.txt",
+      "first_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "final_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "runtime-inventory/os-packages.txt",
+      "first_sha256": "c1a8b42858f814d6e660f154dbdd95e2df9ca0446e74c519ffa27c8c0a94ce03",
+      "final_sha256": "c1a8b42858f814d6e660f154dbdd95e2df9ca0446e74c519ffa27c8c0a94ce03",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "runtime-inventory/os-release.txt",
+      "first_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "final_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "runtime-inventory/python-freeze.txt",
+      "first_sha256": "e4658cc063fdbb463b7dd081b5ad113abce1ca28b9b1f6bcaffedfc739be5157",
+      "final_sha256": "e4658cc063fdbb463b7dd081b5ad113abce1ca28b9b1f6bcaffedfc739be5157",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "runtime-inventory/python-version.txt",
+      "first_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "final_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "setup-ai-network.sh",
+      "first_sha256": "54afe223688ee7c60174e2d8d4d81aa6fa4dd6b7ef68fd2824f20b1e53114933",
+      "final_sha256": "54afe223688ee7c60174e2d8d4d81aa6fa4dd6b7ef68fd2824f20b1e53114933",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "setup-client.sh",
+      "first_sha256": "8e6dd938b7a1716ef91ce1e02de6369540f8ada92260c9b1cbc5c4f2af35c906",
+      "final_sha256": "8e6dd938b7a1716ef91ce1e02de6369540f8ada92260c9b1cbc5c4f2af35c906",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "agentgateway-native.yaml",
+      "first_sha256": "ca4b5d1a08283fd1985e7630b237ec2559dc473639015599f86f205cd0e42bb9",
+      "final_sha256": "ca4b5d1a08283fd1985e7630b237ec2559dc473639015599f86f205cd0e42bb9",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "agentgateway.yaml",
+      "first_sha256": "8d0597efe2ed8f5ac947958070913367a63e26f6e0568cd463cf291167cd0f9f",
+      "final_sha256": "8d0597efe2ed8f5ac947958070913367a63e26f6e0568cd463cf291167cd0f9f",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "collect-host.py",
+      "first_sha256": "9efa050bc35e02a1fc70d274dbd74296c752c935565d98cdc4b8b3b674ebb98e",
+      "final_sha256": "9efa050bc35e02a1fc70d274dbd74296c752c935565d98cdc4b8b3b674ebb98e",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "praxis-native.yaml",
+      "first_sha256": "7ffadd30688efff772ed1105412d40f90a0b1e35ca6556d00c4ccc8e8918f449",
+      "final_sha256": "7ffadd30688efff772ed1105412d40f90a0b1e35ca6556d00c4ccc8e8918f449",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "praxis.yaml",
+      "first_sha256": "1f19bdb76ca8428703c17e00b6dbc7b13efd4540ad59c1f437cf00e8747aa037",
+      "final_sha256": "1f19bdb76ca8428703c17e00b6dbc7b13efd4540ad59c1f437cf00e8747aa037",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "runtime-inventory/host-tcp-profile.txt",
+      "first_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "final_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "runtime-inventory/kernel.txt",
+      "first_sha256": "aeea491f9536232014e974bca12a9389a543e4ce074beeb3223acd81089dc223",
+      "final_sha256": "aeea491f9536232014e974bca12a9389a543e4ce074beeb3223acd81089dc223",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "runtime-inventory/maintenance-timers.txt",
+      "first_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "final_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "runtime-inventory/os-packages.txt",
+      "first_sha256": "c1a8b42858f814d6e660f154dbdd95e2df9ca0446e74c519ffa27c8c0a94ce03",
+      "final_sha256": "c1a8b42858f814d6e660f154dbdd95e2df9ca0446e74c519ffa27c8c0a94ce03",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "runtime-inventory/os-release.txt",
+      "first_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "final_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "runtime-inventory/python-freeze.txt",
+      "first_sha256": "e4658cc063fdbb463b7dd081b5ad113abce1ca28b9b1f6bcaffedfc739be5157",
+      "final_sha256": "e4658cc063fdbb463b7dd081b5ad113abce1ca28b9b1f6bcaffedfc739be5157",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "runtime-inventory/python-version.txt",
+      "first_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "final_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "setup-ai-network.sh",
+      "first_sha256": "54afe223688ee7c60174e2d8d4d81aa6fa4dd6b7ef68fd2824f20b1e53114933",
+      "final_sha256": "54afe223688ee7c60174e2d8d4d81aa6fa4dd6b7ef68fd2824f20b1e53114933",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "setup-gateway.sh",
+      "first_sha256": "ab9e402c9b616b6dcfac01e76ee698e56e3a53f546263689757d4fc53aec8552",
+      "final_sha256": "ab9e402c9b616b6dcfac01e76ee698e56e3a53f546263689757d4fc53aec8552",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "setup-native.sh",
+      "first_sha256": "b8ee379f08f5dd076addc84e590cfe65518853b7ca1a6cc4dd76643b191c5404",
+      "final_sha256": "b8ee379f08f5dd076addc84e590cfe65518853b7ca1a6cc4dd76643b191c5404",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "collect-host.py",
+      "first_sha256": "9efa050bc35e02a1fc70d274dbd74296c752c935565d98cdc4b8b3b674ebb98e",
+      "final_sha256": "9efa050bc35e02a1fc70d274dbd74296c752c935565d98cdc4b8b3b674ebb98e",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "runtime-inventory/host-tcp-profile.txt",
+      "first_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "final_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "runtime-inventory/kernel.txt",
+      "first_sha256": "b95119d3fccdbdbcc44ffa9737c0c12565054a6962889451f610f176fe9f093a",
+      "final_sha256": "b95119d3fccdbdbcc44ffa9737c0c12565054a6962889451f610f176fe9f093a",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "runtime-inventory/maintenance-timers.txt",
+      "first_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "final_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "runtime-inventory/os-packages.txt",
+      "first_sha256": "c1a8b42858f814d6e660f154dbdd95e2df9ca0446e74c519ffa27c8c0a94ce03",
+      "final_sha256": "c1a8b42858f814d6e660f154dbdd95e2df9ca0446e74c519ffa27c8c0a94ce03",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "runtime-inventory/os-release.txt",
+      "first_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "final_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "runtime-inventory/python-freeze.txt",
+      "first_sha256": "e4658cc063fdbb463b7dd081b5ad113abce1ca28b9b1f6bcaffedfc739be5157",
+      "final_sha256": "e4658cc063fdbb463b7dd081b5ad113abce1ca28b9b1f6bcaffedfc739be5157",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "runtime-inventory/python-version.txt",
+      "first_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "final_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "setup-ai-network.sh",
+      "first_sha256": "54afe223688ee7c60174e2d8d4d81aa6fa4dd6b7ef68fd2824f20b1e53114933",
+      "final_sha256": "54afe223688ee7c60174e2d8d4d81aa6fa4dd6b7ef68fd2824f20b1e53114933",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "setup-backend.sh",
+      "first_sha256": "46645fdc576deb9099cf231ecfe6230bca782230eaff4b5e6d31cadf7de98102",
+      "final_sha256": "46645fdc576deb9099cf231ecfe6230bca782230eaff4b5e6d31cadf7de98102",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "capture-controller-startup.sh",
+      "first_sha256": "b31d12590435ce066864af73600930f07a60bbeda9b9e6516bd1967c1ab38f6c",
+      "final_sha256": "b31d12590435ce066864af73600930f07a60bbeda9b9e6516bd1967c1ab38f6c",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "capture-kubernetes-block.py",
+      "first_sha256": "1d3b72e013a2c1bcaace4003604e0a54113f6f54006470775be36a0c72bb46f3",
+      "final_sha256": "1d3b72e013a2c1bcaace4003604e0a54113f6f54006470775be36a0c72bb46f3",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "capture-kubernetes-diagnostics.sh",
+      "first_sha256": "a201be475880aa7d4eed075d382b4e60023018b59e32d6f63db20724bbfaf6f5",
+      "final_sha256": "a201be475880aa7d4eed075d382b4e60023018b59e32d6f63db20724bbfaf6f5",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "check-cancellation.py",
+      "first_sha256": "52d25394e75a3cf8aa22f4f0e9cdd997670c04a769474a14b301cebee0458ccc",
+      "final_sha256": "52d25394e75a3cf8aa22f4f0e9cdd997670c04a769474a14b301cebee0458ccc",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "cleanup-scale-routes.sh",
+      "first_sha256": "4a16e2a08a2344bc90b8806088350aaf2e1b836ab9b12fbbfa7bc6aa79b8a4cc",
+      "final_sha256": "4a16e2a08a2344bc90b8806088350aaf2e1b836ab9b12fbbfa7bc6aa79b8a4cc",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "collect-host.py",
+      "first_sha256": "d83eda84a675309ada7574f25203da0db2eba124a76d3bcd5168663c9d3a7874",
+      "final_sha256": "d83eda84a675309ada7574f25203da0db2eba124a76d3bcd5168663c9d3a7874",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "configs/ai/agentgateway.yaml",
+      "first_sha256": "6d575a88d5d8c36d4ce0e9fb66c6d61adf29aa2ef7a3e35e5e7917fd3ec2136f",
+      "final_sha256": "6d575a88d5d8c36d4ce0e9fb66c6d61adf29aa2ef7a3e35e5e7917fd3ec2136f",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "configs/ai/praxis.yaml",
+      "first_sha256": "ccff0a220d456b6ee4ab42f275732cf325e4f15910f12510ff83400f1e90da3c",
+      "final_sha256": "ccff0a220d456b6ee4ab42f275732cf325e4f15910f12510ff83400f1e90da3c",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "configs/kubernetes/agentgateway-parameters.yaml",
+      "first_sha256": "166c50ef56083d2b48575bb30984496059043e9e2e3e38b7d861c99c978ac3db",
+      "final_sha256": "166c50ef56083d2b48575bb30984496059043e9e2e3e38b7d861c99c978ac3db",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "configs/kubernetes/agentgateway-values.yaml",
+      "first_sha256": "27e303b9980c862fcef5246c1461b4190b2b8bc50af90a6b40faa94e58336cc3",
+      "final_sha256": "27e303b9980c862fcef5246c1461b4190b2b8bc50af90a6b40faa94e58336cc3",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "configs/kubernetes/backend.yaml",
+      "first_sha256": "fa4b5af9838bdcc34227efe8f64dbd5b0cb2e6a9a27ad6b367a3a97aad6eba6b",
+      "final_sha256": "fa4b5af9838bdcc34227efe8f64dbd5b0cb2e6a9a27ad6b367a3a97aad6eba6b",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "configs/kubernetes/gateway.yaml",
+      "first_sha256": "74e60f507043f6cca6c4386c14581301035e08d1cf16f644a3a67ea73575de13",
+      "final_sha256": "74e60f507043f6cca6c4386c14581301035e08d1cf16f644a3a67ea73575de13",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "configs/kubernetes/metallb-controller-patch.json",
+      "first_sha256": "de065c28cd946d3d61fcbc3450583ea34d7d0f4f91ee0ca7e5e5c9f3e46cc624",
+      "final_sha256": "de065c28cd946d3d61fcbc3450583ea34d7d0f4f91ee0ca7e5e5c9f3e46cc624",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "configs/kubernetes/metallb-pool.yaml",
+      "first_sha256": "f29fb352539e64e844e75bddf17be34a4f836cfc29cc67fcae5f3ad434b14250",
+      "final_sha256": "f29fb352539e64e844e75bddf17be34a4f836cfc29cc67fcae5f3ad434b14250",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "configs/kubernetes/praxis-operator.yaml",
+      "first_sha256": "092d76718c690a95df48f7802bf5b71a45a8083a5aeee98f74bf154166f11dc8",
+      "final_sha256": "092d76718c690a95df48f7802bf5b71a45a8083a5aeee98f74bf154166f11dc8",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "diagnose-static-address.py",
+      "first_sha256": "a719d2b0da62a429331e24a5e38a1d875ad5c26235239a814ea8ed95dd6fd3e0",
+      "final_sha256": "a719d2b0da62a429331e24a5e38a1d875ad5c26235239a814ea8ed95dd6fd3e0",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "observe-conformance.py",
+      "first_sha256": "88ebf29d6c742b28064ee1edeab4d44bab4a227abbd238c0670017695b15850b",
+      "final_sha256": "88ebf29d6c742b28064ee1edeab4d44bab4a227abbd238c0670017695b15850b",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "observe-routes.py",
+      "first_sha256": "8dc495aee3426c463426292a8f9ba51f86fc9ded75a2ee09f85a50dced3376c3",
+      "final_sha256": "8dc495aee3426c463426292a8f9ba51f86fc9ded75a2ee09f85a50dced3376c3",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "qualify-ai.py",
+      "first_sha256": "f63e6e7ddce7a4cf4f637a95829bed4ff3894bde542ef37d6b9eade883c822ef",
+      "final_sha256": "f63e6e7ddce7a4cf4f637a95829bed4ff3894bde542ef37d6b9eade883c822ef",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "run-ai.py",
+      "first_sha256": "0013b8034adc8e717b4bd563b25995856506c1e3023f02dc326b346aee49b05d",
+      "final_sha256": "0013b8034adc8e717b4bd563b25995856506c1e3023f02dc326b346aee49b05d",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "run-common.py",
+      "first_sha256": "ad08fe8896723a7c1ee9ec0f659f26ec39414dba706e9075bfea9b175f270c94",
+      "final_sha256": "ad08fe8896723a7c1ee9ec0f659f26ec39414dba706e9075bfea9b175f270c94",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "run-http.py",
+      "first_sha256": "a6c6fdcc85a619db4210849586280cdc10c29b06f1b85ab44aca0114739d8015",
+      "final_sha256": "a6c6fdcc85a619db4210849586280cdc10c29b06f1b85ab44aca0114739d8015",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "run-kubernetes.py",
+      "first_sha256": "27c29c525f28f82be900959765b8f4a4390c76629f9963b4a60daa02ee8c298a",
+      "final_sha256": "27c29c525f28f82be900959765b8f4a4390c76629f9963b4a60daa02ee8c298a",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "run-recovery.py",
+      "first_sha256": "78728b6863281fee217e9bbaaf4496e39c01ca4010ae35b282e98c6077d472b3",
+      "final_sha256": "78728b6863281fee217e9bbaaf4496e39c01ca4010ae35b282e98c6077d472b3",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "run-scale.sh",
+      "first_sha256": "47d9ada7620f3f378f3db411d92373adb6a155625fd2795e21978461926dc171",
+      "final_sha256": "47d9ada7620f3f378f3db411d92373adb6a155625fd2795e21978461926dc171",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "run-static-address.sh",
+      "first_sha256": "75be05d0707def04a922190267d3dd1bc37b5dd4853d9ba2d48be5ab0ea648da",
+      "final_sha256": "75be05d0707def04a922190267d3dd1bc37b5dd4853d9ba2d48be5ab0ea648da",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "run-static-pass.sh",
+      "first_sha256": "23afd8e36b38c4f4f64daa5d061ce95ff0ceb8dc4ffc310f0f63ed78526a9c1d",
+      "final_sha256": "23afd8e36b38c4f4f64daa5d061ce95ff0ceb8dc4ffc310f0f63ed78526a9c1d",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "runtime-inventory/host-tcp-profile.txt",
+      "first_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "final_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "runtime-inventory/k3s-version.txt",
+      "first_sha256": "19d1e7bcc109aebc8186826af113d87a35b5a592c9b66fa4dc22ddae9df01e0c",
+      "final_sha256": "19d1e7bcc109aebc8186826af113d87a35b5a592c9b66fa4dc22ddae9df01e0c",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "runtime-inventory/kernel.txt",
+      "first_sha256": "085beaee5d3706194d8206a08a1792a8cec566bf7b42ba3ece7f2682b20cefbf",
+      "final_sha256": "085beaee5d3706194d8206a08a1792a8cec566bf7b42ba3ece7f2682b20cefbf",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "runtime-inventory/maintenance-timers.txt",
+      "first_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "final_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "runtime-inventory/os-packages.txt",
+      "first_sha256": "9122aeb491a0e156c9135a8bb66ac2e1b27a71235991d9c8362df8f4e2f03892",
+      "final_sha256": "9122aeb491a0e156c9135a8bb66ac2e1b27a71235991d9c8362df8f4e2f03892",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "runtime-inventory/os-release.txt",
+      "first_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "final_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "runtime-inventory/python-freeze.txt",
+      "first_sha256": "f057386c896b33c2f50dd7130fb134f72c010af60e45b4526178f93d3a7dbf16",
+      "final_sha256": "f057386c896b33c2f50dd7130fb134f72c010af60e45b4526178f93d3a7dbf16",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "runtime-inventory/python-version.txt",
+      "first_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "final_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "select-controller.sh",
+      "first_sha256": "768cf8dee1f9df2a3b2a24b568c10b4962082797efce4e5d19bfe91f49f3aab4",
+      "final_sha256": "768cf8dee1f9df2a3b2a24b568c10b4962082797efce4e5d19bfe91f49f3aab4",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "switch-gateway.sh",
+      "first_sha256": "5b5ede6f0de4ab1c69ef7d4d98dc2b6eb753b9badc1c1e3999488d4590f5c22e",
+      "final_sha256": "5b5ede6f0de4ab1c69ef7d4d98dc2b6eb753b9badc1c1e3999488d4590f5c22e",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "wait-endpoint.py",
+      "first_sha256": "589a2d47d4927f87690fc67cd187d243c2afb5b14326946ed97b3df7fac54fd0",
+      "final_sha256": "589a2d47d4927f87690fc67cd187d243c2afb5b14326946ed97b3df7fac54fd0",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "wait-single-gateway.py",
+      "first_sha256": "73ce19af4b75719e5d92b47930e1939581893555e997beb2286b2b8938bda506",
+      "final_sha256": "73ce19af4b75719e5d92b47930e1939581893555e997beb2286b2b8938bda506",
+      "unchanged": true
+    },
+    {
+      "role": "kclient",
+      "file": "watch-scale-diagnostics.py",
+      "first_sha256": "79624c95d88b06a9e46740a6a50e90d98222dcc5ad2eac7efe216793908820d2",
+      "final_sha256": "79624c95d88b06a9e46740a6a50e90d98222dcc5ad2eac7efe216793908820d2",
+      "unchanged": true
+    },
+    {
+      "role": "kgateway",
+      "file": "collect-host.py",
+      "first_sha256": "d83eda84a675309ada7574f25203da0db2eba124a76d3bcd5168663c9d3a7874",
+      "final_sha256": "d83eda84a675309ada7574f25203da0db2eba124a76d3bcd5168663c9d3a7874",
+      "unchanged": true
+    },
+    {
+      "role": "kgateway",
+      "file": "runtime-inventory/host-tcp-profile.txt",
+      "first_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "final_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "unchanged": true
+    },
+    {
+      "role": "kgateway",
+      "file": "runtime-inventory/k3s-version.txt",
+      "first_sha256": "19d1e7bcc109aebc8186826af113d87a35b5a592c9b66fa4dc22ddae9df01e0c",
+      "final_sha256": "19d1e7bcc109aebc8186826af113d87a35b5a592c9b66fa4dc22ddae9df01e0c",
+      "unchanged": true
+    },
+    {
+      "role": "kgateway",
+      "file": "runtime-inventory/kernel.txt",
+      "first_sha256": "3155a2113ec66561dd514065bd4e97223c86e621c3cca72f251c32df47fd81ac",
+      "final_sha256": "3155a2113ec66561dd514065bd4e97223c86e621c3cca72f251c32df47fd81ac",
+      "unchanged": true
+    },
+    {
+      "role": "kgateway",
+      "file": "runtime-inventory/maintenance-timers.txt",
+      "first_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "final_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "unchanged": true
+    },
+    {
+      "role": "kgateway",
+      "file": "runtime-inventory/os-packages.txt",
+      "first_sha256": "b7fe041ce9072f60866e43c7844d3a677fe42ecc1a8f653db920533bd180f8f4",
+      "final_sha256": "b7fe041ce9072f60866e43c7844d3a677fe42ecc1a8f653db920533bd180f8f4",
+      "unchanged": true
+    },
+    {
+      "role": "kgateway",
+      "file": "runtime-inventory/os-release.txt",
+      "first_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "final_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "unchanged": true
+    },
+    {
+      "role": "kgateway",
+      "file": "runtime-inventory/python-freeze.txt",
+      "first_sha256": "f057386c896b33c2f50dd7130fb134f72c010af60e45b4526178f93d3a7dbf16",
+      "final_sha256": "f057386c896b33c2f50dd7130fb134f72c010af60e45b4526178f93d3a7dbf16",
+      "unchanged": true
+    },
+    {
+      "role": "kgateway",
+      "file": "runtime-inventory/python-version.txt",
+      "first_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "final_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "unchanged": true
+    },
+    {
+      "role": "kbackend",
+      "file": "collect-host.py",
+      "first_sha256": "d83eda84a675309ada7574f25203da0db2eba124a76d3bcd5168663c9d3a7874",
+      "final_sha256": "d83eda84a675309ada7574f25203da0db2eba124a76d3bcd5168663c9d3a7874",
+      "unchanged": true
+    },
+    {
+      "role": "kbackend",
+      "file": "runtime-inventory/host-tcp-profile.txt",
+      "first_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "final_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "unchanged": true
+    },
+    {
+      "role": "kbackend",
+      "file": "runtime-inventory/k3s-version.txt",
+      "first_sha256": "19d1e7bcc109aebc8186826af113d87a35b5a592c9b66fa4dc22ddae9df01e0c",
+      "final_sha256": "19d1e7bcc109aebc8186826af113d87a35b5a592c9b66fa4dc22ddae9df01e0c",
+      "unchanged": true
+    },
+    {
+      "role": "kbackend",
+      "file": "runtime-inventory/kernel.txt",
+      "first_sha256": "851845730060004e82dabbb521d2ec8813f0bb8eec21517c94f59b627d8c1c07",
+      "final_sha256": "851845730060004e82dabbb521d2ec8813f0bb8eec21517c94f59b627d8c1c07",
+      "unchanged": true
+    },
+    {
+      "role": "kbackend",
+      "file": "runtime-inventory/maintenance-timers.txt",
+      "first_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "final_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "unchanged": true
+    },
+    {
+      "role": "kbackend",
+      "file": "runtime-inventory/os-packages.txt",
+      "first_sha256": "b7fe041ce9072f60866e43c7844d3a677fe42ecc1a8f653db920533bd180f8f4",
+      "final_sha256": "b7fe041ce9072f60866e43c7844d3a677fe42ecc1a8f653db920533bd180f8f4",
+      "unchanged": true
+    },
+    {
+      "role": "kbackend",
+      "file": "runtime-inventory/os-release.txt",
+      "first_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "final_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "unchanged": true
+    },
+    {
+      "role": "kbackend",
+      "file": "runtime-inventory/python-freeze.txt",
+      "first_sha256": "f057386c896b33c2f50dd7130fb134f72c010af60e45b4526178f93d3a7dbf16",
+      "final_sha256": "f057386c896b33c2f50dd7130fb134f72c010af60e45b4526178f93d3a7dbf16",
+      "unchanged": true
+    },
+    {
+      "role": "kbackend",
+      "file": "runtime-inventory/python-version.txt",
+      "first_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "final_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "unchanged": true
+    },
+    {
+      "role": "kcontroller",
+      "file": "collect-host.py",
+      "first_sha256": "d83eda84a675309ada7574f25203da0db2eba124a76d3bcd5168663c9d3a7874",
+      "final_sha256": "d83eda84a675309ada7574f25203da0db2eba124a76d3bcd5168663c9d3a7874",
+      "unchanged": true
+    },
+    {
+      "role": "kcontroller",
+      "file": "runtime-inventory/host-tcp-profile.txt",
+      "first_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "final_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "unchanged": true
+    },
+    {
+      "role": "kcontroller",
+      "file": "runtime-inventory/k3s-version.txt",
+      "first_sha256": "19d1e7bcc109aebc8186826af113d87a35b5a592c9b66fa4dc22ddae9df01e0c",
+      "final_sha256": "19d1e7bcc109aebc8186826af113d87a35b5a592c9b66fa4dc22ddae9df01e0c",
+      "unchanged": true
+    },
+    {
+      "role": "kcontroller",
+      "file": "runtime-inventory/kernel.txt",
+      "first_sha256": "fe82bb7755c2750b7e965d47edfd2dbfdc85d6a83c4de59db5e0c76e281ba5c4",
+      "final_sha256": "fe82bb7755c2750b7e965d47edfd2dbfdc85d6a83c4de59db5e0c76e281ba5c4",
+      "unchanged": true
+    },
+    {
+      "role": "kcontroller",
+      "file": "runtime-inventory/maintenance-timers.txt",
+      "first_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "final_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "unchanged": true
+    },
+    {
+      "role": "kcontroller",
+      "file": "runtime-inventory/os-packages.txt",
+      "first_sha256": "b7fe041ce9072f60866e43c7844d3a677fe42ecc1a8f653db920533bd180f8f4",
+      "final_sha256": "b7fe041ce9072f60866e43c7844d3a677fe42ecc1a8f653db920533bd180f8f4",
+      "unchanged": true
+    },
+    {
+      "role": "kcontroller",
+      "file": "runtime-inventory/os-release.txt",
+      "first_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "final_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "unchanged": true
+    },
+    {
+      "role": "kcontroller",
+      "file": "runtime-inventory/python-freeze.txt",
+      "first_sha256": "f057386c896b33c2f50dd7130fb134f72c010af60e45b4526178f93d3a7dbf16",
+      "final_sha256": "f057386c896b33c2f50dd7130fb134f72c010af60e45b4526178f93d3a7dbf16",
+      "unchanged": true
+    },
+    {
+      "role": "kcontroller",
+      "file": "runtime-inventory/python-version.txt",
+      "first_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "final_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "capture-controller-startup.sh",
+      "first_sha256": "b31d12590435ce066864af73600930f07a60bbeda9b9e6516bd1967c1ab38f6c",
+      "final_sha256": "b31d12590435ce066864af73600930f07a60bbeda9b9e6516bd1967c1ab38f6c",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "capture-kubernetes-diagnostics.sh",
+      "first_sha256": "a201be475880aa7d4eed075d382b4e60023018b59e32d6f63db20724bbfaf6f5",
+      "final_sha256": "a201be475880aa7d4eed075d382b4e60023018b59e32d6f63db20724bbfaf6f5",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "check-cancellation.py",
+      "first_sha256": "52d25394e75a3cf8aa22f4f0e9cdd997670c04a769474a14b301cebee0458ccc",
+      "final_sha256": "52d25394e75a3cf8aa22f4f0e9cdd997670c04a769474a14b301cebee0458ccc",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "cleanup-scale-routes.sh",
+      "first_sha256": "4a16e2a08a2344bc90b8806088350aaf2e1b836ab9b12fbbfa7bc6aa79b8a4cc",
+      "final_sha256": "4a16e2a08a2344bc90b8806088350aaf2e1b836ab9b12fbbfa7bc6aa79b8a4cc",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "collect-host.py",
+      "first_sha256": "d83eda84a675309ada7574f25203da0db2eba124a76d3bcd5168663c9d3a7874",
+      "final_sha256": "d83eda84a675309ada7574f25203da0db2eba124a76d3bcd5168663c9d3a7874",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "configs/ai/agentgateway.yaml",
+      "first_sha256": "6d575a88d5d8c36d4ce0e9fb66c6d61adf29aa2ef7a3e35e5e7917fd3ec2136f",
+      "final_sha256": "6d575a88d5d8c36d4ce0e9fb66c6d61adf29aa2ef7a3e35e5e7917fd3ec2136f",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "configs/ai/praxis.yaml",
+      "first_sha256": "ccff0a220d456b6ee4ab42f275732cf325e4f15910f12510ff83400f1e90da3c",
+      "final_sha256": "ccff0a220d456b6ee4ab42f275732cf325e4f15910f12510ff83400f1e90da3c",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "configs/kubernetes/agentgateway-parameters.yaml",
+      "first_sha256": "166c50ef56083d2b48575bb30984496059043e9e2e3e38b7d861c99c978ac3db",
+      "final_sha256": "166c50ef56083d2b48575bb30984496059043e9e2e3e38b7d861c99c978ac3db",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "configs/kubernetes/agentgateway-values.yaml",
+      "first_sha256": "27e303b9980c862fcef5246c1461b4190b2b8bc50af90a6b40faa94e58336cc3",
+      "final_sha256": "27e303b9980c862fcef5246c1461b4190b2b8bc50af90a6b40faa94e58336cc3",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "configs/kubernetes/backend.yaml",
+      "first_sha256": "fa4b5af9838bdcc34227efe8f64dbd5b0cb2e6a9a27ad6b367a3a97aad6eba6b",
+      "final_sha256": "fa4b5af9838bdcc34227efe8f64dbd5b0cb2e6a9a27ad6b367a3a97aad6eba6b",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "configs/kubernetes/gateway.yaml",
+      "first_sha256": "74e60f507043f6cca6c4386c14581301035e08d1cf16f644a3a67ea73575de13",
+      "final_sha256": "74e60f507043f6cca6c4386c14581301035e08d1cf16f644a3a67ea73575de13",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "configs/kubernetes/metallb-controller-patch.json",
+      "first_sha256": "de065c28cd946d3d61fcbc3450583ea34d7d0f4f91ee0ca7e5e5c9f3e46cc624",
+      "final_sha256": "de065c28cd946d3d61fcbc3450583ea34d7d0f4f91ee0ca7e5e5c9f3e46cc624",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "configs/kubernetes/metallb-pool.yaml",
+      "first_sha256": "f29fb352539e64e844e75bddf17be34a4f836cfc29cc67fcae5f3ad434b14250",
+      "final_sha256": "f29fb352539e64e844e75bddf17be34a4f836cfc29cc67fcae5f3ad434b14250",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "configs/kubernetes/praxis-operator.yaml",
+      "first_sha256": "092d76718c690a95df48f7802bf5b71a45a8083a5aeee98f74bf154166f11dc8",
+      "final_sha256": "092d76718c690a95df48f7802bf5b71a45a8083a5aeee98f74bf154166f11dc8",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "diagnose-static-address.py",
+      "first_sha256": "a719d2b0da62a429331e24a5e38a1d875ad5c26235239a814ea8ed95dd6fd3e0",
+      "final_sha256": "a719d2b0da62a429331e24a5e38a1d875ad5c26235239a814ea8ed95dd6fd3e0",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "metallb-native.yaml",
+      "first_sha256": "bf25feebb7582ca7df845efd52ffbc2960d6cbf4cfc972f47fded9f788b67f0b",
+      "final_sha256": "bf25feebb7582ca7df845efd52ffbc2960d6cbf4cfc972f47fded9f788b67f0b",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "observe-conformance.py",
+      "first_sha256": "88ebf29d6c742b28064ee1edeab4d44bab4a227abbd238c0670017695b15850b",
+      "final_sha256": "88ebf29d6c742b28064ee1edeab4d44bab4a227abbd238c0670017695b15850b",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "observe-routes.py",
+      "first_sha256": "8dc495aee3426c463426292a8f9ba51f86fc9ded75a2ee09f85a50dced3376c3",
+      "final_sha256": "8dc495aee3426c463426292a8f9ba51f86fc9ded75a2ee09f85a50dced3376c3",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "qualify-ai.py",
+      "first_sha256": "f63e6e7ddce7a4cf4f637a95829bed4ff3894bde542ef37d6b9eade883c822ef",
+      "final_sha256": "f63e6e7ddce7a4cf4f637a95829bed4ff3894bde542ef37d6b9eade883c822ef",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "run-ai.py",
+      "first_sha256": "0013b8034adc8e717b4bd563b25995856506c1e3023f02dc326b346aee49b05d",
+      "final_sha256": "0013b8034adc8e717b4bd563b25995856506c1e3023f02dc326b346aee49b05d",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "run-common.py",
+      "first_sha256": "ad08fe8896723a7c1ee9ec0f659f26ec39414dba706e9075bfea9b175f270c94",
+      "final_sha256": "ad08fe8896723a7c1ee9ec0f659f26ec39414dba706e9075bfea9b175f270c94",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "run-http.py",
+      "first_sha256": "4215cf75ea673fb0846dbaf853128bbb3bba73b3245b06acbf70255464910e5d",
+      "final_sha256": "4215cf75ea673fb0846dbaf853128bbb3bba73b3245b06acbf70255464910e5d",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "run-kubernetes.py",
+      "first_sha256": "b68ac8b59b7e2e9a16fd49a5c9b8ca959f83a64f69c8e9debe345cc0c98eb576",
+      "final_sha256": "b68ac8b59b7e2e9a16fd49a5c9b8ca959f83a64f69c8e9debe345cc0c98eb576",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "run-recovery.py",
+      "first_sha256": "78728b6863281fee217e9bbaaf4496e39c01ca4010ae35b282e98c6077d472b3",
+      "final_sha256": "78728b6863281fee217e9bbaaf4496e39c01ca4010ae35b282e98c6077d472b3",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "run-scale.sh",
+      "first_sha256": "47d9ada7620f3f378f3db411d92373adb6a155625fd2795e21978461926dc171",
+      "final_sha256": "47d9ada7620f3f378f3db411d92373adb6a155625fd2795e21978461926dc171",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "runtime-inventory/host-tcp-profile.txt",
+      "first_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "final_sha256": "24f4d56d8619a418fea656d58400a3bab7aa68adc10b758913205163fbdfaf46",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "runtime-inventory/k3s-version.txt",
+      "first_sha256": "19d1e7bcc109aebc8186826af113d87a35b5a592c9b66fa4dc22ddae9df01e0c",
+      "final_sha256": "19d1e7bcc109aebc8186826af113d87a35b5a592c9b66fa4dc22ddae9df01e0c",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "runtime-inventory/kernel.txt",
+      "first_sha256": "16977278800ac7967c624f5fd0d1d3d26a2864e5d9c8c2715cb41b31b1623cf5",
+      "final_sha256": "16977278800ac7967c624f5fd0d1d3d26a2864e5d9c8c2715cb41b31b1623cf5",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "runtime-inventory/maintenance-timers.txt",
+      "first_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "final_sha256": "02356d129b5a59b1626e26b0be218f40be2e25518038a406b401a456c42e5be0",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "runtime-inventory/os-packages.txt",
+      "first_sha256": "9122aeb491a0e156c9135a8bb66ac2e1b27a71235991d9c8362df8f4e2f03892",
+      "final_sha256": "9122aeb491a0e156c9135a8bb66ac2e1b27a71235991d9c8362df8f4e2f03892",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "runtime-inventory/os-release.txt",
+      "first_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "final_sha256": "87458b3b1f1ca0e5c693ade771de7007c3783bdc692fa6b39eb6414bf2af2763",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "runtime-inventory/python-freeze.txt",
+      "first_sha256": "f057386c896b33c2f50dd7130fb134f72c010af60e45b4526178f93d3a7dbf16",
+      "final_sha256": "f057386c896b33c2f50dd7130fb134f72c010af60e45b4526178f93d3a7dbf16",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "runtime-inventory/python-version.txt",
+      "first_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "final_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "select-controller.sh",
+      "first_sha256": "768cf8dee1f9df2a3b2a24b568c10b4962082797efce4e5d19bfe91f49f3aab4",
+      "final_sha256": "768cf8dee1f9df2a3b2a24b568c10b4962082797efce4e5d19bfe91f49f3aab4",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "switch-gateway.sh",
+      "first_sha256": "f249a879b7cfdbe9451eecab490bf685ec1eba212ab9bb5d36c4bd5138cb4efc",
+      "final_sha256": "f249a879b7cfdbe9451eecab490bf685ec1eba212ab9bb5d36c4bd5138cb4efc",
+      "unchanged": true
+    },
+    {
+      "role": "kcontrol",
+      "file": "wait-endpoint.py",
+      "first_sha256": "589a2d47d4927f87690fc67cd187d243c2afb5b14326946ed97b3df7fac54fd0",
+      "final_sha256": "589a2d47d4927f87690fc67cd187d243c2afb5b14326946ed97b3df7fac54fd0",
+      "unchanged": true
+    }
+  ],
+  "containers": [
+    {
+      "name": "/agentgateway",
+      "checks": {
+        "container_id": true,
+        "image_id": true,
+        "requested_image": true,
+        "cpu_quota": true,
+        "cpu_set": true,
+        "memory": true,
+        "healthcheck": true
+      }
+    },
+    {
+      "name": "/praxis-release",
+      "checks": {
+        "container_id": true,
+        "image_id": true,
+        "requested_image": true,
+        "cpu_quota": true,
+        "cpu_set": true,
+        "memory": true,
+        "healthcheck": true
+      }
+    },
+    {
+      "name": "/praxis-nightly",
+      "checks": {
+        "container_id": true,
+        "image_id": true,
+        "requested_image": true,
+        "cpu_quota": true,
+        "cpu_set": true,
+        "memory": true,
+        "healthcheck": true
+      }
+    },
+    {
+      "name": "/agentgateway-native",
+      "checks": {
+        "container_id": true,
+        "image_id": true,
+        "requested_image": true,
+        "cpu_quota": true,
+        "cpu_set": true,
+        "memory": true,
+        "healthcheck": true
+      }
+    },
+    {
+      "name": "/praxis-ai",
+      "checks": {
+        "container_id": true,
+        "image_id": true,
+        "requested_image": true,
+        "cpu_quota": true,
+        "cpu_set": true,
+        "memory": true,
+        "healthcheck": true
+      }
+    },
+    {
+      "name": "/praxis-ai-nightly",
+      "checks": {
+        "container_id": true,
+        "image_id": true,
+        "requested_image": true,
+        "cpu_quota": true,
+        "cpu_set": true,
+        "memory": true,
+        "healthcheck": true
+      }
+    }
+  ],
+  "issues": []
+}

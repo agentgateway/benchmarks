@@ -1,0 +1,288 @@
+{
+  "phase": "qualification-nohealth",
+  "profile": "native",
+  "input": "evidence/qualification/native-final-host-review.json",
+  "windows": 48,
+  "roles": {
+    "backend": {
+      "windows": 16,
+      "minimum_samples": 1,
+      "maximum_fd_count": 519,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 19.50422949372178,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.008329168748958853,
+      "peak_mean_quota_busy_percent": 23.586063902359655,
+      "through_gateways_peak_mean_host_busy_percent": 18.69171260633566,
+      "through_gateways_peak_mean_quota_busy_percent": 22.88035746812651
+    },
+    "client": {
+      "windows": 16,
+      "minimum_samples": 0,
+      "maximum_fd_count": 518,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 12.386016673042302,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.050761421319796954,
+      "peak_mean_quota_busy_percent": null,
+      "through_gateways_peak_mean_host_busy_percent": 11.260587942202292,
+      "through_gateways_peak_mean_quota_busy_percent": null
+    },
+    "gateway": {
+      "windows": 16,
+      "minimum_samples": 1,
+      "maximum_fd_count": 815,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 26.97108395989975,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.0,
+      "peak_mean_quota_busy_percent": 99.03007955946882,
+      "through_gateways_peak_mean_host_busy_percent": 26.97108395989975,
+      "through_gateways_peak_mean_quota_busy_percent": 99.03007955946882
+    }
+  },
+  "events_to_review": [
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/00-fortio-openai/execution.json",
+      "few_samples": 4
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/01-aiperf-openai/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/03-aiperf-translation/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/direct/ai/00-fortio-openai/execution.json",
+      "few_samples": 3
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/direct/ai/01-aiperf-openai/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/direct/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/direct/ai/03-aiperf-translation/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/praxis/ai/00-fortio-openai/execution.json",
+      "few_samples": 4
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/praxis/ai/01-aiperf-openai/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/praxis/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/praxis/ai/03-aiperf-translation/execution.json",
+      "few_samples": 2
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/00-fortio-openai/execution.json",
+      "few_samples": 3
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/01-aiperf-openai/execution.json",
+      "few_samples": 2
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "backend",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/03-aiperf-translation/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/00-fortio-openai/execution.json",
+      "few_samples": 4
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/01-aiperf-openai/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 0
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/03-aiperf-translation/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/direct/ai/00-fortio-openai/execution.json",
+      "few_samples": 3
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/direct/ai/01-aiperf-openai/execution.json",
+      "few_samples": 2
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/direct/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/direct/ai/03-aiperf-translation/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/praxis/ai/00-fortio-openai/execution.json",
+      "few_samples": 3
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/praxis/ai/01-aiperf-openai/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/praxis/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/praxis/ai/03-aiperf-translation/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/00-fortio-openai/execution.json",
+      "few_samples": 3
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/01-aiperf-openai/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 2
+    },
+    {
+      "role": "client",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/03-aiperf-translation/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/00-fortio-openai/execution.json",
+      "few_samples": 4
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/01-aiperf-openai/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/agentgateway/ai/03-aiperf-translation/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/direct/ai/00-fortio-openai/execution.json",
+      "few_samples": 3
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/direct/ai/01-aiperf-openai/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/direct/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/direct/ai/03-aiperf-translation/execution.json",
+      "few_samples": 2
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/praxis/ai/00-fortio-openai/execution.json",
+      "few_samples": 3
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/praxis/ai/01-aiperf-openai/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/praxis/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/praxis/ai/03-aiperf-translation/execution.json",
+      "few_samples": 2
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/00-fortio-openai/execution.json",
+      "few_samples": 3
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/01-aiperf-openai/execution.json",
+      "few_samples": 2
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/02-aiperf-anthropic/execution.json",
+      "few_samples": 1
+    },
+    {
+      "role": "gateway",
+      "workload": "results/native/qualification-nohealth/praxis-ai-nightly/ai/03-aiperf-translation/execution.json",
+      "few_samples": 1
+    }
+  ],
+  "approved": false,
+  "note": "Restart/OOM counters may predate a window. Attribute using raw timestamps/lifecycle evidence; intended product capacity/recovery constraints are not automatically infrastructure failures. Short qualification cases can contain few samples. This summary does not approve a pass."
+}

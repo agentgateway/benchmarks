@@ -1,0 +1,956 @@
+[
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/qualification/agentgateway/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 3.964070773691768,
+      "max": 4.225352112676056
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.012342631449024932,
+      "max": 0.024685262898049863
+    },
+    "busiest_sampled_vcpu_percent": 7.984790874524715,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/qualification/agentgateway/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 3.505101455921128,
+      "max": 4.992548435171386
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.07451564828614009,
+      "max": 0.14903129657228018
+    },
+    "busiest_sampled_vcpu_percent": 20.449897750511248,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 21,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/qualification/direct/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 4.584818967640539,
+      "max": 4.673590504451038
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 8.285163776493256,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/qualification/direct/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 9.644999653667748,
+      "max": 12.90089221123704
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.10370393662643845,
+      "max": 0.1832940560356114
+    },
+    "busiest_sampled_vcpu_percent": 86.25429553264605,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 18,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/qualification/praxis-release/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 4.679161862131883,
+      "max": 5.509304603330069
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 9.906542056074766,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 518,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kclient",
+    "workload": "results/kubernetes/qualification/praxis-release/http/01-nighthawk/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 3.2450825499778357,
+      "max": 3.8964303670186022
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.09208953307415572,
+      "max": 0.15082956259426847
+    },
+    "busiest_sampled_vcpu_percent": 16.63019693654267,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": 20,
+    "minimum_soft_nofile": 65536,
+    "minimum_hard_nofile": 65536,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/qualification/agentgateway/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 3.9180403398443,
+      "max": 4.193939393939394
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 10.076045627376425,
+    "container_quota_busy_percent": {
+      "mean": 9.499203800484857,
+      "max": 9.822171571779185
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 866,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 65748992,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/qualification/agentgateway/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 1.1088346512449558,
+      "max": 1.2977289742949838
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 4.008016032064128,
+    "container_quota_busy_percent": {
+      "mean": 8.599893042381956,
+      "max": 9.542200315774625
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 342,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 58597376,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/qualification/direct/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.39379771029359883,
+      "max": 0.39389463318562284
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 1.3806706114398422,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/qualification/direct/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.4183615923224955,
+      "max": 0.4430223972434162
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 1.37524557956778,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/qualification/praxis-release/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 3.5800351380431596,
+      "max": 3.6739659367396595
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 7.184466019417476,
+    "container_quota_busy_percent": {
+      "mean": 7.970463356529854,
+      "max": 8.152075136104896
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 665,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 67207168,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kgateway",
+    "workload": "results/kubernetes/qualification/praxis-release/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 4.088507310416897,
+      "max": 5.237981344176035
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.07175316909830184,
+      "max": 0.1435063381966037
+    },
+    "busiest_sampled_vcpu_percent": 12.704174228675136,
+    "container_quota_busy_percent": {
+      "mean": 7.1794108152181995,
+      "max": 7.877133758544697
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 142,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 44126208,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/qualification/agentgateway/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 4.841714470460241,
+      "max": 4.995173745173745
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 6.627680311890838,
+    "container_quota_busy_percent": {
+      "mean": 4.5835516699265195,
+      "max": 4.652347820054019
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 339,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 17690624,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/qualification/agentgateway/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 9.931883333403354,
+      "max": 12.24671565352928
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.011646866992778943,
+      "max": 0.023293733985557886
+    },
+    "busiest_sampled_vcpu_percent": 18.524871355060036,
+    "container_quota_busy_percent": {
+      "mean": 4.242502341182818,
+      "max": 4.6065259200948665
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 323,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 18096128,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/qualification/direct/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 4.232595501481226,
+      "max": 4.53887011105746
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 5.802707930367505,
+    "container_quota_busy_percent": {
+      "mean": 3.791437391588399,
+      "max": 3.9177494468539664
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 519,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 24481792,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/qualification/direct/http/01-nighthawk/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 1.380671839687432,
+      "max": 1.5837663944568177
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.01652008189834183,
+      "max": 0.02481389578163772
+    },
+    "busiest_sampled_vcpu_percent": 2.964426877470356,
+    "container_quota_busy_percent": {
+      "mean": 3.581327623559784,
+      "max": 3.9320782874452576
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 9,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 22110208,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/qualification/praxis-release/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 4.2499298609886225,
+      "max": 5.138721351025332
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 7.6923076923076925,
+    "container_quota_busy_percent": {
+      "mean": 4.644338774109793,
+      "max": 4.667884928508378
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 134,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 14168064,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kbackend",
+    "workload": "results/kubernetes/qualification/praxis-release/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 10.010905152622227,
+      "max": 13.383392226148409
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 19.30116472545757,
+    "container_quota_busy_percent": {
+      "mean": 4.345407750406565,
+      "max": 4.833532283683257
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 119,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 11972608,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/qualification/agentgateway/http/00-fortio/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 1.1051093893820785,
+      "max": 1.145311381531854
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 2.48565965583174,
+    "container_quota_busy_percent": {
+      "mean": 0.03147772464809712,
+      "max": 0.04372090123405584
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 13,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 34975744,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/qualification/agentgateway/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 1.1103123988167631,
+      "max": 1.1219861542134162
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.011941724385001195,
+      "max": 0.02388344877000239
+    },
+    "busiest_sampled_vcpu_percent": 2.091254752851711,
+    "container_quota_busy_percent": {
+      "mean": 0.059779098345748405,
+      "max": 0.13182292156191985
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 13,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 34938880,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/qualification/direct/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.39398558791927096,
+      "max": 0.41851304775972425
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 1.3806706114398422,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/qualification/direct/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.43060118024266636,
+      "max": 0.46740467404674046
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.024600246002460024,
+      "max": 0.04920049200492005
+    },
+    "busiest_sampled_vcpu_percent": 1.5748031496062993,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/qualification/praxis-release/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 1.1205321547988305,
+      "max": 1.1686143572621035
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 1.717557251908397,
+    "container_quota_busy_percent": {
+      "mean": 0.018685910952769575,
+      "max": 0.04160476637683203
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 24,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 3555328,
+    "max_restart_count": 1,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontroller",
+    "workload": "results/kubernetes/qualification/praxis-release/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 1.1926315979913358,
+      "max": 1.2646146504414222
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.011930326890956812,
+      "max": 0.023860653781913623
+    },
+    "busiest_sampled_vcpu_percent": 2.8680688336520075,
+    "container_quota_busy_percent": {
+      "mean": 0.019292551693453217,
+      "max": 0.041584902657680084
+    },
+    "container_throttled_period_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fd": 24,
+    "minimum_soft_nofile": 1048576,
+    "minimum_hard_nofile": 1048576,
+    "max_container_memory_bytes": 4034560,
+    "max_restart_count": 1,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/qualification/agentgateway/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 1.0347381853460709,
+      "max": 1.0355029585798816
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.012309207287050714,
+      "max": 0.024618414574101428
+    },
+    "busiest_sampled_vcpu_percent": 1.968503937007874,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/qualification/agentgateway/http/01-nighthawk/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 0.9454100413646541,
+      "max": 0.9615384615384616
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.00821827744904668,
+      "max": 0.02465483234714004
+    },
+    "busiest_sampled_vcpu_percent": 1.968503937007874,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/qualification/direct/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.9616389002350447,
+      "max": 1.01059896475228
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 1.768172888015717,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/qualification/direct/http/01-nighthawk/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 1.0343557670484838,
+      "max": 1.034992607195663
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.01232134056185313,
+      "max": 0.02464268112370626
+    },
+    "busiest_sampled_vcpu_percent": 2.161100196463654,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/qualification/praxis-release/http/00-fortio/execution.json",
+    "samples": 3,
+    "host_busy_percent": {
+      "mean": 0.9980353870859623,
+      "max": 1.1327259295739966
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "busiest_sampled_vcpu_percent": 1.968503937007874,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  },
+  {
+    "role": "kcontrol",
+    "workload": "results/kubernetes/qualification/praxis-release/http/01-nighthawk/execution.json",
+    "samples": 4,
+    "host_busy_percent": {
+      "mean": 0.961625646700567,
+      "max": 0.9864364981504316
+    },
+    "host_steal_percent": {
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "host_iowait_percent": {
+      "mean": 0.008220304151253596,
+      "max": 0.02466091245376079
+    },
+    "busiest_sampled_vcpu_percent": 1.953125,
+    "container_quota_busy_percent": null,
+    "container_throttled_period_percent": null,
+    "max_fd": null,
+    "minimum_soft_nofile": null,
+    "minimum_hard_nofile": null,
+    "max_container_memory_bytes": null,
+    "max_restart_count": 0,
+    "max_oom_kill_counter": 0,
+    "collector_errors": [],
+    "transient_container_read_errors": [],
+    "network_error_drop_deltas": {}
+  }
+]

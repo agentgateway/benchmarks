@@ -1,0 +1,238 @@
+{
+  "installed_inputs": [
+    {
+      "role": "client",
+      "file": "qualify-ai-native.py",
+      "sha256": "bbfe2dab4790cda263b8fba244ceca775cf5332eeb343e286ba7bc12861284c9",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "qualify-ai.py",
+      "sha256": "f63e6e7ddce7a4cf4f637a95829bed4ff3894bde542ef37d6b9eade883c822ef",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "check-cancellation.py",
+      "sha256": "52d25394e75a3cf8aa22f4f0e9cdd997670c04a769474a14b301cebee0458ccc",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "collect-host.py",
+      "sha256": "9efa050bc35e02a1fc70d274dbd74296c752c935565d98cdc4b8b3b674ebb98e",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "setup-client.sh",
+      "sha256": "8e6dd938b7a1716ef91ce1e02de6369540f8ada92260c9b1cbc5c4f2af35c906",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "run-ai.py",
+      "sha256": "c7772a09c931972a733e5bd9c38cad8cdc283b54ba4bfc858087f9e55968f045",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "run-common.py",
+      "sha256": "ad08fe8896723a7c1ee9ec0f659f26ec39414dba706e9075bfea9b175f270c94",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "run-native.py",
+      "sha256": "cdf5eac4b4bc9510c457ea8a80b399124c98fe39257b4d88ece5b5458eb4e0a3",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "setup-ai-network.sh",
+      "sha256": "54afe223688ee7c60174e2d8d4d81aa6fa4dd6b7ef68fd2824f20b1e53114933",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "run-ai-native.py",
+      "sha256": "3dea07850a71d53f796aae803b19afe2cf107cd547711d544ed6dee4ea7d2422",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "check-cancellation-native.py",
+      "sha256": "5e1340769396fcbc321992ea8d33d325b652ab9d24dbbbbde6924620f62b5439",
+      "unchanged": true
+    },
+    {
+      "role": "client",
+      "file": "run-http.py",
+      "sha256": "4215cf75ea673fb0846dbaf853128bbb3bba73b3245b06acbf70255464910e5d",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "setup-gateway.sh",
+      "sha256": "ab9e402c9b616b6dcfac01e76ee698e56e3a53f546263689757d4fc53aec8552",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "agentgateway-native.yaml",
+      "sha256": "ca4b5d1a08283fd1985e7630b237ec2559dc473639015599f86f205cd0e42bb9",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "collect-host.py",
+      "sha256": "9efa050bc35e02a1fc70d274dbd74296c752c935565d98cdc4b8b3b674ebb98e",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "praxis-native.yaml",
+      "sha256": "7ffadd30688efff772ed1105412d40f90a0b1e35ca6556d00c4ccc8e8918f449",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "agentgateway.yaml",
+      "sha256": "8d0597efe2ed8f5ac947958070913367a63e26f6e0568cd463cf291167cd0f9f",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "praxis.yaml",
+      "sha256": "1f19bdb76ca8428703c17e00b6dbc7b13efd4540ad59c1f437cf00e8747aa037",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "setup-ai-network.sh",
+      "sha256": "54afe223688ee7c60174e2d8d4d81aa6fa4dd6b7ef68fd2824f20b1e53114933",
+      "unchanged": true
+    },
+    {
+      "role": "gateway",
+      "file": "setup-native.sh",
+      "sha256": "b8ee379f08f5dd076addc84e590cfe65518853b7ca1a6cc4dd76643b191c5404",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "setup-backend.sh",
+      "sha256": "46645fdc576deb9099cf231ecfe6230bca782230eaff4b5e6d31cadf7de98102",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "collect-host.py",
+      "sha256": "9efa050bc35e02a1fc70d274dbd74296c752c935565d98cdc4b8b3b674ebb98e",
+      "unchanged": true
+    },
+    {
+      "role": "backend",
+      "file": "setup-ai-network.sh",
+      "sha256": "54afe223688ee7c60174e2d8d4d81aa6fa4dd6b7ef68fd2824f20b1e53114933",
+      "unchanged": true
+    }
+  ],
+  "containers": [
+    {
+      "name": "/agentgateway",
+      "container_id": "d4c7feb4a8c06c8906ad0e040353efb81ea7c1e34351218e950ca33b724155fd",
+      "image": "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+      "image_id": "sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+      "unchanged_container_and_image": true,
+      "cpu_quota": 2000000000,
+      "cpu_set": "2,3",
+      "memory_bytes": 2147483648,
+      "healthcheck": null
+    },
+    {
+      "name": "/praxis-release",
+      "container_id": "c36e88e1ded9a8efd948748abf669a334c2c9700c6af63ce95c1f2a1f9fcf269",
+      "image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+      "image_id": "sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+      "unchanged_container_and_image": true,
+      "cpu_quota": 2000000000,
+      "cpu_set": "2,3",
+      "memory_bytes": 2147483648,
+      "healthcheck": {
+        "Test": [
+          "NONE"
+        ],
+        "Interval": 5000000000,
+        "Timeout": 3000000000,
+        "StartPeriod": 2000000000
+      }
+    },
+    {
+      "name": "/praxis-nightly",
+      "container_id": "658bab15416730d3bbd885d1a9ae2b08be9adf35ea3e9a27af131c941d57179f",
+      "image": "ghcr.io/praxis-proxy/praxis@sha256:be62d256d5ec92aacb1216baba506aac763e2100f9eb361820a5c27c54e17be8",
+      "image_id": "sha256:be62d256d5ec92aacb1216baba506aac763e2100f9eb361820a5c27c54e17be8",
+      "unchanged_container_and_image": true,
+      "cpu_quota": 2000000000,
+      "cpu_set": "2,3",
+      "memory_bytes": 2147483648,
+      "healthcheck": {
+        "Test": [
+          "NONE"
+        ],
+        "Interval": 5000000000,
+        "Timeout": 3000000000,
+        "StartPeriod": 2000000000
+      }
+    },
+    {
+      "name": "/agentgateway-native",
+      "container_id": "f77b80f7bd0e29dc5a9a29cf6a20a39d84cdd8939fa0f08fd1e7ca97ab4375b6",
+      "image": "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+      "image_id": "sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+      "unchanged_container_and_image": true,
+      "cpu_quota": 2000000000,
+      "cpu_set": "2,3",
+      "memory_bytes": 2147483648,
+      "healthcheck": null
+    },
+    {
+      "name": "/praxis-ai",
+      "container_id": "4c376a67a5b0a09c1dc927d70c8ee985511293fb4bd965bc12e93e2442f066f9",
+      "image": "ghcr.io/praxis-proxy/ai@sha256:5121c638ee4b2c4dd9184c403b11d9384cd1ea26c1542085d2953a74bb15b4f8",
+      "image_id": "sha256:5121c638ee4b2c4dd9184c403b11d9384cd1ea26c1542085d2953a74bb15b4f8",
+      "unchanged_container_and_image": true,
+      "cpu_quota": 2000000000,
+      "cpu_set": "2,3",
+      "memory_bytes": 2147483648,
+      "healthcheck": {
+        "Test": [
+          "NONE"
+        ],
+        "Interval": 5000000000,
+        "Timeout": 3000000000,
+        "StartPeriod": 2000000000
+      }
+    },
+    {
+      "name": "/praxis-ai-nightly",
+      "container_id": "7edd4a3f38f74f4f0ab4fdf5812e206da5661703e76d4b00b9fd8e660a37d22a",
+      "image": "ghcr.io/praxis-proxy/ai@sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+      "image_id": "sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+      "unchanged_container_and_image": true,
+      "cpu_quota": 2000000000,
+      "cpu_set": "2,3",
+      "memory_bytes": 2147483648,
+      "healthcheck": {
+        "Test": [
+          "NONE"
+        ],
+        "Interval": 5000000000,
+        "Timeout": 3000000000,
+        "StartPeriod": 2000000000
+      }
+    }
+  ]
+}

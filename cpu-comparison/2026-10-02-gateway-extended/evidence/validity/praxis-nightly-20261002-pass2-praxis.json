@@ -1,0 +1,23 @@
+{
+  "case": "results/praxis-nightly-20261002/pass2/praxis",
+  "reviewed_at": "2026-10-03T09:53:48.316578+00:00",
+  "infrastructure_valid": true,
+  "counts": {
+    "not-executed": 107
+  },
+  "classification": "Product operator/nightly pairing setup-blocked; individual feature coverage not evaluated",
+  "runtime_review": "nightly-praxis-pass2-runtime.json",
+  "setup_review": "nightly-praxis-pass2-setup.json",
+  "operator_startup_LeadershipLost_exits": 1,
+  "checks": {
+    "node_issues": {},
+    "collection_errors": [],
+    "all_four_empty_router_failures": true,
+    "fixture_pods_ready": true,
+    "cleanup_complete": true,
+    "outer_timeout_reached": false
+  },
+  "notes": [
+    "Same immutable nightly image and empty-router failure as measured repetition one. Four data-plane crash loops are product initialization failures; not OOM or node/API failures."
+  ]
+}

@@ -1,0 +1,19 @@
+# Cluster-internal conformance addresses only. No L2/BGP advertisements.
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: conformance-internal
+  namespace: metallb-system
+spec:
+  addresses:
+  - 198.18.0.1-198.18.0.254
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: conformance-static
+  namespace: metallb-system
+spec:
+  autoAssign: false
+  addresses:
+  - 198.18.1.254/32

@@ -1,0 +1,142 @@
+{
+  "observations": [
+    {
+      "pass": "pass1",
+      "treatment": "agentgateway",
+      "artifact": "kclient/results/kubernetes/pass1/agentgateway/recovery/data-plane/probes.jsonl",
+      "first_probe": "2026-10-05T22:43:35.460076+00:00",
+      "last_probe": "2026-10-05T22:43:58.136708+00:00",
+      "first_and_last_host_samples": [
+        {
+          "utc": "2026-10-05T22:43:39.517010+00:00",
+          "pids": [
+            188152
+          ]
+        },
+        {
+          "utc": "2026-10-05T22:43:55.090448+00:00",
+          "pids": [
+            188152,
+            188788
+          ]
+        }
+      ],
+      "initial_process_present_in_last_sample": true
+    },
+    {
+      "pass": "pass1",
+      "treatment": "praxis-release",
+      "artifact": "kclient/results/kubernetes/pass1/praxis-release/recovery/data-plane/probes.jsonl",
+      "first_probe": "2026-10-05T23:19:12.671184+00:00",
+      "last_probe": "2026-10-05T23:19:36.947575+00:00",
+      "first_and_last_host_samples": [
+        {
+          "utc": "2026-10-05T23:19:14.688771+00:00",
+          "pids": [
+            234927
+          ]
+        },
+        {
+          "utc": "2026-10-05T23:19:35.504891+00:00",
+          "pids": [
+            234927,
+            235508
+          ]
+        }
+      ],
+      "initial_process_present_in_last_sample": true
+    },
+    {
+      "pass": "pass2",
+      "treatment": "agentgateway",
+      "artifact": "kclient/results/kubernetes/pass2/agentgateway/recovery/data-plane/probes.jsonl",
+      "first_probe": "2026-10-06T00:34:18.397904+00:00",
+      "last_probe": "2026-10-06T00:34:41.275007+00:00",
+      "first_and_last_host_samples": [
+        {
+          "utc": "2026-10-06T00:34:23.474621+00:00",
+          "pids": [
+            298105
+          ]
+        },
+        {
+          "utc": "2026-10-06T00:34:39.048935+00:00",
+          "pids": [
+            298739
+          ]
+        }
+      ],
+      "initial_process_present_in_last_sample": false
+    },
+    {
+      "pass": "pass2",
+      "treatment": "praxis-release",
+      "artifact": "kclient/results/kubernetes/pass2/praxis-release/recovery/data-plane/probes.jsonl",
+      "first_probe": "2026-10-06T00:04:06.729089+00:00",
+      "last_probe": "2026-10-06T00:04:30.705469+00:00",
+      "first_and_last_host_samples": [
+        {
+          "utc": "2026-10-06T00:04:08.698068+00:00",
+          "pids": [
+            284201
+          ]
+        },
+        {
+          "utc": "2026-10-06T00:04:29.509711+00:00",
+          "pids": [
+            284201,
+            284757
+          ]
+        }
+      ],
+      "initial_process_present_in_last_sample": true
+    },
+    {
+      "pass": "pass3",
+      "treatment": "agentgateway",
+      "artifact": "kclient/results/kubernetes/pass3/agentgateway/recovery/data-plane/probes.jsonl",
+      "first_probe": "2026-10-06T01:00:22.854324+00:00",
+      "last_probe": "2026-10-06T01:00:44.930940+00:00",
+      "first_and_last_host_samples": [
+        {
+          "utc": "2026-10-06T01:00:24.164128+00:00",
+          "pids": [
+            327849
+          ]
+        },
+        {
+          "utc": "2026-10-06T01:00:39.738089+00:00",
+          "pids": [
+            327849,
+            328448
+          ]
+        }
+      ],
+      "initial_process_present_in_last_sample": true
+    },
+    {
+      "pass": "pass3",
+      "treatment": "praxis-release",
+      "artifact": "kclient/results/kubernetes/pass3/praxis-release/recovery/data-plane/probes.jsonl",
+      "first_probe": "2026-10-06T01:35:46.928123+00:00",
+      "last_probe": "2026-10-06T01:36:10.804489+00:00",
+      "first_and_last_host_samples": [
+        {
+          "utc": "2026-10-06T01:35:49.157587+00:00",
+          "pids": [
+            371970
+          ]
+        },
+        {
+          "utc": "2026-10-06T01:36:09.967341+00:00",
+          "pids": [
+            371970,
+            372571
+          ]
+        }
+      ],
+      "initial_process_present_in_last_sample": true
+    }
+  ],
+  "interpretation": "The HTTPX probes reuse connections. Presence in the last sample means observed process overlap near the window end, not proof of the destination for each request. The last sample can precede the final probe. These probes do not establish complete handoff, fresh-connection availability or hard-failure recovery."
+}

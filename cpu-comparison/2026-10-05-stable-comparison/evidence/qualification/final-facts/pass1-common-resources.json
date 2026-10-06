@@ -1,0 +1,47 @@
+{
+  "phase": "pass1",
+  "profile": "common",
+  "input": "/private/tmp/gateway-comparison-benchmarks/campaigns/2026-10-05-stable-comparison/evidence/qualification/final-facts/cpu-hosts.json",
+  "windows": 384,
+  "roles": {
+    "backend": {
+      "windows": 128,
+      "minimum_samples": 6,
+      "maximum_fd_count": 634,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 75.25984494101172,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.004976362279173923,
+      "peak_mean_quota_busy_percent": 96.75723357602213,
+      "through_gateways_peak_mean_host_busy_percent": 68.74958472460845,
+      "through_gateways_peak_mean_quota_busy_percent": 88.66559690163585
+    },
+    "client": {
+      "windows": 128,
+      "minimum_samples": 6,
+      "maximum_fd_count": 518,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 97.7118360941471,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.0460519123146836,
+      "peak_mean_quota_busy_percent": 10.927133414038082,
+      "through_gateways_peak_mean_host_busy_percent": 61.58096569301584,
+      "through_gateways_peak_mean_quota_busy_percent": 9.24198074556687
+    },
+    "gateway": {
+      "windows": 128,
+      "minimum_samples": 6,
+      "maximum_fd_count": 1159,
+      "minimum_soft_nofile": 65536,
+      "peak_mean_host_busy_percent": 32.78089892213074,
+      "peak_mean_steal_percent": 0.0,
+      "peak_mean_iowait_percent": 0.008307373954311244,
+      "peak_mean_quota_busy_percent": 99.70901446882598,
+      "through_gateways_peak_mean_host_busy_percent": 32.78089892213074,
+      "through_gateways_peak_mean_quota_busy_percent": 99.70901446882598
+    }
+  },
+  "events_to_review": [],
+  "approved": false,
+  "note": "Restart/OOM counters may predate a window. Attribute using raw timestamps/lifecycle evidence; intended product capacity/recovery constraints are not automatically infrastructure failures. Short qualification cases can contain few samples. This summary does not approve a pass."
+}

@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-05T19:50:25.276007+00:00",
+  "excluded": "qualification-tcp whole attempt",
+  "reason": "Stopping the excluded default-TCP pilot interrupted ClusterLoader2 before its temporary namespace cleanup. The next qualification stopped at pre-existing automanaged namespaces, before submitting any ten-route mutation. Removed the captured campaign-owned namespace, retain failed qualification, and restart complete qualification. No product failure or performance ranking is inferred.",
+  "artifact": "results/excluded/kubernetes-stale-cl2-qualification",
+  "namespace_evidence": "../diagnostics/stale-cl2-namespaces.json"
+}

@@ -1,0 +1,60 @@
+{
+  "selected_at": "2026-10-02T23:20:27.230382+00:00",
+  "gateway_api": {
+    "version": "conformance/v1.6.1",
+    "commit": "8bb74df00e56ec8f944d48c25e6c1c9c2f6848e3",
+    "channel": "experimental",
+    "binary_sha256": "93e83d477702ed962a4a4d1fc94447858bdbb9e8745e7186c2feddba4889b5ca",
+    "scope": "Corrected static-address follow-up; original 107-case comparisons remain separate historical results"
+  },
+  "agentgateway": {
+    "version": "v1.6.0",
+    "image": "ghcr.io/agentgateway/agentgateway@sha256:9d3e6044ddcdc0878b1787f77bd401252b95e22684203fb5e874c4c42d2ed90c",
+    "controller": "ghcr.io/agentgateway/controller@sha256:d84259a7e2d87f8f39bae385d4b032d823c0a4450aecb32e0e31e2258449645b",
+    "revision": "ea5608642b9d5c94c5baf5fd9f2f9849b808e963"
+  },
+  "praxis_operator": {
+    "date": "2026-09-29T17:23:24Z",
+    "sha": "fb8beaa14cf714dacf0e6964cc8be94d1b5c1d7c",
+    "url": "https://github.com/praxis-proxy/operator/commit/fb8beaa14cf714dacf0e6964cc8be94d1b5c1d7c",
+    "head_rechecked_on": "2026-10-05",
+    "campaign_built_image_provenance": "praxis-operator-image-provenance.json"
+  },
+  "praxis_release": {
+    "version": "v0.5.2",
+    "published_at": "2026-08-10T20:11:42Z",
+    "image": "ghcr.io/praxis-proxy/praxis@sha256:ef01934b86c6368e097fa8adfc879663a0f8b01cdd265802ba9595c3402230f8",
+    "revision": "af54edcd24de01e4dac7da59a809bf88bd246fe5"
+  },
+  "praxis_nightly": {
+    "image": "ghcr.io/praxis-proxy/praxis@sha256:be62d256d5ec92aacb1216baba506aac763e2100f9eb361820a5c27c54e17be8",
+    "labels": {
+      "org.opencontainers.image.created": "2026-10-02T03:07:42.663Z",
+      "org.opencontainers.image.description": "AI and cloud-native proxy server and framework",
+      "org.opencontainers.image.licenses": "Apache-2.0",
+      "org.opencontainers.image.revision": "31ac6dc86fba30ff510b17f9139021de60d8ba79",
+      "org.opencontainers.image.source": "https://github.com/praxis-proxy/praxis",
+      "org.opencontainers.image.title": "praxis",
+      "org.opencontainers.image.url": "https://github.com/praxis-proxy/praxis",
+      "org.opencontainers.image.version": "nightly-20261002"
+    }
+  },
+  "praxis_ai_release": {
+    "version": "v0.5.0",
+    "image": "ghcr.io/praxis-proxy/ai@sha256:5121c638ee4b2c4dd9184c403b11d9384cd1ea26c1542085d2953a74bb15b4f8",
+    "scope": "native AI profile only",
+    "revision": "2f8732c1389b889660bcb3495af4d4d28dd4e682",
+    "registry_tag": "0.5.0"
+  },
+  "praxis_ai_nightly": {
+    "version": "2026-10-02 nightly build",
+    "image": "ghcr.io/praxis-proxy/ai@sha256:727c4cb043af573cfb812208475dc6b290570b72ff01d07c6b7ca85dc09155e4",
+    "index_digest": "sha256:2fb1d2193887a536ff8a994c3f6b05a07807ebe9883e6e5fd4ea71352f281f65",
+    "revision": "f5f51a751d6f25acde96fb840665b24f2696ce46",
+    "retained_tag": "sha-f5f51a7",
+    "workflow_run": "https://github.com/praxis-proxy/ai/actions/runs/36967646910",
+    "scope": "native AI profile; resolved from actual publishing convention after dated-tag lookup failed",
+    "provenance": "praxis-ai-nightly-provenance.json"
+  },
+  "campaign_requested_versions_reconfirmed_at": "2026-10-05T19:05:29.274087+00:00"
+}

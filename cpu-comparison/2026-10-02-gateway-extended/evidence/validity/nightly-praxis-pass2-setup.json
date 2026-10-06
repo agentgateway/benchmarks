@@ -1,0 +1,209 @@
+{
+  "case": "results/praxis-nightly-20261002/pass2/praxis",
+  "duration_seconds": 302.0,
+  "fatal_empty_router_pods": {
+    "praxis-all-namespaces-66bb875dc4-gtl65": {
+      "container": "praxis",
+      "error": "router: 'routes' is empty; every request would fail with 404"
+    },
+    "praxis-backend-namespaces-6946fbdfdd-7hzg7": {
+      "container": "praxis",
+      "error": "router: 'routes' is empty; every request would fail with 404"
+    },
+    "praxis-same-namespace-55cc77d97d-v77n9": {
+      "container": "praxis",
+      "error": "router: 'routes' is empty; every request would fail with 404"
+    },
+    "praxis-same-namespace-with-https-listener-858c9546b5-fdfnr": {
+      "container": "praxis",
+      "error": "router: 'routes' is empty; every request would fail with 404"
+    }
+  },
+  "desired_core_images": [
+    "ghcr.io/praxis-proxy/praxis@sha256:be62d256d5ec92aacb1216baba506aac763e2100f9eb361820a5c27c54e17be8"
+  ],
+  "empty_routes_in_generated_configs": {
+    "praxis-all-namespaces": true,
+    "praxis-backend-namespaces": true,
+    "praxis-same-namespace": true,
+    "praxis-same-namespace-with-https-listener": true
+  },
+  "late_setup_snapshot": "2026-10-03T09:50:52.177714+00:00",
+  "fixture_pods": [
+    {
+      "namespace": "gateway-conformance-app-backend",
+      "pod": "app-backend-v1-86f8cd8464-m5stn",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-app-backend",
+      "pod": "app-backend-v1-86f8cd8464-qscxg",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-app-backend",
+      "pod": "app-backend-v2-f5bd5979d-hrjrj",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-app-backend",
+      "pod": "app-backend-v2-f5bd5979d-wzvdt",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-app-backend",
+      "pod": "tls-backend-58b6fcfb64-8rx2l",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "coredns-5998cfc87f-9rdrr",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "grpc-infra-backend-v1-5bcf59bbf8-fq8h7",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "grpc-infra-backend-v1-5bcf59bbf8-hb9jr",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "grpc-infra-backend-v2-55b4fd69c4-6blzr",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "grpc-infra-backend-v2-55b4fd69c4-gn2rd",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "grpc-infra-backend-v3-779f9ddf8b-lpcwm",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "grpc-infra-backend-v3-779f9ddf8b-vcf4m",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "infra-backend-v1-7db47fdbfd-4kbml",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "infra-backend-v1-7db47fdbfd-wbzd4",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "infra-backend-v2-5656d77b6d-7p6sw",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "infra-backend-v2-5656d77b6d-g4c7h",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "infra-backend-v3-5bc7b66498-s5t28",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "infra-backend-v3-5bc7b66498-w5jbd",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "tcp-backend-59587f94f8-rskwp",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "tcp-backend-59587f94f8-s24nx",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "tls-backend-2-5fffcbf4cc-6hbb6",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "tls-backend-86b4d79785-4jlpm",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-web-backend",
+      "pod": "web-backend-c744f5b98-d8tp5",
+      "phase": "Running",
+      "ready": true
+    },
+    {
+      "namespace": "gateway-conformance-web-backend",
+      "pod": "web-backend-c744f5b98-wglz9",
+      "phase": "Running",
+      "ready": true
+    }
+  ],
+  "praxis_data_plane_pods": [
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "praxis-all-namespaces-66bb875dc4-gtl65",
+      "phase": "Running",
+      "ready": false
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "praxis-backend-namespaces-6946fbdfdd-7hzg7",
+      "phase": "Running",
+      "ready": false
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "praxis-same-namespace-55cc77d97d-v77n9",
+      "phase": "Running",
+      "ready": false
+    },
+    {
+      "namespace": "gateway-conformance-infra",
+      "pod": "praxis-same-namespace-with-https-listener-858c9546b5-fdfnr",
+      "phase": "Running",
+      "ready": false
+    }
+  ],
+  "all_observed_fixture_pods_ready": true,
+  "all_four_base_gateways_failed_to_start": true,
+  "individual_test_status": "not evaluated only if full.log contains no selected top-level outcomes; check summarized results",
+  "cleanup_complete": true,
+  "job_finished": true
+}

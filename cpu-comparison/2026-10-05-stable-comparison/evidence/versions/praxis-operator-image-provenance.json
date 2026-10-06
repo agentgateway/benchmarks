@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-10-06T02:10:00.966643+00:00",
+  "source_commit": "fb8beaa14cf714dacf0e6964cc8be94d1b5c1d7c",
+  "oci_manifest_digest": "sha256:eb6e618c9fa388ff71e170fc249196280ad3b9d30216cf2c4f873061ee8b5e74",
+  "oci_config_digest": "sha256:e3bc32ff8ab83905b6ffee88e8744130f392c50780962c14d523e89f6eeb211a",
+  "loaded_manifest_source": "Read-only kcontroller containerd content lookup after Kubernetes campaign completion",
+  "runtime_controller_placements_verified": 12,
+  "praxis_runtime_identity": "Kubernetes reports the local operator image configuration digest; Docker build inspection in this environment reports the OCI manifest digest. The retained manifest links these distinct identities.",
+  "build_inspection": "praxis-operator-build-image.json",
+  "loaded_manifest": "praxis-operator-loaded-manifest.json"
+}

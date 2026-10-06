@@ -1,0 +1,67 @@
+{
+  "case": "results/praxis-v0.5.2/pass2/praxis",
+  "infrastructure_valid": true,
+  "reviewed_at": "2026-10-03T06:02:43.398716+00:00",
+  "counts": {
+    "pass": 52,
+    "fail": 55
+  },
+  "outcomes_identical_to_pass1": true,
+  "all_selected_cases_scored": true,
+  "cleanup_complete": true,
+  "runtime_review": "praxis-pass2-runtime.json",
+  "classified_terminating_pods": {
+    "gateway-conformance-infra/praxis-backend-namespaces-bb4b9f9c8-49tc2/praxis": {
+      "deletion_timestamp": "2026-10-03T04:06:39Z",
+      "restart_count": 0,
+      "termination": {
+        "containerID": "containerd://354c2e94af850d51ba61a8d397c23e058eabd6dc659204762836a36cd7322146",
+        "exitCode": 137,
+        "finishedAt": "2026-10-03T04:06:39Z",
+        "reason": "Error",
+        "startedAt": "2026-10-03T04:06:12Z"
+      }
+    },
+    "gateway-conformance-infra/praxis-httproute-listener-hostname-matching-6f5b8d7b5f-kg4gc/praxis": {
+      "deletion_timestamp": "2026-10-03T04:16:21Z",
+      "restart_count": 0,
+      "termination": {
+        "containerID": "containerd://432953cba9632a0031307158bb830a25fb4cf94fd12e18f577efbf6e8c41e4fe",
+        "exitCode": 137,
+        "finishedAt": "2026-10-03T04:16:21Z",
+        "reason": "Error",
+        "startedAt": "2026-10-03T04:16:00Z"
+      }
+    },
+    "gateway-conformance-infra/praxis-httproute-listener-hostname-matching-79c47ddb55-v5dm4/praxis": {
+      "deletion_timestamp": "2026-10-03T04:16:22Z",
+      "restart_count": 0,
+      "termination": {
+        "containerID": "containerd://507c06ff254d8f9b9f30912ebe144b08b9c01020d016857738bc84ab894b3649",
+        "exitCode": 137,
+        "finishedAt": "2026-10-03T04:16:22Z",
+        "reason": "Error",
+        "startedAt": "2026-10-03T04:16:01Z"
+      }
+    }
+  },
+  "operator_restarts": {
+    "total": 3,
+    "reason": "LeadershipLost in all three captured previous-container logs; two happened after startup. No lease-renewal errors were logged in the two later captures. Root cause of leadership changes is not established.",
+    "logs": [
+      "operator-previous.log",
+      "praxis-jpwxx-restart2.log",
+      "praxis-pg4ns-restart1.log"
+    ]
+  },
+  "checks": {
+    "node_issues": {},
+    "collection_errors": [],
+    "outer_timeout_reached": false,
+    "no_recorded_OOMKilled": true
+  },
+  "notes": [
+    "Both products use two controller replicas; this configuration and its leadership-loss exits remain disclosed.",
+    "Service/endpoint/IP-address warning events during creation/deletion did not change any selected test outcome; no unresolved infrastructure fault was identified."
+  ]
+}

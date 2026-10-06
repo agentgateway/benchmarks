@@ -1,0 +1,6 @@
+.work/
+/results/
+/qualification/
+/diagnostics/
+/rejected-infrastructure/
+__pycache__/

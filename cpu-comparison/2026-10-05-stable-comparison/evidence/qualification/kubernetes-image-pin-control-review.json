@@ -1,0 +1,97 @@
+{
+  "scale": [
+    {
+      "treatment": "agentgateway",
+      "count": 10,
+      "marker": "created",
+      "complete": true,
+      "status_convergence_seconds": 0.4562081119984214,
+      "all_route_traffic_verified_seconds": 0.47944258299867215
+    },
+    {
+      "treatment": "agentgateway",
+      "count": 10,
+      "marker": "updated",
+      "complete": true,
+      "status_convergence_seconds": 0.38612780299990845,
+      "all_route_traffic_verified_seconds": 0.4084172540005966
+    },
+    {
+      "treatment": "praxis-release",
+      "count": 10,
+      "marker": "created",
+      "complete": true,
+      "status_convergence_seconds": 10.836411567999676,
+      "all_route_traffic_verified_seconds": 10.856126937998852
+    },
+    {
+      "treatment": "praxis-release",
+      "count": 10,
+      "marker": "updated",
+      "complete": true,
+      "status_convergence_seconds": 10.509372218999488,
+      "all_route_traffic_verified_seconds": 10.529593060999105
+    }
+  ],
+  "recovery": [
+    {
+      "treatment": "agentgateway",
+      "kind": "controller",
+      "requests": 266,
+      "failed_requests": 0,
+      "max_dispatch_delay_seconds": 0.049229803000343964,
+      "note": "Scheduled 10 requests/sec; report individual failures and recovery interval, not a production availability estimate.",
+      "command_exits": [
+        0,
+        0
+      ],
+      "pre_mutation_failures": 0
+    },
+    {
+      "treatment": "agentgateway",
+      "kind": "data-plane",
+      "requests": 231,
+      "failed_requests": 0,
+      "max_dispatch_delay_seconds": 0.02506450200053223,
+      "note": "Scheduled 10 requests/sec; report individual failures and recovery interval, not a production availability estimate.",
+      "command_exits": [
+        0,
+        0
+      ],
+      "pre_mutation_failures": 0
+    },
+    {
+      "treatment": "praxis-release",
+      "kind": "controller",
+      "requests": 277,
+      "failed_requests": 0,
+      "max_dispatch_delay_seconds": 0.05735991199981072,
+      "note": "Scheduled 10 requests/sec; report individual failures and recovery interval, not a production availability estimate.",
+      "command_exits": [
+        0,
+        0
+      ],
+      "pre_mutation_failures": 0
+    },
+    {
+      "treatment": "praxis-release",
+      "kind": "data-plane",
+      "requests": 261,
+      "failed_requests": 62,
+      "max_dispatch_delay_seconds": 0.024151857000106247,
+      "note": "Scheduled 10 requests/sec; report individual failures and recovery interval, not a production availability estimate.",
+      "command_exits": [
+        0,
+        0
+      ],
+      "pre_mutation_failures": 0
+    }
+  ],
+  "transient_container_reads": [
+    {
+      "utc": "2026-10-05T22:06:46.635380+00:00",
+      "pid": 170192,
+      "error": "[Errno 2] No such file or directory: '/proc/170192/net/sockstat'"
+    }
+  ]
+}
