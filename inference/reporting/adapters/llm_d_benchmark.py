@@ -128,12 +128,13 @@ def read_treatment(campaign: Path, treatment: str) -> TreatmentResults:
         reports = sorted(repetition.glob(REPORT_GLOB))
         if not reports:
             raise ValueError(f"no stage reports found in {repetition}")
-        repetition_metadata = read_metadata(reports[0])
-        if metadata is None:
-            metadata = repetition_metadata
-        elif repetition_metadata != metadata:
-            raise ValueError(
-                f"treatment {treatment!r} has different stack metadata across repetitions"
-            )
+        for report in reports:
+            report_metadata = read_metadata(report)
+            if metadata is None:
+                metadata = report_metadata
+            elif report_metadata != metadata:
+                raise ValueError(
+                    f"treatment {treatment!r} has different stack metadata in {report}"
+                )
         repetitions.append([read_stage(report) for report in reports])
     return aggregate_repetitions(treatment, repetitions, metadata)
