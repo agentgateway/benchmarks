@@ -8,12 +8,21 @@ TEMP_DIR="$(mktemp -d)"
 trap 'rm -rf -- "${TEMP_DIR}"' EXIT
 mkdir -p "${TEMP_DIR}/bin" "${TEMP_DIR}/state"
 
-if PATH=/usr/bin:/bin bash "${PROVISION_DIR}/provision.sh" plan \
+# Hosted runners can have gcloud in /usr/bin. Expose only the utility needed
+# to source common.sh, and invoke Bash directly so gcloud is always absent.
+mkdir -p "${TEMP_DIR}/missing-tool-bin"
+ln -s "$(command -v dirname)" "${TEMP_DIR}/missing-tool-bin/dirname"
+if PATH="${TEMP_DIR}/missing-tool-bin" "${BASH}" "${PROVISION_DIR}/provision.sh" plan \
   >"${TEMP_DIR}/missing-tool.log" 2>&1; then
+  cat "${TEMP_DIR}/missing-tool.log" >&2
   echo "provisioning unexpectedly accepted a missing gcloud CLI" >&2
   exit 1
 fi
-grep -q 'gcloud is required but was not found in PATH' "${TEMP_DIR}/missing-tool.log"
+if ! grep -q 'gcloud is required but was not found in PATH' "${TEMP_DIR}/missing-tool.log"; then
+  cat "${TEMP_DIR}/missing-tool.log" >&2
+  echo "provisioning did not report the missing gcloud CLI" >&2
+  exit 1
+fi
 
 cat >"${TEMP_DIR}/bin/gke-gcloud-auth-plugin" <<'EOF'
 #!/usr/bin/env bash
