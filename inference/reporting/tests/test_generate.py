@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import shutil
 import struct
 import subprocess
 import sys
@@ -125,6 +126,172 @@ class GenerateReportTest(unittest.TestCase):
                 )
                 path.write_text(yaml.safe_dump(report(stage, rate, multiplier)), encoding="utf-8")
         return campaign
+
+    def add_repetition(self, campaign: Path) -> None:
+        manifest_path = campaign / "campaign-manifest.yaml"
+        manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+        for treatment, entry in manifest["treatments"].items():
+            entry["repetitions"]["2"] = {}
+            treatment_dir = campaign / "runs" / treatment
+            shutil.copytree(
+                treatment_dir / "repetition-1", treatment_dir / "repetition-2"
+            )
+        manifest_path.write_text(yaml.safe_dump(manifest), encoding="utf-8")
+
+    def test_rejects_changed_backend_stack_metadata_in_stage(self) -> None:
+        for stage in (0, 1, 2):
+            with self.subTest(stage=stage), tempfile.TemporaryDirectory() as directory:
+                campaign = self.create_campaign(Path(directory))
+                path = next(
+                    (campaign / "runs" / "service" / "repetition-1").glob(
+                        f"*_stage_{stage}_*"
+                    )
+                )
+                document = yaml.safe_load(path.read_text(encoding="utf-8"))
+                document["scenario"]["stack"][0]["standardized"]["tool_version"] = "v0.28.0"
+                path.write_text(yaml.safe_dump(document), encoding="utf-8")
+                completed = subprocess.run(
+                    [
+                        sys.executable,
+                        str(GENERATOR),
+                        "--campaign",
+                        str(campaign),
+                        "--comparison",
+                        "service:agentgateway-standalone",
+                        "--formats",
+                        "csv",
+                    ],
+                    text=True,
+                    capture_output=True,
+                )
+                self.assertNotEqual(completed.returncode, 0)
+                self.assertIn("different stack metadata", completed.stderr)
+
+    def test_rejects_changed_component_stack_metadata_in_stage(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            campaign = self.create_campaign(Path(directory))
+            for path in (campaign / "runs").rglob("benchmark_report_*.yaml"):
+                document = yaml.safe_load(path.read_text(encoding="utf-8"))
+                document["scenario"]["stack"].append(
+                    {
+                        "standardized": {
+                            "kind": "orchestrator",
+                            "tool": "kubernetes",
+                            "tool_version": "v1.34.0",
+                        }
+                    }
+                )
+                if path.parent.parent.name == "service" and "_stage_2_" in path.name:
+                    document["scenario"]["stack"][1]["standardized"]["tool_version"] = "v1.35.0"
+                path.write_text(yaml.safe_dump(document), encoding="utf-8")
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    str(GENERATOR),
+                    "--campaign",
+                    str(campaign),
+                    "--comparison",
+                    "service:agentgateway-standalone",
+                    "--formats",
+                    "csv",
+                ],
+                text=True,
+                capture_output=True,
+            )
+            self.assertNotEqual(completed.returncode, 0)
+            self.assertIn("different stack metadata", completed.stderr)
+
+    def test_rejects_changed_stack_metadata_across_repetitions(self) -> None:
+        for stage in (0, 2):
+            with self.subTest(stage=stage), tempfile.TemporaryDirectory() as directory:
+                campaign = self.create_campaign(Path(directory))
+                self.add_repetition(campaign)
+                path = next(
+                    (campaign / "runs" / "service" / "repetition-2").glob(
+                        f"*_stage_{stage}_*"
+                    )
+                )
+                document = yaml.safe_load(path.read_text(encoding="utf-8"))
+                document["scenario"]["stack"][0]["standardized"]["tool_version"] = "v0.28.0"
+                path.write_text(yaml.safe_dump(document), encoding="utf-8")
+                completed = subprocess.run(
+                    [
+                        sys.executable,
+                        str(GENERATOR),
+                        "--campaign",
+                        str(campaign),
+                        "--comparison",
+                        "service:agentgateway-standalone",
+                        "--formats",
+                        "csv",
+                    ],
+                    text=True,
+                    capture_output=True,
+                )
+                self.assertNotEqual(completed.returncode, 0)
+                self.assertIn("different stack metadata", completed.stderr)
+
+    def test_accepts_consistent_stack_metadata_across_stages_and_repetitions(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            campaign = self.create_campaign(root)
+            self.add_repetition(campaign)
+            for path in (campaign / "runs").rglob("benchmark_report_*.yaml"):
+                document = yaml.safe_load(path.read_text(encoding="utf-8"))
+                stack = document["scenario"]["stack"]
+                stack[0]["custom"] = {
+                    "report": path.name, "repetition": path.parent.name
+                }
+                stack.append(
+                    {
+                        "standardized": {
+                            "kind": "orchestrator",
+                            "tool": "kubernetes",
+                            "tool_version": "v1.34.0",
+                        }
+                    }
+                )
+                throughput = document["results"]["request_performance"]["aggregate"]["throughput"]
+                if path.parent.name == "repetition-2":
+                    stack.reverse()
+                    throughput["output_token_rate"]["mean"] *= 2
+                if "_stage_0_" in path.name:
+                    throughput["output_token_rate"]["mean"] = 999999
+                path.write_text(yaml.safe_dump(document), encoding="utf-8")
+            output = root / "published"
+            subprocess.run(
+                [
+                    sys.executable,
+                    str(GENERATOR),
+                    "--campaign",
+                    str(campaign),
+                    "--comparison",
+                    "service:agentgateway-standalone",
+                    "--output",
+                    str(output),
+                    "--formats",
+                    "markdown,csv,prism",
+                ],
+                check=True,
+            )
+            report_dir = output / "service-vs-agentgateway-standalone"
+            with (report_dir / "metrics.csv").open(encoding="utf-8") as stream:
+                rows = list(csv.DictReader(stream))
+            self.assertEqual(len(rows), 4)
+            for row in rows:
+                self.assertIn(row["requested_qps"], ("3.0", "10.0"))
+                expected = 1500 if row["treatment"] == "service" else 2250
+                self.assertEqual(float(row["output_tokens_per_second"]), expected)
+            markdown = (report_dir / "README.md").read_text(encoding="utf-8")
+            self.assertIn("Backend image/version: `v0.27.1`", markdown)
+            for treatment in ("service", "agentgateway-standalone"):
+                for repetition in (1, 2):
+                    prism_reports = list(
+                        (output / "prism" / treatment / f"repetition-{repetition}").glob(
+                            "benchmark_report_*.yaml"
+                        )
+                    )
+                    self.assertEqual(len(prism_reports), 3)
 
     def test_generates_upstream_style_artifacts(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
